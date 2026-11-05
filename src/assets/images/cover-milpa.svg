@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Portada decorativa milpa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#135439"/><stop offset="1" stop-color="#1e45a2"/></linearGradient>
+    <radialGradient id="glow" cx=".8" cy=".1" r=".7"><stop offset="0" stop-color="#43bf82" stop-opacity=".85"/><stop offset="1" stop-color="#43bf82" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+    <path transform="translate(132 345) rotate(172) scale(2.32)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.38"/>
+  <path transform="translate(646 256) rotate(85) scale(2.01)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.25"/>
+  <path transform="translate(746 214) rotate(270) scale(1.15)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffffff" fill-opacity="0.80"/>
+  <path transform="translate(349 498) rotate(146) scale(2.65)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.52"/>
+  <path transform="translate(432 347) rotate(338) scale(2.36)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffffff" fill-opacity="0.26"/>
+  <path transform="translate(100 464) rotate(199) scale(1.89)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.46"/>
+  <path transform="translate(121 333) rotate(295) scale(1.93)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.29"/>
+  <path transform="translate(167 484) rotate(272) scale(2.95)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffdc7a" fill-opacity="0.71"/>
+  <path transform="translate(791 35) rotate(201) scale(2.14)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.48"/>
+  <path transform="translate(739 444) rotate(131) scale(1.78)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.52"/>
+  <path transform="translate(254 242) rotate(300) scale(1.44)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.35"/>
+  <path transform="translate(2 35) rotate(188) scale(2.24)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.59"/>
+  <path transform="translate(445 311) rotate(61) scale(1.23)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.46"/>
+  <path transform="translate(277 299) rotate(37) scale(1.54)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.29"/>
+  <path transform="translate(622 187) rotate(243) scale(2.44)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.79"/>
+  <path transform="translate(326 495) rotate(213) scale(3.11)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.78"/>
+  <path transform="translate(405 333) rotate(89) scale(3.05)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#c3a7f1" fill-opacity="0.59"/>
+  <path transform="translate(644 387) rotate(301) scale(1.96)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.28"/>
+  <path transform="translate(527 17) rotate(142) scale(1.40)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.77"/>
+  <path transform="translate(787 373) rotate(91) scale(1.95)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffdc7a" fill-opacity="0.83"/>
+  <path transform="translate(729 240) rotate(324) scale(3.09)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.47"/>
+  <path transform="translate(705 301) rotate(209) scale(1.82)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ff93c6" fill-opacity="0.76"/>
+  <path transform="translate(111 294) rotate(259) scale(1.13)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.48"/>
+  <path transform="translate(763 12) rotate(232) scale(2.22)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffdc7a" fill-opacity="0.76"/>
+  <path transform="translate(337 342) rotate(292) scale(2.60)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ece4fb" fill-opacity="0.33"/>
+  <path transform="translate(76 47) rotate(161) scale(0.86)" d="M0 0C-9-5-11-19 0-27 11-19 9-5 0 0Z" fill="#ffffff" fill-opacity="0.33"/>
+</svg>

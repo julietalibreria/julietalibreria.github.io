@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tipografía · Julieta UI</title>
+  <meta name="description" content="Fuentes, escala tipográfica y estilos de texto de Julieta UI. Con ejes variables interactivos.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/tipografia.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/tipografia.html">
+  <meta property="og:title" content="Tipografía · Julieta UI">
+  <meta property="og:description" content="Fuentes, escala tipográfica y estilos de texto de Julieta UI. Con ejes variables interactivos.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tipografía · Julieta UI">
+  <meta name="twitter:description" content="Fuentes, escala tipográfica y estilos de texto de Julieta UI. Con ejes variables interactivos.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Tipografía · Julieta UI", "description": "Fuentes, escala tipográfica y estilos de texto de Julieta UI. Con ejes variables interactivos.", "url": "https://julietalibreria.github.io/src/pages/tipografia.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/tipografia.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Tipografía</h1>
+      <p>Una fuente con carácter para los titulares, una sans clara para leer y una monoespaciada para el código. Las tres son variables y de licencia abierta.</p>
+    </header>
+
+    <h2 id="fuentes">Fuentes</h2>
+    <p>Elige el texto de muestra y mueve los ejes: lo que ves es la fuente real que carga la librería.</p>
+    <div id="fonts"></div>
+
+    <h2 id="escala">Escala</h2>
+    <p>Diez tamaños. Los grandes usan <code>clamp()</code>, así que crecen con la pantalla sin saltos. Haz clic en una fila para copiar su token.</p>
+    <div class="d-scale" id="scale"></div>
+
+    <h2 id="estilos">Estilos de texto</h2>
+    <p>Combinaciones de tamaño, peso, interlineado y espaciado ya resueltas.</p>
+    <div class="d-styles" id="styles"></div>
+
+    <h2 id="lectura">Pautas de lectura</h2>
+    <ul>
+      <li>Mantén los párrafos por debajo de 68 caracteres de ancho: <code>.al-prose</code> y <code>.al-lead</code> ya lo hacen.</li>
+      <li>El texto en serif o grande admite más interlineado; el pequeño necesita menos.</li>
+      <li>Los titulares grandes se aprietan (<code>letter-spacing</code> negativo); los textos pequeños, no.</li>
+      <li>Usa <code>.al-tabular</code> en cifras que se comparan o se alinean.</li>
+    </ul>
+    <div class="d-demo" data-al-demo data-stage="is-block">
+      <article class="al-prose">
+        <h3>Una calle morada</h3>
+        <p class="al-lead">Cada marzo, las jacarandas pintan la ciudad durante unas semanas.</p>
+        <p>Este párrafo usa <code>.al-prose</code>: limita el ancho de línea, separa los bloques con un ritmo constante y estiliza listas y enlaces sin que tengas que escribir una sola regla.</p>
+        <p>Precio con cifras tabulares: <span class="al-tabular al-weight-700">$1,299.00</span></p>
+      </article>
+    </div>
+  </main>
+
+  <script type="module">
+    import { julieta, refreshToc } from "../assets/scripts/docs.js";
+    import { h, $ } from "../assets/scripts/core.js";
+
+    const t = await julieta.loadJSON("typography");
+    const fam = (f) => `var(${f.cssVar})`;
+    const GLYPHS = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz 0123456789 ¡!¿? áéíóúü ()[]{}@#$%&";
+
+    /* ---- fuentes ---- */
+    const fonts = $("#fonts");
+    for (const f of t.fonts) {
+      const spec = h("div", { class: "d-font__spec", contenteditable: "true", spellcheck: "false", role: "textbox", "aria-label": `Texto de muestra en ${f.name}`, style: `font-family:${fam(f)};font-weight:${f.id === "bricolage" ? 700 : 500}` }, f.sample);
+      const axes = h("div", { class: "al-cluster", style: "--al-gap:2rem" });
+      const addAxis = (label, min, max, val, step, apply) => {
+        const id = `ax-${f.id}-${label}`;
+        const out = h("output", {}, val);
+        const input = h("input", { class: "al-range", id, type: "range", min, max, step, value: val, "aria-label": label });
+        input.addEventListener("input", () => { out.textContent = input.value; apply(input.value); });
+        axes.append(h("div", { class: "d-axis" }, h("label", { for: id }, label, out), input));
+      };
+      addAxis("Peso", Math.min(...f.weights), Math.max(...f.weights), f.id === "bricolage" ? 700 : 500, 10, (v) => { spec.style.fontWeight = v; });
+      if (f.id === "bricolage") addAxis("Ancho", 75, 100, 100, 1, (v) => { spec.style.fontStretch = `${v}%`; spec.style.fontVariationSettings = `"wdth" ${v}`; });
+
+      fonts.append(h("article", { class: "d-font", id: f.id },
+        h("div", { class: "d-font__head" },
+          h("h3", {}, f.name, " ", h("span", { class: "al-badge" }, f.category)),
+          h("span", { class: "al-text-muted al-text-sm" }, f.role)),
+        spec,
+        axes,
+        h("div", { class: "d-glyphs", style: `font-family:${fam(f)}` }, GLYPHS),
+        h("div", { class: "d-weights", style: `font-family:${fam(f)}` }, f.weights.map((w) => h("span", { style: `font-weight:${w}` }, "Aa", h("small", {}, w)))),
+        h("p", { class: "al-text-muted al-text-sm" }, f.description),
+        h("div", { class: "al-cluster" },
+          h("code", {}, `font-family: var(${f.cssVar})`),
+          h("button", { class: "al-btn al-btn--soft al-btn--sm", type: "button", async onclick() { const ok = await julieta.copy(`font-family: var(${f.cssVar});`); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Copiado" : "No se pudo copiar", duration: 1500 }); } }, h("al-icon", { name: "copy", size: 15 }), "Copiar"),
+          h("a", { class: "al-btn al-btn--ghost al-btn--sm", href: f.source, target: "_blank", rel: "noopener" }, "Ver en Google Fonts", h("al-icon", { name: "external-link", size: 15 })),
+          h("span", { class: "al-text-subtle al-text-xs" }, f.axes + " · " + f.license))));
+    }
+
+    /* ---- escala ---- */
+    const scale = $("#scale");
+    for (const s of t.scale) {
+      const px = () => `${Math.round(parseFloat(getComputedStyle(probe).fontSize))} px`;
+      const probe = h("span", { style: `font-size:var(${s.token});position:absolute;visibility:hidden` }, "x");
+      document.body.append(probe);
+      const size = h("span", {}, px());
+      scale.append(h("button", { class: "d-scale__row", type: "button", async onclick() { const ok = await julieta.copy(`font-size: var(${s.token});`); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Copiado" : "No se pudo copiar", text: `var(${s.token})`, duration: 1600 }); } },
+        h("span", { class: "d-scale__meta" }, h("b", {}, s.name), h("code", {}, s.token), size, h("span", {}, s.usage)),
+        h("span", { class: "d-scale__sample", style: `font-size:var(${s.token})` }, "Jacarandas en la Condesa")));
+      addEventListener("resize", () => { size.textContent = px(); });
+    }
+
+    /* ---- estilos ---- */
+    const sty = { display: "--al-font-display", sans: "--al-font-sans", mono: "--al-font-mono" };
+    const styleCss = {
+      "Portada": "font-size:var(--al-text-5xl);font-weight:800;line-height:.92;letter-spacing:-.05em",
+      "Título de página": "font-size:var(--al-text-4xl);font-weight:700;line-height:1.05;letter-spacing:-.04em",
+      "Título de sección": "font-size:var(--al-text-3xl);font-weight:700;line-height:1.1;letter-spacing:-.025em",
+      "Entradilla": "font-size:var(--al-text-lg);font-weight:400;line-height:1.55;color:var(--al-text-muted)",
+      "Lectura": "font-size:var(--al-text-base);font-weight:400;line-height:1.6",
+      "Código": "font-size:.9em;font-weight:500",
+    };
+    $("#styles").replaceChildren(...t.styles.map((s) => h("div", { class: "d-style" },
+      h("div", { style: `font-family:var(${sty[s.font]});${styleCss[s.name] || ""}` }, s.sample),
+      h("div", { class: "d-style__meta" }, h("b", {}, s.name), " · ", s.spec))));
+
+    refreshToc();
+    julieta.init(document);
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+  </script>
+</body>
+</html>

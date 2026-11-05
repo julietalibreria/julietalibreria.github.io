@@ -1,0 +1,66 @@
+{
+  "fonts": [
+    {
+      "id": "bricolage",
+      "name": "Bricolage Grotesque",
+      "role": "Titulares y números grandes",
+      "category": "Display",
+      "cssVar": "--al-font-display",
+      "classes": ["al-font-display"],
+      "weights": [200, 300, 400, 500, 600, 700, 800],
+      "axes": "Peso 200–800 · Ancho 75–100 · Tamaño óptico 12–96",
+      "description": "Grotesca con carácter humano y ejes variables. El eje de ancho permite que los titulares se abran al cargar la página.",
+      "sample": "Jacarandas en marzo",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fonts.google.com/specimen/Bricolage+Grotesque"
+    },
+    {
+      "id": "hanken",
+      "name": "Hanken Grotesk",
+      "role": "Texto de interfaz y lectura",
+      "category": "Sans",
+      "cssVar": "--al-font-sans",
+      "classes": [],
+      "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      "axes": "Peso 100–900 · Cursiva",
+      "description": "Sans neutra y cálida con buena legibilidad en tamaños pequeños. Acompaña sin competir con los titulares.",
+      "sample": "La ciudad se pinta de violeta durante dos semanas.",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fonts.google.com/specimen/Hanken+Grotesk"
+    },
+    {
+      "id": "jetbrains",
+      "name": "JetBrains Mono",
+      "role": "Código y datos tabulares",
+      "category": "Mono",
+      "cssVar": "--al-font-mono",
+      "classes": ["al-font-mono"],
+      "weights": [400, 500, 600, 700],
+      "axes": "Peso 400–700",
+      "description": "Monoespaciada pensada para leer código durante horas. Se usa solo donde el alineado importa.",
+      "sample": "const julieta = await import(url);",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fonts.google.com/specimen/JetBrains+Mono"
+    }
+  ],
+  "scale": [
+    { "token": "--al-text-xs",   "name": "xs",   "usage": "Notas al pie, contadores" },
+    { "token": "--al-text-sm",   "name": "sm",   "usage": "Texto secundario, etiquetas" },
+    { "token": "--al-text-base", "name": "base", "usage": "Texto de lectura" },
+    { "token": "--al-text-lg",   "name": "lg",   "usage": "Entradillas" },
+    { "token": "--al-text-xl",   "name": "xl",   "usage": "Subtítulos, citas" },
+    { "token": "--al-text-2xl",  "name": "2xl",  "usage": "Títulos de tarjeta" },
+    { "token": "--al-text-3xl",  "name": "3xl",  "usage": "Títulos de sección" },
+    { "token": "--al-text-4xl",  "name": "4xl",  "usage": "Títulos de página" },
+    { "token": "--al-text-5xl",  "name": "5xl",  "usage": "Titulares destacados" },
+    { "token": "--al-text-6xl",  "name": "6xl",  "usage": "Portada y héroes" }
+  ],
+  "styles": [
+    { "name": "Portada", "font": "display", "spec": "6xl · 800 · interlineado 0.9 · tracking −0.05em", "sample": "Flores para la web" },
+    { "name": "Título de página", "font": "display", "spec": "4xl · 700 · interlineado 1.05 · tracking −0.04em", "sample": "Todo lo que necesitas" },
+    { "name": "Título de sección", "font": "display", "spec": "3xl · 700 · interlineado 1.1 · tracking −0.025em", "sample": "Componentes con alma" },
+    { "name": "Entradilla", "font": "sans", "spec": "lg · 400 · interlineado 1.55", "sample": "Una librería para interfaces que se sienten hechas a mano." },
+    { "name": "Lectura", "font": "sans", "spec": "base · 400 · interlineado 1.6 · máx. 68 caracteres", "sample": "Cada componente se instala por CDN y se usa con clases, sin compilar nada." },
+    { "name": "Código", "font": "mono", "spec": "0.9em · 400–500", "sample": "class=\"al-btn al-btn--primary\"" }
+  ]
+}

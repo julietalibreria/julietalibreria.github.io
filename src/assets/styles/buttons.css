@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Julieta UI · buttons.css
+   Botones, grupos de botones, enlaces decorados, badges, chips y teclas.
+   ========================================================================== */
+
+.al-btn {
+  --_bg: var(--al-surface);
+  --_fg: var(--al-text);
+  --_bd: var(--al-border-strong);
+  --_sh: var(--al-shadow-xs);
+  --_h: 2.75rem;
+
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  min-height: var(--_h);
+  padding: 0 1.35rem;
+  border: 1px solid var(--_bd);
+  border-radius: var(--al-radius-full);
+  background: var(--_bg);
+  color: var(--_fg);
+  box-shadow: var(--_sh);
+  font-family: var(--al-font-sans);
+  font-size: .9375rem; font-weight: 600; line-height: 1;
+  text-decoration: none; white-space: nowrap;
+  user-select: none; -webkit-tap-highlight-color: transparent;
+  transition: transform var(--al-dur-fast) var(--al-ease),
+              background-color var(--al-dur) var(--al-ease),
+              border-color var(--al-dur) var(--al-ease),
+              box-shadow var(--al-dur) var(--al-ease),
+              color var(--al-dur) var(--al-ease);
+}
+.al-btn:hover { --_bg: var(--_bg-h, var(--al-bg-subtle)); }
+.al-btn:active { transform: translateY(1px) scale(.985); }
+.al-btn:focus-visible { outline-offset: 3px; border-radius: var(--al-radius-full); }
+
+.al-btn--primary {
+  --_bg: linear-gradient(180deg, color-mix(in oklab, var(--al-jacaranda-500) 86%, white), var(--al-jacaranda-600));
+  --_bg-h: linear-gradient(180deg, color-mix(in oklab, var(--al-jacaranda-500) 70%, white), var(--al-jacaranda-600));
+  --_fg: var(--al-on-primary);
+  --_bd: var(--al-jacaranda-700);
+  --_sh: inset 0 1px 0 rgb(255 255 255 / .3), 0 8px 18px -8px color-mix(in oklab, var(--al-jacaranda-600) 75%, transparent);
+}
+.al-btn--primary:hover { transform: translateY(-1px); --_sh: inset 0 1px 0 rgb(255 255 255 / .35), 0 12px 24px -8px color-mix(in oklab, var(--al-jacaranda-600) 80%, transparent); }
+.al-btn--primary:active { transform: translateY(0) scale(.985); }
+
+.al-btn--accent {
+  --_bg: linear-gradient(180deg, var(--al-cempasuchil-300), var(--al-cempasuchil-400));
+  --_bg-h: linear-gradient(180deg, var(--al-cempasuchil-200), var(--al-cempasuchil-300));
+  --_fg: var(--al-cempasuchil-950);
+  --_bd: var(--al-cempasuchil-500);
+  --_sh: inset 0 1px 0 rgb(255 255 255 / .5), 0 8px 18px -8px color-mix(in oklab, var(--al-cempasuchil-500) 80%, transparent);
+}
+.al-btn--accent:hover { transform: translateY(-1px); }
+
+.al-btn--secondary { --_bg: var(--al-surface); --_bg-h: var(--al-surface-sunken); }
+
+.al-btn--soft {
+  --_bg: var(--al-primary-soft); --_bg-h: color-mix(in oklab, var(--al-primary) 22%, var(--al-surface));
+  --_fg: var(--al-primary-strong); --_bd: transparent; --_sh: none;
+}
+
+.al-btn--outline {
+  --_bg: transparent; --_bg-h: var(--al-primary-soft);
+  --_fg: var(--al-primary); --_bd: color-mix(in oklab, var(--al-primary) 55%, transparent); --_sh: none;
+}
+
+.al-btn--ghost {
+  --_bg: transparent; --_bg-h: var(--al-bg-subtle);
+  --_fg: var(--al-text); --_bd: transparent; --_sh: none;
+}
+
+.al-btn--danger {
+  --_bg: var(--al-granada-600); --_bg-h: var(--al-granada-700);
+  --_fg: #fff; --_bd: var(--al-granada-700);
+  --_sh: inset 0 1px 0 rgb(255 255 255 / .25), 0 8px 18px -8px color-mix(in oklab, var(--al-granada-600) 80%, transparent);
+}
+
+.al-btn--link {
+  --_bg: transparent; --_bg-h: transparent; --_fg: var(--al-primary); --_bd: transparent; --_sh: none;
+  padding: 0; min-height: 0; border-radius: var(--al-radius-xs);
+  text-decoration: underline; text-decoration-color: color-mix(in oklab, currentColor 35%, transparent); text-underline-offset: .25em;
+}
+.al-btn--link:hover { text-decoration-color: currentColor; }
+
+.al-btn--sm { --_h: 2.25rem; padding: 0 1rem; font-size: .8125rem; gap: .4rem; }
+.al-btn--lg { --_h: 3.25rem; padding: 0 1.75rem; font-size: 1.0625rem; }
+.al-btn--xl { --_h: 3.75rem; padding: 0 2.25rem; font-size: 1.1875rem; }
+.al-btn--icon { width: var(--_h); padding: 0; }
+.al-btn--block { display: flex; width: 100%; }
+
+.al-btn:disabled, .al-btn[aria-disabled="true"] {
+  opacity: .5; pointer-events: none; transform: none; filter: saturate(.6);
+}
+
+/* Cargando: el contenido se oculta y aparece un spinner */
+.al-btn.is-loading, .al-btn[aria-busy="true"] { color: transparent; pointer-events: none; }
+.al-btn.is-loading::after, .al-btn[aria-busy="true"]::after {
+  content: ""; position: absolute; width: 1.15em; height: 1.15em;
+  border: 2px solid var(--_fg-spin, #fff); border-right-color: transparent; border-radius: 50%;
+  animation: al-spin .7s linear infinite;
+}
+.al-btn--secondary.is-loading, .al-btn--ghost.is-loading, .al-btn--soft.is-loading, .al-btn--outline.is-loading { --_fg-spin: var(--al-primary); }
+.al-btn--accent.is-loading { --_fg-spin: var(--al-cempasuchil-950); }
+@keyframes al-spin { to { rotate: 360deg; } }
+
+/* Grupo de botones unidos */
+.al-btn-group { display: inline-flex; }
+.al-btn-group > .al-btn { border-radius: 0; margin-inline-start: -1px; }
+.al-btn-group > .al-btn:first-child { border-radius: var(--al-radius-full) 0 0 var(--al-radius-full); margin-inline-start: 0; padding-inline-start: 1.3rem; }
+.al-btn-group > .al-btn:last-child  { border-radius: 0 var(--al-radius-full) var(--al-radius-full) 0; padding-inline-end: 1.3rem; }
+.al-btn-group > .al-btn:hover, .al-btn-group > .al-btn:focus-visible { z-index: 1; }
+
+/* Botón alternable (aria-pressed) dentro de un grupo */
+.al-btn-group > .al-btn[aria-pressed="true"], .al-btn[aria-pressed="true"].al-btn--secondary {
+  --_bg: var(--al-primary-soft); --_bg-h: var(--al-primary-soft); --_fg: var(--al-primary-strong); --_bd: color-mix(in oklab, var(--al-primary) 50%, transparent);
+}
+
+/* Enlace con subrayado animado */
+.al-link {
+  color: var(--al-primary); text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat;
+  transition: background-size var(--al-dur) var(--al-ease);
+  padding-bottom: 2px;
+}
+.al-link:hover, .al-link:focus-visible { background-size: 100% 1.5px; }
+
+/* Badges */
+.al-badge {
+  --_c: var(--al-primary);
+  display: inline-flex; align-items: center; gap: .35em;
+  padding: .22em .7em; border-radius: var(--al-radius-full);
+  background: color-mix(in oklab, var(--_c) 13%, var(--al-surface));
+  color: color-mix(in oklab, var(--_c) 80%, var(--al-text));
+  font-size: .75rem; font-weight: 650; line-height: 1.4; white-space: nowrap;
+}
+.al-badge--success { --_c: var(--al-success); }
+.al-badge--warning { --_c: var(--al-warning); }
+.al-badge--danger  { --_c: var(--al-danger); }
+.al-badge--info    { --_c: var(--al-info); }
+.al-badge--neutral { --_c: var(--al-text-muted); }
+.al-badge--solid { background: var(--_c); color: #fff; }
+.al-badge--outline { background: transparent; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--_c) 45%, transparent); }
+.al-badge--dot::before { content: ""; width: .5em; height: .5em; border-radius: 50%; background: currentColor; }
+
+/* Chips (etiquetas que se pueden quitar o activar) */
+.al-chip {
+  display: inline-flex; align-items: center; gap: .45rem;
+  min-height: 2.15rem; padding: 0 .85rem; border-radius: var(--al-radius-full);
+  border: 1px solid var(--al-border-strong); background: var(--al-surface);
+  font-size: .8125rem; font-weight: 550; color: var(--al-text);
+  transition: background-color var(--al-dur) var(--al-ease), border-color var(--al-dur) var(--al-ease), color var(--al-dur) var(--al-ease);
+}
+button.al-chip:hover { border-color: var(--al-primary); }
+.al-chip[aria-pressed="true"], .al-chip.is-active {
+  background: var(--al-primary-soft); border-color: color-mix(in oklab, var(--al-primary) 60%, transparent); color: var(--al-primary-strong);
+}
+.al-chip__remove {
+  display: grid; place-items: center; width: 1.25rem; height: 1.25rem; margin-right: -.4rem;
+  border-radius: 50%; color: var(--al-text-subtle);
+}
+.al-chip__remove:hover { background: var(--al-bg-subtle); color: var(--al-text); }
+
+/* Teclas */
+.al-kbd {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 .4rem;
+  border: 1px solid var(--al-border-strong); border-bottom-width: 2px; border-radius: var(--al-radius-xs);
+  background: var(--al-surface); color: var(--al-text-muted);
+  font-family: var(--al-font-mono); font-size: .75rem; font-weight: 500; line-height: 1;
+}

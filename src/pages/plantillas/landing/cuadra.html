@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuadra · Organiza tu tianguis sin perder la cabeza</title>
+  <meta name="description" content="Cuadra ayuda a quienes organizan tianguis y mercados de barrio a asignar puestos, confirmar asistencia y cobrar el lugar.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/landing/cuadra.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/landing/cuadra.html">
+  <meta property="og:title" content="Cuadra · Organiza tu tianguis sin perder la cabeza">
+  <meta property="og:description" content="Cuadra ayuda a quienes organizan tianguis y mercados de barrio a asignar puestos, confirmar asistencia y cobrar el lugar.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cuadra · Organiza tu tianguis sin perder la cabeza">
+  <meta name="twitter:description" content="Cuadra ayuda a quienes organizan tianguis y mercados de barrio a asignar puestos, confirmar asistencia y cobrar el lugar.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Cuadra · Organiza tu tianguis sin perder la cabeza", "description": "Cuadra ayuda a quienes organizan tianguis y mercados de barrio a asignar puestos, confirmar asistencia y cobrar el lugar.", "url": "https://julietalibreria.github.io/src/pages/plantillas/landing/cuadra.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .cu-brand { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.03em; font-size: 1.3rem; }
+    .cu-brand__sq { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: var(--al-accent); color: var(--al-cempasuchil-950); }
+    .cu-nav-menu { display: none; }
+    @media (max-width: 52rem) { .cu-nav-links, .cu-nav-cta { display: none; } .cu-nav-menu { display: inline-flex; } }
+
+    .cu-hero { position: relative; isolation: isolate; overflow: hidden;
+      background:
+        radial-gradient(40rem 26rem at 100% 0%, color-mix(in oklab, var(--al-accent) 28%, transparent), transparent 65%),
+        radial-gradient(34rem 24rem at 0% 100%, color-mix(in oklab, var(--al-primary) 18%, transparent), transparent 65%),
+        var(--al-bg); }
+    .cu-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(2.5rem, 7vw, 6rem); }
+    @media (max-width: 62rem) { .cu-hero__grid { grid-template-columns: 1fr; } }
+    .cu-hero__copy { display: grid; gap: 1.5rem; justify-items: start; }
+    .cu-hero h1 { font-size: clamp(2.7rem, 1.4rem + 4.6vw, 5.2rem); line-height: .95; letter-spacing: -0.05em; text-wrap: balance; }
+    .cu-hero h1 mark { background: linear-gradient(transparent 62%, color-mix(in oklab, var(--al-accent) 55%, transparent) 62%); color: inherit; padding: 0 .1em; }
+
+    .cu-win { border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-xl); background: var(--al-surface); box-shadow: 0 40px 70px -30px color-mix(in oklab, var(--al-primary) 45%, transparent), var(--al-shadow-lg); overflow: hidden; }
+    .cu-win__bar { display: flex; align-items: center; gap: .4rem; padding: .7rem .9rem; background: var(--al-surface-sunken); border-bottom: 1px solid var(--al-border); font-size: .8125rem; color: var(--al-text-muted); }
+    .cu-win__bar i { width: .65rem; height: .65rem; border-radius: 50%; background: var(--al-border-strong); }
+    .cu-win__bar span { margin-left: .6rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cu-win__body { display: grid; gap: 1rem; padding: 1.1rem; }
+    .cu-win__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+    .cu-win__stats .al-stat { padding: .75rem .9rem; border-radius: var(--al-radius-md); background: var(--al-surface-sunken); }
+    .cu-puesto { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .7rem .2rem; border-bottom: 1px solid var(--al-border); }
+    .cu-puesto:last-child { border-bottom: 0; }
+    .cu-puesto strong { display: block; font-size: .9375rem; }
+    .cu-puesto small { color: var(--al-text-muted); }
+    .cu-hint { font-size: .8125rem; color: var(--al-text-muted); display: flex; align-items: center; gap: .4rem; }
+
+    .cu-bento { display: grid; gap: 1.25rem; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .cu-bento > * { grid-column: span 2; }
+    .cu-bento > .cu-wide { grid-column: span 4; }
+    @media (max-width: 62rem) { .cu-bento > *, .cu-bento > .cu-wide { grid-column: span 3; } }
+    @media (max-width: 40rem) { .cu-bento > *, .cu-bento > .cu-wide { grid-column: 1 / -1; } }
+    .cu-bento .al-card__body { padding: 1.5rem; }
+    .cu-tone { background: var(--al-primary-soft); border-color: transparent; }
+    .cu-tone2 { background: var(--al-warning-soft); border-color: transparent; }
+    .cu-icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: .8rem; background: var(--al-surface); color: var(--al-primary); box-shadow: var(--al-shadow-sm); }
+    .cu-map { display: grid; grid-template-columns: repeat(8, 1fr); gap: .35rem; margin-top: .5rem; }
+    .cu-map i { aspect-ratio: 1; border-radius: .35rem; background: var(--al-border); }
+    .cu-map i.on { background: var(--al-primary); } .cu-map i.mid { background: var(--al-accent); }
+
+    .cu-plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); align-items: stretch; }
+    .cu-center { display: grid; justify-items: center; text-align: center; gap: 1rem; margin-bottom: 2.5rem; }
+    .cu-center h2 { font-size: var(--al-text-4xl); letter-spacing: -0.045em; line-height: 1; }
+
+    .cu-end { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: clamp(1.75rem, 4vw, 3rem); border-radius: var(--al-radius-2xl); background: var(--al-surface); border: 2px solid var(--al-text); }
+    .cu-end h2 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1; }
+    @media (max-width: 40rem) { .cu-end { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="al-navbar">
+    <a class="al-navbar__brand cu-brand" href="#inicio"><span class="cu-brand__sq"><al-icon name="grid" size="18"></al-icon></span>cuadra</a>
+    <nav class="al-navbar__links cu-nav-links" aria-label="Principal">
+      <a class="al-nav-link" href="#funciones">Funciones</a>
+      <a class="al-nav-link" href="#pasos">Cómo empezar</a>
+      <a class="al-nav-link" href="#planes">Planes</a>
+      <a class="al-nav-link" href="#preguntas">Preguntas</a>
+    </nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle data-al-tip="Cambiar tema" data-al-tip-pos="bottom" aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+    <button class="al-btn al-btn--accent al-btn--sm cu-nav-cta" data-al-open="#lista">Pedir acceso</button>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm cu-nav-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
+  </header>
+
+  <dialog class="al-drawer" id="menu-movil" aria-label="Menú">
+    <div class="al-drawer__header"><span class="al-drawer__title">cuadra</span><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-drawer__body">
+      <nav class="al-sidebar" aria-label="Móvil">
+        <div class="al-sidebar__group">
+          <a class="al-sidebar__link" href="#funciones" data-al-close>Funciones</a>
+          <a class="al-sidebar__link" href="#pasos" data-al-close>Cómo empezar</a>
+          <a class="al-sidebar__link" href="#planes" data-al-close>Planes</a>
+          <a class="al-sidebar__link" href="#preguntas" data-al-close>Preguntas</a>
+        </div>
+      </nav>
+    </div>
+    <div class="al-drawer__footer"><button class="al-btn al-btn--accent al-btn--block" data-al-close data-al-open="#lista">Pedir acceso</button></div>
+  </dialog>
+
+  <main id="contenido">
+    <section class="cu-hero" id="inicio">
+      <div class="al-container cu-hero__grid">
+        <div class="cu-hero__copy">
+          <span class="al-badge al-badge--primary"><al-icon name="sparkles" size="14"></al-icon>Para tianguis y mercados de barrio</span>
+          <h1>Cada puesto en su <mark>lugar</mark>, cada sábado.</h1>
+          <p class="al-lead">Cuadra reúne el mapa del tianguis, la lista de comerciantes y el cobro del lugar. Se acabó el grupo de mensajes con 200 notificaciones.</p>
+          <div class="al-cluster">
+            <button class="al-btn al-btn--primary al-btn--lg" data-al-open="#lista">Pedir acceso<al-icon name="arrow-right"></al-icon></button>
+            <a class="al-btn al-btn--outline al-btn--lg" href="#funciones">Ver funciones</a>
+          </div>
+        </div>
+
+        <div class="cu-win" role="group" aria-label="Demostración interactiva">
+          <div class="cu-win__bar"><i></i><i></i><i></i><span>Tianguis de ejemplo · sábado</span></div>
+          <div class="cu-win__body">
+            <div data-al-tabs>
+              <div class="al-tabs al-tabs--pills" role="tablist" aria-label="Vista del tianguis">
+                <button class="al-tab" data-target="d-asistencia" aria-selected="true">Asistencia</button>
+                <button class="al-tab" data-target="d-cobros">Cobros</button>
+              </div>
+              <div class="al-tabpanel" id="d-asistencia" style="display:grid;gap:1rem;margin-top:1rem">
+                <div class="cu-win__stats">
+                  <div class="al-stat"><span class="al-stat__label">Confirmados</span><span class="al-stat__value" id="d-conf">2 de 4</span></div>
+                  <div class="al-stat"><span class="al-stat__label">Lugares libres</span><span class="al-stat__value" id="d-libres">2</span></div>
+                </div>
+                <div class="al-progress al-progress--lg" id="d-prog" style="--value:50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Puestos confirmados"><span></span></div>
+                <div id="d-lista">
+                  <div class="cu-puesto"><div><strong>A-01 · Tamales de rajas</strong><small>Doña Lupe</small></div><label class="al-switch"><input type="checkbox" role="switch" checked aria-label="Confirmar A-01">Asiste</label></div>
+                  <div class="cu-puesto"><div><strong>A-02 · Plantas y macetas</strong><small>Vivero Los Cedros</small></div><label class="al-switch"><input type="checkbox" role="switch" checked aria-label="Confirmar A-02">Asiste</label></div>
+                  <div class="cu-puesto"><div><strong>B-07 · Pan de pueblo</strong><small>Panadería La Espiga</small></div><label class="al-switch"><input type="checkbox" role="switch" aria-label="Confirmar B-07">Asiste</label></div>
+                  <div class="cu-puesto"><div><strong>B-08 · Ropa de segunda</strong><small>Clóset Circular</small></div><label class="al-switch"><input type="checkbox" role="switch" aria-label="Confirmar B-08">Asiste</label></div>
+                </div>
+                <p class="cu-hint"><al-icon name="mouse-pointer" size="16"></al-icon>Prueba los interruptores: la demo es real.</p>
+              </div>
+              <div class="al-tabpanel" id="d-cobros" hidden style="margin-top:1rem">
+                <ul class="al-list" role="list">
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Doña Lupe</div><div class="al-list__meta">Lugar A-01 · $80</div></div><span class="al-badge al-badge--success">Pagado</span></li>
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Vivero Los Cedros</div><div class="al-list__meta">Lugar A-02 · $120</div></div><span class="al-badge al-badge--warning">Pendiente</span></li>
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Panadería La Espiga</div><div class="al-list__meta">Lugar B-07 · $80</div></div><span class="al-badge al-badge--neutral">Sin confirmar</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section" id="funciones">
+      <div class="al-container">
+        <div class="al-section-head"><h2>Lo que hace falta un sábado cualquiera</h2><p>Hecho con quienes ya organizan: pocas funciones, todas pensadas para la mañana en que todo pasa a la vez.</p></div>
+        <div class="cu-bento">
+          <article class="al-card cu-wide cu-tone"><div class="al-card__body"><span class="cu-icon"><al-icon name="map-pin"></al-icon></span><h3 class="al-card__title">Mapa de puestos</h3><p class="al-card__text">Dibuja las calles y los lugares una vez. Cada semana ves quién ocupa qué espacio y dónde cabe un puesto más.</p><div class="cu-map" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="mid"></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="mid"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="mid"></i><i class="on"></i><i></i><i></i></div></div></article>
+          <article class="al-card"><div class="al-card__body"><span class="cu-icon"><al-icon name="check-circle"></al-icon></span><h3 class="al-card__title">Asistencia en un toque</h3><p class="al-card__text">Cada comerciante confirma desde su teléfono. Tú ves la lista, sin perseguir a nadie.</p></div></article>
+          <article class="al-card"><div class="al-card__body"><span class="cu-icon"><al-icon name="wallet"></al-icon></span><h3 class="al-card__title">Cobro del lugar</h3><p class="al-card__text">Registra quién pagó y quién debe. Genera el recibo al momento.</p></div></article>
+          <article class="al-card cu-wide cu-tone2"><div class="al-card__body"><span class="cu-icon"><al-icon name="bell"></al-icon></span><h3 class="al-card__title">Avisos que sí se leen</h3><p class="al-card__text">Si llueve, si cambia la calle o si se suspende, mandas un solo aviso a todos los comerciantes y ves quién lo abrió.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section al-section--tint" id="pasos">
+      <div class="al-container al-container--narrow">
+        <div class="al-section-head"><h2>Listo antes del próximo sábado</h2></div>
+        <ol class="al-stepper" style="flex-wrap:wrap;row-gap:1.5rem">
+          <li class="al-stepper__item is-done">Dibuja tu tianguis</li>
+          <li class="al-stepper__item is-current">Invita a tus comerciantes</li>
+          <li class="al-stepper__item">Confirma y cobra</li>
+        </ol>
+        <p class="al-lead" style="margin-top:2rem">Importa tu lista desde una hoja de cálculo, comparte un enlace de invitación y empieza a recibir confirmaciones. No necesitas instalar nada.</p>
+      </div>
+    </section>
+
+    <section class="al-section" id="planes">
+      <div class="al-container">
+        <div class="cu-center">
+          <h2>Un plan según el tamaño de tu tianguis</h2>
+          <div class="al-segmented" role="radiogroup" aria-label="Facturación">
+            <label><input type="radio" name="ciclo" value="mensual" checked><span>Mensual</span></label>
+            <label><input type="radio" name="ciclo" value="anual"><span>Anual · 2 meses gratis</span></label>
+          </div>
+        </div>
+        <div class="cu-plans">
+          <article class="al-plan"><div><h3 class="al-plan__name">Cuadra chico</h3><p class="al-plan__desc">Hasta 30 puestos.</p></div><div class="al-plan__price"><span data-precio="0">$0</span><small class="cu-per">al mes</small></div>
+            <ul class="al-plan__features" role="list"><li><al-icon name="check"></al-icon>Mapa y asistencia</li><li><al-icon name="check"></al-icon>Un administrador</li><li><al-icon name="check"></al-icon>Avisos por correo</li></ul>
+            <button class="al-btn al-btn--outline al-btn--block" data-al-open="#lista" data-plan="Cuadra chico">Pedir acceso</button></article>
+          <article class="al-plan al-plan--featured"><div><h3 class="al-plan__name">Cuadra barrio</h3><p class="al-plan__desc">Hasta 150 puestos.</p></div><div class="al-plan__price"><span data-precio="290">$290</span><small class="cu-per">al mes</small></div>
+            <ul class="al-plan__features" role="list"><li><al-icon name="check"></al-icon>Todo lo de Chico</li><li><al-icon name="check"></al-icon>Cobro del lugar y recibos</li><li><al-icon name="check"></al-icon>Tres administradores</li></ul>
+            <button class="al-btn al-btn--accent al-btn--block" data-al-open="#lista" data-plan="Cuadra barrio">Pedir acceso</button></article>
+          <article class="al-plan"><div><h3 class="al-plan__name">Cuadra red</h3><p class="al-plan__desc">Varios tianguis o alcaldías.</p></div><div class="al-plan__price"><span data-precio="790">$790</span><small class="cu-per">al mes</small></div>
+            <ul class="al-plan__features" role="list"><li><al-icon name="check"></al-icon>Todo lo de Barrio</li><li><al-icon name="check"></al-icon>Varios tianguis a la vez</li><li><al-icon name="check"></al-icon>Reportes en CSV</li></ul>
+            <button class="al-btn al-btn--outline al-btn--block" data-al-open="#lista" data-plan="Cuadra red">Pedir acceso</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section al-section--tint" id="preguntas">
+      <div class="al-container al-container--narrow">
+        <div class="al-section-head"><h2>Preguntas frecuentes</h2></div>
+        <div class="al-accordion">
+          <details open><summary>¿Mis comerciantes necesitan una cuenta?</summary><div class="al-accordion__body">No. Reciben un enlace por mensaje y confirman con un toque; no tienen que crear contraseña.</div></details>
+          <details><summary>¿Puedo cobrar con tarjeta?</summary><div class="al-accordion__body">Cuadra registra los pagos que recibes en efectivo o transferencia. No procesamos tarjetas.</div></details>
+          <details><summary>¿Y si el tianguis cambia de calle?</summary><div class="al-accordion__body">Duplicas el mapa, mueves los lugares y avisas a todos desde la misma pantalla.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section" id="final">
+      <div class="al-container">
+        <div class="cu-end">
+          <div class="al-stack" style="--al-gap:.75rem"><h2>Este sábado, un tianguis menos caótico</h2><p class="al-text-muted">Estamos abriendo el acceso por tandas. Apúntate y te avisamos.</p></div>
+          <button class="al-btn al-btn--primary al-btn--lg" data-al-open="#lista">Pedir acceso</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="al-modal" id="lista" aria-labelledby="lista-t">
+    <form id="acceso" data-al-validate novalidate method="dialog">
+      <div class="al-modal__header">
+        <h2 class="al-modal__title" id="lista-t">Pedir acceso a Cuadra</h2>
+        <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button>
+      </div>
+      <div class="al-modal__body al-stack" style="--al-gap:1rem">
+        <div class="al-field"><label class="al-label" for="a-nombre">Tu nombre</label><input class="al-input" id="a-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
+        <div class="al-field"><label class="al-label" for="a-correo">Correo</label><input class="al-input" id="a-correo" name="correo" type="email" autocomplete="email" required></div>
+        <div class="al-field"><label class="al-label" for="a-tianguis">¿Cuántos puestos tiene tu tianguis?</label>
+          <div class="al-select-wrap"><select class="al-select" id="a-tianguis" name="tamano" required><option value="">Elige un rango</option><option>Hasta 30</option><option>De 31 a 150</option><option>Más de 150</option></select></div></div>
+      </div>
+      <div class="al-modal__footer">
+        <button class="al-btn al-btn--ghost" type="button" data-al-close>Cancelar</button>
+        <button class="al-btn al-btn--primary" type="submit">Enviar solicitud</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="al-footer">
+    <div class="al-container">
+      <div class="al-footer__grid">
+        <div class="al-stack" style="--al-gap:.9rem"><a class="al-navbar__brand cu-brand" href="#inicio"><span class="cu-brand__sq"><al-icon name="grid" size="18"></al-icon></span>cuadra</a><p class="al-text-sm al-text-muted" style="max-width:30ch">Herramientas para quienes organizan el comercio de barrio.</p></div>
+        <div><div class="al-footer__title">Producto</div><ul class="al-footer__links" role="list"><li><a href="#funciones">Funciones</a></li><li><a href="#planes">Planes</a></li><li><a href="#preguntas">Preguntas</a></li></ul></div>
+        <div><div class="al-footer__title">Empezar</div><ul class="al-footer__links" role="list"><li><a href="#pasos">Cómo empezar</a></li><li><a href="#final">Pedir acceso</a></li></ul></div>
+        <div><div class="al-footer__title">Legal</div><ul class="al-footer__links" role="list"><li><a href="#inicio">Privacidad</a></li><li><a href="#inicio">Términos</a></li></ul></div>
+      </div>
+      <div class="al-footer__legal"><span>© 2026 Cuadra. Marca ficticia.</span><span>Plantilla de ejemplo de Julieta UI</span></div>
+    </div>
+  </footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../landing.html"><al-icon name="arrow-left" size="16"></al-icon>Landing de producto</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    // Demo de asistencia
+    const lista = document.getElementById("d-lista");
+    const cuenta = () => {
+      const boxes = [...lista.querySelectorAll("input")];
+      const n = boxes.filter((b) => b.checked).length, t = boxes.length, p = Math.round((n / t) * 100);
+      document.getElementById("d-conf").textContent = `${n} de ${t}`;
+      document.getElementById("d-libres").textContent = t - n;
+      const bar = document.getElementById("d-prog");
+      bar.style.setProperty("--value", p); bar.setAttribute("aria-valuenow", p);
+    };
+    lista.addEventListener("change", cuenta);
+    // Precios mensual / anual
+    const per = document.querySelectorAll(".cu-per");
+    document.querySelectorAll("input[name=ciclo]").forEach((r) => r.addEventListener("change", () => {
+      const anual = document.querySelector("input[name=ciclo]:checked").value === "anual";
+      document.querySelectorAll("[data-precio]").forEach((s) => {
+        const base = +s.dataset.precio; s.textContent = "$" + (anual ? Math.round(base * 10 / 12) : base);
+      });
+      per.forEach((p) => (p.textContent = "al mes" + (anual ? ", pago anual" : "")));
+    }));
+    // Solicitud de acceso
+    const form = document.getElementById("acceso");
+    document.querySelectorAll("[data-plan]").forEach((b) => b.addEventListener("click", () => { form.dataset.plan = b.dataset.plan; }));
+    form.addEventListener("al:valid", (e) => {
+      document.getElementById("lista").close();
+      Julieta.toast({ type: "success", title: "Solicitud enviada", text: `Te escribiremos a ${e.detail.data.correo} cuando abramos tu tanda.` });
+      form.reset();
+    });
+  </script>
+</body>
+</html>

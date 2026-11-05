@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precios · Cántaro</title>
+  <meta name="description" content="Cántaro: facturación y cobros para personas independientes y para equipos. Compara planes, resuelve dudas y empieza con garantía de 30 días.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/precios/cantaro-personal-vs-equipos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/precios/cantaro-personal-vs-equipos.html">
+  <meta property="og:title" content="Precios · Cántaro">
+  <meta property="og:description" content="Cántaro: facturación y cobros para personas independientes y para equipos. Compara planes, resuelve dudas y empieza con garantía de 30 días.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Precios · Cántaro">
+  <meta name="twitter:description" content="Cántaro: facturación y cobros para personas independientes y para equipos. Compara planes, resuelve dudas y empieza con garantía de 30 días.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Precios · Cántaro", "description": "Cántaro: facturación y cobros para personas independientes y para equipos. Compara planes, resuelve dudas y empieza con garantía de 30 días.", "url": "https://julietalibreria.github.io/src/pages/plantillas/precios/cantaro-personal-vs-equipos.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .ca-head { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-block: clamp(3rem, 7vw, 5rem) 2.5rem; }
+    .ca-head h1 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 15ch; }
+    .ca-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); max-width: 48ch; }
+    .ca-plans { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; margin-inline: auto; }
+    @media (max-width: 46rem) { .ca-plans { grid-template-columns: 1fr; max-width: 28rem; } }
+    .ca-note { min-height: 1.25rem; font-size: .8125rem; margin-top: -.75rem; color: var(--al-text-muted); }
+    .al-plan--featured .ca-note { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
+    .ca-seats { display: grid; gap: .35rem; }
+    .al-plan--featured .ca-seats .al-label { color: #fff; }
+    .ca-flag { position: absolute; top: -.8rem; right: 1.5rem; }
+    .ca-cmp { max-width: 56rem; margin-inline: auto; }
+    .ca-cmp .al-accordion__body { padding: 0; }
+    .ca-cmp td:not(:first-child), .ca-cmp th:not(:first-child) { text-align: center; }
+    .ca-cmp al-icon[name="check"] { color: var(--al-success); }
+    .ca-cmp al-icon[name="minus"] { color: var(--al-text-subtle); }
+    .ca-guar { max-width: 56rem; margin-inline: auto; display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; padding: 1.75rem; }
+    .ca-guar h2 { font-size: var(--al-text-2xl); letter-spacing: -0.03em; }
+    .ca-guar p { color: var(--al-text-muted); margin-top: .35rem; }
+    .ca-seal { width: 4rem; height: 4rem; border-radius: 50%; display: grid; place-items: center; background: var(--al-primary-soft); color: var(--al-primary-strong); }
+    @media (max-width: 46rem) { .ca-guar { grid-template-columns: 1fr; justify-items: start; } }
+    .ca-trust { max-width: 56rem; margin-inline: auto; }
+    .ca-example { text-align: center; color: var(--al-text-subtle); font-size: .8125rem; margin-top: 1rem; }
+    .ca-nav-links { display: flex; }
+    @media (max-width: 40rem) { .ca-nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#planes">Saltar a los planes</a>
+  <header class="al-navbar">
+    <a class="al-navbar__brand" href="#"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">cántaro</a>
+    <nav class="al-navbar__links ca-nav-links" aria-label="Principal"><a class="al-nav-link" href="#">Producto</a><a class="al-nav-link" href="#planes" aria-current="page">Precios</a><a class="al-nav-link" href="#preguntas">Preguntas</a></nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+    <a class="al-btn al-btn--primary al-btn--sm" href="#planes">Empezar</a>
+  </header>
+
+  <main>
+    <div class="al-container">
+      <div class="ca-head">
+        <span class="al-badge"><al-icon name="shield" size="14"></al-icon>Garantía de 30 días</span>
+        <h1>Cobra en orden, trabajes solo o en equipo</h1>
+        <p>Dos planes, sin letras chiquitas. Si no te convence en el primer mes, te devolvemos tu dinero.</p>
+      </div>
+
+      <section class="ca-plans" id="planes" aria-label="Planes">
+        <article class="al-plan">
+          <div><h2 class="al-plan__name">Personal</h2><p class="al-plan__desc">Para quien factura por su cuenta.</p></div>
+          <div class="al-plan__price"><span id="p-personal"></span><small>al mes</small></div>
+          <p class="ca-note">Para 1 persona. Más IVA.</p>
+          <ul class="al-plan__features" role="list">
+            <li><al-icon name="check"></al-icon>30 facturas CFDI al mes</li>
+            <li><al-icon name="check"></al-icon>Cobros con tarjeta y SPEI</li>
+            <li><al-icon name="check"></al-icon>Recordatorios de pago</li>
+            <li><al-icon name="check"></al-icon>Acceso gratuito para tu contador</li>
+          </ul>
+          <button class="al-btn al-btn--secondary al-btn--block" type="button" data-plan="Personal">Elegir Personal</button>
+        </article>
+
+        <article class="al-plan al-plan--featured">
+          <span class="al-badge al-badge--solid ca-flag" style="--_c:var(--al-cempasuchil-500);color:var(--al-cempasuchil-950)">Para crecer</span>
+          <div><h2 class="al-plan__name">Equipos</h2><p class="al-plan__desc">Para despachos y negocios con varias personas.</p></div>
+          <div class="al-plan__price"><span id="p-equipos"></span><small>al mes</small></div>
+          <p class="ca-note" id="n-equipos"></p>
+          <div class="ca-seats">
+            <label class="al-label" for="personas">Personas en tu equipo</label>
+            <div class="al-select-wrap"><select class="al-select" id="personas">
+              <option value="3">3 personas</option><option value="5" selected>5 personas</option><option value="10">10 personas</option><option value="20">20 personas</option>
+            </select></div>
+          </div>
+          <ul class="al-plan__features" role="list">
+            <li><al-icon name="check"></al-icon>Facturas ilimitadas</li>
+            <li><al-icon name="check"></al-icon>Roles, permisos y aprobación de gastos</li>
+            <li><al-icon name="check"></al-icon>Facturas recurrentes</li>
+            <li><al-icon name="check"></al-icon>Gestor de cuenta dedicado</li>
+          </ul>
+          <button class="al-btn al-btn--accent al-btn--block" type="button" data-plan="Equipos">Elegir Equipos</button>
+        </article>
+      </section>
+
+      <section class="al-section" aria-labelledby="comparar">
+        <div class="al-section-head"><h2 id="comparar">Compara a detalle</h2><p>Abre cada sección para ver qué incluye cada plan.</p></div>
+        <div class="ca-cmp">
+          <div class="al-accordion">
+            <details open><summary>Facturación</summary><div class="al-accordion__body ca-tbody"><div class="al-table-wrap"><table class="al-table"><thead><tr><th>Función</th><th>Personal</th><th>Equipos</th></tr></thead><tbody><tr><td>Facturas CFDI al mes</td><td>30</td><td>Ilimitadas</td></tr><tr><td>Cobros con tarjeta y SPEI</td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Recordatorios de pago</td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Facturas recurrentes</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr></tbody></table></div></div></details>
+            <details><summary>Colaboración</summary><div class="al-accordion__body ca-tbody"><div class="al-table-wrap"><table class="al-table"><thead><tr><th>Función</th><th>Personal</th><th>Equipos</th></tr></thead><tbody><tr><td>Personas</td><td>1</td><td>Desde 3</td></tr><tr><td>Roles y permisos</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Contador con acceso gratuito</td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Aprobación de gastos</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr></tbody></table></div></div></details>
+            <details><summary>Soporte y seguridad</summary><div class="al-accordion__body ca-tbody"><div class="al-table-wrap"><table class="al-table"><thead><tr><th>Función</th><th>Personal</th><th>Equipos</th></tr></thead><tbody><tr><td>Atención</td><td>Correo</td><td>Chat y teléfono</td></tr><tr><td>Respaldo diario</td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Registro de actividad</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr><tr><td>Gestor de cuenta dedicado</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr></tbody></table></div></div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="al-section" style="padding-top:0" aria-labelledby="garantia">
+        <div class="al-card ca-guar">
+          <span class="ca-seal"><al-icon name="shield" size="32"></al-icon></span>
+          <div><h2 id="garantia">Si no te sirve, te devolvemos todo</h2><p>Tienes 30 días para probar Cántaro. Si no es para ti, escríbenos y reembolsamos tu pago completo, sin preguntas.</p></div>
+          <button class="al-btn al-btn--secondary" type="button" id="garantia-btn">Ver cómo funciona</button>
+        </div>
+      </section>
+
+      <section class="al-section" style="padding-top:0" aria-labelledby="confianza">
+        <div class="ca-trust">
+          <div class="al-section-head"><h2 id="confianza">Personas que ya cobran con orden</h2></div>
+          <div class="al-grid al-grid--3">
+            <div class="al-stat"><span class="al-stat__label">Negocios activos</span><span class="al-stat__value">12,400</span></div>
+            <div class="al-stat"><span class="al-stat__label">Facturas emitidas</span><span class="al-stat__value">3.2 M</span></div>
+            <div class="al-stat"><span class="al-stat__label">Satisfacción</span><span class="al-stat__value">4.8 / 5</span></div>
+          </div>
+          <p class="ca-example">Cifras ficticias, solo de ejemplo para esta plantilla.</p>
+        </div>
+      </section>
+
+      <section class="al-section" style="padding-top:0" id="preguntas" aria-labelledby="faq">
+        <div class="al-container al-container--narrow" style="padding-inline:0">
+          <div class="al-section-head"><h2 id="faq">Preguntas frecuentes</h2></div>
+          <div class="al-accordion">
+            <details open><summary>¿Puedo pasar de Personal a Equipos?</summary><div class="al-accordion__body">Sí, en cualquier momento. Conservas tus facturas y clientes, y pagas solo la diferencia del periodo.</div></details>
+            <details><summary>¿Los precios incluyen IVA?</summary><div class="al-accordion__body">No. Se muestran sin IVA y verás el desglose antes de confirmar.</div></details>
+            <details><summary>¿Cómo funciona el precio por persona?</summary><div class="al-accordion__body">Equipos cuesta $249 al mes por persona. Si alguien se suma o se va, tu siguiente cobro se ajusta solo.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="al-section" style="padding-top:0" aria-label="Empieza hoy">
+        <div class="al-cta">
+          <h2>Ordena tus cobros desde hoy</h2>
+          <p>Elige tu plan y prueba Cántaro con 30 días de garantía.</p>
+          <a class="al-btn al-btn--accent al-btn--lg" href="#planes">Elegir mi plan</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="al-footer">
+    <div class="al-container">
+      <div class="al-footer__legal" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 Cántaro. Hecho en México.</span><span>Plantilla de ejemplo de Julieta UI</span></div>
+    </div>
+  </footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../precios.html"><al-icon name="arrow-left" size="16"></al-icon>Precios</a></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    const mxn = (n) => n.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
+    const PERSONAL = 149, POR_PERSONA = 249;
+    const sel = document.getElementById("personas");
+    function pintar() {
+      const n = Number(sel.value);
+      document.getElementById("p-personal").textContent = mxn(PERSONAL);
+      document.getElementById("p-equipos").textContent = mxn(n * POR_PERSONA);
+      document.getElementById("n-equipos").textContent = `${mxn(POR_PERSONA)} por persona × ${n}. Más IVA.`;
+    }
+    sel.addEventListener("change", pintar);
+    pintar();
+    document.querySelectorAll("[data-plan]").forEach((b) => b.addEventListener("click", () => {
+      const equipos = b.dataset.plan === "Equipos";
+      const n = Number(sel.value);
+      const texto = equipos ? `${n} personas por ${mxn(n * POR_PERSONA)} al mes más IVA.` : `${mxn(PERSONAL)} al mes más IVA.`;
+      Julieta.toast({ type: "success", title: `Elegiste ${b.dataset.plan}`, text: `${texto} Aquí iría tu flujo de pago.` });
+    }));
+    document.getElementById("garantia-btn").addEventListener("click", () => {
+      Julieta.toast({ type: "info", title: "Garantía de 30 días", text: "Escribe a ayuda@cantaro.example dentro de tus primeros 30 días y te reembolsamos." });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Julieta UI · overlays.css
+   Modal, drawer, tooltip y paleta de comandos. Usan <dialog> nativo.
+   ========================================================================== */
+
+dialog.al-modal, dialog.al-drawer, dialog.al-command {
+  padding: 0; border: 0; color: var(--al-text); background: var(--al-surface-raised);
+  max-width: 100vw; max-height: 100dvh; overflow: visible;
+}
+dialog.al-modal::backdrop, dialog.al-drawer::backdrop, dialog.al-command::backdrop {
+  background: color-mix(in oklab, var(--al-jacaranda-950) 45%, transparent);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  opacity: 0; transition: opacity var(--al-dur) var(--al-ease), display var(--al-dur) allow-discrete, overlay var(--al-dur) allow-discrete;
+}
+dialog[open]::backdrop { opacity: 1; }
+html:has(dialog.al-modal[open], dialog.al-drawer[open], dialog.al-command[open]) { overflow: hidden; }
+@starting-style { dialog[open]::backdrop { opacity: 0; } }
+
+/* ---------- Modal ---------- */
+dialog.al-modal {
+  width: min(32rem, calc(100vw - 2rem)); margin: auto; border-radius: var(--al-radius-xl);
+  box-shadow: var(--al-shadow-xl); border: 1px solid var(--al-border);
+  opacity: 0; transform: translateY(16px) scale(.96);
+  transition: opacity var(--al-dur) var(--al-ease), transform var(--al-dur-slow) var(--al-ease-spring), display var(--al-dur) allow-discrete, overlay var(--al-dur) allow-discrete;
+}
+dialog.al-modal[open] { opacity: 1; transform: none; }
+@starting-style { dialog.al-modal[open] { opacity: 0; transform: translateY(16px) scale(.96); } }
+dialog.al-modal--lg { width: min(48rem, calc(100vw - 2rem)); }
+.al-modal__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.6rem 1.75rem 0; }
+.al-modal__title { font-family: var(--al-font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; }
+.al-modal__body { padding: .75rem 1.75rem 1.5rem; color: var(--al-text-muted); display: grid; gap: .85rem; }
+.al-modal__footer { display: flex; justify-content: flex-end; gap: .6rem; padding: 1rem 1.75rem; border-top: 1px solid var(--al-border); background: var(--al-surface-sunken); border-radius: 0 0 var(--al-radius-xl) var(--al-radius-xl); }
+
+/* ---------- Drawer ---------- */
+dialog.al-drawer {
+  --_x: 100%;
+  position: fixed; inset: 0 0 0 auto; margin: 0; width: min(26rem, 100vw); height: 100dvh;
+  border-radius: var(--al-radius-xl) 0 0 var(--al-radius-xl); border-left: 1px solid var(--al-border); box-shadow: var(--al-shadow-xl);
+  display: none; flex-direction: column; transform: translateX(var(--_x));
+  transition: transform var(--al-dur-slow) var(--al-ease), display var(--al-dur-slow) allow-discrete, overlay var(--al-dur-slow) allow-discrete;
+}
+dialog.al-drawer[open] { display: flex; transform: none; }
+@starting-style { dialog.al-drawer[open] { transform: translateX(var(--_x)); } }
+dialog.al-drawer--left { --_x: -100%; inset: 0 auto 0 0; border-radius: 0 var(--al-radius-xl) var(--al-radius-xl) 0; border-left: 0; border-right: 1px solid var(--al-border); }
+.al-drawer__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--al-border); }
+.al-drawer__title { font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+.al-drawer__body { flex: 1; overflow: auto; padding: 1.5rem; }
+.al-drawer__footer { padding: 1rem 1.5rem; border-top: 1px solid var(--al-border); display: flex; gap: .6rem; justify-content: flex-end; }
+
+/* ---------- Tooltip (solo CSS): <button data-al-tip="Texto"> ----------
+   Está en display:none hasta que se muestra, para no generar scroll horizontal
+   cuando el disparador queda junto al borde de la pantalla. */
+[data-al-tip] { position: relative; }
+[data-al-tip]::after {
+  content: attr(data-al-tip); display: none; position: absolute; z-index: var(--al-z-dropdown); left: 50%; bottom: calc(100% + .55rem);
+  translate: -50% 0; padding: .4rem .7rem; border-radius: var(--al-radius-sm);
+  background: var(--al-piedra-900); color: #fff; font-family: var(--al-font-sans); font-size: .75rem; font-weight: 550; line-height: 1.3;
+  white-space: nowrap; box-shadow: var(--al-shadow-md); pointer-events: none;
+}
+:root[data-theme="dark"] [data-al-tip]::after { background: var(--al-piedra-100); color: var(--al-piedra-900); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) [data-al-tip]::after { background: var(--al-piedra-100); color: var(--al-piedra-900); } }
+[data-al-tip]:hover::after, [data-al-tip]:focus-visible::after { display: block; animation: al-tip-in var(--al-dur) var(--al-ease) 250ms both; }
+[data-al-tip-pos="bottom"]::after { bottom: auto; top: calc(100% + .55rem); }
+[data-al-tip-pos="right"]::after { left: calc(100% + .55rem); bottom: auto; top: 50%; translate: 0 -50%; }
+[data-al-tip-pos="left"]::after { left: auto; right: calc(100% + .55rem); bottom: auto; top: 50%; translate: 0 -50%; }
+@keyframes al-tip-in { from { opacity: 0; } }
+
+/* ---------- Paleta de comandos (la crea command.js) ---------- */
+dialog.al-command {
+  width: min(40rem, calc(100vw - 1.5rem)); margin: min(14vh, 8rem) auto auto; border-radius: var(--al-radius-xl);
+  border: 1px solid var(--al-border); box-shadow: var(--al-shadow-xl); overflow: hidden;
+  opacity: 0; transform: translateY(-10px) scale(.98);
+  transition: opacity var(--al-dur) var(--al-ease), transform var(--al-dur) var(--al-ease), display var(--al-dur) allow-discrete, overlay var(--al-dur) allow-discrete;
+}
+dialog.al-command[open] { opacity: 1; transform: none; }
+@starting-style { dialog.al-command[open] { opacity: 0; transform: translateY(-10px) scale(.98); } }
+.al-command__search { display: flex; align-items: center; gap: .8rem; padding: 0 1.25rem; border-bottom: 1px solid var(--al-border); color: var(--al-text-subtle); }
+.al-command__input { flex: 1; min-width: 0; height: 3.6rem; border: 0; background: transparent; outline: none; font-size: 1.0625rem; color: var(--al-text); }
+.al-command__input::placeholder { color: var(--al-text-subtle); }
+.al-command__list { max-height: min(26rem, 55dvh); overflow: auto; padding: .5rem; scroll-padding: .5rem; }
+.al-command__group { padding: .7rem .75rem .3rem; font-size: .75rem; font-weight: 700; color: var(--al-text-subtle); }
+.al-command__item {
+  display: flex; align-items: center; gap: .85rem; width: 100%; padding: .65rem .75rem; border-radius: var(--al-radius-md);
+  text-align: left; color: var(--al-text); text-decoration: none;
+}
+.al-command__item al-icon { color: var(--al-text-subtle); --al-icon-size: 1.2rem; }
+.al-command__item[aria-selected="true"] { background: var(--al-primary-soft); }
+.al-command__item[aria-selected="true"] al-icon { color: var(--al-primary); }
+.al-command__text { flex: 1; min-width: 0; display: grid; }
+.al-command__title { font-weight: 600; font-size: .9375rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.al-command__sub { font-size: .8125rem; color: var(--al-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.al-command__hint { font-size: .75rem; color: var(--al-text-subtle); }
+.al-command__empty { padding: 2.5rem 1rem; text-align: center; color: var(--al-text-muted); }
+.al-command__footer { display: flex; gap: 1.25rem; padding: .7rem 1.25rem; border-top: 1px solid var(--al-border); background: var(--al-surface-sunken); font-size: .75rem; color: var(--al-text-muted); }
+.al-command__footer span { display: inline-flex; align-items: center; gap: .4rem; }

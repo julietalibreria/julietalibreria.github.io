@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instalación · Julieta UI</title>
+  <meta name="description" content="Cómo instalar Julieta UI por CDN, usar módulos sueltos, personalizar tokens y publicar tu propia copia.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/instalacion.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/instalacion.html">
+  <meta property="og:title" content="Instalación · Julieta UI">
+  <meta property="og:description" content="Cómo instalar Julieta UI por CDN, usar módulos sueltos, personalizar tokens y publicar tu propia copia.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Instalación · Julieta UI">
+  <meta name="twitter:description" content="Cómo instalar Julieta UI por CDN, usar módulos sueltos, personalizar tokens y publicar tu propia copia.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Instalación · Julieta UI", "description": "Cómo instalar Julieta UI por CDN, usar módulos sueltos, personalizar tokens y publicar tu propia copia.", "url": "https://julietalibreria.github.io/src/pages/instalacion.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/instalacion.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Instalación</h1>
+      <p>Julieta UI son archivos estáticos: no hay nada que compilar. Sírvelos desde un CDN, pega dos líneas y listo.</p>
+    </header>
+
+    <ol class="d-steps" role="list">
+      <li>
+        <h3 id="paso-origen">Elige de dónde vienen los archivos</h3>
+        <p class="al-text-muted">Todos los fragmentos de esta página usan la URL que elijas aquí. Se queda guardada en tu navegador.</p>
+        <div data-cdn-picker data-editable class="al-stack" style="--al-gap:.9rem;margin-top:1rem"></div>
+      </li>
+      <li>
+        <h3 id="paso-pegar">Pega estas dos líneas en el &lt;head&gt;</h3>
+        <p class="al-text-muted">La hoja de estilos carga todos los módulos CSS. El script registra <code>&lt;al-icon&gt;</code>, el tema, las pestañas, los modales y el resto.</p>
+        <div class="al-code" data-lang="html" data-label="HTML"><pre><code>&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/julieta.css"&gt;
+&lt;script type="module" src="{{CDN}}/src/assets/scripts/julieta.js"&gt;&lt;/script&gt;</code></pre></div>
+      </li>
+      <li>
+        <h3 id="paso-usar">Usa las clases</h3>
+        <p class="al-text-muted">Los componentes se escriben con clases <code>al-*</code>. Los iconos, con <code>&lt;al-icon name="…"&gt;</code>.</p>
+        <div class="d-demo" data-al-demo data-stage="is-block" style="margin-top:1rem">
+          <div class="al-cluster">
+            <button class="al-btn al-btn--primary"><al-icon name="rocket"></al-icon>Lanzar proyecto</button>
+            <span class="al-badge al-badge--success al-badge--dot">En línea</span>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <h2 id="modulos">Módulos sueltos</h2>
+    <p>Si solo necesitas una parte, importa el archivo que te interesa. Cada módulo declara de cuáles depende. Casi todos necesitan <code>tokens.css</code>.</p>
+
+    <h3 id="modulos-css">CSS</h3>
+    <div class="al-table-wrap" style="margin-top:1rem"><table class="al-table al-table--hover d-api"><thead><tr><th>Archivo</th><th>Qué incluye</th><th>Necesita</th></tr></thead><tbody id="mod-css"></tbody></table></div>
+
+    <h3 id="modulos-js">JavaScript</h3>
+    <div class="al-table-wrap" style="margin-top:1rem"><table class="al-table al-table--hover d-api"><thead><tr><th>Archivo</th><th>Qué hace</th><th>Exporta</th></tr></thead><tbody id="mod-js"></tbody></table></div>
+
+    <div class="al-code" data-lang="js" data-label="Importar un solo módulo"><pre><code>import { toast } from "{{CDN}}/src/assets/scripts/toast.js";
+import { highlight } from "{{CDN}}/src/assets/scripts/code.js";
+
+toast.success("Copiado", "El fragmento está en tu portapapeles.");</code></pre></div>
+    <div class="d-note"><al-icon name="info"></al-icon><p>Los módulos JS cargan <code>icons.json</code> y el resto de datos desde su propia URL (<code>import.meta.url</code>), así que funcionan igual desde un CDN, desde un subdirectorio o desde tu servidor local.</p></div>
+
+    <h2 id="personalizar">Personalizar</h2>
+    <h3 id="tokens">Cambia los tokens</h3>
+    <p>Todo el diseño sale de variables CSS con prefijo <code>--al-</code>. Sobrescríbelas en tu propia hoja: como Julieta usa <code>@layer</code>, tus reglas ganan sin <code>!important</code>.</p>
+    <div class="al-code" data-lang="css" data-label="mi-tema.css"><pre><code>:root {
+  --al-jacaranda-600: #0f766e;   /* tu color de marca */
+  --al-radius-full: 12px;        /* botones menos redondos */
+  --al-font-display: "Fraunces", serif;
+}</code></pre></div>
+
+    <h3 id="tema">Tema claro y oscuro</h3>
+    <p>Sigue al sistema por defecto. Para ofrecer un interruptor, añade un botón con <code>data-al-theme-toggle</code>; la preferencia se guarda sola. Para evitar el parpadeo al cargar, copia este script antes de la hoja de estilos:</p>
+    <div class="al-code" data-lang="html" data-label="Antes del primer pintado"><pre><code>&lt;script&gt;
+  try { var m = localStorage.getItem("julieta-theme");
+    if (m &amp;&amp; m !== "system") document.documentElement.setAttribute("data-theme", m);
+  } catch (e) {}
+&lt;/script&gt;</code></pre></div>
+    <div class="d-demo" data-al-demo>
+      <button class="al-btn al-btn--secondary" data-al-theme-toggle><al-icon name="moon"></al-icon>Cambiar tema</button>
+      <div class="al-btn-group" role="group" aria-label="Tema">
+        <button class="al-btn al-btn--secondary al-btn--sm" data-al-theme-set="light">Claro</button>
+        <button class="al-btn al-btn--secondary al-btn--sm" data-al-theme-set="system">Sistema</button>
+        <button class="al-btn al-btn--secondary al-btn--sm" data-al-theme-set="dark">Oscuro</button>
+      </div>
+    </div>
+
+    <h3 id="fuentes">Fuentes</h3>
+    <p><code>julieta.css</code> pide Bricolage Grotesque, Hanken Grotesk y JetBrains Mono a Google Fonts. Si prefieres alojarlas tú, usa <code>tokens.css</code> y <code>base.css</code> sueltos y declara tus propios <code>@font-face</code>.</p>
+
+    <h2 id="frameworks">Con frameworks</h2>
+    <p>Julieta solo necesita clases y un script de módulo, así que funciona en cualquier stack. Para React, Vue, Svelte o Astro, carga las dos líneas en el HTML base y escribe las clases como siempre.</p>
+    <div class="al-code" data-lang="js" data-label="React"><pre><code>export function Guardar() {
+  return (
+    &lt;button className="al-btn al-btn--primary" onClick={() =&gt; Julieta.toast.success("Guardado")}&gt;
+      Guardar cambios
+    &lt;/button&gt;
+  );
+}</code></pre></div>
+
+    <h2 id="api">API de JavaScript</h2>
+    <p>El objeto <code>window.Julieta</code> existe en cuanto carga <code>julieta.js</code>. También se anuncia con el evento <code>al:ready</code>.</p>
+    <div class="al-table-wrap" style="margin-top:1rem"><table class="al-table d-api">
+      <thead><tr><th>Método</th><th>Para qué sirve</th></tr></thead>
+      <tbody>
+        <tr><td><code>Julieta.toast({ title, text, type, duration, action })</code></td><td>Muestra una notificación. Atajos: <code>toast.success</code>, <code>.error</code>, <code>.warning</code>, <code>.info</code>.</td></tr>
+        <tr><td><code>Julieta.confirm({ title, text, danger })</code></td><td>Diálogo de confirmación; devuelve una promesa <code>true</code> o <code>false</code>.</td></tr>
+        <tr><td><code>Julieta.modal.open(sel)</code> / <code>.close(sel)</code></td><td>Abre o cierra un <code>&lt;dialog&gt;</code>.</td></tr>
+        <tr><td><code>Julieta.theme.set("light" | "dark" | "system")</code></td><td>Cambia el tema y lo guarda.</td></tr>
+        <tr><td><code>Julieta.command.open(texto)</code></td><td>Abre la paleta de comandos.</td></tr>
+        <tr><td><code>Julieta.chart(el, config)</code></td><td>Dibuja una gráfica en un elemento.</td></tr>
+        <tr><td><code>Julieta.petals(canvas, { density })</code></td><td>Inicia los pétalos en un canvas.</td></tr>
+        <tr><td><code>Julieta.copy(texto)</code></td><td>Copia al portapapeles; devuelve una promesa.</td></tr>
+        <tr><td><code>Julieta.catalog.build()</code></td><td>Devuelve el catálogo completo de recursos.</td></tr>
+        <tr><td><code>Julieta.init(raíz)</code></td><td>Activa componentes en HTML que insertaste después de cargar la página.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="publicar">Publicar tu propia copia</h2>
+    <p>Julieta es una carpeta de archivos estáticos, así que cualquier servicio que los sirva con los tipos MIME correctos funciona como CDN. Las dos opciones más rápidas:</p>
+    <h3 id="publicar-github">GitHub Pages</h3>
+    <ol>
+      <li>Sube este proyecto al repositorio <code>julietalibreria.github.io</code>.</li>
+      <li>Activa GitHub Pages en la rama principal.</li>
+      <li>Usa <code>https://julietalibreria.github.io</code> como URL base.</li>
+    </ol>
+    <h3 id="publicar-jsdelivr">jsDelivr con GitHub</h3>
+    <div class="al-code" data-lang="text" data-label="URL base alternativa"><pre><code>https://cdn.jsdelivr.net/gh/julietalibreria/julietalibreria.github.io@1.0.0</code></pre></div>
+    <div class="d-note"><al-icon name="alert-triangle"></al-icon><p>Para jsDelivr crea antes la etiqueta de versión <code>v1.0.0</code>. Para probar en local, sirve la carpeta con cualquier servidor estático (por ejemplo <code>npx serve</code>); abrir los archivos con <code>file://</code> no funciona porque los módulos ES y <code>fetch</code> requieren HTTP.</p></div>
+
+    <h2 id="compatibilidad">Compatibilidad</h2>
+    <p>Julieta usa CSS moderno a propósito: <code>light-dark()</code>, <code>color-mix()</code>, <code>@layer</code>, <code>:has()</code> y <code>@starting-style</code>. Funciona en las versiones actuales de los navegadores principales.</p>
+    <div class="al-table-wrap" style="margin-top:1rem"><table class="al-table">
+      <thead><tr><th>Navegador</th><th>Versión mínima</th></tr></thead>
+      <tbody>
+        <tr><td>Chrome y Edge</td><td>123</td></tr>
+        <tr><td>Safari</td><td>17.5</td></tr>
+        <tr><td>Firefox</td><td>129</td></tr>
+      </tbody>
+    </table></div>
+  </main>
+
+  <script type="module">
+    import { julieta } from "../assets/scripts/docs.js";
+    import { h } from "../assets/scripts/core.js";
+    const man = await julieta.loadJSON("manifest");
+    document.getElementById("mod-css").replaceChildren(...man.modules.styles.map((m) => h("tr", {},
+      h("td", {}, h("code", {}, `${m.name}.css`)), h("td", {}, m.description), h("td", { class: "al-text-muted" }, m.requires.length ? m.requires.join(", ") : "—"))));
+    document.getElementById("mod-js").replaceChildren(...man.modules.scripts.map((m) => h("tr", {},
+      h("td", {}, h("code", {}, `${m.name}.js`)), h("td", {}, m.description), h("td", { class: "al-text-muted" }, h("code", {}, m.exports)))));
+  </script>
+</body>
+</html>

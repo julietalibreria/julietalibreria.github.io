@@ -1,0 +1,17 @@
+{
+  "name": "julieta-ui",
+  "version": "1.0.0",
+  "description": "Interfaces con alma: librería modular de componentes, iconos, colores, tipografías y plantillas que se instala por CDN.",
+  "type": "module",
+  "homepage": "https://julietalibreria.github.io",
+  "repository": { "type": "git", "url": "git+https://github.com/julietalibreria/julietalibreria.github.io.git" },
+  "main": "src/assets/scripts/julieta.js",
+  "module": "src/assets/scripts/julieta.js",
+  "style": "src/assets/styles/julieta.css",
+  "jsdelivr": "src/assets/scripts/julieta.js",
+  "unpkg": "src/assets/scripts/julieta.js",
+  "files": ["index.html", "src"],
+  "sideEffects": ["**/*.css", "src/assets/scripts/julieta.js"],
+  "keywords": ["ui", "css", "components", "icons", "design-system", "cdn", "es-modules", "web-components"],
+  "license": "MIT"
+}

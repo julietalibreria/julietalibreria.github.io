@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Julieta UI · julieta.css  (punto de entrada)
+   Importa los módulos en capas (@layer) para que tus estilos siempre
+   ganen sin guerras de especificidad. También puedes importar cada módulo
+   por separado desde el CDN.
+   ========================================================================== */
+
+@layer al.tokens, al.base, al.layout, al.components, al.patterns, al.utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400..700&display=swap");
+
+@import url("./tokens.css")       layer(al.tokens);
+@import url("./base.css")         layer(al.base);
+@import url("./layout.css")       layer(al.layout);
+@import url("./buttons.css")      layer(al.components);
+@import url("./forms.css")        layer(al.components);
+@import url("./feedback.css")     layer(al.components);
+@import url("./data-display.css") layer(al.components);
+@import url("./navigation.css")   layer(al.components);
+@import url("./overlays.css")     layer(al.components);
+@import url("./patterns.css")     layer(al.patterns);
+@import url("./utilities.css")    layer(al.utilities);

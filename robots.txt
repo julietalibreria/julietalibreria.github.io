@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julietalibreria.github.io/sitemap.xml

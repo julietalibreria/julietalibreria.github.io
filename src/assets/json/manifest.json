@@ -1,0 +1,256 @@
+{
+  "name": "Julieta UI",
+  "version": "1.0.0",
+  "description": "Librería de interfaz modular por CDN con tokens, componentes, iconos, tipografías y plantillas.",
+  "entry": {
+    "css": "src/assets/styles/julieta.css",
+    "js": "src/assets/scripts/julieta.js"
+  },
+  "modules": {
+    "styles": [
+      {
+        "name": "tokens",
+        "description": "Variables CSS: colores, tipografía, espacio, radios, sombras y movimiento.",
+        "requires": []
+      },
+      {
+        "name": "base",
+        "description": "Reset moderno, tipografía de elementos, foco visible y scrollbars.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "layout",
+        "description": "Contenedores, pila, rejilla, secciones, prosa y el elemento <al-icon>.",
+        "requires": [
+          "tokens",
+          "base"
+        ]
+      },
+      {
+        "name": "buttons",
+        "description": "Botones, grupos, enlaces animados, insignias, chips y teclas.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "forms",
+        "description": "Campos, selects, casillas, radios, interruptores, rangos, dropzone.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "feedback",
+        "description": "Alertas, toasts, progreso, anillo, spinner y esqueletos.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "data-display",
+        "description": "Tarjetas, avatares, tablas, métricas, listas, acordeón, código y estados vacíos.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "navigation",
+        "description": "Navbar, pestañas, migas, paginación, pasos, menús, barra lateral e índice.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "overlays",
+        "description": "Modal, drawer, tooltip y paleta de comandos.",
+        "requires": [
+          "tokens"
+        ]
+      },
+      {
+        "name": "patterns",
+        "description": "Héroe, planes, CTA, pie, acceso, estructura de app y gráficas.",
+        "requires": [
+          "tokens",
+          "buttons"
+        ]
+      },
+      {
+        "name": "utilities",
+        "description": "Utilidades de un solo propósito (espaciado, texto, color, sombra).",
+        "requires": [
+          "tokens"
+        ]
+      }
+    ],
+    "scripts": [
+      {
+        "name": "core",
+        "description": "Utilidades: rutas desde import.meta.url, loadJSON, h(), on(), copyText…",
+        "exports": "loadJSON, asset, fromRoot, h, $, $$, on, copyText"
+      },
+      {
+        "name": "theme",
+        "description": "Tema claro, oscuro o del sistema, con preferencia guardada.",
+        "exports": "initTheme, setTheme, getMode"
+      },
+      {
+        "name": "icons",
+        "description": "Elemento <al-icon> alimentado por icons.json.",
+        "exports": "defineIcon, loadIcons, iconSVG"
+      },
+      {
+        "name": "toast",
+        "description": "Notificaciones temporales.",
+        "exports": "toast"
+      },
+      {
+        "name": "overlays",
+        "description": "Apertura y cierre de modales y drawers, y confirmDialog().",
+        "exports": "initOverlays, openDialog, closeDialog, confirmDialog"
+      },
+      {
+        "name": "tabs",
+        "description": "Pestañas accesibles con teclado.",
+        "exports": "initTabs"
+      },
+      {
+        "name": "dropdown",
+        "description": "Menús desplegables con teclado completo.",
+        "exports": "initDropdowns"
+      },
+      {
+        "name": "forms",
+        "description": "Relleno del rango, contador, dropzone, contraseña y validación.",
+        "exports": "initForms"
+      },
+      {
+        "name": "table",
+        "description": "Tablas ordenables por columna y filtrables en vivo.",
+        "exports": "initTables, sortTable"
+      },
+      {
+        "name": "code",
+        "description": "Resaltado de sintaxis ligero y botón de copiar.",
+        "exports": "initCode, highlight, codeBlock"
+      },
+      {
+        "name": "catalog",
+        "description": "Catálogo unificado de recursos y búsqueda sin acentos.",
+        "exports": "buildCatalog, search, TYPES"
+      },
+      {
+        "name": "command",
+        "description": "Paleta de comandos (Ctrl/⌘ + K).",
+        "exports": "initCommand, openCommand"
+      },
+      {
+        "name": "charts",
+        "description": "Gráficas SVG de línea, área, barras y sparkline.",
+        "exports": "chart, initCharts"
+      },
+      {
+        "name": "petals",
+        "description": "Pétalos de jacaranda animados en canvas.",
+        "exports": "petals, initPetals"
+      },
+      {
+        "name": "julieta",
+        "description": "Punto de entrada: carga todo, se inicia solo y expone window.Julieta.",
+        "exports": "Julieta (default)"
+      }
+    ]
+  },
+  "images": [
+    {
+      "path": "src/assets/images/mark.svg",
+      "title": "Marca de Julieta UI",
+      "description": "Perrito en morado jacaranda",
+      "tags": [
+        "logo",
+        "marca",
+        "perro"
+      ]
+    },
+    {
+      "path": "src/assets/images/mark-mono.svg",
+      "title": "Marca monocroma",
+      "description": "Versión de un solo color que hereda currentColor",
+      "tags": [
+        "logo",
+        "monocromo"
+      ]
+    },
+    {
+      "path": "src/assets/images/favicon.svg",
+      "title": "Favicon",
+      "description": "Icono de pestaña sobre fondo jacaranda",
+      "tags": [
+        "favicon",
+        "icono"
+      ]
+    },
+    {
+      "path": "src/assets/images/og-image.svg",
+      "title": "Imagen para redes",
+      "description": "1200×630 para Open Graph",
+      "tags": [
+        "og",
+        "social",
+        "compartir"
+      ]
+    },
+    {
+      "path": "src/assets/images/empty-state.svg",
+      "title": "Ilustración: estado vacío",
+      "description": "Caja con pétalos para pantallas sin datos",
+      "tags": [
+        "ilustracion",
+        "vacio"
+      ]
+    },
+    {
+      "path": "src/assets/images/cover-jacaranda.svg",
+      "title": "Portada Jacaranda",
+      "description": "Fondo violeta con pétalos, 800×500",
+      "tags": [
+        "portada",
+        "cover",
+        "tarjeta"
+      ]
+    },
+    {
+      "path": "src/assets/images/cover-atardecer.svg",
+      "title": "Portada Atardecer",
+      "description": "Fondo rosa y dorado con pétalos",
+      "tags": [
+        "portada",
+        "cover",
+        "tarjeta"
+      ]
+    },
+    {
+      "path": "src/assets/images/cover-milpa.svg",
+      "title": "Portada Milpa",
+      "description": "Fondo verde y azul con pétalos",
+      "tags": [
+        "portada",
+        "cover",
+        "tarjeta"
+      ]
+    },
+    {
+      "path": "src/assets/images/pattern-petals.svg",
+      "title": "Patrón de pétalos",
+      "description": "Mosaico repetible de 120×120",
+      "tags": [
+        "patron",
+        "fondo",
+        "tile"
+      ]
+    }
+  ]
+}

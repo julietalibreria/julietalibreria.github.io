@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Julieta UI · feedback.css
+   Alertas, toasts, progreso, spinner, skeleton y anillo de progreso.
+   ========================================================================== */
+
+.al-alert {
+  --_c: var(--al-info);
+  display: grid; grid-template-columns: auto 1fr auto; gap: .85rem; align-items: start;
+  padding: 1rem 1.1rem; border-radius: var(--al-radius-lg);
+  background: color-mix(in oklab, var(--_c) 9%, var(--al-surface));
+  border: 1px solid color-mix(in oklab, var(--_c) 28%, var(--al-border));
+  font-size: .9375rem;
+}
+.al-alert--success { --_c: var(--al-success); }
+.al-alert--warning { --_c: var(--al-warning); }
+.al-alert--danger  { --_c: var(--al-danger); }
+.al-alert--primary { --_c: var(--al-primary); }
+.al-alert > al-icon { color: var(--_c); --al-icon-size: 1.35rem; margin-top: .1rem; }
+.al-alert__title { font-weight: 700; margin-bottom: .15rem; }
+.al-alert__text { color: var(--al-text-muted); }
+.al-alert__close { color: var(--al-text-subtle); border-radius: 50%; width: 1.75rem; height: 1.75rem; display: grid; place-items: center; margin: -.25rem -.3rem 0 0; }
+.al-alert__close:hover { background: color-mix(in oklab, var(--_c) 14%, transparent); color: var(--al-text); }
+
+/* Barra de progreso: style="--value:64" */
+.al-progress {
+  --value: 0; --_h: .55rem;
+  height: var(--_h); border-radius: var(--al-radius-full); background: var(--al-bg-subtle); overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--al-border);
+}
+.al-progress > span {
+  display: block; height: 100%; width: calc(var(--value) * 1%); border-radius: inherit;
+  background: linear-gradient(90deg, var(--al-jacaranda-500), var(--al-rosa-400));
+  transition: width var(--al-dur-slow) var(--al-ease);
+}
+.al-progress--lg { --_h: .9rem; }
+.al-progress--success > span { background: var(--al-agave-500); }
+.al-progress--warning > span { background: var(--al-cempasuchil-400); }
+.al-progress--indeterminate > span { width: 40%; animation: al-indeterminate 1.4s var(--al-ease-in-out) infinite; }
+@keyframes al-indeterminate { from { translate: -100%; } to { translate: 250%; } }
+
+/* Anillo de progreso: <div class="al-ring" style="--value:72"><span>72%</span></div> */
+.al-ring { --value: 0; --size: 5.5rem; --thick: 9px; position: relative; display: grid; place-items: center; width: var(--size); aspect-ratio: 1; font-family: var(--al-font-display); font-weight: 700; font-size: calc(var(--size) * .24); font-variant-numeric: tabular-nums; }
+.al-ring::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--al-jacaranda-500), var(--al-rosa-400) calc(var(--value) * 1%), var(--al-border) 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - var(--thick) - 1px), #000 calc(100% - var(--thick)));
+}
+
+/* Spinner */
+.al-spinner {
+  --_s: 1.5rem; display: inline-block; width: var(--_s); height: var(--_s);
+  border: 2.5px solid var(--al-border-strong); border-top-color: var(--al-primary); border-radius: 50%;
+  animation: al-spin .75s linear infinite; vertical-align: middle;
+}
+.al-spinner--lg { --_s: 2.5rem; border-width: 3.5px; }
+
+/* Skeleton */
+.al-skeleton {
+  display: block; min-height: 1em; border-radius: var(--al-radius-sm);
+  background: linear-gradient(100deg, var(--al-bg-subtle) 30%, color-mix(in oklab, var(--al-bg-subtle) 60%, var(--al-surface)) 50%, var(--al-bg-subtle) 70%) 0 0 / 250% 100%;
+  animation: al-shimmer 1.6s linear infinite;
+}
+.al-skeleton--circle { border-radius: 50%; aspect-ratio: 1; }
+.al-skeleton--text { height: .9em; margin-block: .45em; }
+@keyframes al-shimmer { to { background-position: -150% 0; } }
+
+/* Toasts (los crea Julieta.toast()) */
+.al-toast-region {
+  position: fixed; inset: auto 1rem 1rem auto; z-index: var(--al-z-toast);
+  display: flex; flex-direction: column-reverse; gap: .75rem; width: min(24rem, calc(100vw - 2rem));
+  pointer-events: none;
+}
+.al-toast-region[data-pos="top"] { inset: 1rem 1rem auto auto; flex-direction: column; }
+.al-toast {
+  --_c: var(--al-primary);
+  pointer-events: auto; position: relative; overflow: hidden;
+  display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: start;
+  padding: .95rem 1rem; border-radius: var(--al-radius-lg);
+  background: var(--al-surface-raised); border: 1px solid var(--al-border); box-shadow: var(--al-shadow-lg);
+  animation: al-toast-in var(--al-dur-slow) var(--al-ease-spring);
+}
+.al-toast.is-leaving { animation: al-toast-out var(--al-dur) var(--al-ease) forwards; }
+.al-toast--success { --_c: var(--al-success); }
+.al-toast--warning { --_c: var(--al-warning); }
+.al-toast--danger  { --_c: var(--al-danger); }
+.al-toast--info    { --_c: var(--al-info); }
+.al-toast__icon { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: color-mix(in oklab, var(--_c) 14%, transparent); color: var(--_c); --al-icon-size: 1.1rem; }
+.al-toast__title { font-weight: 700; font-size: .9375rem; line-height: 1.3; }
+.al-toast__text { font-size: .875rem; color: var(--al-text-muted); margin-top: .1rem; }
+.al-toast__close { color: var(--al-text-subtle); width: 1.6rem; height: 1.6rem; display: grid; place-items: center; border-radius: 50%; }
+.al-toast__close:hover { background: var(--al-bg-subtle); color: var(--al-text); }
+.al-toast__timer { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--_c); transform-origin: left; animation: al-timer var(--_dur, 4s) linear forwards; opacity: .7; }
+.al-toast:hover .al-toast__timer { animation-play-state: paused; }
+@keyframes al-toast-in  { from { opacity: 0; transform: translateY(1rem) scale(.96); } }
+@keyframes al-toast-out { to   { opacity: 0; transform: translateX(1.5rem) scale(.96); } }
+@keyframes al-timer     { to   { transform: scaleX(0); } }

@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Julieta UI · layout.css
+   Contenedores y primitivas de composición.
+   ========================================================================== */
+
+.al-container {
+  width: 100%;
+  max-width: var(--al-container);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+.al-container--narrow { max-width: var(--al-container-narrow); }
+.al-container--wide   { max-width: 92rem; }
+
+/* Pila vertical: la separación se controla con --al-gap */
+.al-stack { display: flex; flex-direction: column; gap: var(--al-gap, var(--al-space-4)); }
+.al-stack > * { margin: 0; }
+
+/* Grupo horizontal que envuelve */
+.al-cluster {
+  display: flex; flex-wrap: wrap; align-items: var(--al-align, center);
+  gap: var(--al-gap, var(--al-space-3));
+}
+
+/* Rejilla automática: tantas columnas como quepan con --al-min de ancho mínimo */
+.al-grid {
+  display: grid;
+  gap: var(--al-gap, var(--al-space-6));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--al-min, 16rem)), 1fr));
+}
+.al-grid > *, .al-split > *, .al-stack > * { min-width: 0; }
+.al-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.al-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.al-grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 62rem) { .al-grid--4 { grid-template-columns: repeat(2, 1fr); } .al-grid--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 40rem) { .al-grid--2, .al-grid--3, .al-grid--4 { grid-template-columns: 1fr; } }
+
+/* Dos columnas con proporción configurable */
+.al-split {
+  display: grid; gap: var(--al-gap, var(--al-space-12)); align-items: center;
+  grid-template-columns: var(--al-cols, 1fr 1fr);
+}
+@media (max-width: 52rem) { .al-split { grid-template-columns: 1fr; } }
+
+.al-section { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.al-section--tight { padding-block: clamp(2rem, 5vw, 4rem); }
+.al-section--tint { background: var(--al-bg-subtle); }
+
+.al-center { display: grid; place-items: center; }
+.al-text-center { text-align: center; }
+
+/* Texto largo con ritmo tipográfico */
+.al-prose { max-width: 68ch; }
+.al-prose > * + * { margin-top: 1.1em; }
+.al-prose > h2 { margin-top: 2.2em; }
+.al-prose > h3 { margin-top: 1.8em; }
+.al-prose ul, .al-prose ol { padding-left: 1.3em; }
+.al-prose li + li { margin-top: .4em; }
+.al-prose a { color: var(--al-primary); text-decoration-color: color-mix(in oklab, var(--al-primary) 40%, transparent); }
+.al-prose a:hover { text-decoration-color: currentColor; }
+
+/* Icono (elemento <al-icon>) */
+al-icon {
+  --_s: var(--al-icon-size, 1.25em);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: var(--_s); height: var(--_s); flex: none; vertical-align: -0.2em;
+  color: inherit;
+}
+al-icon > svg {
+  width: 100%; height: 100%; fill: none; stroke: currentColor;
+  stroke-width: var(--al-icon-stroke, 1.75); stroke-linecap: round; stroke-linejoin: round;
+}

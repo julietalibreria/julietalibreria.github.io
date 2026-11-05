@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundamentos · Julieta UI</title>
+  <meta name="description" content="Tokens de Julieta UI: espacio, radios, sombras, movimiento y capas, con valores en vivo.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/fundamentos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/fundamentos.html">
+  <meta property="og:title" content="Fundamentos · Julieta UI">
+  <meta property="og:description" content="Tokens de Julieta UI: espacio, radios, sombras, movimiento y capas, con valores en vivo.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fundamentos · Julieta UI">
+  <meta name="twitter:description" content="Tokens de Julieta UI: espacio, radios, sombras, movimiento y capas, con valores en vivo.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Fundamentos · Julieta UI", "description": "Tokens de Julieta UI: espacio, radios, sombras, movimiento y capas, con valores en vivo.", "url": "https://julietalibreria.github.io/src/pages/fundamentos.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/fundamentos.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Fundamentos</h1>
+      <p>Cada decisión de diseño es una variable CSS. Haz clic en cualquier token para copiar su <code>var()</code>. Los valores se leen en vivo de <code>tokens.css</code>.</p>
+    </header>
+
+    <div id="groups"></div>
+
+    <h2 id="espaciado-en-uso">Espacio en la práctica</h2>
+    <p>Las utilidades de layout usan la escala de espacio. <code>al-stack</code> separa en vertical y <code>al-cluster</code> en horizontal; ambos aceptan <code>--al-gap</code>.</p>
+    <div class="d-demo" data-al-demo data-stage="is-block">
+      <div class="al-stack" style="--al-gap: var(--al-space-3)">
+        <div class="al-card al-card--flat"><div class="al-card__body">Un bloque</div></div>
+        <div class="al-card al-card--flat"><div class="al-card__body">Otro bloque, a 12 px (<code>--al-space-3</code>)</div></div>
+        <div class="al-cluster" style="--al-gap: var(--al-space-6)">
+          <span class="al-badge">Etiqueta</span><span class="al-badge al-badge--info">separada</span><span class="al-badge al-badge--success">24 px</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="accesibilidad">Accesibilidad integrada</h2>
+    <p>Julieta está pensada para que lo accesible sea lo fácil:</p>
+    <ul>
+      <li>Anillo de foco visible en todo elemento interactivo (<code>:focus-visible</code>).</li>
+      <li>Los componentes dinámicos siguen los patrones WAI-ARIA: roles, estados y teclado.</li>
+      <li><code>prefers-reduced-motion</code> reduce todas las duraciones a 1 ms y detiene los pétalos.</li>
+      <li>Los pares de color de texto y fondo cumplen contraste AA en ambos temas (compruébalo en <a class="al-link" href="colores.html#contraste">Colores</a>).</li>
+    </ul>
+  </main>
+
+  <script type="module">
+    import { julieta, refreshToc } from "../assets/scripts/docs.js";
+    import { h, $ } from "../assets/scripts/core.js";
+
+    const { tokens } = await julieta.catalog.build();
+    const root = document.documentElement;
+    const val = (name) => getComputedStyle(root).getPropertyValue(name).trim();
+
+    function visual(kind, name) {
+      if (kind === "space") return h("i", { class: "d-vis-space", style: `width:var(${name})` });
+      if (kind === "radius") return h("i", { class: "d-vis-radius", style: `border-top-left-radius:var(${name})` });
+      if (kind === "shadow") return h("i", { class: "d-vis-shadow", style: `box-shadow:var(${name})` });
+      if (kind === "motion" && /ease/.test(name)) return h("span", { class: "d-vis-motion", style: `--_ease:var(${name})` }, h("i"));
+      return null;
+    }
+
+    const host = $("#groups");
+    for (const g of tokens.groups) {
+      const sec = h("section", {},
+        h("h2", { id: g.id }, g.title),
+        h("p", {}, g.description),
+        h("div", { class: "d-tokens" }, g.tokens.map((t) => {
+          const v = val(t.name).replace(/\s+/g, " ");
+          return h("button", { class: "d-token", type: "button", title: `Copiar var(${t.name})`,
+            async onclick() { const ok = await julieta.copy(`var(${t.name})`); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Copiado" : "No se pudo copiar", text: `var(${t.name})`, duration: 1800 }); } },
+            h("code", {}, t.name),
+            h("span", { class: "d-token__vis" }, visual(g.kind, t.name), t.note && h("span", { class: "d-token__note" }, t.note)),
+            h("span", { class: "d-token__val", title: v }, v));
+        })));
+      host.append(sec);
+    }
+    julieta.init(host);
+    refreshToc();
+    if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+  </script>
+</body>
+</html>

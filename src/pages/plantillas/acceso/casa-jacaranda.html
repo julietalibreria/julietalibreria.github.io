@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso · Casa Jacaranda</title>
+  <meta name="description" content="Inicia sesión o crea tu cuenta.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/acceso/casa-jacaranda.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/acceso/casa-jacaranda.html">
+  <meta property="og:title" content="Acceso · Casa Jacaranda">
+  <meta property="og:description" content="Inicia sesión o crea tu cuenta.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acceso · Casa Jacaranda">
+  <meta name="twitter:description" content="Inicia sesión o crea tu cuenta.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Acceso · Casa Jacaranda", "description": "Inicia sesión o crea tu cuenta.", "url": "https://julietalibreria.github.io/src/pages/plantillas/acceso/casa-jacaranda.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .ac-art__quote { font-family: var(--al-font-display); font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.035em; font-weight: 600; max-width: 18ch; color: #fff; }
+    .ac-art__who { display: flex; align-items: center; gap: .8rem; color: color-mix(in oklab, #fff 75%, var(--al-jacaranda-300)); font-size: .9375rem; }
+    .ac-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: inherit; text-decoration: none; }
+    .ac-top { position: absolute; top: 1.25rem; right: 1.25rem; }
+    .ac-title { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1.05; }
+    .ac-sso { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    .ac-meta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .al-auth__form { position: relative; }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#formulario">Saltar al formulario</a>
+  <div class="al-auth">
+    <aside class="al-auth__art" aria-hidden="false">
+      <canvas class="al-petals" data-al-petals data-density=".9"></canvas>
+      <a class="ac-brand" href="#" style="color:#fff"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">casa jacaranda</a>
+      <figure style="margin:0;display:grid;gap:1.5rem">
+        <blockquote class="ac-art__quote" style="margin:0">“Cada pieza llega con una nota escrita a mano.”</blockquote>
+        <figcaption class="ac-art__who"><span class="al-avatar al-avatar--sol" aria-hidden="true">LP</span><span>Lucía Paredes, clienta desde 2023</span></figcaption>
+      </figure>
+    </aside>
+
+    <section class="al-auth__form" id="formulario">
+      <div class="ac-top"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button></div>
+      <div class="al-auth__box">
+        <div data-al-tabs>
+          <div class="al-tabs" role="tablist" aria-label="Acceso">
+            <button class="al-tab" data-target="entrar" aria-selected="true">Iniciar sesión</button>
+            <button class="al-tab" data-target="crear">Crear cuenta</button>
+          </div>
+
+          <div class="al-tabpanel" id="entrar">
+            <form class="al-stack" data-al-validate id="f-entrar" style="--al-gap:1.25rem" novalidate>
+              <div><h1 class="ac-title">Qué gusto verte</h1><p class="al-text-muted al-mt-2">Entra para revisar tus pedidos.</p></div>
+              <div class="ac-sso">
+                <button class="al-btn al-btn--secondary" type="button" data-sso="Google"><al-icon name="globe"></al-icon>Google</button>
+                <button class="al-btn al-btn--secondary" type="button" data-sso="Apple"><al-icon name="smartphone"></al-icon>Apple</button>
+              </div>
+              <div class="al-divider">o con tu correo</div>
+              <div class="al-field"><label class="al-label" for="e-correo">Correo</label><input class="al-input al-input--lg" id="e-correo" name="correo" type="email" autocomplete="email" required></div>
+              <div class="al-field">
+                <label class="al-label" for="e-clave">Contraseña</label>
+                <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="e-clave" name="clave" type="password" autocomplete="current-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#e-clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
+              </div>
+              <div class="ac-meta"><label class="al-check"><input type="checkbox" name="recordar" checked>Recordarme</label><a class="al-link al-text-sm" href="#" id="olvide">¿Olvidaste tu contraseña?</a></div>
+              <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Entrar</button>
+            </form>
+          </div>
+
+          <div class="al-tabpanel" id="crear" hidden>
+            <form class="al-stack" data-al-validate id="f-crear" style="--al-gap:1.25rem" novalidate>
+              <div><h2 class="ac-title">Crea tu cuenta</h2><p class="al-text-muted al-mt-2">Guarda tus direcciones y sigue tus envíos.</p></div>
+              <div class="al-field"><label class="al-label" for="c-nombre">Nombre</label><input class="al-input al-input--lg" id="c-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
+              <div class="al-field"><label class="al-label" for="c-correo">Correo</label><input class="al-input al-input--lg" id="c-correo" name="correo" type="email" autocomplete="email" required></div>
+              <div class="al-field">
+                <label class="al-label" for="c-clave">Contraseña</label>
+                <input class="al-input al-input--lg" id="c-clave" name="clave" type="password" autocomplete="new-password" required minlength="8">
+                <div class="al-progress" id="fuerza" style="--value:0" aria-hidden="true"><span></span></div>
+                <p class="al-hint" id="fuerza-txt">Usa al menos 8 caracteres.</p>
+              </div>
+              <label class="al-check"><input type="checkbox" name="terminos" required>Acepto los términos y el aviso de privacidad</label>
+              <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Crear cuenta</button>
+            </form>
+          </div>
+        </div>
+        <p class="al-text-xs al-text-subtle al-text-center">Plantilla de ejemplo: los datos no se envían a ningún servidor.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../acceso.html"><al-icon name="arrow-left" size="16"></al-icon>Acceso y registro</a></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    const $ = (s) => document.querySelector(s);
+
+    function enviar(form, mensaje) {
+      const btn = form.querySelector('[type="submit"]');
+      btn.classList.add("is-loading");
+      setTimeout(() => { btn.classList.remove("is-loading"); Julieta.toast({ type: "success", title: mensaje.title, text: mensaje.text }); }, 1100);
+    }
+    $("#f-entrar").addEventListener("al:valid", (e) => enviar(e.target, { title: "Sesión iniciada", text: e.detail.data.correo }));
+    $("#f-crear").addEventListener("al:valid", (e) => enviar(e.target, { title: "Cuenta creada", text: `Bienvenida, ${e.detail.data.nombre.split(" ")[0]}.` }));
+    $("#olvide").addEventListener("click", (e) => { e.preventDefault(); Julieta.toast({ type: "info", title: "Revisa tu correo", text: "Te enviaremos un enlace para restablecerla." }); });
+    document.querySelectorAll("[data-sso]").forEach((b) => b.addEventListener("click", () => Julieta.toast({ type: "info", title: `Acceso con ${b.dataset.sso}`, text: "Conecta aquí tu proveedor de identidad." })));
+
+    // Medidor de fuerza de contraseña
+    $("#c-clave").addEventListener("input", (e) => {
+      const v = e.target.value;
+      const puntos = [v.length >= 8, /[A-Z]/.test(v), /[0-9]/.test(v), /[^A-Za-z0-9]/.test(v)].filter(Boolean).length;
+      const barra = $("#fuerza");
+      barra.style.setProperty("--value", v ? puntos * 25 : 0);
+      barra.classList.toggle("al-progress--success", puntos >= 3);
+      barra.classList.toggle("al-progress--warning", puntos === 2);
+      $("#fuerza-txt").textContent = !v ? "Usa al menos 8 caracteres." : ["Muy débil", "Débil", "Aceptable", "Buena", "Excelente"][puntos];
+    });
+  </script>
+</body>
+</html>

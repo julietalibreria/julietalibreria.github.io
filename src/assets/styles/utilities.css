@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Julieta UI · utilities.css
+   Utilidades de un solo propósito. Viven en la capa más alta: siempre ganan.
+   ========================================================================== */
+
+/* Visualización */
+.al-hidden { display: none !important; }
+.al-block { display: block; } .al-inline { display: inline; } .al-flex { display: flex; } .al-grid-inline { display: inline-grid; }
+.al-flex-col { flex-direction: column; } .al-flex-wrap { flex-wrap: wrap; } .al-flex-1 { flex: 1; }
+.al-items-center { align-items: center; } .al-items-start { align-items: flex-start; } .al-items-end { align-items: flex-end; }
+.al-justify-between { justify-content: space-between; } .al-justify-center { justify-content: center; } .al-justify-end { justify-content: flex-end; }
+.al-relative { position: relative; } .al-sticky { position: sticky; top: calc(var(--al-header-h) + 1rem); }
+.al-w-full { width: 100%; } .al-mx-auto { margin-inline: auto; }
+.al-overflow-hidden { overflow: hidden; }
+
+/* Espaciado (escala de tokens) */
+.al-gap-1 { gap: var(--al-space-1); } .al-gap-2 { gap: var(--al-space-2); } .al-gap-3 { gap: var(--al-space-3); }
+.al-gap-4 { gap: var(--al-space-4); } .al-gap-6 { gap: var(--al-space-6); } .al-gap-8 { gap: var(--al-space-8); } .al-gap-12 { gap: var(--al-space-12); }
+.al-m-0 { margin: 0; } .al-mt-2 { margin-top: var(--al-space-2); } .al-mt-4 { margin-top: var(--al-space-4); } .al-mt-6 { margin-top: var(--al-space-6); }
+.al-mt-8 { margin-top: var(--al-space-8); } .al-mt-12 { margin-top: var(--al-space-12); } .al-mt-16 { margin-top: var(--al-space-16); }
+.al-mb-2 { margin-bottom: var(--al-space-2); } .al-mb-4 { margin-bottom: var(--al-space-4); } .al-mb-6 { margin-bottom: var(--al-space-6); } .al-mb-8 { margin-bottom: var(--al-space-8); }
+.al-p-4 { padding: var(--al-space-4); } .al-p-6 { padding: var(--al-space-6); } .al-p-8 { padding: var(--al-space-8); }
+
+/* Tipografía */
+.al-font-display { font-family: var(--al-font-display); letter-spacing: var(--al-tracking-tight); }
+.al-font-mono { font-family: var(--al-font-mono); }
+.al-text-xs { font-size: var(--al-text-xs); } .al-text-sm { font-size: var(--al-text-sm); } .al-text-lg { font-size: var(--al-text-lg); } .al-text-xl { font-size: var(--al-text-xl); }
+.al-text-2xl { font-size: var(--al-text-2xl); } .al-text-3xl { font-size: var(--al-text-3xl); } .al-text-4xl { font-size: var(--al-text-4xl); } .al-text-5xl { font-size: var(--al-text-5xl); }
+.al-lead { font-size: var(--al-text-lg); color: var(--al-text-muted); line-height: 1.55; max-width: 60ch; }
+.al-weight-500 { font-weight: 500; } .al-weight-600 { font-weight: 600; } .al-weight-700 { font-weight: 700; } .al-weight-800 { font-weight: 800; }
+.al-text-left { text-align: left; } .al-text-right { text-align: right; } .al-text-balance { text-wrap: balance; }
+.al-tabular { font-variant-numeric: tabular-nums; }
+.al-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Color */
+.al-text-default { color: var(--al-text); } .al-text-muted { color: var(--al-text-muted); } .al-text-subtle { color: var(--al-text-subtle); }
+.al-text-primary { color: var(--al-primary); } .al-text-success { color: var(--al-success); } .al-text-warning { color: var(--al-warning); }
+.al-text-danger { color: var(--al-danger); } .al-text-info { color: var(--al-info); }
+.al-bg-surface { background: var(--al-surface); } .al-bg-subtle { background: var(--al-bg-subtle); } .al-bg-primary-soft { background: var(--al-primary-soft); }
+
+/* Forma y elevación */
+.al-rounded-sm { border-radius: var(--al-radius-sm); } .al-rounded-md { border-radius: var(--al-radius-md); } .al-rounded-lg { border-radius: var(--al-radius-lg); }
+.al-rounded-xl { border-radius: var(--al-radius-xl); } .al-rounded-full { border-radius: var(--al-radius-full); }
+.al-border { border: 1px solid var(--al-border); }
+.al-shadow-sm { box-shadow: var(--al-shadow-sm); } .al-shadow-md { box-shadow: var(--al-shadow-md); } .al-shadow-lg { box-shadow: var(--al-shadow-lg); } .al-shadow-xl { box-shadow: var(--al-shadow-xl); }
+
+/* Responsive */
+@media (max-width: 48rem) { .al-hide-sm { display: none !important; } }
+@media (min-width: 48.01rem) { .al-show-sm { display: none !important; } }

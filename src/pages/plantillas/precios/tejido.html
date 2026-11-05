@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precios · Tejido</title>
+  <meta name="description" content="Planes de Tejido para talleres de todos los tamaños. Paga mensual o ahorra con el plan anual.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/precios/tejido.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/precios/tejido.html">
+  <meta property="og:title" content="Precios · Tejido">
+  <meta property="og:description" content="Planes de Tejido para talleres de todos los tamaños. Paga mensual o ahorra con el plan anual.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Precios · Tejido">
+  <meta name="twitter:description" content="Planes de Tejido para talleres de todos los tamaños. Paga mensual o ahorra con el plan anual.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Precios · Tejido", "description": "Planes de Tejido para talleres de todos los tamaños. Paga mensual o ahorra con el plan anual.", "url": "https://julietalibreria.github.io/src/pages/plantillas/precios/tejido.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .pr-head { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-block: clamp(3rem, 7vw, 5.5rem) 2.5rem; }
+    .pr-head h1 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 14ch; }
+    .pr-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); max-width: 46ch; }
+    .pr-save { color: var(--al-success); font-weight: 700; font-size: .75rem; margin-left: .35rem; }
+    .pr-plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+    @media (max-width: 62rem) { .pr-plans { grid-template-columns: 1fr; max-width: 28rem; margin-inline: auto; } }
+    .pr-plans .al-plan--featured { position: relative; }
+    .pr-flag { position: absolute; top: -.8rem; right: 1.5rem; }
+    .pr-price-note { min-height: 1.25rem; font-size: .8125rem; margin-top: -.75rem; color: var(--al-text-muted); }
+    .al-plan--featured .pr-price-note { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
+    .pr-table td:not(:first-child), .pr-table th:not(:first-child) { text-align: center; }
+    .pr-table al-icon[name="check"] { color: var(--al-success); }
+    .pr-table al-icon[name="minus"] { color: var(--al-text-subtle); }
+    .pr-nav-links { display: flex; }
+    @media (max-width: 40rem) { .pr-nav-links { display: none; } }
+    #precios-tabla-wrap { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#planes">Saltar a los planes</a>
+  <header class="al-navbar">
+    <a class="al-navbar__brand" href="#"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">tejido</a>
+    <nav class="al-navbar__links pr-nav-links" aria-label="Principal"><a class="al-nav-link" href="#">Funciones</a><a class="al-nav-link" href="#planes" aria-current="page">Precios</a><a class="al-nav-link" href="#preguntas">Preguntas</a></nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+    <a class="al-btn al-btn--primary al-btn--sm" href="#planes">Probar gratis</a>
+  </header>
+
+  <main>
+    <div class="al-container">
+      <div class="pr-head">
+        <h1>Un plan para cada taller</h1>
+        <p>Empieza gratis. Cambia de plan cuando tu taller crezca, sin permanencia ni sorpresas.</p>
+        <div class="al-segmented" role="radiogroup" aria-label="Facturación">
+          <label><input type="radio" name="ciclo" value="mensual" checked><span>Mensual</span></label>
+          <label><input type="radio" name="ciclo" value="anual"><span>Anual <span class="pr-save">−20%</span></span></label>
+        </div>
+      </div>
+
+      <section class="pr-plans" id="planes" aria-label="Planes">
+        <article class="al-plan">
+          <div><h2 class="al-plan__name">Semilla</h2><p class="al-plan__desc">Para probar con tus primeros pedidos.</p></div>
+          <div class="al-plan__price"><span data-precio="0">$0</span><small>al mes</small></div>
+          <p class="pr-price-note">Gratis para siempre</p>
+          <ul class="al-plan__features" role="list">
+            <li><al-icon name="check"></al-icon>Hasta 20 pedidos al mes</li>
+            <li><al-icon name="check"></al-icon>Tablero y calendario</li>
+            <li><al-icon name="check"></al-icon>1 persona</li>
+          </ul>
+          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-plan="Semilla">Empezar gratis</a>
+        </article>
+
+        <article class="al-plan al-plan--featured">
+          <span class="al-badge al-badge--solid pr-flag" style="--_c:var(--al-cempasuchil-500);color:var(--al-cempasuchil-950)">Más elegido</span>
+          <div><h2 class="al-plan__name">Taller</h2><p class="al-plan__desc">Para estudios que ya viven de esto.</p></div>
+          <div class="al-plan__price"><span data-precio="249">$249</span><small>al mes</small></div>
+          <p class="pr-price-note" data-nota="249"></p>
+          <ul class="al-plan__features" role="list">
+            <li><al-icon name="check"></al-icon>Pedidos ilimitados</li>
+            <li><al-icon name="check"></al-icon>Cobros y anticipos</li>
+            <li><al-icon name="check"></al-icon>Hasta 5 personas</li>
+            <li><al-icon name="check"></al-icon>Recibos con tu logotipo</li>
+          </ul>
+          <a class="al-btn al-btn--accent al-btn--block" href="#" data-plan="Taller">Probar 30 días gratis</a>
+        </article>
+
+        <article class="al-plan">
+          <div><h2 class="al-plan__name">Cooperativa</h2><p class="al-plan__desc">Para colectivos con varias sedes.</p></div>
+          <div class="al-plan__price"><span data-precio="699">$699</span><small>al mes</small></div>
+          <p class="pr-price-note" data-nota="699"></p>
+          <ul class="al-plan__features" role="list">
+            <li><al-icon name="check"></al-icon>Todo lo de Taller</li>
+            <li><al-icon name="check"></al-icon>Personas ilimitadas</li>
+            <li><al-icon name="check"></al-icon>Inventario por sede</li>
+            <li><al-icon name="check"></al-icon>Atención prioritaria</li>
+          </ul>
+          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-plan="Cooperativa">Hablar con nosotras</a>
+        </article>
+      </section>
+
+      <section class="al-section" aria-labelledby="comparar">
+        <div class="al-section-head"><h2 id="comparar">Compara con detalle</h2></div>
+        <div class="al-table-wrap pr-table" id="precios-tabla-wrap">
+          <table class="al-table al-table--striped">
+            <thead><tr><th>Función</th><th>Semilla</th><th>Taller</th><th>Cooperativa</th></tr></thead>
+            <tbody>
+              <tr><td>Pedidos al mes</td><td>20</td><td>Ilimitados</td><td>Ilimitados</td></tr>
+              <tr><td>Personas</td><td>1</td><td>5</td><td>Ilimitadas</td></tr>
+              <tr><td>Tablero y calendario</td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr>
+              <tr><td>Cobros y anticipos</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr>
+              <tr><td>Recibos con logotipo</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr>
+              <tr><td>Inventario por sede</td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="minus" label="No incluido"></al-icon></td><td><al-icon name="check" label="Incluido"></al-icon></td></tr>
+              <tr><td>Atención</td><td>Correo</td><td>Correo y chat</td><td>Prioritaria</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="al-section" style="padding-top:0" id="preguntas" aria-labelledby="faq">
+        <div class="al-container al-container--narrow" style="padding-inline:0">
+          <div class="al-section-head"><h2 id="faq">Preguntas sobre precios</h2></div>
+          <div class="al-accordion">
+            <details open><summary>¿Puedo cambiar de plan después?</summary><div class="al-accordion__body">Sí, cuando quieras. Si subes de plan, pagas solo la diferencia del periodo en curso.</div></details>
+            <details><summary>¿Los precios incluyen IVA?</summary><div class="al-accordion__body">Los precios se muestran sin IVA. Lo verás desglosado antes de confirmar el pago.</div></details>
+            <details><summary>¿Cómo funciona el plan anual?</summary><div class="al-accordion__body">Pagas doce meses por adelantado y obtienes 20% de descuento frente al plan mensual.</div></details>
+            <details><summary>¿Qué métodos de pago aceptan?</summary><div class="al-accordion__body">Tarjetas de crédito y débito, y transferencia SPEI en el plan anual.</div></details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="al-footer">
+    <div class="al-container">
+      <div class="al-footer__legal" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 Tejido. Hecho en México.</span><span>Plantilla de ejemplo de Julieta UI</span></div>
+    </div>
+  </footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../precios.html"><al-icon name="arrow-left" size="16"></al-icon>Precios</a></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    const mxn = (n) => n.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
+    const ANUAL = 0.8;
+
+    function pintar(ciclo) {
+      document.querySelectorAll("[data-precio]").forEach((el) => {
+        const base = Number(el.dataset.precio);
+        el.textContent = mxn(ciclo === "anual" ? Math.round(base * ANUAL) : base);
+      });
+      document.querySelectorAll("[data-nota]").forEach((el) => {
+        const base = Number(el.dataset.nota);
+        el.textContent = ciclo === "anual" ? `${mxn(Math.round(base * ANUAL * 12))} al año · ahorras ${mxn(Math.round(base * 12 * (1 - ANUAL)))}` : "Facturado cada mes";
+      });
+    }
+    document.querySelectorAll('input[name="ciclo"]').forEach((r) => r.addEventListener("change", () => pintar(r.value)));
+    pintar("mensual");
+
+    document.querySelectorAll("[data-plan]").forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const ciclo = document.querySelector('input[name="ciclo"]:checked').value;
+      Julieta.toast({ type: "success", title: `Elegiste ${a.dataset.plan}`, text: `Facturación ${ciclo}. Aquí iría tu flujo de pago.` });
+    }));
+  </script>
+</body>
+</html>

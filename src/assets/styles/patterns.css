@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Julieta UI · patterns.css
+   Patrones de página: hero, secciones, planes, pie, acceso, panel y gráficas.
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.al-hero {
+  position: relative; isolation: isolate; overflow: hidden; color: #fff;
+  background:
+    radial-gradient(60rem 36rem at 85% -10%, color-mix(in oklab, var(--al-rosa-500) 55%, transparent), transparent 60%),
+    radial-gradient(50rem 30rem at 0% 100%, color-mix(in oklab, var(--al-jacaranda-400) 45%, transparent), transparent 65%),
+    linear-gradient(165deg, var(--al-jacaranda-800), var(--al-jacaranda-950) 70%);
+}
+.al-hero > canvas.al-petals { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.al-hero__inner { padding-block: clamp(4rem, 11vw, 9rem) clamp(3.5rem, 8vw, 6.5rem); }
+.al-hero__title {
+  font-size: var(--al-text-6xl); font-weight: 800; line-height: .9; letter-spacing: -0.05em; color: #fff; text-wrap: balance;
+  font-variation-settings: "wdth" 100;
+}
+.al-hero__title.is-entering { animation: al-widen 1.6s var(--al-ease) both; }
+@keyframes al-widen { from { font-variation-settings: "wdth" 75; letter-spacing: -0.07em; opacity: .0; } 30% { opacity: 1; } }
+.al-hero__lead { font-size: var(--al-text-lg); color: color-mix(in oklab, #fff 78%, var(--al-jacaranda-300)); max-width: 46ch; line-height: 1.55; }
+
+/* ---------- Encabezado de sección ---------- */
+.al-section-head { display: grid; gap: .75rem; max-width: 44rem; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.al-section-head h2 { font-size: var(--al-text-4xl); line-height: 1; letter-spacing: -0.04em; }
+.al-section-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); }
+
+/* ---------- Característica ---------- */
+.al-feature { display: grid; gap: .75rem; align-content: start; }
+.al-feature__icon {
+  display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: var(--al-radius-md);
+  background: var(--al-primary-soft); color: var(--al-primary); --al-icon-size: 1.5rem;
+}
+.al-feature__title { font-family: var(--al-font-display); font-size: 1.2rem; font-weight: 650; letter-spacing: -0.02em; }
+.al-feature__text { color: var(--al-text-muted); font-size: .9375rem; }
+
+/* ---------- Plan de precios ---------- */
+.al-plan {
+  display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem; border-radius: var(--al-radius-xl);
+  background: var(--al-surface); border: 1px solid var(--al-border); box-shadow: var(--al-shadow-xs);
+}
+.al-plan__name { font-family: var(--al-font-display); font-size: 1.25rem; font-weight: 700; }
+.al-plan__desc { color: var(--al-text-muted); font-size: .9375rem; margin-top: .25rem; }
+.al-plan__price { display: flex; align-items: baseline; gap: .4rem; font-family: var(--al-font-display); font-size: 3.4rem; font-weight: 800; letter-spacing: -0.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+.al-plan__price small { font-family: var(--al-font-sans); font-size: .9rem; font-weight: 500; letter-spacing: 0; color: var(--al-text-muted); }
+.al-plan__features { list-style: none; padding: 0; display: grid; gap: .75rem; font-size: .9375rem; flex: 1; align-content: start; }
+.al-plan__features li { display: flex; gap: .65rem; align-items: flex-start; }
+.al-plan__features al-icon { color: var(--al-success); margin-top: .15em; flex: none; }
+.al-plan--featured {
+  background: linear-gradient(170deg, var(--al-jacaranda-700), var(--al-jacaranda-950)); color: #fff; border-color: var(--al-jacaranda-500);
+  box-shadow: var(--al-shadow-xl); position: relative;
+}
+.al-plan--featured .al-plan__desc, .al-plan--featured .al-plan__price small { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
+.al-plan--featured .al-plan__features al-icon { color: var(--al-cempasuchil-300); }
+.al-plan--featured .al-plan__name { color: #fff; }
+
+/* ---------- Banda de llamada a la acción ---------- */
+.al-cta {
+  display: grid; gap: 1.5rem; justify-items: start; padding: clamp(2rem, 5vw, 4rem); border-radius: var(--al-radius-2xl); color: #fff; position: relative; overflow: hidden; isolation: isolate;
+  background: radial-gradient(40rem 20rem at 100% 0%, color-mix(in oklab, var(--al-cempasuchil-400) 55%, transparent), transparent 60%), linear-gradient(150deg, var(--al-jacaranda-700), var(--al-jacaranda-900));
+}
+.al-cta h2 { color: #fff; font-size: var(--al-text-4xl); line-height: 1; letter-spacing: -0.04em; max-width: 18ch; }
+.al-cta p { color: color-mix(in oklab, #fff 75%, var(--al-jacaranda-300)); max-width: 46ch; }
+
+/* ---------- Pie de página ---------- */
+.al-footer { border-top: 1px solid var(--al-border); padding-block: 3.5rem 2.5rem; background: var(--al-bg); }
+.al-footer__grid { display: grid; gap: 2.5rem; grid-template-columns: 1.6fr repeat(3, 1fr); }
+@media (max-width: 52rem) { .al-footer__grid { grid-template-columns: 1fr 1fr; } .al-footer__grid > :first-child { grid-column: 1 / -1; } }
+.al-footer__title { font-weight: 700; font-size: .875rem; margin-bottom: .85rem; }
+.al-footer__links { list-style: none; padding: 0; display: grid; gap: .55rem; font-size: .9rem; }
+.al-footer__links a { color: var(--al-text-muted); text-decoration: none; }
+.al-footer__links a:hover { color: var(--al-primary); }
+.al-footer__legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--al-border); font-size: .8125rem; color: var(--al-text-subtle); }
+
+/* ---------- Acceso (login / registro) ---------- */
+.al-auth { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); min-height: 100dvh; }
+@media (max-width: 62rem) { .al-auth { grid-template-columns: 1fr; } .al-auth__art { display: none; } }
+.al-auth__art {
+  position: relative; isolation: isolate; overflow: hidden; color: #fff; padding: clamp(2rem, 4vw, 3.5rem); display: flex; flex-direction: column; justify-content: space-between;
+  background: radial-gradient(40rem 30rem at 100% 0%, color-mix(in oklab, var(--al-rosa-500) 50%, transparent), transparent 60%), linear-gradient(170deg, var(--al-jacaranda-700), var(--al-jacaranda-950));
+}
+.al-auth__art > canvas.al-petals { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.al-auth__form { display: grid; place-items: center; padding: clamp(1.5rem, 5vw, 4rem); }
+.al-auth__box { width: min(26rem, 100%); display: grid; gap: 1.75rem; }
+
+/* ---------- Panel (dashboard) ---------- */
+.al-app { display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); min-height: 100dvh; }
+.al-app__sidebar {
+  position: sticky; top: 0; height: 100dvh; display: flex; flex-direction: column; gap: 1.5rem; padding: 1.25rem 1rem;
+  background: var(--al-surface); border-right: 1px solid var(--al-border); overflow: auto; z-index: var(--al-z-drawer);
+}
+.al-app__main { min-width: 0; display: flex; flex-direction: column; }
+.al-app__topbar {
+  position: sticky; top: 0; z-index: var(--al-z-sticky); display: flex; align-items: center; gap: 1rem; min-height: var(--al-header-h); padding-inline: clamp(1rem, 3vw, 2rem);
+  background: color-mix(in oklab, var(--al-bg) 80%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--al-border);
+}
+.al-app__content { padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; align-content: start; }
+.al-app__menu-btn { display: none; }
+@media (max-width: 62rem) {
+  .al-app { grid-template-columns: 1fr; }
+  .al-app__sidebar { position: fixed; inset: 0 auto 0 0; width: 17rem; translate: -100% 0; transition: translate var(--al-dur-slow) var(--al-ease); box-shadow: var(--al-shadow-xl); }
+  .al-app.is-menu-open .al-app__sidebar { translate: 0; }
+  .al-app__menu-btn { display: inline-flex; }
+  .al-app.is-menu-open .al-app__main::after { content: ""; position: fixed; inset: 0; z-index: calc(var(--al-z-drawer) - 1); background: color-mix(in oklab, var(--al-jacaranda-950) 45%, transparent); backdrop-filter: blur(3px); }
+}
+
+/* ---------- Gráficas (las dibuja charts.js) ---------- */
+.al-chart { position: relative; width: 100%; height: var(--al-chart-h, 14rem); color: var(--al-primary); }
+.al-chart svg { width: 100%; height: 100%; overflow: visible; }
+.al-chart .grid-line { stroke: var(--al-border); stroke-width: 1; stroke-dasharray: 3 5; }
+.al-chart .axis-label { fill: var(--al-text-subtle); font-size: 11px; font-family: var(--al-font-sans); }
+.al-chart .line { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.al-chart .line--2 { stroke: var(--al-accent); }
+.al-chart .bar { fill: currentColor; opacity: .85; transition: opacity var(--al-dur) var(--al-ease); }
+.al-chart .bar:hover { opacity: 1; }
+.al-chart .dot { fill: var(--al-surface); stroke: currentColor; stroke-width: 2.5; opacity: 0; transition: opacity var(--al-dur-fast); }
+.al-chart .dot.is-on { opacity: 1; }
+.al-chart .cursor { stroke: var(--al-border-strong); stroke-width: 1; opacity: 0; }
+.al-chart .cursor.is-on { opacity: 1; }
+.al-chart__tip {
+  position: absolute; pointer-events: none; transform: translate(-50%, -115%); white-space: nowrap; opacity: 0; transition: opacity var(--al-dur-fast);
+  padding: .35rem .65rem; border-radius: var(--al-radius-sm); background: var(--al-piedra-900); color: #fff; font-size: .75rem; font-weight: 600; box-shadow: var(--al-shadow-md);
+}
+.al-chart__tip.is-on { opacity: 1; }
+.al-chart--spark { --al-chart-h: 2.5rem; }

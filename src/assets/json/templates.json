@@ -1,0 +1,369 @@
+{
+  "categories": [
+    {
+      "id": "landing",
+      "name": "Landing de producto",
+      "icon": "rocket",
+      "description": "Páginas de presentación para dar a conocer un producto: héroe, características, planes, testimonios y llamada a la acción.",
+      "keywords": "marketing portada hero"
+    },
+    {
+      "id": "dashboard",
+      "name": "Panel de control",
+      "icon": "bar-chart",
+      "description": "Interfaces de administración con métricas, gráficas, tablas y tableros para trabajar todo el día.",
+      "keywords": "admin dashboard analitica"
+    },
+    {
+      "id": "acceso",
+      "name": "Acceso y registro",
+      "icon": "log-in",
+      "description": "Inicio de sesión, alta de cuenta y recuperación de acceso con validación en español.",
+      "keywords": "login registro sesion contraseña"
+    },
+    {
+      "id": "precios",
+      "name": "Precios",
+      "icon": "credit-card",
+      "description": "Planes, calculadoras y comparativas para que tu gente elija sin dudas.",
+      "keywords": "planes suscripcion pricing"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tejido",
+      "category": "landing",
+      "name": "Tejido · Landing de producto",
+      "description": "Página de presentación con héroe de pétalos, características, testimonios, preguntas frecuentes y llamada a la acción.",
+      "href": "src/pages/plantillas/landing/tejido.html",
+      "preview": "src/assets/images/templates/landing/tejido.webp",
+      "tags": [
+        "marketing",
+        "portada",
+        "hero",
+        "faq",
+        "testimonios"
+      ],
+      "uses": [
+        "hero",
+        "feature",
+        "quote",
+        "accordion",
+        "cta",
+        "footer",
+        "navbar"
+      ]
+    },
+    {
+      "id": "milpa",
+      "category": "landing",
+      "name": "Milpa · Landing de caja de verdura",
+      "description": "Landing tipográfica para una caja semanal de verdura de temporada, con titular gigante, cinta animada de ingredientes y un configurador de pedido con precio en vivo.",
+      "href": "src/pages/plantillas/landing/milpa.html",
+      "preview": "src/assets/images/templates/landing/milpa.webp",
+      "tags": [
+        "landing",
+        "e-commerce",
+        "suscripción",
+        "tipográfica",
+        "formulario"
+      ],
+      "uses": [
+        "navbar",
+        "drawer",
+        "card",
+        "badge",
+        "accordion",
+        "segmented",
+        "select",
+        "input",
+        "checkbox",
+        "button",
+        "toast",
+        "footer"
+      ]
+    },
+    {
+      "id": "cuadra",
+      "category": "landing",
+      "name": "Cuadra · Landing SaaS para tianguis",
+      "description": "Landing de software con demostración interactiva en el héroe, cuadrícula bento de funciones, planes con alternancia mensual/anual y solicitud de acceso en modal.",
+      "href": "src/pages/plantillas/landing/cuadra.html",
+      "preview": "src/assets/images/templates/landing/cuadra.webp",
+      "tags": [
+        "landing",
+        "saas",
+        "bento",
+        "planes",
+        "demo interactiva"
+      ],
+      "uses": [
+        "navbar",
+        "drawer",
+        "tabs",
+        "switch",
+        "progress",
+        "stat",
+        "list",
+        "card",
+        "badge",
+        "stepper",
+        "segmented",
+        "plan",
+        "accordion",
+        "modal",
+        "input",
+        "select",
+        "button",
+        "toast",
+        "footer"
+      ]
+    },
+    {
+      "id": "casa-jacaranda",
+      "category": "dashboard",
+      "name": "Casa Jacaranda · Panel de control",
+      "description": "Barra lateral, métricas, gráficas, tabla ordenable con búsqueda, actividad y paleta de comandos.",
+      "href": "src/pages/plantillas/dashboard/casa-jacaranda.html",
+      "preview": "src/assets/images/templates/dashboard/casa-jacaranda.webp",
+      "tags": [
+        "admin",
+        "analítica",
+        "tabla",
+        "gráficas",
+        "métricas"
+      ],
+      "uses": [
+        "sidebar",
+        "stat",
+        "chart",
+        "table",
+        "avatar",
+        "badge",
+        "dropdown",
+        "timeline",
+        "ring"
+      ]
+    },
+    {
+      "id": "caja-chica",
+      "category": "dashboard",
+      "name": "Caja Chica · Panel de finanzas",
+      "description": "Finanzas para un negocio pequeño: barra superior, indicadores, gráfica de ingresos y egresos, presupuesto por categoría y tabla de movimientos con filtro y detalle.",
+      "href": "src/pages/plantillas/dashboard/caja-chica.html",
+      "preview": "src/assets/images/templates/dashboard/caja-chica.webp",
+      "tags": [
+        "finanzas",
+        "movimientos",
+        "presupuesto",
+        "barra superior",
+        "gráficas"
+      ],
+      "uses": [
+        "navbar",
+        "stat",
+        "chart",
+        "ring",
+        "progress",
+        "table",
+        "chip",
+        "segmented",
+        "dropdown",
+        "modal",
+        "drawer",
+        "avatar",
+        "badge",
+        "toast",
+        "button",
+        "input"
+      ]
+    },
+    {
+      "id": "estudio-nopal",
+      "category": "dashboard",
+      "name": "Estudio Nopal · Tablero de proyectos",
+      "description": "Kanban de cuatro columnas, avance general, carga del equipo y línea de tiempo de hitos. Permite mover, filtrar y agregar tareas.",
+      "href": "src/pages/plantillas/dashboard/estudio-nopal.html",
+      "preview": "src/assets/images/templates/dashboard/estudio-nopal.webp",
+      "tags": [
+        "proyectos",
+        "kanban",
+        "tareas",
+        "línea de tiempo",
+        "equipo"
+      ],
+      "uses": [
+        "app",
+        "sidebar",
+        "stat",
+        "chart",
+        "ring",
+        "progress",
+        "table",
+        "timeline",
+        "chip",
+        "dropdown",
+        "modal",
+        "drawer",
+        "avatar",
+        "badge",
+        "toast",
+        "button",
+        "input"
+      ]
+    },
+    {
+      "id": "casa-jacaranda",
+      "category": "acceso",
+      "name": "Casa Jacaranda · Acceso y registro",
+      "description": "Inicio de sesión con validación en español, mostrar contraseña, pestañas y estados de carga.",
+      "href": "src/pages/plantillas/acceso/casa-jacaranda.html",
+      "preview": "src/assets/images/templates/acceso/casa-jacaranda.webp",
+      "tags": [
+        "login",
+        "registro",
+        "formulario",
+        "validación"
+      ],
+      "uses": [
+        "auth",
+        "input",
+        "checkbox",
+        "button",
+        "tabs",
+        "alert"
+      ]
+    },
+    {
+      "id": "nopal-registro-pasos",
+      "category": "acceso",
+      "name": "Nopal Ahorro · Registro en pasos",
+      "description": "Tarjeta centrada para abrir una cuenta en tres pasos con medidor de contraseña, resumen editable y pantalla de éxito.",
+      "href": "src/pages/plantillas/acceso/nopal-registro-pasos.html",
+      "preview": "src/assets/images/templates/acceso/nopal-registro-pasos.webp",
+      "tags": [
+        "registro",
+        "pasos",
+        "onboarding",
+        "tarjeta centrada"
+      ],
+      "uses": [
+        "card",
+        "stepper",
+        "input",
+        "select",
+        "radio",
+        "segmented",
+        "checkbox",
+        "switch",
+        "progress",
+        "button",
+        "alert",
+        "toast"
+      ]
+    },
+    {
+      "id": "cenote-recuperar-acceso",
+      "category": "acceso",
+      "name": "Cenote Seguros · Recuperar acceso",
+      "description": "Recuperación de contraseña con código de 6 dígitos (pegado y reenvío con cuenta regresiva) y nueva contraseña, con el arte a la derecha.",
+      "href": "src/pages/plantillas/acceso/cenote-recuperar-acceso.html",
+      "preview": "src/assets/images/templates/acceso/cenote-recuperar-acceso.webp",
+      "tags": [
+        "recuperar contraseña",
+        "código OTP",
+        "verificación",
+        "seguridad"
+      ],
+      "uses": [
+        "auth",
+        "input",
+        "progress",
+        "button",
+        "alert",
+        "toast",
+        "link"
+      ]
+    },
+    {
+      "id": "tejido",
+      "category": "precios",
+      "name": "Tejido · Precios",
+      "description": "Planes con selector mensual y anual que recalcula los precios, comparativa y preguntas frecuentes.",
+      "href": "src/pages/plantillas/precios/tejido.html",
+      "preview": "src/assets/images/templates/precios/tejido.webp",
+      "tags": [
+        "planes",
+        "suscripción",
+        "comparativa",
+        "faq"
+      ],
+      "uses": [
+        "plan",
+        "segmented",
+        "table",
+        "accordion",
+        "badge",
+        "navbar",
+        "footer"
+      ]
+    },
+    {
+      "id": "amate-precios-por-uso",
+      "category": "precios",
+      "name": "Amate · Precio por uso",
+      "description": "Calculadora en vivo con controles de rango para personas y almacenamiento, extras, descuento por volumen y por pago anual. El resumen incluye IVA.",
+      "href": "src/pages/plantillas/precios/amate-precios-por-uso.html",
+      "preview": "src/assets/images/templates/precios/amate-precios-por-uso.webp",
+      "tags": [
+        "calculadora",
+        "por uso",
+        "volumen",
+        "saas"
+      ],
+      "uses": [
+        "navbar",
+        "badge",
+        "chip",
+        "range",
+        "switch",
+        "segmented",
+        "card",
+        "stat",
+        "alert",
+        "button",
+        "accordion",
+        "toast",
+        "footer"
+      ]
+    },
+    {
+      "id": "cantaro-personal-vs-equipos",
+      "category": "precios",
+      "name": "Cántaro · Personal vs Equipos",
+      "description": "Dos planes con precio por persona ajustable, tabla comparativa en secciones colapsables, garantía de 30 días y llamada a la acción final.",
+      "href": "src/pages/plantillas/precios/cantaro-personal-vs-equipos.html",
+      "preview": "src/assets/images/templates/precios/cantaro-personal-vs-equipos.webp",
+      "tags": [
+        "comparativa",
+        "garantía",
+        "equipos",
+        "facturación"
+      ],
+      "uses": [
+        "navbar",
+        "badge",
+        "plan",
+        "select",
+        "table",
+        "accordion",
+        "card",
+        "stat",
+        "cta",
+        "button",
+        "toast",
+        "footer"
+      ]
+    }
+  ]
+}

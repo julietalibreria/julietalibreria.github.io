@@ -1,0 +1,1220 @@
+{
+  "categories": [
+    {
+      "id": "acciones",
+      "name": "Acciones",
+      "icon": "cursor"
+    },
+    {
+      "id": "formularios",
+      "name": "Formularios",
+      "icon": "edit"
+    },
+    {
+      "id": "retroalimentacion",
+      "name": "Retroalimentación",
+      "icon": "bell"
+    },
+    {
+      "id": "datos",
+      "name": "Datos",
+      "icon": "table"
+    },
+    {
+      "id": "navegacion",
+      "name": "Navegación",
+      "icon": "compass"
+    },
+    {
+      "id": "superposiciones",
+      "name": "Superposiciones",
+      "icon": "layers"
+    },
+    {
+      "id": "layout",
+      "name": "Layout",
+      "icon": "columns"
+    },
+    {
+      "id": "patrones",
+      "name": "Patrones de página",
+      "icon": "layout"
+    }
+  ],
+  "components": [
+    {
+      "id": "button",
+      "name": "Botón",
+      "category": "acciones",
+      "icon": "mouse-pointer",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Acción principal, secundaria o destructiva, con estado de carga.",
+      "keywords": "boton button cta",
+      "classes": [
+        {
+          "name": "al-btn",
+          "desc": "Base. Siempre se combina con una variante."
+        },
+        {
+          "name": "al-btn--primary",
+          "desc": "Acción principal de la pantalla (una por vista)."
+        },
+        {
+          "name": "al-btn--accent",
+          "desc": "Acento cálido para promociones."
+        },
+        {
+          "name": "al-btn--secondary",
+          "desc": "Acción alternativa con borde."
+        },
+        {
+          "name": "al-btn--soft",
+          "desc": "Fondo suave de marca."
+        },
+        {
+          "name": "al-btn--outline",
+          "desc": "Solo contorno."
+        },
+        {
+          "name": "al-btn--ghost",
+          "desc": "Sin fondo, para barras de herramientas."
+        },
+        {
+          "name": "al-btn--danger",
+          "desc": "Acciones destructivas."
+        },
+        {
+          "name": "al-btn--link",
+          "desc": "Aspecto de enlace."
+        },
+        {
+          "name": "al-btn--sm / --lg / --xl",
+          "desc": "Tamaños."
+        },
+        {
+          "name": "al-btn--icon",
+          "desc": "Cuadrado, solo icono (requiere aria-label)."
+        },
+        {
+          "name": "al-btn--block",
+          "desc": "Ocupa todo el ancho."
+        },
+        {
+          "name": "is-loading",
+          "desc": "Muestra spinner y bloquea el clic."
+        }
+      ],
+      "a11y": "Usa <button> para acciones y <a> para navegar. Los botones de solo icono necesitan aria-label."
+    },
+    {
+      "id": "button-group",
+      "name": "Grupo de botones",
+      "category": "acciones",
+      "icon": "columns",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Botones unidos en una sola píldora.",
+      "keywords": "agrupar toolbar",
+      "classes": [
+        {
+          "name": "al-btn-group",
+          "desc": "Contenedor de botones .al-btn."
+        }
+      ],
+      "a11y": "Añade role=\"group\" y aria-label."
+    },
+    {
+      "id": "badge",
+      "name": "Insignia",
+      "category": "acciones",
+      "icon": "tag",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Etiqueta corta de estado o categoría.",
+      "keywords": "badge etiqueta estado",
+      "classes": [
+        {
+          "name": "al-badge",
+          "desc": "Base (color de marca)."
+        },
+        {
+          "name": "al-badge--success / --warning / --danger / --info / --neutral",
+          "desc": "Color semántico."
+        },
+        {
+          "name": "al-badge--solid / --outline",
+          "desc": "Relleno sólido o contorno."
+        },
+        {
+          "name": "al-badge--dot",
+          "desc": "Punto de estado al inicio."
+        }
+      ],
+      "a11y": "No dependas solo del color: incluye texto."
+    },
+    {
+      "id": "chip",
+      "name": "Chip",
+      "category": "acciones",
+      "icon": "hash",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Filtro activable o etiqueta que se puede quitar.",
+      "keywords": "chip filtro tag",
+      "classes": [
+        {
+          "name": "al-chip",
+          "desc": "Base. Usa <button> para que sea interactivo."
+        },
+        {
+          "name": "aria-pressed=\"true\"",
+          "desc": "Estado activo."
+        },
+        {
+          "name": "al-chip__remove",
+          "desc": "Botón para quitar."
+        }
+      ],
+      "a11y": "Los chips alternables llevan aria-pressed."
+    },
+    {
+      "id": "kbd",
+      "name": "Tecla",
+      "category": "acciones",
+      "icon": "command",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Representa una tecla del teclado.",
+      "keywords": "kbd atajo shortcut",
+      "classes": [
+        {
+          "name": "al-kbd",
+          "desc": "Usa el elemento <kbd>."
+        }
+      ],
+      "a11y": "Semántica nativa de <kbd>."
+    },
+    {
+      "id": "link",
+      "name": "Enlace animado",
+      "category": "acciones",
+      "icon": "link",
+      "css": "buttons.css",
+      "js": null,
+      "description": "Enlace con subrayado que se dibuja al pasar el cursor.",
+      "keywords": "enlace link anchor",
+      "classes": [
+        {
+          "name": "al-link",
+          "desc": "Subrayado animado."
+        }
+      ],
+      "a11y": "El subrayado también aparece con foco de teclado."
+    },
+    {
+      "id": "input",
+      "name": "Campo de texto",
+      "category": "formularios",
+      "icon": "edit",
+      "css": "forms.css",
+      "js": "forms.js",
+      "description": "Entrada de texto con etiqueta, ayuda, error, prefijos y contador.",
+      "keywords": "input campo texto email password formulario textarea",
+      "classes": [
+        {
+          "name": "al-field",
+          "desc": "Agrupa etiqueta, campo y mensajes."
+        },
+        {
+          "name": "al-label / al-hint / al-error",
+          "desc": "Etiqueta, ayuda y error."
+        },
+        {
+          "name": "al-input / al-textarea",
+          "desc": "Campos."
+        },
+        {
+          "name": "al-input--lg",
+          "desc": "Campo grande."
+        },
+        {
+          "name": "al-input-group",
+          "desc": "Campo con prefijo, sufijo o botón integrado."
+        },
+        {
+          "name": "data-al-counter",
+          "desc": "Contador de caracteres."
+        },
+        {
+          "name": "data-al-toggle-password",
+          "desc": "Botón para mostrar la contraseña."
+        }
+      ],
+      "a11y": "Toda entrada necesita <label>. Los errores usan aria-invalid y aria-describedby (los pone forms.js)."
+    },
+    {
+      "id": "select",
+      "name": "Selector",
+      "category": "formularios",
+      "icon": "chevrons-up-down",
+      "css": "forms.css",
+      "js": null,
+      "description": "Lista desplegable nativa con estilo propio.",
+      "keywords": "select dropdown opciones",
+      "classes": [
+        {
+          "name": "al-select-wrap > al-select",
+          "desc": "Envoltorio con chevron + <select>."
+        }
+      ],
+      "a11y": "Conserva el comportamiento nativo en móvil y lectores."
+    },
+    {
+      "id": "checkbox",
+      "name": "Casilla",
+      "category": "formularios",
+      "icon": "check-circle",
+      "css": "forms.css",
+      "js": null,
+      "description": "Casilla con estado indeterminado.",
+      "keywords": "checkbox casilla marcar",
+      "classes": [
+        {
+          "name": "al-check",
+          "desc": "<label class=\"al-check\"><input type=\"checkbox\">…</label>"
+        }
+      ],
+      "a11y": "El <input> real sigue en el DOM."
+    },
+    {
+      "id": "radio",
+      "name": "Radio",
+      "category": "formularios",
+      "icon": "target",
+      "css": "forms.css",
+      "js": null,
+      "description": "Selección única entre varias opciones.",
+      "keywords": "radio opcion",
+      "classes": [
+        {
+          "name": "al-radio",
+          "desc": "<label class=\"al-radio\"><input type=\"radio\" name=\"…\">…</label>"
+        }
+      ],
+      "a11y": "Agrúpalos con <fieldset> y <legend>."
+    },
+    {
+      "id": "switch",
+      "name": "Interruptor",
+      "category": "formularios",
+      "icon": "toggle-left",
+      "css": "forms.css",
+      "js": null,
+      "description": "Activa o desactiva una opción al instante.",
+      "keywords": "switch toggle interruptor",
+      "classes": [
+        {
+          "name": "al-switch",
+          "desc": "<label class=\"al-switch\"><input type=\"checkbox\" role=\"switch\">…</label>"
+        }
+      ],
+      "a11y": "Usa role=\"switch\"."
+    },
+    {
+      "id": "range",
+      "name": "Rango",
+      "category": "formularios",
+      "icon": "sliders",
+      "css": "forms.css",
+      "js": "forms.js",
+      "description": "Deslizador con barra rellena y valor en vivo.",
+      "keywords": "range slider deslizador",
+      "classes": [
+        {
+          "name": "al-range",
+          "desc": "<input type=\"range\">; forms.js pinta el relleno."
+        },
+        {
+          "name": "data-al-output-for",
+          "desc": "Muestra el valor en cualquier elemento."
+        }
+      ],
+      "a11y": "Es un <input type=\"range\"> nativo."
+    },
+    {
+      "id": "segmented",
+      "name": "Control segmentado",
+      "category": "formularios",
+      "icon": "toggle-left",
+      "css": "forms.css",
+      "js": null,
+      "description": "Elige una opción entre pocas, como mensual o anual.",
+      "keywords": "segmented toggle selector",
+      "classes": [
+        {
+          "name": "al-segmented",
+          "desc": "Radios dentro de <label><input><span>."
+        }
+      ],
+      "a11y": "Son radios nativos con foco visible."
+    },
+    {
+      "id": "dropzone",
+      "name": "Zona de archivos",
+      "category": "formularios",
+      "icon": "upload",
+      "css": "forms.css",
+      "js": "forms.js",
+      "description": "Arrastra y suelta archivos, o haz clic para elegirlos.",
+      "keywords": "upload subir archivo drag drop",
+      "classes": [
+        {
+          "name": "al-dropzone",
+          "desc": "Contenedor <label> con input[type=file]."
+        },
+        {
+          "name": "al-dropzone__files",
+          "desc": "Lista donde se muestran los archivos."
+        }
+      ],
+      "a11y": "Funciona con teclado: Enter o Espacio abren el selector."
+    },
+    {
+      "id": "alert",
+      "name": "Alerta",
+      "category": "retroalimentacion",
+      "icon": "alert-circle",
+      "css": "feedback.css",
+      "js": "forms.js",
+      "description": "Mensaje persistente dentro de la página.",
+      "keywords": "alert aviso mensaje error",
+      "classes": [
+        {
+          "name": "al-alert",
+          "desc": "Base (información)."
+        },
+        {
+          "name": "al-alert--success / --warning / --danger / --primary",
+          "desc": "Variantes."
+        },
+        {
+          "name": "data-al-alert-close",
+          "desc": "Botón que la cierra."
+        }
+      ],
+      "a11y": "Añade role=\"alert\" a errores urgentes y role=\"status\" al resto."
+    },
+    {
+      "id": "toast",
+      "name": "Toast",
+      "category": "retroalimentacion",
+      "icon": "bell",
+      "css": "feedback.css",
+      "js": "toast.js",
+      "description": "Notificación temporal que se pausa al pasar el cursor.",
+      "keywords": "toast notificacion snackbar",
+      "classes": [
+        {
+          "name": "Julieta.toast({ title, text, type, duration, action })",
+          "desc": "Devuelve { close }."
+        },
+        {
+          "name": "Julieta.toast.success / error / warning / info",
+          "desc": "Atajos."
+        }
+      ],
+      "a11y": "La región es aria-live; los errores usan role=\"alert\"."
+    },
+    {
+      "id": "progress",
+      "name": "Barra de progreso",
+      "category": "retroalimentacion",
+      "icon": "activity",
+      "css": "feedback.css",
+      "js": null,
+      "description": "Avance de una tarea, determinado o indeterminado.",
+      "keywords": "progress barra avance",
+      "classes": [
+        {
+          "name": "al-progress",
+          "desc": "Contenedor; el valor va en style=\"--value:64\"."
+        },
+        {
+          "name": "al-progress--lg / --success / --warning / --indeterminate",
+          "desc": "Variantes."
+        }
+      ],
+      "a11y": "Añade role=\"progressbar\" y aria-valuenow."
+    },
+    {
+      "id": "ring",
+      "name": "Anillo de progreso",
+      "category": "retroalimentacion",
+      "icon": "target",
+      "css": "feedback.css",
+      "js": null,
+      "description": "Porcentaje circular con degradado.",
+      "keywords": "ring circular porcentaje",
+      "classes": [
+        {
+          "name": "al-ring",
+          "desc": "style=\"--value:72; --size:6rem\""
+        }
+      ],
+      "a11y": "Incluye el valor como texto dentro."
+    },
+    {
+      "id": "spinner",
+      "name": "Spinner",
+      "category": "retroalimentacion",
+      "icon": "loader",
+      "css": "feedback.css",
+      "js": null,
+      "description": "Indicador de carga.",
+      "keywords": "spinner cargando loading",
+      "classes": [
+        {
+          "name": "al-spinner / al-spinner--lg",
+          "desc": "Anillo giratorio."
+        }
+      ],
+      "a11y": "Acompáñalo de role=\"status\" y texto para lectores."
+    },
+    {
+      "id": "skeleton",
+      "name": "Esqueleto",
+      "category": "retroalimentacion",
+      "icon": "layout",
+      "css": "feedback.css",
+      "js": null,
+      "description": "Marcador de posición mientras llega el contenido.",
+      "keywords": "skeleton placeholder carga",
+      "classes": [
+        {
+          "name": "al-skeleton",
+          "desc": "Bloque con brillo animado."
+        },
+        {
+          "name": "al-skeleton--circle / --text",
+          "desc": "Formas."
+        }
+      ],
+      "a11y": "Marca el contenedor con aria-busy=\"true\"."
+    },
+    {
+      "id": "card",
+      "name": "Tarjeta",
+      "category": "datos",
+      "icon": "layout",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Contenedor con imagen, cuerpo y pie.",
+      "keywords": "card tarjeta",
+      "classes": [
+        {
+          "name": "al-card",
+          "desc": "Base."
+        },
+        {
+          "name": "al-card__media / __body / __title / __text / __footer",
+          "desc": "Partes."
+        },
+        {
+          "name": "al-card--interactive / --flat / --raised / --glass / --horizontal",
+          "desc": "Variantes."
+        }
+      ],
+      "a11y": "Si toda la tarjeta es un enlace, usa <a class=\"al-card\">."
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "category": "datos",
+      "icon": "user",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Iniciales o foto, con estado y grupos.",
+      "keywords": "avatar usuario perfil",
+      "classes": [
+        {
+          "name": "al-avatar",
+          "desc": "Base."
+        },
+        {
+          "name": "al-avatar--sm / --lg / --xl",
+          "desc": "Tamaños."
+        },
+        {
+          "name": "data-status=\"online|away|busy|offline\"",
+          "desc": "Punto de estado."
+        },
+        {
+          "name": "al-avatar-group",
+          "desc": "Apila avatares."
+        }
+      ],
+      "a11y": "Con iniciales, añade aria-label con el nombre."
+    },
+    {
+      "id": "table",
+      "name": "Tabla",
+      "category": "datos",
+      "icon": "table",
+      "css": "data-display.css",
+      "js": "table.js",
+      "description": "Tabla con encabezado, hover, cebra y columnas ordenables.",
+      "keywords": "table tabla datos ordenar",
+      "classes": [
+        {
+          "name": "al-table-wrap > al-table",
+          "desc": "Envoltorio con scroll + tabla."
+        },
+        {
+          "name": "al-table--hover / --striped",
+          "desc": "Variantes."
+        },
+        {
+          "name": "is-num",
+          "desc": "Alinea números a la derecha."
+        },
+        {
+          "name": "aria-sort",
+          "desc": "Muestra la flecha de orden."
+        },
+        {
+          "name": "data-al-sortable",
+          "desc": "Activa el orden por columna (th con <button>)."
+        },
+        {
+          "name": "data-al-filter=\"#id\"",
+          "desc": "Filtra las filas con un campo de búsqueda."
+        }
+      ],
+      "a11y": "Usa aria-sort en <th> ordenables."
+    },
+    {
+      "id": "stat",
+      "name": "Métrica",
+      "category": "datos",
+      "icon": "trending-up",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Un número importante con su etiqueta y variación.",
+      "keywords": "stat metrica kpi numero",
+      "classes": [
+        {
+          "name": "al-stat",
+          "desc": "Contenedor."
+        },
+        {
+          "name": "al-stat__label / __value / __delta",
+          "desc": "Partes."
+        },
+        {
+          "name": "al-stat__delta--down",
+          "desc": "Variación negativa."
+        }
+      ],
+      "a11y": "Describe la variación con texto, no solo con color."
+    },
+    {
+      "id": "list",
+      "name": "Lista",
+      "category": "datos",
+      "icon": "list",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Filas con avatar, título y acción.",
+      "keywords": "list lista filas",
+      "classes": [
+        {
+          "name": "al-list / al-list__item / __main / __title / __meta",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Es un <ul> real."
+    },
+    {
+      "id": "timeline",
+      "name": "Línea de tiempo",
+      "category": "datos",
+      "icon": "clock",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Eventos en orden cronológico.",
+      "keywords": "timeline historial actividad",
+      "classes": [
+        {
+          "name": "al-timeline / __item / __time / __title / __text",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Usa <ol> si el orden importa."
+    },
+    {
+      "id": "accordion",
+      "name": "Acordeón",
+      "category": "datos",
+      "icon": "chevron-down",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Secciones plegables con <details> nativo.",
+      "keywords": "accordion faq preguntas details",
+      "classes": [
+        {
+          "name": "al-accordion",
+          "desc": "Contenedor de <details>."
+        },
+        {
+          "name": "al-accordion__body",
+          "desc": "Contenido."
+        }
+      ],
+      "a11y": "Nativo: teclado y lectores funcionan sin JS."
+    },
+    {
+      "id": "quote",
+      "name": "Cita",
+      "category": "datos",
+      "icon": "quote",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Testimonio con autor.",
+      "keywords": "quote cita testimonio",
+      "classes": [
+        {
+          "name": "al-quote / __text / __author",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Usa <blockquote> y <figcaption>."
+    },
+    {
+      "id": "code",
+      "name": "Bloque de código",
+      "category": "datos",
+      "icon": "code",
+      "css": "data-display.css",
+      "js": "code.js",
+      "description": "Código con resaltado y botón de copiar.",
+      "keywords": "code codigo pre syntax",
+      "classes": [
+        {
+          "name": "al-code[data-lang]",
+          "desc": "html, css, js, json, bash."
+        }
+      ],
+      "a11y": "El botón de copiar anuncia el resultado."
+    },
+    {
+      "id": "empty",
+      "name": "Estado vacío",
+      "category": "datos",
+      "icon": "inbox",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Explica qué falta y qué hacer.",
+      "keywords": "empty vacio sin datos",
+      "classes": [
+        {
+          "name": "al-empty / __art / __title / __text",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Incluye siempre una acción."
+    },
+    {
+      "id": "divider",
+      "name": "Divisor",
+      "category": "datos",
+      "icon": "minus",
+      "css": "data-display.css",
+      "js": null,
+      "description": "Línea con texto opcional.",
+      "keywords": "divider separador hr",
+      "classes": [
+        {
+          "name": "al-divider",
+          "desc": "Con texto: <div class=\"al-divider\">o</div>."
+        }
+      ],
+      "a11y": "Decorativo."
+    },
+    {
+      "id": "navbar",
+      "name": "Barra de navegación",
+      "category": "navegacion",
+      "icon": "menu",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Cabecera fija con desenfoque.",
+      "keywords": "navbar header cabecera menu",
+      "classes": [
+        {
+          "name": "al-navbar / __brand / __links / __spacer",
+          "desc": "Estructura."
+        },
+        {
+          "name": "al-nav-link",
+          "desc": "Enlace; aria-current=\"page\" lo resalta."
+        }
+      ],
+      "a11y": "Envuélvela en <nav aria-label>."
+    },
+    {
+      "id": "tabs",
+      "name": "Pestañas",
+      "category": "navegacion",
+      "icon": "columns",
+      "css": "navigation.css",
+      "js": "tabs.js",
+      "description": "Paneles alternables con flechas, Inicio y Fin.",
+      "keywords": "tabs pestañas paneles",
+      "classes": [
+        {
+          "name": "data-al-tabs",
+          "desc": "Activa el comportamiento."
+        },
+        {
+          "name": "al-tabs / al-tab / al-tabpanel",
+          "desc": "Estructura; data-target apunta al panel."
+        },
+        {
+          "name": "al-tabs--pills",
+          "desc": "Estilo píldora."
+        }
+      ],
+      "a11y": "WAI-ARIA completo: roles, aria-selected y teclado."
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Migas de pan",
+      "category": "navegacion",
+      "icon": "chevron-right",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Ruta hasta la página actual.",
+      "keywords": "breadcrumb ruta migas",
+      "classes": [
+        {
+          "name": "al-breadcrumb",
+          "desc": "<nav><ol><li>…"
+        }
+      ],
+      "a11y": "aria-current=\"page\" en el último."
+    },
+    {
+      "id": "pagination",
+      "name": "Paginación",
+      "category": "navegacion",
+      "icon": "more-horizontal",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Navega entre páginas de resultados.",
+      "keywords": "pagination paginas",
+      "classes": [
+        {
+          "name": "al-pagination",
+          "desc": "<ul> de enlaces o botones."
+        }
+      ],
+      "a11y": "aria-current=\"page\" en la actual."
+    },
+    {
+      "id": "stepper",
+      "name": "Pasos",
+      "category": "navegacion",
+      "icon": "check",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Progreso en un proceso con orden real.",
+      "keywords": "stepper pasos wizard",
+      "classes": [
+        {
+          "name": "al-stepper > al-stepper__item",
+          "desc": "Con is-done / is-current."
+        }
+      ],
+      "a11y": "Es un <ol>; marca el actual con aria-current=\"step\"."
+    },
+    {
+      "id": "dropdown",
+      "name": "Menú desplegable",
+      "category": "navegacion",
+      "icon": "more-vertical",
+      "css": "navigation.css",
+      "js": "dropdown.js",
+      "description": "Menú con teclado completo y apertura hacia arriba si no cabe.",
+      "keywords": "dropdown menu desplegable contextual",
+      "classes": [
+        {
+          "name": "data-al-dropdown",
+          "desc": "Contenedor."
+        },
+        {
+          "name": "data-al-dropdown-trigger",
+          "desc": "Botón que lo abre."
+        },
+        {
+          "name": "al-menu / al-menu__item",
+          "desc": "Menú y opciones."
+        },
+        {
+          "name": "evento al:select",
+          "desc": "detail.value con la opción elegida."
+        }
+      ],
+      "a11y": "role=\"menu\", aria-expanded, flechas, Inicio, Fin y Esc."
+    },
+    {
+      "id": "sidebar",
+      "name": "Barra lateral",
+      "category": "navegacion",
+      "icon": "panel-left",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Navegación vertical agrupada.",
+      "keywords": "sidebar lateral menu",
+      "classes": [
+        {
+          "name": "al-sidebar / __group / __title / __link",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Usa <nav aria-label>."
+    },
+    {
+      "id": "toc",
+      "name": "Índice de página",
+      "category": "navegacion",
+      "icon": "list",
+      "css": "navigation.css",
+      "js": null,
+      "description": "Enlaces a las secciones de una página.",
+      "keywords": "toc indice tabla contenidos",
+      "classes": [
+        {
+          "name": "al-toc",
+          "desc": "Enlaces; is-active marca la sección visible."
+        }
+      ],
+      "a11y": "Usa <nav aria-label>."
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "category": "superposiciones",
+      "icon": "maximize",
+      "css": "overlays.css",
+      "js": "overlays.js",
+      "description": "Diálogo nativo con foco atrapado, Esc y cierre al hacer clic fuera.",
+      "keywords": "modal dialog dialogo ventana confirmar",
+      "classes": [
+        {
+          "name": "dialog.al-modal",
+          "desc": "Diálogo."
+        },
+        {
+          "name": "data-al-open=\"#id\"",
+          "desc": "Abre."
+        },
+        {
+          "name": "data-al-close",
+          "desc": "Cierra (el valor llega como returnValue)."
+        },
+        {
+          "name": "Julieta.confirm({ title, text, danger })",
+          "desc": "Devuelve una promesa true / false."
+        }
+      ],
+      "a11y": "Usa <dialog>: foco atrapado y restauración del foco incluidos."
+    },
+    {
+      "id": "drawer",
+      "name": "Drawer",
+      "category": "superposiciones",
+      "icon": "panel-left",
+      "css": "overlays.css",
+      "js": "overlays.js",
+      "description": "Panel lateral que entra desde el borde.",
+      "keywords": "drawer panel lateral",
+      "classes": [
+        {
+          "name": "dialog.al-drawer",
+          "desc": "Derecha por defecto."
+        },
+        {
+          "name": "al-drawer--left",
+          "desc": "Desde la izquierda."
+        }
+      ],
+      "a11y": "Igual que el modal."
+    },
+    {
+      "id": "tooltip",
+      "name": "Tooltip",
+      "category": "superposiciones",
+      "icon": "message-circle",
+      "css": "overlays.css",
+      "js": null,
+      "description": "Ayuda breve con solo CSS.",
+      "keywords": "tooltip ayuda hint",
+      "classes": [
+        {
+          "name": "data-al-tip=\"Texto\"",
+          "desc": "Posición con data-al-tip-pos: top, bottom, left, right."
+        }
+      ],
+      "a11y": "Aparece también con foco. Para información esencial usa texto visible."
+    },
+    {
+      "id": "command",
+      "name": "Paleta de comandos",
+      "category": "superposiciones",
+      "icon": "command",
+      "css": "overlays.css",
+      "js": "command.js",
+      "description": "Busca en todo el catálogo con Ctrl/⌘ + K.",
+      "keywords": "command palette buscar atajo",
+      "classes": [
+        {
+          "name": "data-al-command-open",
+          "desc": "Botón que la abre."
+        },
+        {
+          "name": "Julieta.command.open(texto)",
+          "desc": "Abre por código."
+        }
+      ],
+      "a11y": "Patrón combobox con aria-activedescendant."
+    },
+    {
+      "id": "container",
+      "name": "Contenedor",
+      "category": "layout",
+      "icon": "maximize",
+      "css": "layout.css",
+      "js": null,
+      "description": "Centra y limita el ancho.",
+      "keywords": "container ancho",
+      "classes": [
+        {
+          "name": "al-container / --narrow / --wide",
+          "desc": "76rem, 46rem, 92rem."
+        },
+        {
+          "name": "al-section / --tight / --tint",
+          "desc": "Bloques verticales."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "stack",
+      "name": "Pila y grupo",
+      "category": "layout",
+      "icon": "list",
+      "css": "layout.css",
+      "js": null,
+      "description": "Separa hijos en vertical (stack) u horizontal con salto (cluster).",
+      "keywords": "stack cluster flex gap",
+      "classes": [
+        {
+          "name": "al-stack",
+          "desc": "Vertical; --al-gap controla el espacio."
+        },
+        {
+          "name": "al-cluster",
+          "desc": "Horizontal con salto de línea."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "grid",
+      "name": "Rejilla",
+      "category": "layout",
+      "icon": "grid",
+      "css": "layout.css",
+      "js": null,
+      "description": "Columnas automáticas o fijas.",
+      "keywords": "grid rejilla columnas",
+      "classes": [
+        {
+          "name": "al-grid",
+          "desc": "Auto: --al-min define el ancho mínimo de columna."
+        },
+        {
+          "name": "al-grid--2 / --3 / --4",
+          "desc": "Columnas fijas; colapsan en móvil."
+        },
+        {
+          "name": "al-split",
+          "desc": "Dos columnas; --al-cols cambia la proporción."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "hero",
+      "name": "Héroe",
+      "category": "patrones",
+      "icon": "flower",
+      "css": "patterns.css",
+      "js": "petals.js",
+      "description": "Portada con degradado y pétalos animados en canvas.",
+      "keywords": "hero portada petalos",
+      "classes": [
+        {
+          "name": "al-hero / __inner / __title / __lead",
+          "desc": "Estructura."
+        },
+        {
+          "name": "canvas[data-al-petals]",
+          "desc": "Pétalos; data-density ajusta la cantidad."
+        }
+      ],
+      "a11y": "El canvas es decorativo (aria-hidden) y respeta prefers-reduced-motion."
+    },
+    {
+      "id": "feature",
+      "name": "Característica",
+      "category": "patrones",
+      "icon": "sparkles",
+      "css": "patterns.css",
+      "js": null,
+      "description": "Icono, título y descripción.",
+      "keywords": "feature caracteristica beneficio",
+      "classes": [
+        {
+          "name": "al-feature / __icon / __title / __text",
+          "desc": "Estructura."
+        },
+        {
+          "name": "al-section-head",
+          "desc": "Encabezado de sección."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "plan",
+      "name": "Plan de precios",
+      "category": "patrones",
+      "icon": "credit-card",
+      "css": "patterns.css",
+      "js": null,
+      "description": "Precio, descripción y lista de beneficios.",
+      "keywords": "plan precio pricing suscripcion",
+      "classes": [
+        {
+          "name": "al-plan / __name / __desc / __price / __features",
+          "desc": "Estructura."
+        },
+        {
+          "name": "al-plan--featured",
+          "desc": "Plan destacado oscuro."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "cta",
+      "name": "Llamada a la acción",
+      "category": "patrones",
+      "icon": "rocket",
+      "css": "patterns.css",
+      "js": null,
+      "description": "Banda de cierre con degradado.",
+      "keywords": "cta llamada accion banda",
+      "classes": [
+        {
+          "name": "al-cta",
+          "desc": "Contenedor con h2, p y botones."
+        }
+      ],
+      "a11y": "—"
+    },
+    {
+      "id": "footer",
+      "name": "Pie de página",
+      "category": "patrones",
+      "icon": "align-center",
+      "css": "patterns.css",
+      "js": null,
+      "description": "Marca, columnas de enlaces y aviso legal.",
+      "keywords": "footer pie",
+      "classes": [
+        {
+          "name": "al-footer / __grid / __title / __links / __legal",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "Usa <footer>."
+    },
+    {
+      "id": "auth",
+      "name": "Pantalla de acceso",
+      "category": "patrones",
+      "icon": "log-in",
+      "css": "patterns.css",
+      "js": "petals.js",
+      "description": "Dos columnas: arte y formulario.",
+      "keywords": "auth login acceso registro",
+      "classes": [
+        {
+          "name": "al-auth / __art / __form / __box",
+          "desc": "Estructura."
+        }
+      ],
+      "a11y": "El arte se oculta en pantallas pequeñas."
+    },
+    {
+      "id": "app",
+      "name": "Estructura de aplicación",
+      "category": "patrones",
+      "icon": "panel-left",
+      "css": "patterns.css",
+      "js": null,
+      "description": "Barra lateral + barra superior + contenido; la lateral se vuelve cajón en móvil.",
+      "keywords": "app shell dashboard layout admin",
+      "classes": [
+        {
+          "name": "al-app / __sidebar / __main / __topbar / __content",
+          "desc": "Estructura."
+        },
+        {
+          "name": "is-menu-open",
+          "desc": "Muestra la barra lateral en móvil."
+        }
+      ],
+      "a11y": "Cierra la barra con Esc en móvil."
+    },
+    {
+      "id": "chart",
+      "name": "Gráfica",
+      "category": "patrones",
+      "icon": "bar-chart",
+      "css": "patterns.css",
+      "js": "charts.js",
+      "description": "Línea, área, barras y sparkline en SVG, con tooltip.",
+      "keywords": "chart grafica linea barras sparkline",
+      "classes": [
+        {
+          "name": "al-chart[data-al-chart]",
+          "desc": "JSON con type, labels y series."
+        },
+        {
+          "name": "al-chart--spark",
+          "desc": "Versión mini sin ejes."
+        },
+        {
+          "name": "Julieta.chart(el, config)",
+          "desc": "Por código."
+        }
+      ],
+      "a11y": "Añade aria-label con un resumen de los datos."
+    }
+  ]
+}

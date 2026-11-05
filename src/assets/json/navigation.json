@@ -1,0 +1,124 @@
+{
+  "site": {
+    "name": "Julieta UI",
+    "tagline": "Interfaces con alma, por CDN",
+    "repo": "https://github.com/julietalibreria/julietalibreria.github.io"
+  },
+  "groups": [
+    {
+      "id": "empezar",
+      "title": "Empezar",
+      "items": [
+        {
+          "title": "Inicio",
+          "href": "index.html",
+          "icon": "home",
+          "description": "Qué es Julieta UI y cómo se ve",
+          "keywords": "portada home bienvenida"
+        },
+        {
+          "title": "Instalación",
+          "href": "src/pages/instalacion.html",
+          "icon": "download",
+          "description": "Instalar por CDN, módulos sueltos y configuración",
+          "keywords": "cdn github pages jsdelivr instalar importar modulos"
+        },
+        {
+          "title": "Navegador de recursos",
+          "href": "src/pages/recursos.html",
+          "icon": "compass",
+          "description": "Busca y filtra todo lo que contiene la librería",
+          "keywords": "buscar catalogo explorar filtrar recursos"
+        }
+      ]
+    },
+    {
+      "id": "fundamentos",
+      "title": "Fundamentos",
+      "items": [
+        {
+          "title": "Fundamentos",
+          "href": "src/pages/fundamentos.html",
+          "icon": "sliders",
+          "description": "Espacio, radios, sombras, movimiento y capas",
+          "keywords": "tokens spacing radius shadow motion z-index variables css"
+        },
+        {
+          "title": "Colores",
+          "href": "src/pages/colores.html",
+          "icon": "palette",
+          "description": "Siete familias, tonos 50–950 y colores semánticos",
+          "keywords": "paleta color tema oscuro contraste"
+        },
+        {
+          "title": "Tipografía",
+          "href": "src/pages/tipografia.html",
+          "icon": "type",
+          "description": "Fuentes, escala y estilos de texto",
+          "keywords": "fuentes fonts tipos letra escala"
+        },
+        {
+          "title": "Iconos",
+          "href": "src/pages/iconos.html",
+          "icon": "sparkles",
+          "description": "Más de 160 iconos de trazo, con buscador",
+          "keywords": "icons svg glifos"
+        }
+      ]
+    },
+    {
+      "id": "componentes",
+      "title": "Componentes",
+      "items": [
+        {
+          "title": "Componentes",
+          "href": "src/pages/componentes.html",
+          "icon": "box",
+          "description": "Todos los componentes con demostración y código",
+          "keywords": "ui botones formularios tarjetas tablas modales"
+        }
+      ]
+    },
+    {
+      "id": "plantillas",
+      "title": "Plantillas",
+      "items": [
+        {
+          "title": "Galería de plantillas",
+          "href": "src/pages/plantillas.html",
+          "icon": "layout",
+          "description": "12 páginas completas, todas las categorías",
+          "keywords": "templates paginas ejemplos"
+        },
+        {
+          "title": "Landing de producto",
+          "href": "src/pages/plantillas/landing.html",
+          "icon": "rocket",
+          "description": "3 plantillas · Páginas de presentación para dar a conocer un producto",
+          "keywords": "marketing portada hero"
+        },
+        {
+          "title": "Panel de control",
+          "href": "src/pages/plantillas/dashboard.html",
+          "icon": "bar-chart",
+          "description": "3 plantillas · Interfaces de administración con métricas, gráficas, tablas y tableros para trabajar todo el día",
+          "keywords": "admin dashboard analitica"
+        },
+        {
+          "title": "Acceso y registro",
+          "href": "src/pages/plantillas/acceso.html",
+          "icon": "log-in",
+          "description": "3 plantillas · Inicio de sesión, alta de cuenta y recuperación de acceso con validación en español",
+          "keywords": "login registro sesion contraseña"
+        },
+        {
+          "title": "Precios",
+          "href": "src/pages/plantillas/precios.html",
+          "icon": "credit-card",
+          "description": "3 plantillas · Planes, calculadoras y comparativas para que tu gente elija sin dudas",
+          "keywords": "planes suscripcion pricing"
+        }
+      ]
+    }
+  ]
+}

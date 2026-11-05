@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tejido · El tablero donde tu taller se organiza</title>
+  <meta name="description" content="Tejido reúne pedidos, calendario y cobros de tu taller en un solo lugar.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/landing/tejido.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/landing/tejido.html">
+  <meta property="og:title" content="Tejido · El tablero donde tu taller se organiza">
+  <meta property="og:description" content="Tejido reúne pedidos, calendario y cobros de tu taller en un solo lugar.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tejido · El tablero donde tu taller se organiza">
+  <meta name="twitter:description" content="Tejido reúne pedidos, calendario y cobros de tu taller en un solo lugar.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Tejido · El tablero donde tu taller se organiza", "description": "Tejido reúne pedidos, calendario y cobros de tu taller en un solo lugar.", "url": "https://julietalibreria.github.io/src/pages/plantillas/landing/tejido.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .lp-hero .al-hero__title { font-size: clamp(3rem, 1.2rem + 6.4vw, 7rem); letter-spacing: -0.045em; }
+    .lp-hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+    @media (max-width: 62rem) { .lp-hero__grid { grid-template-columns: 1fr; } }
+    .lp-hero__copy { display: grid; gap: 1.75rem; justify-items: start; }
+    .lp-hero .al-btn--ghost { --_fg: #fff; --_bg-h: rgb(255 255 255 / .14); --_bd: rgb(255 255 255 / .3); border: 1px solid var(--_bd); }
+    .lp-board { display: grid; gap: .85rem; padding: 1.1rem; border-radius: var(--al-radius-xl); background: color-mix(in oklab, var(--al-surface) 94%, transparent); color: var(--al-text); box-shadow: 0 40px 80px -30px rgb(0 0 0 / .55); rotate: 1.2deg; }
+    .lp-board__head { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+    .lp-board__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+    .lp-col { display: grid; gap: .5rem; align-content: start; padding: .55rem; border-radius: var(--al-radius-md); background: var(--al-surface-sunken); }
+    .lp-col h4 { font-size: .75rem; color: var(--al-text-muted); font-family: var(--al-font-sans); letter-spacing: 0; padding: .1rem .2rem; }
+    .lp-card { padding: .65rem .7rem; border-radius: var(--al-radius-sm); background: var(--al-surface); box-shadow: var(--al-shadow-sm); font-size: .8125rem; font-weight: 600; display: grid; gap: .4rem; }
+    .lp-card small { font-weight: 500; color: var(--al-text-muted); }
+    .lp-section-title { font-size: var(--al-text-4xl); line-height: .98; letter-spacing: -0.045em; max-width: 17ch; }
+    .lp-features { display: grid; gap: 2.5rem 3rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+    .lp-view { display: grid; gap: 1rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface-sunken); border: 1px solid var(--al-border); }
+    .lp-quotes { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+    .lp-quotes .al-quote { padding: 1.75rem; border-radius: var(--al-radius-xl); background: var(--al-surface); border: 1px solid var(--al-border); align-content: space-between; margin: 0; }
+    .lp-quotes .al-quote:nth-child(2) { margin-top: 2rem; }
+    @media (max-width: 62rem) { .lp-quotes .al-quote:nth-child(2) { margin-top: 0; } }
+    .lp-numbers { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+    .lp-numbers .al-stat__value { font-size: clamp(2.5rem, 2rem + 2vw, 3.75rem); letter-spacing: -0.04em; }
+    #alta .al-error { color: #ffd0d3; }
+    .lp-nav-menu { display: none; }
+    @media (max-width: 52rem) { .lp-nav-links, .lp-nav-cta { display: none; } .lp-nav-menu { display: inline-flex; } }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="al-navbar">
+    <a class="al-navbar__brand" href="#inicio"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">tejido</a>
+    <nav class="al-navbar__links lp-nav-links" aria-label="Principal">
+      <a class="al-nav-link" href="#funciones">Funciones</a>
+      <a class="al-nav-link" href="#vistas">Vistas</a>
+      <a class="al-nav-link" href="#opiniones">Opiniones</a>
+      <a class="al-nav-link" href="#preguntas">Preguntas</a>
+    </nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle data-al-tip="Cambiar tema" data-al-tip-pos="bottom"><al-icon name="moon" size="20"></al-icon></button>
+    <a class="al-btn al-btn--ghost al-btn--sm lp-nav-cta" href="#inicio">Entrar</a>
+    <a class="al-btn al-btn--primary al-btn--sm lp-nav-cta" href="#final">Probar gratis</a>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm lp-nav-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
+  </header>
+
+  <dialog class="al-drawer" id="menu-movil" aria-label="Menú">
+    <div class="al-drawer__header"><span class="al-drawer__title">tejido</span><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-drawer__body">
+      <nav class="al-sidebar" aria-label="Móvil">
+        <div class="al-sidebar__group">
+          <a class="al-sidebar__link" href="#funciones" data-al-close>Funciones</a>
+          <a class="al-sidebar__link" href="#vistas" data-al-close>Vistas</a>
+          <a class="al-sidebar__link" href="#opiniones" data-al-close>Opiniones</a>
+          <a class="al-sidebar__link" href="#preguntas" data-al-close>Preguntas</a>
+        </div>
+      </nav>
+    </div>
+    <div class="al-drawer__footer"><a class="al-btn al-btn--primary al-btn--block" href="#final" data-al-close>Probar gratis</a></div>
+  </dialog>
+
+  <main id="contenido">
+    <section class="al-hero lp-hero" id="inicio">
+      <canvas class="al-petals" data-al-petals></canvas>
+      <div class="al-container al-hero__inner">
+        <div class="lp-hero__grid">
+          <div class="lp-hero__copy">
+            <h1 class="al-hero__title is-entering">Tu taller, en orden</h1>
+            <p class="al-hero__lead">Pedidos, calendario y cobros en un solo tablero. Tejido está pensado para estudios pequeños que hacen cosas a mano y no quieren pasar la tarde en hojas de cálculo.</p>
+            <div class="al-cluster">
+              <a class="al-btn al-btn--accent al-btn--lg" href="#final">Probar 30 días gratis</a>
+              <a class="al-btn al-btn--ghost al-btn--lg" href="#vistas"><al-icon name="play"></al-icon>Ver cómo funciona</a>
+            </div>
+          </div>
+          <div class="lp-board" aria-label="Ejemplo de tablero">
+            <div class="lp-board__head"><span>Pedidos de noviembre</span><span class="al-avatar-group"><span class="al-avatar al-avatar--sm" aria-label="Ximena">XO</span><span class="al-avatar al-avatar--sm al-avatar--sol" aria-label="Mateo">MR</span></span></div>
+            <div class="lp-board__cols">
+              <div class="lp-col"><h4>Por hacer</h4>
+                <div class="lp-card">Vajilla de barro, 12 piezas<small>Entrega 4 nov</small></div>
+                <div class="lp-card">Rebozo teñido con grana<span class="al-badge al-badge--warning" style="justify-self:start">Urgente</span></div>
+              </div>
+              <div class="lp-col"><h4>En proceso</h4>
+                <div class="lp-card">Mesa de parota<small>Lijado y barniz</small><div class="al-progress" style="--value:60"><span></span></div></div>
+              </div>
+              <div class="lp-col"><h4>Listo</h4>
+                <div class="lp-card">Cuadernos cosidos<span class="al-badge al-badge--success al-badge--dot" style="justify-self:start">Cobrado</span></div>
+                <div class="lp-card">Velas de cera de abeja<small>Entregado</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section" id="funciones">
+      <div class="al-container">
+        <div class="al-section-head"><h2>Lo que necesitas para que el trabajo fluya</h2><p>Sin módulos que nunca usarás: cada función resuelve algo que de verdad pasa en un taller.</p></div>
+        <div class="lp-features">
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="columns"></al-icon></span><h3 class="al-feature__title">Tablero de pedidos</h3><p class="al-feature__text">Arrastra cada encargo de “por hacer” a “listo” y avisa a tu cliente con un clic.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="calendar"></al-icon></span><h3 class="al-feature__title">Calendario de entregas</h3><p class="al-feature__text">Ve de un vistazo qué semana está llena y cuál tiene espacio para otro encargo.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="wallet"></al-icon></span><h3 class="al-feature__title">Cobros y anticipos</h3><p class="al-feature__text">Pide el 50% por adelantado y registra cada pago contra su pedido.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="package"></al-icon></span><h3 class="al-feature__title">Inventario de materiales</h3><p class="al-feature__text">Te avisa cuando la cera, la tela o el barro estén por acabarse.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="message-circle"></al-icon></span><h3 class="al-feature__title">Mensajes con clientes</h3><p class="al-feature__text">Cada conversación vive junto a su pedido. Nada se pierde entre chats.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="receipt"></al-icon></span><h3 class="al-feature__title">Recibos listos</h3><p class="al-feature__text">Genera un recibo con tu logotipo en cuanto marcas un pedido como cobrado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section al-section--tint" id="vistas">
+      <div class="al-container">
+        <div class="al-split" style="--al-cols:minmax(0,.8fr) minmax(0,1.2fr);align-items:start">
+          <div class="al-stack" style="--al-gap:1.25rem">
+            <h2 class="lp-section-title">Tres formas de mirar lo mismo</h2>
+            <p class="al-lead">Cambia de vista sin perder el contexto. Los datos son los mismos; solo cambia lo que necesitas ver en ese momento.</p>
+          </div>
+          <div data-al-tabs>
+            <div class="al-tabs al-tabs--pills" role="tablist" aria-label="Vistas">
+              <button class="al-tab" data-target="v-tablero" aria-selected="true"><al-icon name="columns" size="18"></al-icon>Tablero</button>
+              <button class="al-tab" data-target="v-calendario"><al-icon name="calendar" size="18"></al-icon>Calendario</button>
+              <button class="al-tab" data-target="v-cobros"><al-icon name="wallet" size="18"></al-icon>Cobros</button>
+            </div>
+            <div class="al-tabpanel" id="v-tablero">
+              <div class="lp-view">
+                <ul class="al-list" role="list">
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Vajilla de barro</div><div class="al-list__meta">Para Casa Tlalpan · 4 nov</div></div><span class="al-badge al-badge--neutral">Por hacer</span></li>
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Mesa de parota</div><div class="al-list__meta">Para Julia Vega · 12 nov</div></div><span class="al-badge al-badge--info">En proceso</span></li>
+                  <li class="al-list__item"><div class="al-list__main"><div class="al-list__title">Cuadernos cosidos</div><div class="al-list__meta">Para Librería Nonoalco</div></div><span class="al-badge al-badge--success">Listo</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="al-tabpanel" id="v-calendario" hidden>
+              <div class="lp-view">
+                <ol class="al-timeline">
+                  <li class="al-timeline__item"><div class="al-timeline__time">Lun 4 nov</div><div class="al-timeline__title">Entrega: vajilla de barro</div></li>
+                  <li class="al-timeline__item"><div class="al-timeline__time">Mié 6 nov</div><div class="al-timeline__title">Recoger tela en el mercado</div></li>
+                  <li class="al-timeline__item"><div class="al-timeline__time">Mar 12 nov</div><div class="al-timeline__title">Entrega: mesa de parota</div></li>
+                </ol>
+              </div>
+            </div>
+            <div class="al-tabpanel" id="v-cobros" hidden>
+              <div class="lp-view">
+                <div class="al-grid" style="--al-min:9rem">
+                  <div class="al-stat"><span class="al-stat__label">Cobrado</span><span class="al-stat__value">$18,400</span></div>
+                  <div class="al-stat"><span class="al-stat__label">Por cobrar</span><span class="al-stat__value">$6,250</span></div>
+                </div>
+                <div class="al-progress al-progress--lg" style="--value:75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Avance de cobro del mes"><span></span></div>
+                <p class="al-text-sm al-text-muted">75% de lo facturado este mes ya está cobrado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section">
+      <div class="al-container">
+        <div class="lp-numbers">
+          <div class="al-stat"><span class="al-stat__value">2,400</span><span class="al-stat__label">talleres usan Tejido</span></div>
+          <div class="al-stat"><span class="al-stat__value">31 h</span><span class="al-stat__label">menos de papeleo al mes, en promedio</span></div>
+          <div class="al-stat"><span class="al-stat__value">98%</span><span class="al-stat__label">de pedidos entregados a tiempo</span></div>
+          <div class="al-stat"><span class="al-stat__value">4.9</span><span class="al-stat__label">de 5 en reseñas de la tienda de apps</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section al-section--tint" id="opiniones">
+      <div class="al-container">
+        <div class="al-section-head"><h2>Lo que dicen quienes lo usan</h2></div>
+        <div class="lp-quotes">
+          <figure class="al-quote"><blockquote class="al-quote__text" style="margin:0">“Dejé de perder pedidos en WhatsApp. Ahora todo está en un solo lugar y mis clientes saben cuándo les toca.”</blockquote><figcaption class="al-quote__author"><span class="al-avatar" aria-hidden="true">RM</span><span><strong>Rocío Mendoza</strong><small>Cerámica, Coyoacán</small></span></figcaption></figure>
+          <figure class="al-quote"><blockquote class="al-quote__text" style="margin:0">“El anticipo del 50% cambió mi flujo de caja. Antes pagaba el material de mi bolsa.”</blockquote><figcaption class="al-quote__author"><span class="al-avatar al-avatar--sol" aria-hidden="true">JV</span><span><strong>Julián Vega</strong><small>Carpintería, Oaxaca</small></span></figcaption></figure>
+          <figure class="al-quote"><blockquote class="al-quote__text" style="margin:0">“Lo configuré en una tarde. Mi hermana, que odia la tecnología, ya lo usa sola.”</blockquote><figcaption class="al-quote__author"><span class="al-avatar al-avatar--agave" aria-hidden="true">PS</span><span><strong>Paola Sandoval</strong><small>Textiles, Puebla</small></span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section" id="preguntas">
+      <div class="al-container al-container--narrow">
+        <div class="al-section-head"><h2>Preguntas frecuentes</h2></div>
+        <div class="al-accordion">
+          <details open><summary>¿Necesito tarjeta para probarlo?</summary><div class="al-accordion__body">No. Los 30 días de prueba incluyen todas las funciones y no pedimos datos de pago hasta que decidas quedarte.</div></details>
+          <details><summary>¿Puedo importar mis pedidos actuales?</summary><div class="al-accordion__body">Sí. Sube tu hoja de cálculo en formato CSV y relacionamos las columnas contigo en un par de pasos.</div></details>
+          <details><summary>¿Funciona en el celular?</summary><div class="al-accordion__body">Funciona desde el navegador de cualquier teléfono, sin instalar nada. Puedes añadir un acceso directo a la pantalla de inicio.</div></details>
+          <details><summary>¿Qué pasa con mis datos si cancelo?</summary><div class="al-accordion__body">Descargas todo en un archivo en cualquier momento. Si cancelas, conservamos tus datos 60 días por si cambias de opinión.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="al-section" id="final" style="padding-top:0">
+      <div class="al-container">
+        <div class="al-cta">
+          <h2>Ordena tu taller esta semana</h2>
+          <p>Crea tu cuenta, importa tus pedidos y mira cómo queda el mes. Tardas menos que en preparar un café.</p>
+          <form data-al-validate id="alta" style="max-width:30rem;width:100%" novalidate>
+            <div class="al-field">
+              <div class="al-input-group" style="background:#fff">
+                <input class="al-input" type="email" name="correo" placeholder="tu@correo.com" required aria-label="Correo electrónico" style="color:var(--al-piedra-900)">
+                <button class="al-btn al-btn--primary" type="submit">Empezar gratis</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="al-footer">
+    <div class="al-container">
+      <div class="al-footer__grid">
+        <div class="al-stack" style="--al-gap:.9rem"><a class="al-navbar__brand" href="#inicio"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">tejido</a><p class="al-text-sm al-text-muted" style="max-width:30ch">El tablero donde los talleres pequeños se organizan.</p></div>
+        <div><div class="al-footer__title">Producto</div><ul class="al-footer__links" role="list"><li><a href="#funciones">Funciones</a></li><li><a href="#vistas">Vistas</a></li><li><a href="#preguntas">Preguntas</a></li></ul></div>
+        <div><div class="al-footer__title">Compañía</div><ul class="al-footer__links" role="list"><li><a href="#inicio">Nosotras</a></li><li><a href="#inicio">Blog</a></li><li><a href="#inicio">Contacto</a></li></ul></div>
+        <div><div class="al-footer__title">Legal</div><ul class="al-footer__links" role="list"><li><a href="#inicio">Privacidad</a></li><li><a href="#inicio">Términos</a></li></ul></div>
+      </div>
+      <div class="al-footer__legal"><span>© 2026 Tejido. Hecho en México.</span><span>Plantilla de ejemplo de Julieta UI</span></div>
+    </div>
+  </footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../landing.html"><al-icon name="arrow-left" size="16"></al-icon>Landing de producto</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    document.getElementById("alta").addEventListener("al:valid", (e) => {
+      Julieta.toast({ type: "success", title: "¡Listo!", text: `Te escribiremos a ${e.detail.data.correo}.` });
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Componentes · Julieta UI</title>
+  <meta name="description" content="Todos los componentes de Julieta UI con demostración en vivo, código listo para copiar, clases disponibles y notas de accesibilidad.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/componentes.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/componentes.html">
+  <meta property="og:title" content="Componentes · Julieta UI">
+  <meta property="og:description" content="Todos los componentes de Julieta UI con demostración en vivo, código listo para copiar, clases disponibles y notas de accesibilidad.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Componentes · Julieta UI">
+  <meta name="twitter:description" content="Todos los componentes de Julieta UI con demostración en vivo, código listo para copiar, clases disponibles y notas de accesibilidad.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Componentes · Julieta UI", "description": "Todos los componentes de Julieta UI con demostración en vivo, código listo para copiar, clases disponibles y notas de accesibilidad.", "url": "https://julietalibreria.github.io/src/pages/componentes.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/componentes.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Componentes</h1>
+      <p>Cada componente tiene una demostración real, el código exacto que la produce, la lista de clases y las notas de accesibilidad. Los títulos y descripciones salen de <code>components.json</code>, el mismo archivo que alimenta el buscador.</p>
+    </header>
+
+    <!-- ===================== ACCIONES ===================== -->
+    <div data-category="acciones">
+
+      <section data-component="button">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--primary">Primario</button>
+          <button class="al-btn al-btn--accent">Acento</button>
+          <button class="al-btn al-btn--secondary">Secundario</button>
+          <button class="al-btn al-btn--soft">Suave</button>
+          <button class="al-btn al-btn--outline">Contorno</button>
+          <button class="al-btn al-btn--ghost">Fantasma</button>
+          <button class="al-btn al-btn--danger">Peligro</button>
+          <button class="al-btn al-btn--link">Enlace</button>
+        </div>
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--primary al-btn--sm">Pequeño</button>
+          <button class="al-btn al-btn--primary">Normal</button>
+          <button class="al-btn al-btn--primary al-btn--lg">Grande</button>
+          <button class="al-btn al-btn--primary al-btn--xl">Extra grande</button>
+        </div>
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--primary"><al-icon name="plus"></al-icon>Nuevo proyecto</button>
+          <button class="al-btn al-btn--secondary">Siguiente<al-icon name="arrow-right"></al-icon></button>
+          <button class="al-btn al-btn--soft al-btn--icon" aria-label="Favorito"><al-icon name="heart"></al-icon></button>
+          <button class="al-btn al-btn--primary is-loading" aria-busy="true">Guardando</button>
+          <button class="al-btn al-btn--secondary" disabled>Desactivado</button>
+        </div>
+      </section>
+
+      <section data-component="button-group">
+        <div class="d-demo" data-al-demo>
+          <div class="al-btn-group" role="group" aria-label="Alineación">
+            <button class="al-btn al-btn--secondary" aria-pressed="true"><al-icon name="align-left"></al-icon>Izquierda</button>
+            <button class="al-btn al-btn--secondary"><al-icon name="align-center"></al-icon>Centro</button>
+            <button class="al-btn al-btn--secondary">Más<al-icon name="chevron-down" size="16"></al-icon></button>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="badge">
+        <div class="d-demo" data-al-demo>
+          <span class="al-badge">Nuevo</span>
+          <span class="al-badge al-badge--success al-badge--dot">Activo</span>
+          <span class="al-badge al-badge--warning al-badge--dot">Pendiente</span>
+          <span class="al-badge al-badge--danger">Error</span>
+          <span class="al-badge al-badge--info">Beta</span>
+          <span class="al-badge al-badge--neutral">Borrador</span>
+          <span class="al-badge al-badge--solid">Sólido</span>
+          <span class="al-badge al-badge--outline">Contorno</span>
+        </div>
+      </section>
+
+      <section data-component="chip">
+        <div class="d-demo" data-al-demo>
+          <button class="al-chip" aria-pressed="true">Diseño</button>
+          <button class="al-chip" aria-pressed="false">Desarrollo</button>
+          <span class="al-chip">Etiqueta <button class="al-chip__remove" aria-label="Quitar etiqueta"><al-icon name="x" size="14"></al-icon></button></span>
+        </div>
+      </section>
+
+      <section data-component="kbd">
+        <div class="d-demo" data-al-demo>
+          <span>Busca con <kbd class="al-kbd">Ctrl</kbd> <kbd class="al-kbd">K</kbd> o presiona <kbd class="al-kbd">/</kbd></span>
+        </div>
+      </section>
+
+      <section data-component="link">
+        <div class="d-demo" data-al-demo>
+          <a class="al-link" href="#link">Pasa el cursor por este enlace</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== FORMULARIOS ===================== -->
+    <div data-category="formularios">
+
+      <section data-component="input">
+        <div class="d-demo" data-al-demo data-stage="is-grid">
+          <div class="al-field">
+            <label class="al-label" for="f-nombre">Nombre completo</label>
+            <input class="al-input" id="f-nombre" type="text" placeholder="Ximena Ortega" autocomplete="name">
+            <p class="al-hint">Como aparece en tu identificación.</p>
+          </div>
+          <div class="al-field">
+            <label class="al-label" for="f-correo">Correo <span class="al-optional">opcional</span></label>
+            <input class="al-input" id="f-correo" type="email" value="ximena@" aria-invalid="true" aria-describedby="f-correo-err">
+            <p class="al-error" id="f-correo-err">Escribe un correo válido, como nombre@dominio.com.</p>
+          </div>
+          <div class="al-field">
+            <label class="al-label" for="f-monto">Monto</label>
+            <div class="al-input-group">
+              <span class="al-input-group__addon">$</span>
+              <input class="al-input" id="f-monto" type="number" value="1200">
+              <span class="al-input-group__addon">MXN</span>
+            </div>
+          </div>
+          <div class="al-field">
+            <label class="al-label" for="f-pass">Contraseña</label>
+            <div class="al-input-group">
+              <input class="al-input" id="f-pass" type="password" value="jacaranda2026" autocomplete="new-password">
+              <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#f-pass" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button>
+            </div>
+          </div>
+          <div class="al-field" style="grid-column: 1 / -1">
+            <label class="al-label" for="f-msg">Mensaje</label>
+            <textarea class="al-textarea" id="f-msg" maxlength="120" placeholder="Cuéntanos qué necesitas"></textarea>
+            <span class="al-counter" data-al-counter="#f-msg"></span>
+          </div>
+        </div>
+        <h4 class="al-mt-6">Validación automática</h4>
+        <p class="al-text-muted">Añade <code>data-al-validate</code> al formulario: los mensajes salen en español, junto al campo, y el foco salta al primero con error.</p>
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <form class="al-stack" data-al-validate id="demo-form" style="--al-gap:1rem">
+            <div class="al-field">
+              <label class="al-label" for="v-correo">Correo</label>
+              <input class="al-input" id="v-correo" name="correo" type="email" required>
+            </div>
+            <div class="al-field">
+              <label class="al-label" for="v-clave">Contraseña</label>
+              <input class="al-input" id="v-clave" name="clave" type="password" required minlength="8">
+            </div>
+            <button class="al-btn al-btn--primary" type="submit">Crear cuenta</button>
+          </form>
+        </div>
+      </section>
+
+      <section data-component="select">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <div class="al-field">
+            <label class="al-label" for="s-ciudad">Ciudad</label>
+            <div class="al-select-wrap">
+              <select class="al-select" id="s-ciudad">
+                <option>Ciudad de México</option>
+                <option>Guadalajara</option>
+                <option>Monterrey</option>
+                <option>Oaxaca</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="checkbox">
+        <div class="d-demo" data-al-demo>
+          <label class="al-check"><input type="checkbox" checked>Recordarme</label>
+          <label class="al-check"><input type="checkbox">Recibir novedades</label>
+          <label class="al-check"><input type="checkbox" data-indeterminate><span>Selección parcial</span></label>
+          <label class="al-check"><input type="checkbox" disabled>Desactivada</label>
+        </div>
+      </section>
+
+      <section data-component="radio">
+        <div class="d-demo" data-al-demo>
+          <fieldset style="border:0;padding:0;display:grid;gap:.7rem">
+            <legend class="al-label" style="margin-bottom:.5rem">Entrega</legend>
+            <label class="al-radio"><input type="radio" name="entrega" checked>Estándar · 3 a 5 días</label>
+            <label class="al-radio"><input type="radio" name="entrega">Exprés · 24 horas</label>
+            <label class="al-radio"><input type="radio" name="entrega" disabled>Mismo día (no disponible)</label>
+          </fieldset>
+        </div>
+      </section>
+
+      <section data-component="switch">
+        <div class="d-demo" data-al-demo data-stage="is-col">
+          <label class="al-switch"><input type="checkbox" role="switch" checked>Notificaciones por correo</label>
+          <label class="al-switch"><input type="checkbox" role="switch">Modo avión</label>
+        </div>
+      </section>
+
+      <section data-component="range">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <div class="al-field">
+            <label class="al-label" for="r-vol">Volumen: <output data-al-output-for="#r-vol">40</output></label>
+            <input class="al-range" id="r-vol" type="range" min="0" max="100" value="40">
+          </div>
+        </div>
+      </section>
+
+      <section data-component="segmented">
+        <div class="d-demo" data-al-demo>
+          <div class="al-segmented" role="radiogroup" aria-label="Periodo">
+            <label><input type="radio" name="periodo" checked><span>Día</span></label>
+            <label><input type="radio" name="periodo"><span>Semana</span></label>
+            <label><input type="radio" name="periodo"><span>Mes</span></label>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="dropzone">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <label class="al-dropzone" tabindex="0">
+            <al-icon class="al-dropzone__icon" name="upload"></al-icon>
+            <strong>Suelta tus archivos aquí</strong>
+            <span class="al-text-sm">o haz clic para elegirlos · PNG, JPG o PDF</span>
+            <input type="file" multiple>
+            <ul class="al-dropzone__files"></ul>
+          </label>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== RETROALIMENTACIÓN ===================== -->
+    <div data-category="retroalimentacion">
+
+      <section data-component="alert">
+        <div class="d-demo" data-al-demo data-stage="is-col">
+          <div class="al-alert al-alert--primary" role="status">
+            <al-icon name="info"></al-icon>
+            <div><div class="al-alert__title">Actualización disponible</div><div class="al-alert__text">La versión 1.1 mejora la paleta de comandos.</div></div>
+            <button class="al-alert__close" data-al-alert-close aria-label="Cerrar aviso"><al-icon name="x" size="16"></al-icon></button>
+          </div>
+          <div class="al-alert al-alert--success" role="status">
+            <al-icon name="check-circle"></al-icon>
+            <div><div class="al-alert__title">Pago recibido</div><div class="al-alert__text">Te enviamos el comprobante por correo.</div></div>
+          </div>
+          <div class="al-alert al-alert--warning" role="status">
+            <al-icon name="alert-triangle"></al-icon>
+            <div><div class="al-alert__title">Tu plan vence en 3 días</div><div class="al-alert__text">Renuévalo para conservar tus proyectos.</div></div>
+          </div>
+          <div class="al-alert al-alert--danger" role="alert">
+            <al-icon name="alert-circle"></al-icon>
+            <div><div class="al-alert__title">No se pudo guardar</div><div class="al-alert__text">Revisa tu conexión e inténtalo de nuevo.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="toast">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--secondary" data-demo-toast="success">Éxito</button>
+          <button class="al-btn al-btn--secondary" data-demo-toast="info">Información</button>
+          <button class="al-btn al-btn--secondary" data-demo-toast="warning">Advertencia</button>
+          <button class="al-btn al-btn--secondary" data-demo-toast="danger">Error</button>
+        </div>
+        <div class="al-code" data-lang="js" data-label="JavaScript"><pre><code>Julieta.toast({ type: "success", title: "Publicado", text: "Tu página ya está en línea.", duration: 4500 });
+Julieta.toast.error("No se pudo guardar", "Revisa tu conexión.");</code></pre></div>
+      </section>
+
+      <section data-component="progress">
+        <div class="d-demo" data-al-demo data-stage="is-col">
+          <div class="al-progress" style="--value:64" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-label="Subida"><span></span></div>
+          <div class="al-progress al-progress--lg al-progress--success" style="--value:100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Completado"><span></span></div>
+          <div class="al-progress al-progress--indeterminate" role="progressbar" aria-label="Cargando"><span></span></div>
+        </div>
+      </section>
+
+      <section data-component="ring">
+        <div class="d-demo" data-al-demo>
+          <div class="al-ring" style="--value:72" role="img" aria-label="72% completado"><span>72%</span></div>
+          <div class="al-ring" style="--value:35;--size:7rem;--thick:12px" role="img" aria-label="35% completado"><span>35%</span></div>
+        </div>
+      </section>
+
+      <section data-component="spinner">
+        <div class="d-demo" data-al-demo>
+          <span class="al-spinner" role="status" aria-label="Cargando"></span>
+          <span class="al-spinner al-spinner--lg" role="status" aria-label="Cargando"></span>
+        </div>
+      </section>
+
+      <section data-component="skeleton">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <div class="al-cluster" style="flex-wrap:nowrap;align-items:flex-start" aria-busy="true">
+            <span class="al-skeleton al-skeleton--circle" style="width:3rem"></span>
+            <div style="flex:1">
+              <span class="al-skeleton al-skeleton--text" style="width:60%"></span>
+              <span class="al-skeleton al-skeleton--text"></span>
+              <span class="al-skeleton al-skeleton--text" style="width:80%"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== DATOS ===================== -->
+    <div data-category="datos">
+
+      <section data-component="card">
+        <div class="d-demo" data-al-demo data-stage="is-grid">
+          <article class="al-card al-card--interactive">
+            <div class="al-card__media"><img src="../assets/images/cover-jacaranda.svg" alt="" loading="lazy"></div>
+            <div class="al-card__body">
+              <span class="al-badge al-badge--info" style="justify-self:start">Guía</span>
+              <h3 class="al-card__title">Dónde ver jacarandas</h3>
+              <p class="al-card__text">Cinco calles de la ciudad que se vuelven moradas en marzo.</p>
+            </div>
+            <div class="al-card__footer"><span class="al-avatar al-avatar--sm" aria-label="Ximena Ortega">XO</span><span class="al-text-sm al-text-muted">Ximena · 4 min</span></div>
+          </article>
+          <article class="al-card al-card--raised">
+            <div class="al-card__body">
+              <h3 class="al-card__title">Tarjeta elevada</h3>
+              <p class="al-card__text">Sin imagen, con sombra media. Útil para métricas y avisos.</p>
+              <button class="al-btn al-btn--soft al-btn--sm" style="justify-self:start">Ver detalle</button>
+            </div>
+          </article>
+          <article class="al-card al-card--flat">
+            <div class="al-card__body">
+              <h3 class="al-card__title">Tarjeta plana</h3>
+              <p class="al-card__text">Sin sombra y con fondo hundido, para agrupar sin llamar la atención.</p>
+            </div>
+          </article>
+        </div>
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <article class="al-card al-card--horizontal al-card--interactive">
+            <div class="al-card__media"><img src="../assets/images/cover-atardecer.svg" alt="" loading="lazy"></div>
+            <div class="al-card__body">
+              <h3 class="al-card__title">Variante horizontal</h3>
+              <p class="al-card__text">La imagen pasa a un lado y, en pantallas pequeñas, se apila arriba.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section data-component="avatar">
+        <div class="d-demo" data-al-demo>
+          <span class="al-avatar al-avatar--sm" aria-label="Ana López">AL</span>
+          <span class="al-avatar" data-status="online" aria-label="Ximena Ortega">XO</span>
+          <span class="al-avatar al-avatar--sol al-avatar--lg" data-status="away" aria-label="Mateo Ruiz">MR</span>
+          <span class="al-avatar al-avatar--agave al-avatar--xl" data-status="busy" aria-label="Lucía Paredes">LP</span>
+          <span class="al-avatar-group">
+            <span class="al-avatar" aria-label="Ana">AN</span>
+            <span class="al-avatar al-avatar--sol" aria-label="Beto">BE</span>
+            <span class="al-avatar al-avatar--cielo" aria-label="Caro">CA</span>
+            <span class="al-avatar al-avatar--agave" aria-label="Y 4 personas más">+4</span>
+          </span>
+        </div>
+      </section>
+
+      <section data-component="table">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-input-group" style="max-width:20rem;margin-bottom:1rem">
+            <span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span>
+            <input class="al-input" id="t-buscar" type="search" placeholder="Filtrar pedidos" aria-label="Filtrar pedidos">
+          </div>
+          <div class="al-table-wrap">
+            <table class="al-table al-table--hover" data-al-sortable data-al-filter="#t-buscar">
+              <thead><tr>
+                <th aria-sort="ascending"><button>Cliente</button></th>
+                <th><button>Estado</button></th>
+                <th class="is-num"><button>Total</button></th>
+              </tr></thead>
+              <tbody>
+                <tr><td>Ximena Ortega</td><td><span class="al-badge al-badge--success al-badge--dot">Pagado</span></td><td class="is-num">$1,299.00</td></tr>
+                <tr><td>Mateo Ruiz</td><td><span class="al-badge al-badge--warning al-badge--dot">Pendiente</span></td><td class="is-num">$459.50</td></tr>
+                <tr><td>Lucía Paredes</td><td><span class="al-badge al-badge--success al-badge--dot">Pagado</span></td><td class="is-num">$12,980.00</td></tr>
+                <tr><td>Diego Salinas</td><td><span class="al-badge al-badge--danger al-badge--dot">Rechazado</span></td><td class="is-num">$89.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="stat">
+        <div class="d-demo" data-al-demo data-stage="is-grid">
+          <div class="al-stat"><span class="al-stat__label">Ventas del mes</span><span class="al-stat__value">$84,230</span><span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>12% más</span></div>
+          <div class="al-stat"><span class="al-stat__label">Devoluciones</span><span class="al-stat__value">38</span><span class="al-stat__delta al-stat__delta--down"><al-icon name="trending-down" size="16"></al-icon>4% menos</span></div>
+        </div>
+      </section>
+
+      <section data-component="list">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <ul class="al-list" role="list">
+            <li class="al-list__item"><span class="al-avatar" aria-label="Ana">AN</span><div class="al-list__main"><div class="al-list__title">Ana Beltrán</div><div class="al-list__meta">Te envió un archivo</div></div><span class="al-text-xs al-text-subtle">9:41</span></li>
+            <li class="al-list__item"><span class="al-avatar al-avatar--sol" aria-label="Beto">BE</span><div class="al-list__main"><div class="al-list__title">Beto Cruz</div><div class="al-list__meta">Comentó tu propuesta</div></div><span class="al-text-xs al-text-subtle">Ayer</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section data-component="timeline">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <ol class="al-timeline">
+            <li class="al-timeline__item"><div class="al-timeline__time">Hoy · 9:15</div><div class="al-timeline__title">Pedido enviado</div><div class="al-timeline__text">Sale de la bodega en Iztapalapa.</div></li>
+            <li class="al-timeline__item"><div class="al-timeline__time">Ayer · 18:02</div><div class="al-timeline__title">Pago confirmado</div><div class="al-timeline__text">Tarjeta terminada en 4242.</div></li>
+            <li class="al-timeline__item"><div class="al-timeline__time">Ayer · 17:58</div><div class="al-timeline__title">Pedido creado</div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section data-component="accordion">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <div class="al-accordion">
+            <details open><summary>¿Necesito instalar algo?</summary><div class="al-accordion__body">No. Pega dos líneas de CDN y listo.</div></details>
+            <details><summary>¿Funciona con mi framework?</summary><div class="al-accordion__body">Sí: Julieta solo usa clases y un script de módulo.</div></details>
+            <details><summary>¿Puedo cambiar los colores?</summary><div class="al-accordion__body">Sobrescribe las variables <code>--al-*</code> en tu CSS.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="quote">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <figure class="al-quote" style="margin:0">
+            <blockquote class="al-quote__text" style="margin:0">“Pasamos de maqueta a producción en una tarde. Los componentes ya vienen pensados.”</blockquote>
+            <figcaption class="al-quote__author"><span class="al-avatar al-avatar--cielo" aria-hidden="true">RM</span><span><strong>Rocío Mendoza</strong><small>Diseñadora, Taller Cuauhtémoc</small></span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section data-component="code">
+        <p>Es el mismo componente que muestra todos los fragmentos de esta documentación. Se activa solo con <code>data-lang</code>.</p>
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-code" data-lang="css" data-label="CSS"><pre><code>.mi-boton {
+  background: var(--al-primary);
+  border-radius: var(--al-radius-full);
+  padding: 0 1.5rem;
+}</code></pre></div>
+        </div>
+      </section>
+
+      <section data-component="empty">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-empty">
+            <img class="al-empty__art" src="../assets/images/empty-state.svg" alt="">
+            <div class="al-empty__title">Todavía no tienes proyectos</div>
+            <p class="al-empty__text">Crea el primero para empezar a organizar tus diseños.</p>
+            <button class="al-btn al-btn--primary"><al-icon name="plus"></al-icon>Crear proyecto</button>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="divider">
+        <div class="d-demo" data-al-demo data-stage="is-col">
+          <div class="al-divider"></div>
+          <div class="al-divider">o continúa con</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== NAVEGACIÓN ===================== -->
+    <div data-category="navegacion">
+
+      <section data-component="navbar">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <nav class="al-navbar" style="position:static;border-radius:var(--al-radius-lg);border:1px solid var(--al-border)" aria-label="Demostración">
+            <a class="al-navbar__brand" href="#navbar"><img src="../assets/images/mark.svg" alt="" width="26" height="26">julieta</a>
+            <div class="al-navbar__links">
+              <a class="al-nav-link" href="#navbar" aria-current="page">Inicio</a>
+              <a class="al-nav-link" href="#navbar">Producto</a>
+              <a class="al-nav-link" href="#navbar">Precios</a>
+            </div>
+            <span class="al-navbar__spacer"></span>
+            <a class="al-btn al-btn--primary al-btn--sm" href="#navbar">Empezar</a>
+          </nav>
+        </div>
+      </section>
+
+      <section data-component="tabs">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div data-al-tabs>
+            <div class="al-tabs" role="tablist" aria-label="Secciones del proyecto">
+              <button class="al-tab" data-target="tab-res" aria-selected="true"><al-icon name="home" size="18"></al-icon>Resumen</button>
+              <button class="al-tab" data-target="tab-act"><al-icon name="activity" size="18"></al-icon>Actividad</button>
+              <button class="al-tab" data-target="tab-aju"><al-icon name="settings" size="18"></al-icon>Ajustes</button>
+            </div>
+            <div class="al-tabpanel" id="tab-res">Resumen del proyecto: 24 archivos y 3 colaboradoras.</div>
+            <div class="al-tabpanel" id="tab-act" hidden>Actividad reciente: Ximena subió una nueva versión.</div>
+            <div class="al-tabpanel" id="tab-aju" hidden>Ajustes: nombre, privacidad y facturación.</div>
+          </div>
+        </div>
+        <p class="al-text-muted">Con las flechas, <kbd class="al-kbd">Inicio</kbd> y <kbd class="al-kbd">Fin</kbd> te mueves entre pestañas. La variante <code>al-tabs--pills</code> usa botones en forma de píldora.</p>
+      </section>
+
+      <section data-component="breadcrumb">
+        <div class="d-demo" data-al-demo>
+          <nav class="al-breadcrumb" aria-label="Ruta">
+            <ol>
+              <li><a href="#breadcrumb">Inicio</a></li>
+              <li><a href="#breadcrumb">Proyectos</a></li>
+              <li><span aria-current="page">Jacaranda</span></li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section data-component="pagination">
+        <div class="d-demo" data-al-demo>
+          <nav aria-label="Paginación">
+            <ul class="al-pagination">
+              <li><a href="#pagination" aria-label="Anterior"><al-icon name="chevron-left" size="18"></al-icon></a></li>
+              <li><a href="#pagination">1</a></li>
+              <li><a href="#pagination" aria-current="page">2</a></li>
+              <li><a href="#pagination">3</a></li>
+              <li><span class="al-text-subtle">…</span></li>
+              <li><a href="#pagination">12</a></li>
+              <li><a href="#pagination" aria-label="Siguiente"><al-icon name="chevron-right" size="18"></al-icon></a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section data-component="stepper">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <ol class="al-stepper">
+            <li class="al-stepper__item is-done">Carrito</li>
+            <li class="al-stepper__item is-current" aria-current="step">Envío</li>
+            <li class="al-stepper__item">Pago</li>
+            <li class="al-stepper__item">Confirmación</li>
+          </ol>
+        </div>
+      </section>
+
+      <section data-component="dropdown">
+        <div class="d-demo" data-al-demo>
+          <div class="al-dropdown" data-al-dropdown>
+            <button class="al-btn al-btn--secondary" data-al-dropdown-trigger>Acciones<al-icon name="chevron-down" size="16"></al-icon></button>
+            <div class="al-menu" role="menu" hidden>
+              <div class="al-menu__label">Archivo</div>
+              <button class="al-menu__item" data-value="editar"><al-icon name="edit" size="18"></al-icon>Editar<kbd>E</kbd></button>
+              <button class="al-menu__item" data-value="duplicar"><al-icon name="copy" size="18"></al-icon>Duplicar</button>
+              <button class="al-menu__item" aria-disabled="true"><al-icon name="lock" size="18"></al-icon>Bloquear</button>
+              <div class="al-menu__sep"></div>
+              <button class="al-menu__item al-menu__item--danger" data-value="eliminar"><al-icon name="trash" size="18"></al-icon>Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="sidebar">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <nav class="al-sidebar" aria-label="Demostración">
+            <div class="al-sidebar__group">
+              <div class="al-sidebar__title">General</div>
+              <a class="al-sidebar__link" href="#sidebar" aria-current="page"><al-icon name="home"></al-icon>Resumen</a>
+              <a class="al-sidebar__link" href="#sidebar"><al-icon name="bar-chart"></al-icon>Analítica<span class="al-badge al-sidebar__badge">Nuevo</span></a>
+              <a class="al-sidebar__link" href="#sidebar"><al-icon name="users"></al-icon>Equipo</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <section data-component="toc">
+        <div class="d-demo" data-al-demo data-stage="is-narrow">
+          <nav class="al-toc" aria-label="En esta página">
+            <a href="#toc" class="is-active">Introducción</a>
+            <a href="#toc">Instalación</a>
+            <a href="#toc" data-level="3">Con CDN</a>
+            <a href="#toc">Uso</a>
+          </nav>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== SUPERPOSICIONES ===================== -->
+    <div data-category="superposiciones">
+
+      <section data-component="modal">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--primary" data-al-open="#demo-modal">Abrir modal</button>
+          <button class="al-btn al-btn--secondary" id="demo-confirm">Pedir confirmación</button>
+          <dialog class="al-modal" id="demo-modal" aria-labelledby="demo-modal-t">
+            <div class="al-modal__header">
+              <h2 class="al-modal__title" id="demo-modal-t">Invitar a tu equipo</h2>
+              <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button>
+            </div>
+            <div class="al-modal__body">
+              <p>Escribe el correo de quien quieres invitar.</p>
+              <div class="al-field"><label class="al-label" for="inv">Correo</label><input class="al-input" id="inv" type="email" placeholder="nombre@dominio.com"></div>
+            </div>
+            <div class="al-modal__footer">
+              <button class="al-btn al-btn--ghost" data-al-close="cancel">Cancelar</button>
+              <button class="al-btn al-btn--primary" data-al-close="ok">Enviar invitación</button>
+            </div>
+          </dialog>
+        </div>
+        <div class="al-code" data-lang="js" data-label="Confirmación con promesa"><pre><code>const ok = await Julieta.confirm({
+  title: "¿Eliminar el proyecto?",
+  text: "Esta acción no se puede deshacer.",
+  confirmText: "Eliminar proyecto",
+  danger: true,
+});
+if (ok) borrar();</code></pre></div>
+      </section>
+
+      <section data-component="drawer">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--secondary" data-al-open="#demo-drawer"><al-icon name="panel-left"></al-icon>Abrir panel</button>
+          <dialog class="al-drawer" id="demo-drawer" aria-labelledby="demo-drawer-t">
+            <div class="al-drawer__header">
+              <h2 class="al-drawer__title" id="demo-drawer-t">Filtros</h2>
+              <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button>
+            </div>
+            <div class="al-drawer__body al-stack">
+              <label class="al-switch"><input type="checkbox" role="switch" checked>Solo disponibles</label>
+              <label class="al-switch"><input type="checkbox" role="switch">Con envío gratis</label>
+            </div>
+            <div class="al-drawer__footer">
+              <button class="al-btn al-btn--ghost" data-al-close>Limpiar</button>
+              <button class="al-btn al-btn--primary" data-al-close>Aplicar</button>
+            </div>
+          </dialog>
+        </div>
+      </section>
+
+      <section data-component="tooltip">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--secondary al-btn--icon" data-al-tip="Arriba" aria-label="Arriba"><al-icon name="arrow-up"></al-icon></button>
+          <button class="al-btn al-btn--secondary al-btn--icon" data-al-tip="Abajo" data-al-tip-pos="bottom" aria-label="Abajo"><al-icon name="arrow-down"></al-icon></button>
+          <button class="al-btn al-btn--secondary al-btn--icon" data-al-tip="Izquierda" data-al-tip-pos="left" aria-label="Izquierda"><al-icon name="arrow-left"></al-icon></button>
+          <button class="al-btn al-btn--secondary al-btn--icon" data-al-tip="Derecha" data-al-tip-pos="right" aria-label="Derecha"><al-icon name="arrow-right"></al-icon></button>
+        </div>
+      </section>
+
+      <section data-component="command">
+        <div class="d-demo" data-al-demo>
+          <button class="al-btn al-btn--secondary" data-al-command-open><al-icon name="search"></al-icon>Buscar en todo<span class="al-kbd">Ctrl K</span></button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== LAYOUT ===================== -->
+    <div data-category="layout">
+
+      <section data-component="container">
+        <p>Úsalo en cada sección de página para alinear el contenido. <code>al-section</code> añade el espacio vertical que crece con la pantalla.</p>
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <section class="al-section al-section--tight al-section--tint" style="border-radius:var(--al-radius-lg)">
+            <div class="al-container al-container--narrow"><strong>Contenedor estrecho</strong><p class="al-text-muted">46 rem de ancho máximo: ideal para lectura.</p></div>
+          </section>
+        </div>
+      </section>
+
+      <section data-component="stack">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-stack" style="--al-gap:.75rem">
+            <div class="al-card al-card--flat"><div class="al-card__body">Uno</div></div>
+            <div class="al-card al-card--flat"><div class="al-card__body">Dos</div></div>
+            <div class="al-cluster"><span class="al-badge">Etiqueta</span><span class="al-badge">otra</span><span class="al-badge">y otra</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="grid">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-grid" style="--al-min:10rem;--al-gap:1rem">
+            <div class="al-card al-card--flat"><div class="al-card__body">1</div></div>
+            <div class="al-card al-card--flat"><div class="al-card__body">2</div></div>
+            <div class="al-card al-card--flat"><div class="al-card__body">3</div></div>
+            <div class="al-card al-card--flat"><div class="al-card__body">4</div></div>
+          </div>
+        </div>
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-split" style="--al-cols: 2fr 1fr; --al-gap: 1.5rem">
+            <div class="al-card al-card--flat"><div class="al-card__body">Principal (2fr)</div></div>
+            <div class="al-card al-card--flat"><div class="al-card__body">Lateral (1fr)</div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== PATRONES ===================== -->
+    <div data-category="patrones">
+
+      <section data-component="hero">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <section class="al-hero" style="border-radius:var(--al-radius-xl)">
+            <canvas class="al-petals" data-al-petals data-density=".6"></canvas>
+            <div class="al-container al-hero__inner" style="padding-block:3.5rem">
+              <h3 class="al-hero__title" style="font-size:clamp(2.2rem,5vw,3.6rem)">Marzo, en violeta</h3>
+              <p class="al-hero__lead al-mt-4">Un héroe con pétalos que caen sobre el degradado.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section data-component="feature">
+        <div class="d-demo" data-al-demo data-stage="is-grid">
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="zap"></al-icon></span><h4 class="al-feature__title">Rápido por diseño</h4><p class="al-feature__text">Sin dependencias ni compilación: carga solo lo que usas.</p></div>
+          <div class="al-feature"><span class="al-feature__icon"><al-icon name="shield"></al-icon></span><h4 class="al-feature__title">Accesible</h4><p class="al-feature__text">Foco visible, roles ARIA y movimiento reducido.</p></div>
+        </div>
+      </section>
+
+      <section data-component="plan">
+        <div class="d-demo" data-al-demo data-stage="is-grid">
+          <div class="al-plan">
+            <div><div class="al-plan__name">Taller</div><p class="al-plan__desc">Para empezar un proyecto.</p></div>
+            <div class="al-plan__price">$0<small>al mes</small></div>
+            <ul class="al-plan__features" role="list"><li><al-icon name="check"></al-icon>3 proyectos</li><li><al-icon name="check"></al-icon>Soporte por correo</li></ul>
+            <a class="al-btn al-btn--secondary al-btn--block" href="#plan">Empezar gratis</a>
+          </div>
+          <div class="al-plan al-plan--featured">
+            <div><div class="al-plan__name">Estudio</div><p class="al-plan__desc">Para equipos pequeños.</p></div>
+            <div class="al-plan__price">$299<small>al mes</small></div>
+            <ul class="al-plan__features" role="list"><li><al-icon name="check"></al-icon>Proyectos ilimitados</li><li><al-icon name="check"></al-icon>Colaboración en vivo</li></ul>
+            <a class="al-btn al-btn--accent al-btn--block" href="#plan">Elegir Estudio</a>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="cta">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-cta">
+            <h3 style="color:#fff;font-size:var(--al-text-3xl);max-width:18ch">¿Listo para empezar?</h3>
+            <p>Crea tu primera página en minutos.</p>
+            <a class="al-btn al-btn--accent al-btn--lg" href="#cta">Crear cuenta</a>
+          </div>
+        </div>
+      </section>
+
+      <section data-component="footer">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <footer class="al-footer" style="padding-block:2rem 1.25rem;border-radius:var(--al-radius-lg);border:1px solid var(--al-border)">
+            <div class="al-container">
+              <div class="al-footer__grid">
+                <div><strong>julieta</strong><p class="al-text-sm al-text-muted">Interfaces con alma.</p></div>
+                <div><div class="al-footer__title">Producto</div><ul class="al-footer__links" role="list"><li><a href="#footer">Componentes</a></li><li><a href="#footer">Precios</a></li></ul></div>
+                <div><div class="al-footer__title">Ayuda</div><ul class="al-footer__links" role="list"><li><a href="#footer">Guías</a></li><li><a href="#footer">Contacto</a></li></ul></div>
+              </div>
+              <div class="al-footer__legal"><span>© 2026 Julieta</span><span>Hecho en CDMX</span></div>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <section data-component="auth">
+        <p>Pantalla dividida con arte a la izquierda y formulario a la derecha. Verla funcionando es lo más claro: abre la <a class="al-link" href="plantillas/acceso/casa-jacaranda.html">plantilla de acceso</a>.</p>
+      </section>
+
+      <section data-component="app">
+        <p>La estructura de un panel: barra lateral fija que se vuelve cajón en móvil, barra superior y contenido. Míralo en la <a class="al-link" href="plantillas/dashboard/casa-jacaranda.html">plantilla de panel de control</a>.</p>
+      </section>
+
+      <section data-component="chart">
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-chart" role="img" aria-label="Ingresos mensuales: crecen de 12 mil a 31 mil pesos"
+            data-al-chart='{"type":"line","labels":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"],"series":[{"name":"2026","data":[12000,14500,13800,18200,21000,24500,27800,31000]},{"name":"2025","data":[9000,10200,11500,12000,14000,15200,16800,18000]}]}'></div>
+        </div>
+        <div class="d-demo" data-al-demo data-stage="is-block">
+          <div class="al-chart" aria-label="Pedidos por día"
+            data-al-chart='{"type":"bar","labels":["L","M","X","J","V","S","D"],"series":[{"name":"Pedidos","data":[42,58,51,76,88,120,64]}]}'></div>
+        </div>
+        <div class="d-demo" data-al-demo>
+          <div class="al-chart al-chart--spark" style="width:9rem" aria-label="Tendencia al alza"
+            data-al-chart='{"type":"area","labels":["a","b","c","d","e","f"],"series":[{"data":[3,5,4,7,6,9]}]}'></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module">
+    import { julieta, refreshToc } from "../assets/scripts/docs.js";
+    import { h, $, $$ } from "../assets/scripts/core.js";
+
+    const data = await julieta.loadJSON("components");
+    const byId = new Map(data.components.map((c) => [c.id, c]));
+    const cats = new Map(data.categories.map((c) => [c.id, c]));
+
+    // Títulos de categoría
+    $$("[data-category]").forEach((box) => {
+      const c = cats.get(box.dataset.category);
+      if (c) box.prepend(h("h2", { id: c.id }, c.name));
+    });
+
+    // Cabecera y tabla de API de cada componente, desde components.json
+    $$("[data-component]").forEach((sec) => {
+      const c = byId.get(sec.dataset.component);
+      if (!c) { console.warn("Componente sin entrada en components.json:", sec.dataset.component); return; }
+      const files = h("span", { class: "al-cluster", style: "--al-gap:.35rem" },
+        h("span", { class: "al-badge al-badge--neutral" }, c.css),
+        c.js && h("span", { class: "al-badge al-badge--info" }, c.js));
+      sec.prepend(h("div", { class: "d-comphead" }, h("h3", { id: c.id }, c.name), h("p", {}, c.description), files));
+      const rows = c.classes.map((k) => h("tr", {}, h("td", {}, h("code", {}, k.name)), h("td", {}, k.desc)));
+      sec.append(h("details", { class: "d-apidet" },
+        h("summary", {}, h("al-icon", { name: "chevron-right", size: 16 }), "Clases, atributos y API"),
+        h("div", { class: "al-table-wrap" }, h("table", { class: "al-table d-api" }, h("thead", {}, h("tr", {}, h("th", {}, "Nombre"), h("th", {}, "Descripción"))), h("tbody", {}, rows))),
+        c.a11y && c.a11y !== "—" && h("div", { class: "d-note" }, h("al-icon", { name: "shield", size: 18 }), h("p", {}, h("strong", {}, "Accesibilidad. "), c.a11y))));
+    });
+
+    // Interacciones de las demostraciones
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-demo-toast]");
+      if (!b) return;
+      const type = b.dataset.demoToast;
+      const msg = { success: ["Publicado", "Tu página ya está en línea."], info: ["Nueva versión", "Julieta 1.0 ya está disponible."], warning: ["Casi sin espacio", "Usaste el 90% de tu almacenamiento."], danger: ["No se pudo guardar", "Revisa tu conexión e inténtalo de nuevo."] }[type];
+      julieta.toast({ type, title: msg[0], text: msg[1] });
+    });
+    $("#demo-confirm")?.addEventListener("click", async () => {
+      const ok = await julieta.confirm({ title: "¿Eliminar el proyecto?", text: "Esta acción no se puede deshacer.", confirmText: "Eliminar proyecto", danger: true });
+      julieta.toast({ type: ok ? "danger" : "info", title: ok ? "Proyecto eliminado" : "No se eliminó nada" });
+    });
+    $("#demo-modal")?.addEventListener("close", (e) => { if (e.target.returnValue === "ok") julieta.toast.success("Invitación enviada"); });
+    $("#demo-form")?.addEventListener("al:valid", (e) => julieta.toast.success("Cuenta creada", e.detail.data.correo));
+    document.addEventListener("al:select", (e) => julieta.toast.info(`Elegiste “${e.detail.value}”`));
+
+    refreshToc();
+    julieta.init(document);
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+  </script>
+</body>
+</html>

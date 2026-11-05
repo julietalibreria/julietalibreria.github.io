@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navegador de recursos · Julieta UI</title>
+  <meta name="description" content="Busca y filtra todos los recursos de Julieta UI: componentes, iconos, colores, tipografías, plantillas, tokens e imágenes.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/recursos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/recursos.html">
+  <meta property="og:title" content="Navegador de recursos · Julieta UI">
+  <meta property="og:description" content="Busca y filtra todos los recursos de Julieta UI: componentes, iconos, colores, tipografías, plantillas, tokens e imágenes.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Navegador de recursos · Julieta UI">
+  <meta name="twitter:description" content="Busca y filtra todos los recursos de Julieta UI: componentes, iconos, colores, tipografías, plantillas, tokens e imágenes.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Navegador de recursos · Julieta UI", "description": "Busca y filtra todos los recursos de Julieta UI: componentes, iconos, colores, tipografías, plantillas, tokens e imágenes.", "url": "https://julietalibreria.github.io/src/pages/recursos.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/recursos.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Navegador de recursos</h1>
+      <p>Todo lo que contiene Julieta, en una sola lista. Escribe para buscar o elige un tipo. Si algo existe, está aquí una sola vez.</p>
+    </header>
+
+    <div class="d-finder">
+      <nav class="d-finder__side" aria-label="Tipo de recurso" id="types"></nav>
+
+      <section aria-label="Resultados">
+        <div class="d-finder__top">
+          <div class="al-input-group">
+            <span class="al-input-group__addon"><al-icon name="search" size="20"></al-icon></span>
+            <input class="al-input" id="q" type="search" placeholder="Prueba con “flecha”, “morado” o “tabla”" autocomplete="off" aria-label="Buscar recursos">
+          </div>
+          <span class="d-finder__status" id="status" role="status" aria-live="polite"></span>
+        </div>
+        <div class="d-results" id="results"></div>
+        <div class="al-text-center al-mt-8"><button class="al-btn al-btn--secondary" id="more" hidden>Mostrar más</button></div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module">
+    import { julieta } from "../assets/scripts/docs.js";
+    import { h, $, escapeHTML, norm } from "../assets/scripts/core.js";
+    import { search, TYPES } from "../assets/scripts/catalog.js";
+
+    const { items } = await julieta.catalog.build();
+    const PAGE = 40;
+    const state = { type: "", q: "", shown: PAGE };
+    const params = new URLSearchParams(location.search);
+    if (TYPES[params.get("type")]) state.type = params.get("type");
+    state.q = params.get("q") || "";
+
+    const input = $("#q");
+    input.value = state.q;
+
+    const counts = items.reduce((a, i) => ((a[i.type] = (a[i.type] || 0) + 1), a), {});
+
+    function renderTypes() {
+      const mk = (id, label, icon, n) => h("button", { class: "al-sidebar__link", type: "button", "aria-pressed": String(state.type === id), ...(state.type === id ? { "aria-current": "true", class: "al-sidebar__link is-active" } : {}),
+        onclick() { state.type = id; state.shown = PAGE; sync(); } },
+        h("al-icon", { name: icon, size: 18 }), label, h("span", { class: "count" }, n));
+      $("#types").replaceChildren(
+        mk("", "Todo", "grid", items.length),
+        ...Object.entries(TYPES).map(([id, t]) => mk(id, t.label, t.icon, counts[id] || 0)),
+      );
+    }
+
+    function highlight(text, words) {
+      if (!words.length) return escapeHTML(text);
+      let out = "", rest = String(text);
+      const n = norm(rest);
+      const ranges = [];
+      for (const w of words) { let i = n.indexOf(w); while (i >= 0) { ranges.push([i, i + w.length]); i = n.indexOf(w, i + w.length); } }
+      ranges.sort((a, b) => a[0] - b[0]);
+      let pos = 0;
+      for (const [s, e] of ranges) { if (s < pos) continue; out += escapeHTML(rest.slice(pos, s)) + `<mark class="d-hl">${escapeHTML(rest.slice(s, e))}</mark>`; pos = e; }
+      return out + escapeHTML(rest.slice(pos));
+    }
+
+    function row(it, words) {
+      const lead = it.swatch
+        ? h("span", { class: "d-result__lead is-swatch", style: `background:${it.swatch}` })
+        : it.preview && it.type === "imagen"
+          ? h("span", { class: "d-result__lead" }, h("img", { src: it.preview, alt: "", loading: "lazy" }))
+          : h("span", { class: "d-result__lead" }, h("al-icon", { name: it.icon || TYPES[it.type].icon }));
+      const actions = h("span", { class: "d-result__actions" }, h("span", { class: "al-badge al-badge--neutral" }, TYPES[it.type].one));
+      if (it.copy) actions.append(h("button", { class: "al-btn al-btn--soft al-btn--sm", type: "button", "aria-label": `Copiar ${it.title}`,
+        async onclick(e) { e.preventDefault(); e.stopPropagation(); const ok = await julieta.copy(it.copy); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Copiado" : "No se pudo copiar", text: it.copy, duration: 2200 }); } },
+        h("al-icon", { name: "copy", size: 15 }), "Copiar"));
+      return h("a", { class: "d-result", href: it.href },
+        lead,
+        h("span", { style: "min-width:0" }, h("b", { html: highlight(it.title, words) }), it.sub && h("small", { html: highlight(it.sub, words) })),
+        actions);
+    }
+
+    function sync() {
+      const words = norm(state.q).split(/\s+/).filter(Boolean);
+      const found = search(items, state.q, { type: state.type || undefined, limit: 9999 });
+      const visible = found.slice(0, state.shown);
+      const list = $("#results");
+      if (!found.length) {
+        list.replaceChildren(h("div", { class: "al-empty" },
+          h("img", { class: "al-empty__art", src: "../assets/images/empty-state.svg", alt: "" }),
+          h("div", { class: "al-empty__title" }, "No encontramos nada con eso"),
+          h("p", { class: "al-empty__text" }, "Prueba con otra palabra, quita el filtro de tipo o busca un sinónimo, como “casa” en lugar de “home”."),
+          h("button", { class: "al-btn al-btn--soft", type: "button", onclick() { state.q = ""; state.type = ""; input.value = ""; sync(); } }, "Limpiar búsqueda")));
+      } else list.replaceChildren(...visible.map((it) => row(it, words)));
+      $("#status").textContent = `${found.length} ${found.length === 1 ? "resultado" : "resultados"}`;
+      $("#more").hidden = found.length <= visible.length;
+      renderTypes();
+      const p = new URLSearchParams();
+      if (state.type) p.set("type", state.type);
+      if (state.q) p.set("q", state.q);
+      history.replaceState(null, "", p.size ? `?${p}` : location.pathname);
+    }
+
+    let t;
+    input.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { state.q = input.value; state.shown = PAGE; sync(); }, 90); });
+    $("#more").addEventListener("click", () => { state.shown += PAGE; sync(); });
+    sync();
+  </script>
+</body>
+</html>

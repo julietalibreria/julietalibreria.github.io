@@ -1,0 +1,1894 @@
+{
+ "name": "Julieta Icons",
+ "version": "1.0.0",
+ "viewBox": "0 0 24 24",
+ "strokeWidth": 1.75,
+ "categories": [
+  {
+   "id": "interfaz",
+   "name": "Interfaz"
+  },
+  {
+   "id": "flechas",
+   "name": "Flechas"
+  },
+  {
+   "id": "comunicacion",
+   "name": "Comunicación"
+  },
+  {
+   "id": "archivos",
+   "name": "Archivos"
+  },
+  {
+   "id": "multimedia",
+   "name": "Multimedia"
+  },
+  {
+   "id": "comercio",
+   "name": "Comercio"
+  },
+  {
+   "id": "naturaleza",
+   "name": "Naturaleza"
+  },
+  {
+   "id": "dispositivos",
+   "name": "Dispositivos"
+  },
+  {
+   "id": "personas",
+   "name": "Personas"
+  },
+  {
+   "id": "datos",
+   "name": "Datos"
+  },
+  {
+   "id": "edicion",
+   "name": "Edición"
+  }
+ ],
+ "icons": [
+  {
+   "name": "home",
+   "category": "interfaz",
+   "tags": [
+    "casa",
+    "inicio",
+    "house",
+    "hogar"
+   ],
+   "body": "<polyline points=\"4 11 12 4 20 11\"/><path d=\"M6 9.5V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5\"/><path d=\"M10 20v-5h4v5\"/>"
+  },
+  {
+   "name": "search",
+   "category": "interfaz",
+   "tags": [
+    "buscar",
+    "lupa",
+    "search",
+    "find"
+   ],
+   "body": "<circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><line x1=\"15.3\" y1=\"15.3\" x2=\"20\" y2=\"20\"/>"
+  },
+  {
+   "name": "menu",
+   "category": "interfaz",
+   "tags": [
+    "menu",
+    "hamburguesa",
+    "navegacion",
+    "lineas"
+   ],
+   "body": "<line x1=\"4\" y1=\"7\" x2=\"20\" y2=\"7\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><line x1=\"4\" y1=\"17\" x2=\"20\" y2=\"17\"/>"
+  },
+  {
+   "name": "x",
+   "category": "interfaz",
+   "tags": [
+    "cerrar",
+    "close",
+    "cancelar",
+    "cruz"
+   ],
+   "body": "<line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"/><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"/>"
+  },
+  {
+   "name": "check",
+   "category": "interfaz",
+   "tags": [
+    "listo",
+    "check",
+    "ok",
+    "tick",
+    "correcto"
+   ],
+   "body": "<polyline points=\"5 12.5 10 17.5 19 7\"/>"
+  },
+  {
+   "name": "chevron-down",
+   "category": "flechas",
+   "tags": [
+    "abajo",
+    "down",
+    "chevron",
+    "desplegar"
+   ],
+   "body": "<polyline points=\"6 9 12 15 18 9\"/>"
+  },
+  {
+   "name": "chevron-up",
+   "category": "flechas",
+   "tags": [
+    "arriba",
+    "up",
+    "chevron",
+    "colapsar"
+   ],
+   "body": "<polyline points=\"6 15 12 9 18 15\"/>"
+  },
+  {
+   "name": "chevron-left",
+   "category": "flechas",
+   "tags": [
+    "izquierda",
+    "left",
+    "anterior",
+    "atras"
+   ],
+   "body": "<polyline points=\"15 6 9 12 15 18\"/>"
+  },
+  {
+   "name": "chevron-right",
+   "category": "flechas",
+   "tags": [
+    "derecha",
+    "right",
+    "siguiente",
+    "adelante"
+   ],
+   "body": "<polyline points=\"9 6 15 12 9 18\"/>"
+  },
+  {
+   "name": "chevrons-up-down",
+   "category": "flechas",
+   "tags": [
+    "selector",
+    "ordenar",
+    "select",
+    "dropdown"
+   ],
+   "body": "<polyline points=\"8 9 12 5 16 9\"/><polyline points=\"8 15 12 19 16 15\"/>"
+  },
+  {
+   "name": "arrow-right",
+   "category": "flechas",
+   "tags": [
+    "derecha",
+    "right",
+    "flecha",
+    "siguiente"
+   ],
+   "body": "<line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><polyline points=\"14 6 20 12 14 18\"/>"
+  },
+  {
+   "name": "arrow-left",
+   "category": "flechas",
+   "tags": [
+    "izquierda",
+    "left",
+    "flecha",
+    "volver",
+    "back"
+   ],
+   "body": "<line x1=\"20\" y1=\"12\" x2=\"4\" y2=\"12\"/><polyline points=\"10 6 4 12 10 18\"/>"
+  },
+  {
+   "name": "arrow-up",
+   "category": "flechas",
+   "tags": [
+    "arriba",
+    "up",
+    "flecha",
+    "subir"
+   ],
+   "body": "<line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><polyline points=\"6 10 12 4 18 10\"/>"
+  },
+  {
+   "name": "arrow-down",
+   "category": "flechas",
+   "tags": [
+    "abajo",
+    "down",
+    "flecha",
+    "bajar"
+   ],
+   "body": "<line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\"/><polyline points=\"6 14 12 20 18 14\"/>"
+  },
+  {
+   "name": "arrow-up-right",
+   "category": "flechas",
+   "tags": [
+    "diagonal",
+    "flecha",
+    "externo",
+    "upright"
+   ],
+   "body": "<line x1=\"6\" y1=\"18\" x2=\"18\" y2=\"6\"/><polyline points=\"8 6 18 6 18 16\"/>"
+  },
+  {
+   "name": "plus",
+   "category": "interfaz",
+   "tags": [
+    "mas",
+    "agregar",
+    "add",
+    "anadir"
+   ],
+   "body": "<line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/>"
+  },
+  {
+   "name": "minus",
+   "category": "interfaz",
+   "tags": [
+    "menos",
+    "quitar",
+    "remove",
+    "restar"
+   ],
+   "body": "<line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/>"
+  },
+  {
+   "name": "sun",
+   "category": "naturaleza",
+   "tags": [
+    "sol",
+    "claro",
+    "light",
+    "dia",
+    "tema"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"5\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"21\"/><line x1=\"3\" y1=\"12\" x2=\"5\" y2=\"12\"/><line x1=\"19\" y1=\"12\" x2=\"21\" y2=\"12\"/><line x1=\"5.6\" y1=\"5.6\" x2=\"7\" y2=\"7\"/><line x1=\"17\" y1=\"17\" x2=\"18.4\" y2=\"18.4\"/><line x1=\"5.6\" y1=\"18.4\" x2=\"7\" y2=\"17\"/><line x1=\"17\" y1=\"7\" x2=\"18.4\" y2=\"5.6\"/>"
+  },
+  {
+   "name": "moon",
+   "category": "naturaleza",
+   "tags": [
+    "luna",
+    "noche",
+    "dark",
+    "oscuro",
+    "tema"
+   ],
+   "body": "<path d=\"M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z\"/>"
+  },
+  {
+   "name": "monitor",
+   "category": "dispositivos",
+   "tags": [
+    "pantalla",
+    "monitor",
+    "computadora",
+    "desktop",
+    "sistema"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"12\" rx=\"2\"/><line x1=\"8\" y1=\"20\" x2=\"16\" y2=\"20\"/><line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"20\"/>"
+  },
+  {
+   "name": "copy",
+   "category": "interfaz",
+   "tags": [
+    "copiar",
+    "duplicar",
+    "clipboard",
+    "duplicate"
+   ],
+   "body": "<rect x=\"9\" y=\"9\" width=\"11\" height=\"11\" rx=\"2\"/><path d=\"M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3\"/>"
+  },
+  {
+   "name": "external-link",
+   "category": "flechas",
+   "tags": [
+    "enlace",
+    "externo",
+    "abrir",
+    "open",
+    "nueva"
+   ],
+   "body": "<path d=\"M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5\"/><polyline points=\"14 4 20 4 20 10\"/><line x1=\"20\" y1=\"4\" x2=\"11\" y2=\"13\"/>"
+  },
+  {
+   "name": "download",
+   "category": "flechas",
+   "tags": [
+    "descargar",
+    "bajar",
+    "download",
+    "guardar"
+   ],
+   "body": "<path d=\"M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3\"/><line x1=\"12\" y1=\"4\" x2=\"12\" y2=\"15\"/><polyline points=\"7 10 12 15 17 10\"/>"
+  },
+  {
+   "name": "upload",
+   "category": "flechas",
+   "tags": [
+    "subir",
+    "cargar",
+    "upload",
+    "enviar"
+   ],
+   "body": "<path d=\"M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3\"/><line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"4\"/><polyline points=\"7 9 12 4 17 9\"/>"
+  },
+  {
+   "name": "settings",
+   "category": "interfaz",
+   "tags": [
+    "ajustes",
+    "configuracion",
+    "gear",
+    "engranaje"
+   ],
+   "body": "<polygon points=\"18.4 10.4 20.69 10.62 20.69 13.38 18.4 13.6 17.66 15.4 19.12 17.17 17.17 19.12 15.4 17.66 13.6 18.4 13.38 20.69 10.62 20.69 10.4 18.4 8.6 17.66 6.83 19.12 4.88 17.17 6.34 15.4 5.6 13.6 3.31 13.38 3.31 10.62 5.6 10.4 6.34 8.6 4.88 6.83 6.83 4.88 8.6 6.34 10.4 5.6 10.62 3.31 13.38 3.31 13.6 5.6 15.4 6.34 17.17 4.88 19.12 6.83 17.66 8.6\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+  },
+  {
+   "name": "user",
+   "category": "personas",
+   "tags": [
+    "usuario",
+    "persona",
+    "perfil",
+    "account"
+   ],
+   "body": "<circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4.5 20a7.5 7.5 0 0 1 15 0\"/>"
+  },
+  {
+   "name": "users",
+   "category": "personas",
+   "tags": [
+    "usuarios",
+    "equipo",
+    "grupo",
+    "team"
+   ],
+   "body": "<circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20a6.5 6.5 0 0 1 13 0\"/><path d=\"M15.5 4.8a3.5 3.5 0 0 1 0 6.4\"/><path d=\"M17.5 14.2a6.5 6.5 0 0 1 4 5.8\"/>"
+  },
+  {
+   "name": "user-plus",
+   "category": "personas",
+   "tags": [
+    "agregar",
+    "usuario",
+    "invitar",
+    "add"
+   ],
+   "body": "<circle cx=\"10\" cy=\"8\" r=\"4\"/><path d=\"M3 20a7 7 0 0 1 14 0\"/><line x1=\"19\" y1=\"8\" x2=\"19\" y2=\"14\"/><line x1=\"16\" y1=\"11\" x2=\"22\" y2=\"11\"/>"
+  },
+  {
+   "name": "bell",
+   "category": "comunicacion",
+   "tags": [
+    "campana",
+    "notificacion",
+    "alerta",
+    "notification"
+   ],
+   "body": "<path d=\"M6 17v-6a6 6 0 0 1 12 0v6l1.5 2h-15z\"/><line x1=\"10\" y1=\"21.5\" x2=\"14\" y2=\"21.5\"/>"
+  },
+  {
+   "name": "mail",
+   "category": "comunicacion",
+   "tags": [
+    "correo",
+    "email",
+    "carta",
+    "sobre",
+    "mensaje"
+   ],
+   "body": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><polyline points=\"4 7 12 13 20 7\"/>"
+  },
+  {
+   "name": "heart",
+   "category": "interfaz",
+   "tags": [
+    "corazon",
+    "favorito",
+    "me",
+    "gusta",
+    "like"
+   ],
+   "body": "<path d=\"M12 20s-8-4.8-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.2 12 20 12 20z\"/>"
+  },
+  {
+   "name": "star",
+   "category": "interfaz",
+   "tags": [
+    "estrella",
+    "favorito",
+    "destacado",
+    "rating"
+   ],
+   "body": "<polygon points=\"12 3 14.41 8.68 20.56 9.22 15.9 13.27 17.29 19.28 12 16.1 6.71 19.28 8.1 13.27 3.44 9.22 9.59 8.68\"/>"
+  },
+  {
+   "name": "bookmark",
+   "category": "interfaz",
+   "tags": [
+    "marcador",
+    "guardar",
+    "favorito",
+    "marca"
+   ],
+   "body": "<path d=\"M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z\"/>"
+  },
+  {
+   "name": "calendar",
+   "category": "interfaz",
+   "tags": [
+    "calendario",
+    "fecha",
+    "agenda",
+    "date"
+   ],
+   "body": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/><line x1=\"8\" y1=\"3\" x2=\"8\" y2=\"7\"/><line x1=\"16\" y1=\"3\" x2=\"16\" y2=\"7\"/>"
+  },
+  {
+   "name": "clock",
+   "category": "interfaz",
+   "tags": [
+    "reloj",
+    "hora",
+    "tiempo",
+    "time"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><polyline points=\"12 7 12 12 15.5 14\"/>"
+  },
+  {
+   "name": "trash",
+   "category": "interfaz",
+   "tags": [
+    "basura",
+    "eliminar",
+    "borrar",
+    "delete"
+   ],
+   "body": "<line x1=\"4\" y1=\"7\" x2=\"20\" y2=\"7\"/><path d=\"M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12\"/><path d=\"M9 7V4h6v3\"/><line x1=\"10\" y1=\"11\" x2=\"10\" y2=\"17\"/><line x1=\"14\" y1=\"11\" x2=\"14\" y2=\"17\"/>"
+  },
+  {
+   "name": "edit",
+   "category": "edicion",
+   "tags": [
+    "editar",
+    "lapiz",
+    "pencil",
+    "escribir"
+   ],
+   "body": "<path d=\"M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16z\"/><line x1=\"14\" y1=\"7\" x2=\"17\" y2=\"10\"/>"
+  },
+  {
+   "name": "eye",
+   "category": "interfaz",
+   "tags": [
+    "ver",
+    "ojo",
+    "mostrar",
+    "view",
+    "visible"
+   ],
+   "body": "<path d=\"M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+  },
+  {
+   "name": "eye-off",
+   "category": "interfaz",
+   "tags": [
+    "ocultar",
+    "ojo",
+    "hide",
+    "invisible"
+   ],
+   "body": "<path d=\"M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/><line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\"/>"
+  },
+  {
+   "name": "lock",
+   "category": "interfaz",
+   "tags": [
+    "candado",
+    "bloquear",
+    "seguro",
+    "cerrado",
+    "locked"
+   ],
+   "body": "<rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/><circle cx=\"12\" cy=\"15.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "unlock",
+   "category": "interfaz",
+   "tags": [
+    "desbloquear",
+    "abierto",
+    "candado",
+    "unlocked"
+   ],
+   "body": "<rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 0 1 7.5-2\"/><circle cx=\"12\" cy=\"15.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "info",
+   "category": "interfaz",
+   "tags": [
+    "informacion",
+    "info",
+    "ayuda",
+    "detalle"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><line x1=\"12\" y1=\"11\" x2=\"12\" y2=\"16\"/><circle cx=\"12\" cy=\"8\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "alert-triangle",
+   "category": "interfaz",
+   "tags": [
+    "advertencia",
+    "peligro",
+    "warning",
+    "cuidado"
+   ],
+   "body": "<polygon points=\"12 4 21 19.5 3 19.5\"/><line x1=\"12\" y1=\"10\" x2=\"12\" y2=\"14\"/><circle cx=\"12\" cy=\"16.8\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "alert-circle",
+   "category": "interfaz",
+   "tags": [
+    "alerta",
+    "error",
+    "aviso",
+    "warning"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><line x1=\"12\" y1=\"7.5\" x2=\"12\" y2=\"13\"/><circle cx=\"12\" cy=\"16.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "check-circle",
+   "category": "interfaz",
+   "tags": [
+    "exito",
+    "correcto",
+    "success",
+    "completado"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><polyline points=\"8 12.5 11 15.5 16 9\"/>"
+  },
+  {
+   "name": "x-circle",
+   "category": "interfaz",
+   "tags": [
+    "error",
+    "cancelar",
+    "cerrar",
+    "fallo"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><line x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\"/><line x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\"/>"
+  },
+  {
+   "name": "help-circle",
+   "category": "interfaz",
+   "tags": [
+    "ayuda",
+    "pregunta",
+    "help",
+    "soporte"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7\"/><circle cx=\"12\" cy=\"16.8\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "filter",
+   "category": "interfaz",
+   "tags": [
+    "filtro",
+    "filtrar",
+    "embudo",
+    "funnel"
+   ],
+   "body": "<polygon points=\"3.5 5 20.5 5 14 12.5 14 19 10 17 10 12.5\"/>"
+  },
+  {
+   "name": "sliders",
+   "category": "interfaz",
+   "tags": [
+    "controles",
+    "ajustes",
+    "sliders",
+    "mezclador"
+   ],
+   "body": "<line x1=\"4\" y1=\"8\" x2=\"6.8\" y2=\"8\"/><line x1=\"11.2\" y1=\"8\" x2=\"20\" y2=\"8\"/><circle cx=\"9\" cy=\"8\" r=\"2.2\"/><line x1=\"4\" y1=\"16\" x2=\"12.8\" y2=\"16\"/><line x1=\"17.2\" y1=\"16\" x2=\"20\" y2=\"16\"/><circle cx=\"15\" cy=\"16\" r=\"2.2\"/>"
+  },
+  {
+   "name": "grid",
+   "category": "interfaz",
+   "tags": [
+    "cuadricula",
+    "rejilla",
+    "grid",
+    "mosaico"
+   ],
+   "body": "<rect x=\"4\" y=\"4\" width=\"6.5\" height=\"6.5\" rx=\"1.5\"/><rect x=\"13.5\" y=\"4\" width=\"6.5\" height=\"6.5\" rx=\"1.5\"/><rect x=\"4\" y=\"13.5\" width=\"6.5\" height=\"6.5\" rx=\"1.5\"/><rect x=\"13.5\" y=\"13.5\" width=\"6.5\" height=\"6.5\" rx=\"1.5\"/>"
+  },
+  {
+   "name": "layout",
+   "category": "interfaz",
+   "tags": [
+    "diseno",
+    "layout",
+    "estructura",
+    "plantilla"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\"/><line x1=\"9\" y1=\"9\" x2=\"9\" y2=\"20\"/>"
+  },
+  {
+   "name": "list",
+   "category": "interfaz",
+   "tags": [
+    "lista",
+    "list",
+    "items",
+    "elementos"
+   ],
+   "body": "<line x1=\"9\" y1=\"7\" x2=\"20\" y2=\"7\"/><line x1=\"9\" y1=\"12\" x2=\"20\" y2=\"12\"/><line x1=\"9\" y1=\"17\" x2=\"20\" y2=\"17\"/><circle cx=\"4.8\" cy=\"7\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"4.8\" cy=\"12\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"4.8\" cy=\"17\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "layers",
+   "category": "interfaz",
+   "tags": [
+    "capas",
+    "layers",
+    "apilar",
+    "niveles"
+   ],
+   "body": "<polygon points=\"12 3 21 8 12 13 3 8\"/><polyline points=\"3 12 12 17 21 12\"/><polyline points=\"3 16 12 21 21 16\"/>"
+  },
+  {
+   "name": "box",
+   "category": "comercio",
+   "tags": [
+    "caja",
+    "cubo",
+    "box",
+    "3d"
+   ],
+   "body": "<path d=\"M12 3l8 4.5v9L12 21l-8-4.5v-9z\"/><polyline points=\"4 7.5 12 12 20 7.5\"/><line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\"/>"
+  },
+  {
+   "name": "package",
+   "category": "comercio",
+   "tags": [
+    "paquete",
+    "envio",
+    "package",
+    "entrega"
+   ],
+   "body": "<path d=\"M12 3l8 4.5v9L12 21l-8-4.5v-9z\"/><polyline points=\"4 7.5 12 12 20 7.5\"/><line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\"/><line x1=\"8\" y1=\"5.2\" x2=\"16\" y2=\"9.8\"/>"
+  },
+  {
+   "name": "code",
+   "category": "edicion",
+   "tags": [
+    "codigo",
+    "programar",
+    "code",
+    "dev"
+   ],
+   "body": "<polyline points=\"8 7 3 12 8 17\"/><polyline points=\"16 7 21 12 16 17\"/><line x1=\"13.5\" y1=\"5\" x2=\"10.5\" y2=\"19\"/>"
+  },
+  {
+   "name": "terminal",
+   "category": "dispositivos",
+   "tags": [
+    "terminal",
+    "consola",
+    "shell",
+    "comandos"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><polyline points=\"7 9.5 10.5 12.5 7 15.5\"/><line x1=\"13\" y1=\"16\" x2=\"17\" y2=\"16\"/>"
+  },
+  {
+   "name": "command",
+   "category": "interfaz",
+   "tags": [
+    "comando",
+    "atajo",
+    "cmd",
+    "shortcut"
+   ],
+   "body": "<rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"/><circle cx=\"7\" cy=\"7\" r=\"2.5\"/><circle cx=\"17\" cy=\"7\" r=\"2.5\"/><circle cx=\"7\" cy=\"17\" r=\"2.5\"/><circle cx=\"17\" cy=\"17\" r=\"2.5\"/>"
+  },
+  {
+   "name": "link",
+   "category": "edicion",
+   "tags": [
+    "enlace",
+    "vinculo",
+    "link",
+    "url",
+    "cadena"
+   ],
+   "body": "<path d=\"M10 8H7a4 4 0 0 0 0 8h3\"/><path d=\"M14 8h3a4 4 0 0 1 0 8h-3\"/><line x1=\"8.5\" y1=\"12\" x2=\"15.5\" y2=\"12\"/>"
+  },
+  {
+   "name": "image",
+   "category": "multimedia",
+   "tags": [
+    "imagen",
+    "foto",
+    "picture",
+    "galeria"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><circle cx=\"8.5\" cy=\"9.5\" r=\"1.8\"/><polyline points=\"3.5 17 9 12.5 13 16 15.5 14 20.5 18\"/>"
+  },
+  {
+   "name": "file",
+   "category": "archivos",
+   "tags": [
+    "archivo",
+    "documento",
+    "file",
+    "hoja"
+   ],
+   "body": "<path d=\"M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z\"/><polyline points=\"14 3 14 8 19 8\"/>"
+  },
+  {
+   "name": "file-text",
+   "category": "archivos",
+   "tags": [
+    "documento",
+    "texto",
+    "file",
+    "nota"
+   ],
+   "body": "<path d=\"M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z\"/><polyline points=\"14 3 14 8 19 8\"/><line x1=\"8.5\" y1=\"13\" x2=\"15.5\" y2=\"13\"/><line x1=\"8.5\" y1=\"17\" x2=\"13\" y2=\"17\"/>"
+  },
+  {
+   "name": "folder",
+   "category": "archivos",
+   "tags": [
+    "carpeta",
+    "folder",
+    "directorio"
+   ],
+   "body": "<path d=\"M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>"
+  },
+  {
+   "name": "cloud",
+   "category": "naturaleza",
+   "tags": [
+    "nube",
+    "cloud",
+    "nublado",
+    "almacenamiento"
+   ],
+   "body": "<path d=\"M7 18.5a4.5 4.5 0 0 1-.4-9A6 6 0 0 1 18 10.5a4 4 0 0 1-.5 8z\"/>"
+  },
+  {
+   "name": "zap",
+   "category": "naturaleza",
+   "tags": [
+    "rayo",
+    "energia",
+    "zap",
+    "electricidad",
+    "rapido"
+   ],
+   "body": "<polygon points=\"13 3 5 13 11.5 13 10.5 21 19 10.5 12.5 10.5\"/>"
+  },
+  {
+   "name": "flower",
+   "category": "naturaleza",
+   "tags": [
+    "flor",
+    "jacaranda",
+    "blossom",
+    "flora"
+   ],
+   "body": "<path d=\"M12 12 C 15.6 9.42, 15.6 4.69, 12 3.4 C 8.4 4.69, 8.4 9.42, 12 12\"/><path d=\"M12 12 C 15.57 14.63, 20.06 13.16, 20.18 9.34 C 17.84 6.32, 13.34 7.78, 12 12\"/><path d=\"M12 12 C 10.6 16.2, 13.38 20.03, 17.05 18.96 C 19.21 15.8, 16.43 11.97, 12 12\"/><path d=\"M12 12 C 7.57 11.97, 4.79 15.8, 6.95 18.96 C 10.62 20.03, 13.4 16.2, 12 12\"/><path d=\"M12 12 C 10.66 7.78, 6.16 6.32, 3.82 9.34 C 3.94 13.16, 8.43 14.63, 12 12\"/><circle cx=\"12\" cy=\"12\" r=\"1.2\"/>"
+  },
+  {
+   "name": "petal",
+   "category": "naturaleza",
+   "tags": [
+    "petalo",
+    "petal",
+    "flor",
+    "pétalo"
+   ],
+   "body": "<path d=\"M12 20.5C6.5 17 5.5 10 12 3.5c6.5 6.5 5.5 13.5 0 17z\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"11\"/>"
+  },
+  {
+   "name": "leaf",
+   "category": "naturaleza",
+   "tags": [
+    "hoja",
+    "leaf",
+    "planta",
+    "eco",
+    "verde"
+   ],
+   "body": "<path d=\"M5 19C5 10 10 5 20 4c0 10-5 15-14 15z\"/><line x1=\"5\" y1=\"19\" x2=\"12\" y2=\"12\"/>"
+  },
+  {
+   "name": "palette",
+   "category": "edicion",
+   "tags": [
+    "paleta",
+    "colores",
+    "palette",
+    "pintura"
+   ],
+   "body": "<path d=\"M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-1.8 0-.6-.3-1-.5-1.4-.3-.5-.1-1.3.8-1.3H17a4 4 0 0 0 4-4C21 6.8 17 3 12 3z\"/><circle cx=\"7.5\" cy=\"11.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10\" cy=\"7.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"15\" cy=\"7.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "type",
+   "category": "edicion",
+   "tags": [
+    "texto",
+    "tipografia",
+    "type",
+    "fuente",
+    "font"
+   ],
+   "body": "<polyline points=\"5 7 5 5 19 5 19 7\"/><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"9\" y1=\"19\" x2=\"15\" y2=\"19\"/>"
+  },
+  {
+   "name": "droplet",
+   "category": "naturaleza",
+   "tags": [
+    "gota",
+    "agua",
+    "droplet",
+    "liquido"
+   ],
+   "body": "<path d=\"M12 3.5C8 8.5 6 11.5 6 14.5a6 6 0 0 0 12 0c0-3-2-6-6-11z\"/>"
+  },
+  {
+   "name": "globe",
+   "category": "interfaz",
+   "tags": [
+    "mundo",
+    "globo",
+    "web",
+    "internet",
+    "idioma"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"/><ellipse cx=\"12\" cy=\"12\" rx=\"4\" ry=\"9\"/>"
+  },
+  {
+   "name": "map-pin",
+   "category": "interfaz",
+   "tags": [
+    "ubicacion",
+    "mapa",
+    "pin",
+    "lugar",
+    "location"
+   ],
+   "body": "<path d=\"M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z\"/><circle cx=\"12\" cy=\"10\" r=\"2.3\"/>"
+  },
+  {
+   "name": "send",
+   "category": "comunicacion",
+   "tags": [
+    "enviar",
+    "send",
+    "avion",
+    "paper",
+    "plane"
+   ],
+   "body": "<polygon points=\"21 3 14 21 10.5 13.5 3 10\"/><line x1=\"10.5\" y1=\"13.5\" x2=\"21\" y2=\"3\"/>"
+  },
+  {
+   "name": "message-circle",
+   "category": "comunicacion",
+   "tags": [
+    "mensaje",
+    "chat",
+    "comentario",
+    "burbuja"
+   ],
+   "body": "<path d=\"M20 12a8 8 0 0 1-11.7 7.1L4 20l1-4A8 8 0 1 1 20 12z\"/>"
+  },
+  {
+   "name": "credit-card",
+   "category": "comercio",
+   "tags": [
+    "tarjeta",
+    "pago",
+    "credit",
+    "card",
+    "pagar"
+   ],
+   "body": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/><line x1=\"7\" y1=\"15\" x2=\"11\" y2=\"15\"/>"
+  },
+  {
+   "name": "shopping-cart",
+   "category": "comercio",
+   "tags": [
+    "carrito",
+    "compras",
+    "cart",
+    "tienda"
+   ],
+   "body": "<path d=\"M3 4h2.5l2 11h10l2-8H7\"/><circle cx=\"9\" cy=\"19.5\" r=\"1.3\"/><circle cx=\"17\" cy=\"19.5\" r=\"1.3\"/>"
+  },
+  {
+   "name": "shopping-bag",
+   "category": "comercio",
+   "tags": [
+    "bolsa",
+    "compras",
+    "bag",
+    "tienda"
+   ],
+   "body": "<path d=\"M5.5 8h13l1 12h-15z\"/><path d=\"M9 8V6.5a3 3 0 0 1 6 0V8\"/>"
+  },
+  {
+   "name": "tag",
+   "category": "comercio",
+   "tags": [
+    "etiqueta",
+    "precio",
+    "tag",
+    "oferta"
+   ],
+   "body": "<path d=\"M4 4.5h7.5l8.5 8.5-7 7-9-9z\"/><circle cx=\"8.5\" cy=\"9\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "trending-up",
+   "category": "datos",
+   "tags": [
+    "tendencia",
+    "subir",
+    "crecimiento",
+    "trending",
+    "up"
+   ],
+   "body": "<polyline points=\"3 17 9 11 13 15 21 7\"/><polyline points=\"15 7 21 7 21 13\"/>"
+  },
+  {
+   "name": "trending-down",
+   "category": "datos",
+   "tags": [
+    "tendencia",
+    "bajar",
+    "caida",
+    "trending",
+    "down"
+   ],
+   "body": "<polyline points=\"3 7 9 13 13 9 21 17\"/><polyline points=\"15 17 21 17 21 11\"/>"
+  },
+  {
+   "name": "bar-chart",
+   "category": "datos",
+   "tags": [
+    "grafico",
+    "barras",
+    "chart",
+    "estadisticas"
+   ],
+   "body": "<line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"12\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"5\"/><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"9\"/>"
+  },
+  {
+   "name": "pie-chart",
+   "category": "datos",
+   "tags": [
+    "grafico",
+    "circular",
+    "pastel",
+    "pie",
+    "chart"
+   ],
+   "body": "<path d=\"M11 4a8 8 0 1 0 9 9h-9z\"/><path d=\"M14 3.2A7 7 0 0 1 20.8 10H14z\"/>"
+  },
+  {
+   "name": "activity",
+   "category": "datos",
+   "tags": [
+    "actividad",
+    "pulso",
+    "activity",
+    "ritmo"
+   ],
+   "body": "<polyline points=\"3 12 7 12 10 4 14 20 17 12 21 12\"/>"
+  },
+  {
+   "name": "play",
+   "category": "multimedia",
+   "tags": [
+    "reproducir",
+    "play",
+    "iniciar",
+    "video"
+   ],
+   "body": "<polygon points=\"8 5 19 12 8 19\"/>"
+  },
+  {
+   "name": "pause",
+   "category": "multimedia",
+   "tags": [
+    "pausa",
+    "pause",
+    "detener"
+   ],
+   "body": "<rect x=\"6\" y=\"5\" width=\"4\" height=\"14\" rx=\"1\"/><rect x=\"14\" y=\"5\" width=\"4\" height=\"14\" rx=\"1\"/>"
+  },
+  {
+   "name": "music",
+   "category": "multimedia",
+   "tags": [
+    "musica",
+    "nota",
+    "audio",
+    "music"
+   ],
+   "body": "<path d=\"M9 18V6l11-2v12\"/><circle cx=\"6.5\" cy=\"18\" r=\"2.5\"/><circle cx=\"17.5\" cy=\"16\" r=\"2.5\"/>"
+  },
+  {
+   "name": "camera",
+   "category": "multimedia",
+   "tags": [
+    "camara",
+    "foto",
+    "camera",
+    "fotografia"
+   ],
+   "body": "<path d=\"M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z\"/><circle cx=\"12\" cy=\"12.5\" r=\"3.5\"/>"
+  },
+  {
+   "name": "video",
+   "category": "multimedia",
+   "tags": [
+    "video",
+    "pelicula",
+    "camara",
+    "film"
+   ],
+   "body": "<rect x=\"3\" y=\"6\" width=\"13\" height=\"12\" rx=\"2\"/><polygon points=\"16 10.5 21 7.5 21 16.5 16 13.5\"/>"
+  },
+  {
+   "name": "mic",
+   "category": "multimedia",
+   "tags": [
+    "microfono",
+    "mic",
+    "audio",
+    "voz"
+   ],
+   "body": "<rect x=\"9\" y=\"3\" width=\"6\" height=\"11\" rx=\"3\"/><path d=\"M5.5 11a6.5 6.5 0 0 0 13 0\"/><line x1=\"12\" y1=\"17.5\" x2=\"12\" y2=\"21\"/><line x1=\"9\" y1=\"21\" x2=\"15\" y2=\"21\"/>"
+  },
+  {
+   "name": "phone",
+   "category": "comunicacion",
+   "tags": [
+    "telefono",
+    "llamar",
+    "phone",
+    "call"
+   ],
+   "body": "<path d=\"M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z\"/>"
+  },
+  {
+   "name": "smartphone",
+   "category": "dispositivos",
+   "tags": [
+    "celular",
+    "movil",
+    "smartphone",
+    "telefono"
+   ],
+   "body": "<rect x=\"7\" y=\"2.5\" width=\"10\" height=\"19\" rx=\"2.5\"/><line x1=\"11\" y1=\"18.5\" x2=\"13\" y2=\"18.5\"/>"
+  },
+  {
+   "name": "wifi",
+   "category": "dispositivos",
+   "tags": [
+    "wifi",
+    "red",
+    "inalambrico",
+    "internet",
+    "senal"
+   ],
+   "body": "<path d=\"M3 9.5a13 13 0 0 1 18 0\"/><path d=\"M6 13a8.5 8.5 0 0 1 12 0\"/><path d=\"M9 16.5a4 4 0 0 1 6 0\"/><circle cx=\"12\" cy=\"19.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "battery",
+   "category": "dispositivos",
+   "tags": [
+    "bateria",
+    "carga",
+    "battery",
+    "energia"
+   ],
+   "body": "<rect x=\"2.5\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\"/><line x1=\"21.5\" y1=\"10.5\" x2=\"21.5\" y2=\"13.5\"/><rect x=\"5.5\" y=\"10\" width=\"6\" height=\"4\" rx=\"0.8\"/>"
+  },
+  {
+   "name": "share",
+   "category": "comunicacion",
+   "tags": [
+    "compartir",
+    "share",
+    "enviar",
+    "social"
+   ],
+   "body": "<circle cx=\"18\" cy=\"5.5\" r=\"2.5\"/><circle cx=\"6\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"18.5\" r=\"2.5\"/><line x1=\"8.2\" y1=\"10.8\" x2=\"15.8\" y2=\"6.7\"/><line x1=\"8.2\" y1=\"13.2\" x2=\"15.8\" y2=\"17.3\"/>"
+  },
+  {
+   "name": "refresh",
+   "category": "flechas",
+   "tags": [
+    "actualizar",
+    "recargar",
+    "refresh",
+    "sync"
+   ],
+   "body": "<path d=\"M20 11a8 8 0 0 0-14-4.5L4 9\"/><polyline points=\"4 4 4 9 9 9\"/><path d=\"M4 13a8 8 0 0 0 14 4.5L20 15\"/><polyline points=\"20 20 20 15 15 15\"/>"
+  },
+  {
+   "name": "log-in",
+   "category": "flechas",
+   "tags": [
+    "entrar",
+    "iniciar",
+    "sesion",
+    "login",
+    "ingresar"
+   ],
+   "body": "<path d=\"M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4\"/><line x1=\"3\" y1=\"12\" x2=\"15\" y2=\"12\"/><polyline points=\"10 7 15 12 10 17\"/>"
+  },
+  {
+   "name": "log-out",
+   "category": "flechas",
+   "tags": [
+    "salir",
+    "cerrar",
+    "sesion",
+    "logout"
+   ],
+   "body": "<path d=\"M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4\"/><line x1=\"9\" y1=\"12\" x2=\"21\" y2=\"12\"/><polyline points=\"16 7 21 12 16 17\"/>"
+  },
+  {
+   "name": "shield",
+   "category": "interfaz",
+   "tags": [
+    "escudo",
+    "seguridad",
+    "shield",
+    "proteccion"
+   ],
+   "body": "<path d=\"M12 3l7.5 3v5.5c0 4.5-3.2 8.2-7.5 9.5-4.3-1.3-7.5-5-7.5-9.5V6z\"/><polyline points=\"9 12 11.2 14.2 15.2 9.8\"/>"
+  },
+  {
+   "name": "key",
+   "category": "interfaz",
+   "tags": [
+    "llave",
+    "clave",
+    "key",
+    "acceso"
+   ],
+   "body": "<circle cx=\"8\" cy=\"15\" r=\"4\"/><line x1=\"10.8\" y1=\"12.2\" x2=\"20\" y2=\"4\"/><line x1=\"16.5\" y1=\"7.5\" x2=\"19\" y2=\"10\"/>"
+  },
+  {
+   "name": "gift",
+   "category": "comercio",
+   "tags": [
+    "regalo",
+    "gift",
+    "sorpresa",
+    "presente"
+   ],
+   "body": "<rect x=\"3.5\" y=\"8\" width=\"17\" height=\"4\" rx=\"1\"/><rect x=\"5\" y=\"12\" width=\"14\" height=\"8\" rx=\"1\"/><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"20\"/><path d=\"M12 8C9 8 7.5 7 7.5 5.5S10 3.5 12 8z\"/><path d=\"M12 8c3 0 4.5-1 4.5-2.5S14 3.5 12 8z\"/>"
+  },
+  {
+   "name": "coffee",
+   "category": "comercio",
+   "tags": [
+    "cafe",
+    "taza",
+    "coffee",
+    "bebida"
+   ],
+   "body": "<path d=\"M5 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z\"/><path d=\"M17 9.5h1.5a2.5 2.5 0 0 1 0 5H17\"/><line x1=\"9\" y1=\"3.5\" x2=\"9\" y2=\"5.5\"/><line x1=\"13\" y1=\"3.5\" x2=\"13\" y2=\"5.5\"/>"
+  },
+  {
+   "name": "sparkles",
+   "category": "edicion",
+   "tags": [
+    "destellos",
+    "magia",
+    "sparkles",
+    "ia",
+    "brillo"
+   ],
+   "body": "<path d=\"M10 4c.6 4 2 6 6 6.5-4 .6-5.4 2.5-6 6.5-.6-4-2-5.9-6-6.5 4-.5 5.4-2.5 6-6.5z\"/><path d=\"M18 14.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z\"/><circle cx=\"19\" cy=\"5.5\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "rocket",
+   "category": "comercio",
+   "tags": [
+    "cohete",
+    "lanzamiento",
+    "rocket",
+    "inicio"
+   ],
+   "body": "<path d=\"M12 3c3.5 2 5 6 4.5 10L12 17.5 7.5 13C7 9 8.5 5 12 3z\"/><circle cx=\"12\" cy=\"9.5\" r=\"1.6\"/><path d=\"M7.5 13l-3 1.5 1 3.5 3-1.5\"/><path d=\"M16.5 13l3 1.5-1 3.5-3-1.5\"/><line x1=\"12\" y1=\"19.5\" x2=\"12\" y2=\"21\"/>"
+  },
+  {
+   "name": "compass",
+   "category": "interfaz",
+   "tags": [
+    "brujula",
+    "explorar",
+    "compass",
+    "navegar"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><polygon points=\"15.5 8.5 13.5 13.5 8.5 15.5 10.5 10.5\"/>"
+  },
+  {
+   "name": "book",
+   "category": "archivos",
+   "tags": [
+    "libro",
+    "book",
+    "lectura",
+    "documentacion"
+   ],
+   "body": "<path d=\"M5 5a2 2 0 0 1 2-2h12v18H7a2 2 0 0 1-2-2z\"/><line x1=\"7\" y1=\"18\" x2=\"19\" y2=\"18\"/><line x1=\"9\" y1=\"7\" x2=\"15\" y2=\"7\"/>"
+  },
+  {
+   "name": "lightbulb",
+   "category": "interfaz",
+   "tags": [
+    "idea",
+    "bombilla",
+    "lightbulb",
+    "foco"
+   ],
+   "body": "<path d=\"M8.5 14.5C7 13.3 6 11.8 6 10a6 6 0 0 1 12 0c0 1.8-1 3.3-2.5 4.5-.7.6-1 1.2-1 2h-5c0-.8-.3-1.4-1-2z\"/><line x1=\"10\" y1=\"19.5\" x2=\"14\" y2=\"19.5\"/><line x1=\"11\" y1=\"22\" x2=\"13\" y2=\"22\"/>"
+  },
+  {
+   "name": "flag",
+   "category": "interfaz",
+   "tags": [
+    "bandera",
+    "flag",
+    "reportar",
+    "marcar"
+   ],
+   "body": "<line x1=\"5\" y1=\"3\" x2=\"5\" y2=\"21\"/><path d=\"M5 4h13l-2.5 4.5L18 13H5\"/>"
+  },
+  {
+   "name": "more-horizontal",
+   "category": "interfaz",
+   "tags": [
+    "mas",
+    "opciones",
+    "puntos",
+    "more",
+    "menu"
+   ],
+   "body": "<circle cx=\"5\" cy=\"12\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"12\" cy=\"12\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"19\" cy=\"12\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "more-vertical",
+   "category": "interfaz",
+   "tags": [
+    "mas",
+    "opciones",
+    "puntos",
+    "more",
+    "menu"
+   ],
+   "body": "<circle cx=\"12\" cy=\"5\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"12\" cy=\"12\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"12\" cy=\"19\" r=\"1.4\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "panel-left",
+   "category": "interfaz",
+   "tags": [
+    "panel",
+    "lateral",
+    "sidebar",
+    "barra",
+    "izquierda"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"9.5\" y1=\"4\" x2=\"9.5\" y2=\"20\"/>"
+  },
+  {
+   "name": "dollar-sign",
+   "category": "comercio",
+   "tags": [
+    "dolar",
+    "dinero",
+    "precio",
+    "money"
+   ],
+   "body": "<line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"21\"/><path d=\"M16.5 7.5C16 6 14.5 5.5 12 5.5c-3 0-4.5 1.2-4.5 3s1.5 2.5 4.5 3.3 4.5 1.5 4.5 3.2-1.5 3-4.5 3c-2.7 0-4.3-.8-4.8-2.5\"/>"
+  },
+  {
+   "name": "percent",
+   "category": "comercio",
+   "tags": [
+    "porcentaje",
+    "descuento",
+    "percent",
+    "oferta"
+   ],
+   "body": "<line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\"/><circle cx=\"7\" cy=\"7\" r=\"2.5\"/><circle cx=\"17\" cy=\"17\" r=\"2.5\"/>"
+  },
+  {
+   "name": "award",
+   "category": "personas",
+   "tags": [
+    "premio",
+    "logro",
+    "award",
+    "medalla"
+   ],
+   "body": "<circle cx=\"12\" cy=\"9\" r=\"6\"/><path d=\"M9 14.2L7.5 21 12 18.5l4.5 2.5L15 14.2\"/>"
+  },
+  {
+   "name": "target",
+   "category": "interfaz",
+   "tags": [
+    "objetivo",
+    "meta",
+    "target",
+    "diana"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "cursor",
+   "category": "interfaz",
+   "tags": [
+    "cursor",
+    "navegacion",
+    "puntero",
+    "direccion"
+   ],
+   "body": "<polygon points=\"4 11 20 4 13 20 11 13\"/>"
+  },
+  {
+   "name": "wand",
+   "category": "edicion",
+   "tags": [
+    "varita",
+    "magia",
+    "wand",
+    "herramienta"
+   ],
+   "body": "<line x1=\"4.5\" y1=\"19.5\" x2=\"14.5\" y2=\"9.5\"/><line x1=\"18\" y1=\"3.5\" x2=\"18\" y2=\"8\"/><line x1=\"15.8\" y1=\"5.8\" x2=\"20.2\" y2=\"5.8\"/><circle cx=\"19.5\" cy=\"13\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"7\" cy=\"7\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "feather",
+   "category": "edicion",
+   "tags": [
+    "pluma",
+    "feather",
+    "escribir",
+    "ligero"
+   ],
+   "body": "<path d=\"M19.5 4.5C12 4 6.5 9 6.5 15.5L5 20l4.5-1.5C16 18.5 20 12 19.5 4.5z\"/><line x1=\"5\" y1=\"20\" x2=\"14\" y2=\"11\"/>"
+  },
+  {
+   "name": "columns",
+   "category": "interfaz",
+   "tags": [
+    "columnas",
+    "columns",
+    "diseno",
+    "layout"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"9\" y1=\"4\" x2=\"9\" y2=\"20\"/><line x1=\"15\" y1=\"4\" x2=\"15\" y2=\"20\"/>"
+  },
+  {
+   "name": "inbox",
+   "category": "comunicacion",
+   "tags": [
+    "bandeja",
+    "entrada",
+    "inbox",
+    "correo"
+   ],
+   "body": "<path d=\"M3.5 13.5l2.5-8a2 2 0 0 1 1.9-1.5h8.2a2 2 0 0 1 1.9 1.5l2.5 8\"/><path d=\"M3.5 13.5V18a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-4.5h-5l-1.5 2.5h-5l-1.5-2.5z\"/>"
+  },
+  {
+   "name": "archive",
+   "category": "archivos",
+   "tags": [
+    "archivar",
+    "archive",
+    "guardar",
+    "caja"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8\"/><line x1=\"10\" y1=\"12.5\" x2=\"14\" y2=\"12.5\"/>"
+  },
+  {
+   "name": "paperclip",
+   "category": "archivos",
+   "tags": [
+    "clip",
+    "adjunto",
+    "paperclip",
+    "adjuntar"
+   ],
+   "body": "<path d=\"M19 11l-7.5 7.5a4.5 4.5 0 0 1-6.4-6.4l8-8a3 3 0 0 1 4.3 4.3l-8 8a1.5 1.5 0 0 1-2.2-2.2L14 7.5\"/>"
+  },
+  {
+   "name": "hash",
+   "category": "edicion",
+   "tags": [
+    "numeral",
+    "hash",
+    "hashtag",
+    "etiqueta"
+   ],
+   "body": "<line x1=\"9\" y1=\"4\" x2=\"7\" y2=\"20\"/><line x1=\"17\" y1=\"4\" x2=\"15\" y2=\"20\"/><line x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\"/><line x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\"/>"
+  },
+  {
+   "name": "at-sign",
+   "category": "comunicacion",
+   "tags": [
+    "arroba",
+    "at",
+    "correo",
+    "email",
+    "mencion"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M16 8v5a2.5 2.5 0 0 0 5 0v-1a9 9 0 1 0-3.5 7.1\"/>"
+  },
+  {
+   "name": "loader",
+   "category": "interfaz",
+   "tags": [
+    "cargando",
+    "loader",
+    "spinner",
+    "espera"
+   ],
+   "body": "<path d=\"M12 3a9 9 0 1 0 9 9\"/>"
+  },
+  {
+   "name": "maximize",
+   "category": "interfaz",
+   "tags": [
+    "maximizar",
+    "ampliar",
+    "maximize",
+    "pantalla",
+    "completa"
+   ],
+   "body": "<path d=\"M4 9V4h5\"/><path d=\"M15 4h5v5\"/><path d=\"M20 15v5h-5\"/><path d=\"M9 20H4v-5\"/>"
+  },
+  {
+   "name": "minimize",
+   "category": "interfaz",
+   "tags": [
+    "minimizar",
+    "reducir",
+    "minimize",
+    "contraer"
+   ],
+   "body": "<path d=\"M9 4v5H4\"/><path d=\"M15 4v5h5\"/><path d=\"M20 15h-5v5\"/><path d=\"M4 15h5v5\"/>"
+  },
+  {
+   "name": "undo",
+   "category": "edicion",
+   "tags": [
+    "deshacer",
+    "undo",
+    "revertir",
+    "atras"
+   ],
+   "body": "<path d=\"M4 9h10a6 6 0 0 1 0 12h-4\"/><polyline points=\"8 5 4 9 8 13\"/>"
+  },
+  {
+   "name": "redo",
+   "category": "edicion",
+   "tags": [
+    "rehacer",
+    "redo",
+    "repetir",
+    "adelante"
+   ],
+   "body": "<path d=\"M20 9H10a6 6 0 0 0 0 12h4\"/><polyline points=\"16 5 20 9 16 13\"/>"
+  },
+  {
+   "name": "bold",
+   "category": "edicion",
+   "tags": [
+    "negrita",
+    "bold",
+    "texto",
+    "formato"
+   ],
+   "body": "<path d=\"M7 4h6.5a3.8 3.8 0 0 1 0 7.5H7z\"/><path d=\"M7 11.5h7.5a4.2 4.2 0 0 1 0 8.5H7z\"/>"
+  },
+  {
+   "name": "italic",
+   "category": "edicion",
+   "tags": [
+    "cursiva",
+    "italic",
+    "texto",
+    "formato"
+   ],
+   "body": "<line x1=\"10\" y1=\"4\" x2=\"18\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"14\" y2=\"20\"/><line x1=\"14\" y1=\"4\" x2=\"10\" y2=\"20\"/>"
+  },
+  {
+   "name": "underline",
+   "category": "edicion",
+   "tags": [
+    "subrayado",
+    "underline",
+    "texto",
+    "formato"
+   ],
+   "body": "<path d=\"M7 4v7a5 5 0 0 0 10 0V4\"/><line x1=\"5\" y1=\"20\" x2=\"19\" y2=\"20\"/>"
+  },
+  {
+   "name": "align-left",
+   "category": "edicion",
+   "tags": [
+    "alinear",
+    "izquierda",
+    "align",
+    "left",
+    "texto"
+   ],
+   "body": "<line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><line x1=\"4\" y1=\"10\" x2=\"14\" y2=\"10\"/><line x1=\"4\" y1=\"14\" x2=\"20\" y2=\"14\"/><line x1=\"4\" y1=\"18\" x2=\"14\" y2=\"18\"/>"
+  },
+  {
+   "name": "align-center",
+   "category": "edicion",
+   "tags": [
+    "centrar",
+    "alinear",
+    "center",
+    "texto"
+   ],
+   "body": "<line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><line x1=\"7\" y1=\"10\" x2=\"17\" y2=\"10\"/><line x1=\"4\" y1=\"14\" x2=\"20\" y2=\"14\"/><line x1=\"7\" y1=\"18\" x2=\"17\" y2=\"18\"/>"
+  },
+  {
+   "name": "quote",
+   "category": "edicion",
+   "tags": [
+    "cita",
+    "comillas",
+    "quote",
+    "texto"
+   ],
+   "body": "<path d=\"M9.5 7C6.5 8 5 10.5 5 14v4h5v-5H7\"/><path d=\"M18.5 7C15.5 8 14 10.5 14 14v4h5v-5h-3\"/>"
+  },
+  {
+   "name": "table",
+   "category": "datos",
+   "tags": [
+    "tabla",
+    "table",
+    "datos",
+    "hoja"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/><line x1=\"3\" y1=\"15\" x2=\"21\" y2=\"15\"/><line x1=\"9.5\" y1=\"10\" x2=\"9.5\" y2=\"20\"/>"
+  },
+  {
+   "name": "database",
+   "category": "datos",
+   "tags": [
+    "base",
+    "de",
+    "datos",
+    "database",
+    "almacenamiento"
+   ],
+   "body": "<ellipse cx=\"12\" cy=\"6\" rx=\"7.5\" ry=\"3\"/><path d=\"M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6\"/><path d=\"M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3\"/>"
+  },
+  {
+   "name": "server",
+   "category": "dispositivos",
+   "tags": [
+    "servidor",
+    "server",
+    "hosting",
+    "backend"
+   ],
+   "body": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"7\" rx=\"2\"/><rect x=\"3\" y=\"13\" width=\"18\" height=\"7\" rx=\"2\"/><circle cx=\"7\" cy=\"7.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"7\" cy=\"16.5\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "cpu",
+   "category": "dispositivos",
+   "tags": [
+    "procesador",
+    "cpu",
+    "chip",
+    "hardware"
+   ],
+   "body": "<rect x=\"6\" y=\"6\" width=\"12\" height=\"12\" rx=\"2\"/><rect x=\"9.5\" y=\"9.5\" width=\"5\" height=\"5\" rx=\"1\"/><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"6\"/><line x1=\"15\" y1=\"3\" x2=\"15\" y2=\"6\"/><line x1=\"9\" y1=\"18\" x2=\"9\" y2=\"21\"/><line x1=\"15\" y1=\"18\" x2=\"15\" y2=\"21\"/><line x1=\"3\" y1=\"9\" x2=\"6\" y2=\"9\"/><line x1=\"3\" y1=\"15\" x2=\"6\" y2=\"15\"/><line x1=\"18\" y1=\"9\" x2=\"21\" y2=\"9\"/><line x1=\"18\" y1=\"15\" x2=\"21\" y2=\"15\"/>"
+  },
+  {
+   "name": "git-branch",
+   "category": "edicion",
+   "tags": [
+    "rama",
+    "git",
+    "branch",
+    "version",
+    "codigo"
+   ],
+   "body": "<circle cx=\"6\" cy=\"5.5\" r=\"2\"/><circle cx=\"6\" cy=\"18.5\" r=\"2\"/><circle cx=\"18\" cy=\"8\" r=\"2\"/><line x1=\"6\" y1=\"7.5\" x2=\"6\" y2=\"16.5\"/><path d=\"M18 10c0 3-2 5-6 5H6\"/>"
+  },
+  {
+   "name": "bug",
+   "category": "edicion",
+   "tags": [
+    "error",
+    "bug",
+    "insecto",
+    "depurar",
+    "debug"
+   ],
+   "body": "<ellipse cx=\"12\" cy=\"14.5\" rx=\"4.5\" ry=\"5.5\"/><path d=\"M8.5 9.5V8a3.5 3.5 0 0 1 7 0v1.5\"/><line x1=\"12\" y1=\"9\" x2=\"12\" y2=\"20\"/><line x1=\"3\" y1=\"12\" x2=\"7.5\" y2=\"13.5\"/><line x1=\"21\" y1=\"12\" x2=\"16.5\" y2=\"13.5\"/><line x1=\"4\" y1=\"20\" x2=\"7.8\" y2=\"17.5\"/><line x1=\"20\" y1=\"20\" x2=\"16.2\" y2=\"17.5\"/>"
+  },
+  {
+   "name": "puzzle",
+   "category": "interfaz",
+   "tags": [
+    "rompecabezas",
+    "puzzle",
+    "plugin",
+    "extension"
+   ],
+   "body": "<path d=\"M10.5 6V5.5a2 2 0 1 1 3 0V6H18a1 1 0 0 1 1 1v3.5h-.5a2 2 0 1 0 0 3h.5V18a1 1 0 0 1-1 1h-3.5v-.5a2 2 0 1 0-3 0v.5H6a1 1 0 0 1-1-1v-3.5h.5a2 2 0 1 0 0-3H5V7a1 1 0 0 1 1-1z\"/>"
+  },
+  {
+   "name": "toggle-left",
+   "category": "interfaz",
+   "tags": [
+    "interruptor",
+    "toggle",
+    "switch",
+    "apagado"
+   ],
+   "body": "<rect x=\"2.5\" y=\"7\" width=\"19\" height=\"10\" rx=\"5\"/><circle cx=\"8\" cy=\"12\" r=\"2.5\"/>"
+  },
+  {
+   "name": "mouse-pointer",
+   "category": "interfaz",
+   "tags": [
+    "raton",
+    "mouse",
+    "puntero",
+    "click",
+    "flecha"
+   ],
+   "body": "<polygon points=\"5 3.5 18 11 11.5 12.5 9 19\"/><line x1=\"13.5\" y1=\"14.5\" x2=\"19\" y2=\"20\"/>"
+  },
+  {
+   "name": "move",
+   "category": "interfaz",
+   "tags": [
+    "mover",
+    "move",
+    "arrastrar",
+    "desplazar"
+   ],
+   "body": "<line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"21\"/><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"/><polyline points=\"9 6 12 3 15 6\"/><polyline points=\"9 18 12 21 15 18\"/><polyline points=\"6 9 3 12 6 15\"/><polyline points=\"18 9 21 12 18 15\"/>"
+  },
+  {
+   "name": "crop",
+   "category": "edicion",
+   "tags": [
+    "recortar",
+    "crop",
+    "imagen",
+    "cortar"
+   ],
+   "body": "<path d=\"M7 3v14h14\"/><path d=\"M3 7h14v14\"/>"
+  },
+  {
+   "name": "scissors",
+   "category": "edicion",
+   "tags": [
+    "tijeras",
+    "cortar",
+    "scissors",
+    "recortar"
+   ],
+   "body": "<circle cx=\"6\" cy=\"6.5\" r=\"2.5\"/><circle cx=\"6\" cy=\"17.5\" r=\"2.5\"/><line x1=\"7.8\" y1=\"8.3\" x2=\"20\" y2=\"17.5\"/><line x1=\"7.8\" y1=\"15.7\" x2=\"20\" y2=\"6.5\"/>"
+  },
+  {
+   "name": "printer",
+   "category": "dispositivos",
+   "tags": [
+    "impresora",
+    "imprimir",
+    "printer",
+    "papel"
+   ],
+   "body": "<path d=\"M7 9V4h10v5\"/><path d=\"M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2\"/><rect x=\"7\" y=\"14\" width=\"10\" height=\"6\" rx=\"1\"/>"
+  },
+  {
+   "name": "save",
+   "category": "archivos",
+   "tags": [
+    "guardar",
+    "save",
+    "disquete",
+    "disco"
+   ],
+   "body": "<path d=\"M6 3h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z\"/><polyline points=\"8 3 8 8 15 8 15 3\"/><polyline points=\"7 21 7 14 17 14 17 21\"/>"
+  },
+  {
+   "name": "thumbs-up",
+   "category": "personas",
+   "tags": [
+    "me",
+    "gusta",
+    "thumbs",
+    "up",
+    "aprobar"
+   ],
+   "body": "<path d=\"M3.5 10.5h3.5v9.5H3.5z\"/><path d=\"M7 11l3.5-7c1.5 0 2.5 1 2.5 2.5V9h5.5a2 2 0 0 1 2 2.3l-1 6.5A2.5 2.5 0 0 1 17.1 20H7\"/>"
+  },
+  {
+   "name": "bolt",
+   "category": "naturaleza",
+   "tags": [
+    "rayo",
+    "tormenta",
+    "bolt",
+    "energia",
+    "poder"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><polygon points=\"13 6 8.5 13 11.5 13 11 18 15.5 11 12.5 11\"/>"
+  },
+  {
+   "name": "sunrise",
+   "category": "naturaleza",
+   "tags": [
+    "amanecer",
+    "sunrise",
+    "sol",
+    "alba"
+   ],
+   "body": "<line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"/><path d=\"M7 18a5 5 0 0 1 10 0\"/><line x1=\"12\" y1=\"6\" x2=\"12\" y2=\"8.5\"/><line x1=\"5.3\" y1=\"9.3\" x2=\"7\" y2=\"11\"/><line x1=\"18.7\" y1=\"9.3\" x2=\"17\" y2=\"11\"/>"
+  },
+  {
+   "name": "wind",
+   "category": "naturaleza",
+   "tags": [
+    "viento",
+    "wind",
+    "aire",
+    "brisa"
+   ],
+   "body": "<path d=\"M3 8.5h9.5a2.5 2.5 0 1 0-2.5-2.5\"/><path d=\"M3 12.5h14a2.5 2.5 0 1 1-2.5 2.5\"/><line x1=\"3\" y1=\"16.5\" x2=\"9\" y2=\"16.5\"/>"
+  },
+  {
+   "name": "mountain",
+   "category": "naturaleza",
+   "tags": [
+    "montana",
+    "mountain",
+    "paisaje",
+    "cumbre"
+   ],
+   "body": "<polyline points=\"2.5 19 9.5 6.5 16.5 19\"/><polyline points=\"13 13 16 8 21.5 19\"/><line x1=\"2.5\" y1=\"19\" x2=\"21.5\" y2=\"19\"/>"
+  },
+  {
+   "name": "tree",
+   "category": "naturaleza",
+   "tags": [
+    "arbol",
+    "tree",
+    "pino",
+    "bosque"
+   ],
+   "body": "<polygon points=\"12 3 17.5 10 15 10 19 16 5 16 9 10 6.5 10\"/><line x1=\"12\" y1=\"16\" x2=\"12\" y2=\"21\"/>"
+  },
+  {
+   "name": "cactus",
+   "category": "naturaleza",
+   "tags": [
+    "cactus",
+    "desierto",
+    "planta",
+    "cacto"
+   ],
+   "body": "<rect x=\"9.5\" y=\"3\" width=\"5\" height=\"18\" rx=\"2.5\"/><path d=\"M9.5 14H7a2 2 0 0 1-2-2V9\"/><path d=\"M14.5 12H17a2 2 0 0 0 2-2V8\"/>"
+  },
+  {
+   "name": "smile",
+   "category": "personas",
+   "tags": [
+    "sonrisa",
+    "feliz",
+    "smile",
+    "emoji",
+    "cara"
+   ],
+   "body": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 14.5a5 5 0 0 0 8 0\"/><circle cx=\"9\" cy=\"10\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"15\" cy=\"10\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "building",
+   "category": "interfaz",
+   "tags": [
+    "edificio",
+    "empresa",
+    "building",
+    "oficina"
+   ],
+   "body": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><circle cx=\"9\" cy=\"8\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"15\" cy=\"8\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"9\" cy=\"12\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"15\" cy=\"12\" r=\"1.1\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M10 21v-4h4v4\"/>"
+  },
+  {
+   "name": "briefcase",
+   "category": "comercio",
+   "tags": [
+    "maletin",
+    "trabajo",
+    "briefcase",
+    "negocio"
+   ],
+   "body": "<rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M9 7V5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5v2\"/><line x1=\"3\" y1=\"12.5\" x2=\"21\" y2=\"12.5\"/>"
+  },
+  {
+   "name": "truck",
+   "category": "comercio",
+   "tags": [
+    "camion",
+    "envio",
+    "truck",
+    "entrega"
+   ],
+   "body": "<rect x=\"2.5\" y=\"6\" width=\"12\" height=\"10\" rx=\"1.5\"/><path d=\"M14.5 9.5H18l3.5 3.5V16h-7\"/><circle cx=\"7\" cy=\"17.5\" r=\"2\"/><circle cx=\"17.5\" cy=\"17.5\" r=\"2\"/>"
+  },
+  {
+   "name": "receipt",
+   "category": "comercio",
+   "tags": [
+    "recibo",
+    "factura",
+    "receipt",
+    "ticket"
+   ],
+   "body": "<path d=\"M6 3h12v18l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 21z\"/><line x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\"/><line x1=\"9\" y1=\"12\" x2=\"15\" y2=\"12\"/><line x1=\"9\" y1=\"16\" x2=\"12.5\" y2=\"16\"/>"
+  },
+  {
+   "name": "wallet",
+   "category": "comercio",
+   "tags": [
+    "cartera",
+    "billetera",
+    "wallet",
+    "dinero"
+   ],
+   "body": "<rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M5 7l11-3.5V7\"/><rect x=\"14.5\" y=\"12\" width=\"6.5\" height=\"4\" rx=\"2\"/><circle cx=\"17.5\" cy=\"14\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+   "name": "hourglass",
+   "category": "interfaz",
+   "tags": [
+    "reloj",
+    "de",
+    "arena",
+    "hourglass",
+    "espera"
+   ],
+   "body": "<path d=\"M6.5 3h11M6.5 21h11\"/><path d=\"M7.5 3v3.5c0 2 2 3.5 4.5 5.5-2.5 2-4.5 3.5-4.5 5.5V21M16.5 3v3.5c0 2-2 3.5-4.5 5.5 2.5 2 4.5 3.5 4.5 5.5V21\"/>"
+  },
+  {
+   "name": "power",
+   "category": "interfaz",
+   "tags": [
+    "encender",
+    "apagar",
+    "power",
+    "energia"
+   ],
+   "body": "<path d=\"M7 6.5a8 8 0 1 0 10 0\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"11\"/>"
+  }
+ ]
+}

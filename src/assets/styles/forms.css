@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Julieta UI · forms.css
+   Campos, selects, casillas, radios, interruptores, rangos y dropzone.
+   ========================================================================== */
+
+.al-field { display: grid; gap: .4rem; align-content: start; }
+.al-label { font-size: .875rem; font-weight: 650; color: var(--al-text); }
+.al-label .al-optional { color: var(--al-text-subtle); font-weight: 450; margin-left: .35em; }
+.al-hint  { font-size: .8125rem; color: var(--al-text-muted); }
+.al-error { font-size: .8125rem; color: var(--al-danger); font-weight: 550; }
+
+.al-input, .al-textarea, .al-select {
+  width: 100%; min-height: 2.75rem; padding: .6rem .95rem;
+  border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-md);
+  background: var(--al-surface); color: var(--al-text);
+  box-shadow: inset 0 1px 2px var(--al-shade-1);
+  transition: border-color var(--al-dur) var(--al-ease), box-shadow var(--al-dur) var(--al-ease), background-color var(--al-dur) var(--al-ease);
+}
+.al-input::placeholder, .al-textarea::placeholder { color: var(--al-text-subtle); }
+.al-input:hover, .al-textarea:hover, .al-select:hover { border-color: color-mix(in oklab, var(--al-primary) 45%, var(--al-border-strong)); }
+.al-input:focus, .al-textarea:focus, .al-select:focus {
+  outline: none; border-color: var(--al-primary); box-shadow: var(--al-shadow-glow);
+}
+.al-input:disabled, .al-textarea:disabled, .al-select:disabled { background: var(--al-surface-sunken); opacity: .6; }
+.al-input[aria-invalid="true"], .al-textarea[aria-invalid="true"], .al-select[aria-invalid="true"], .is-invalid {
+  border-color: var(--al-danger);
+}
+.al-input[aria-invalid="true"]:focus, .al-textarea[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px color-mix(in oklab, var(--al-danger) 22%, transparent); }
+.al-input--lg { min-height: 3.25rem; font-size: 1.0625rem; padding-inline: 1.1rem; }
+.al-textarea { min-height: 6.5rem; resize: vertical; line-height: 1.5; }
+
+/* Select con chevron propio */
+.al-select-wrap { position: relative; }
+.al-select { appearance: none; padding-right: 2.6rem; cursor: pointer; }
+.al-select-wrap::after {
+  content: ""; position: absolute; right: 1rem; top: 50%; width: .85rem; height: .85rem; translate: 0 -50%;
+  background: var(--al-text-muted); pointer-events: none;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Campo con prefijo / sufijo */
+.al-input-group {
+  display: flex; align-items: stretch; min-height: 2.75rem;
+  border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-md);
+  background: var(--al-surface); box-shadow: inset 0 1px 2px var(--al-shade-1);
+  transition: border-color var(--al-dur) var(--al-ease), box-shadow var(--al-dur) var(--al-ease);
+}
+.al-input-group:focus-within { border-color: var(--al-primary); box-shadow: var(--al-shadow-glow); }
+.al-input-group .al-input { border: 0; box-shadow: none; background: transparent; border-radius: inherit; min-width: 0; flex: 1; }
+.al-input-group .al-input:focus { box-shadow: none; }
+.al-input-group__addon { display: flex; align-items: center; gap: .4rem; padding-inline: .9rem; color: var(--al-text-subtle); font-size: .9rem; }
+.al-input-group__addon:first-child { padding-right: 0; }
+.al-input-group__addon:last-child  { padding-left: 0; }
+.al-input-group > .al-btn { margin: 4px; --_h: calc(2.75rem - 10px); }
+
+/* Casillas y radios */
+.al-check, .al-radio, .al-switch {
+  display: inline-flex; align-items: center; gap: .7rem; cursor: pointer;
+  font-size: .9375rem; line-height: 1.35; user-select: none;
+}
+.al-check input, .al-radio input {
+  appearance: none; flex: none; width: 1.3rem; height: 1.3rem; margin: 0;
+  border: 1.5px solid var(--al-border-strong); background: var(--al-surface);
+  display: grid; place-items: center; cursor: pointer;
+  transition: background-color var(--al-dur-fast) var(--al-ease), border-color var(--al-dur-fast) var(--al-ease), box-shadow var(--al-dur) var(--al-ease);
+}
+.al-check input { border-radius: 7px; }
+.al-radio input { border-radius: 50%; }
+.al-check input:hover, .al-radio input:hover { border-color: var(--al-primary); }
+.al-check input:checked, .al-check input:indeterminate, .al-radio input:checked {
+  background: var(--al-jacaranda-600); border-color: var(--al-jacaranda-600);
+}
+.al-check input:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+  background-size: 80%; background-position: center; background-repeat: no-repeat;
+}
+.al-check input:indeterminate {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 12h12'/%3E%3C/svg%3E");
+  background-size: 80%; background-position: center; background-repeat: no-repeat;
+}
+.al-radio input:checked { background: radial-gradient(circle, #fff 0 32%, transparent 36%), var(--al-jacaranda-600); }
+.al-check input:focus-visible, .al-radio input:focus-visible, .al-switch input:focus-visible { outline: 2px solid var(--al-ring); outline-offset: 2px; }
+.al-check input:disabled, .al-radio input:disabled, .al-switch input:disabled { opacity: .5; cursor: not-allowed; }
+.al-check:has(input:disabled), .al-radio:has(input:disabled), .al-switch:has(input:disabled) { color: var(--al-text-subtle); cursor: not-allowed; }
+
+/* Interruptor */
+.al-switch input {
+  appearance: none; flex: none; position: relative; width: 2.9rem; height: 1.65rem; margin: 0;
+  border-radius: var(--al-radius-full); background: var(--al-border-strong); cursor: pointer;
+  transition: background-color var(--al-dur) var(--al-ease);
+}
+.al-switch input::before {
+  content: ""; position: absolute; top: 3px; left: 3px; width: calc(1.65rem - 6px); height: calc(1.65rem - 6px);
+  border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgb(0 0 0 / .3);
+  transition: transform var(--al-dur) var(--al-ease-spring);
+}
+.al-switch input:checked { background: var(--al-jacaranda-600); }
+.al-switch input:checked::before { transform: translateX(1.25rem); }
+.al-switch input:active::before { width: calc(1.65rem + 2px); }
+.al-switch input:checked:active::before { transform: translateX(1rem); }
+
+/* Rango: JS actualiza --_fill; sin JS se ve sin relleno */
+.al-range {
+  --_fill: 50%;
+  appearance: none; width: 100%; height: 1.5rem; background: transparent; cursor: pointer;
+}
+.al-range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 99px;
+  background: linear-gradient(to right, var(--al-jacaranda-500) var(--_fill), var(--al-border) var(--_fill));
+}
+.al-range::-moz-range-track { height: 6px; border-radius: 99px; background: var(--al-border); }
+.al-range::-moz-range-progress { height: 6px; border-radius: 99px; background: var(--al-jacaranda-500); }
+.al-range::-webkit-slider-thumb {
+  appearance: none; width: 1.4rem; height: 1.4rem; margin-top: calc((6px - 1.4rem) / 2);
+  border-radius: 50%; background: #fff; border: 2px solid var(--al-jacaranda-600);
+  box-shadow: var(--al-shadow-sm); transition: transform var(--al-dur-fast) var(--al-ease);
+}
+.al-range::-moz-range-thumb { width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #fff; border: 2px solid var(--al-jacaranda-600); box-shadow: var(--al-shadow-sm); }
+.al-range:hover::-webkit-slider-thumb { transform: scale(1.1); }
+.al-range:active::-webkit-slider-thumb { transform: scale(1.2); }
+.al-range:focus-visible { outline: none; }
+.al-range:focus-visible::-webkit-slider-thumb { box-shadow: var(--al-shadow-glow); }
+
+/* Control segmentado */
+.al-segmented {
+  display: inline-flex; padding: 4px; gap: 2px; border-radius: var(--al-radius-full);
+  background: var(--al-bg-subtle); border: 1px solid var(--al-border);
+}
+.al-segmented label { position: relative; cursor: pointer; }
+.al-segmented input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.al-segmented span {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 2.1rem; padding: 0 1rem; border-radius: var(--al-radius-full);
+  font-size: .875rem; font-weight: 600; color: var(--al-text-muted);
+  transition: background-color var(--al-dur) var(--al-ease), color var(--al-dur) var(--al-ease), box-shadow var(--al-dur) var(--al-ease);
+}
+.al-segmented input:checked + span { background: var(--al-surface); color: var(--al-text); box-shadow: var(--al-shadow-sm); }
+.al-segmented input:focus-visible + span { outline: 2px solid var(--al-ring); outline-offset: 1px; }
+
+/* Zona para soltar archivos */
+.al-dropzone {
+  display: grid; place-items: center; gap: .35rem; text-align: center; padding: 2rem 1.5rem;
+  border: 1.5px dashed var(--al-border-strong); border-radius: var(--al-radius-lg);
+  background: var(--al-surface-sunken); color: var(--al-text-muted); cursor: pointer;
+  transition: border-color var(--al-dur) var(--al-ease), background-color var(--al-dur) var(--al-ease);
+}
+.al-dropzone:hover, .al-dropzone.is-dragover { border-color: var(--al-primary); background: var(--al-primary-soft); }
+.al-dropzone input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.al-dropzone__icon { color: var(--al-primary); --al-icon-size: 2rem; }
+.al-dropzone__files { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; margin-top: .5rem; }
+
+.al-form-row { display: grid; gap: var(--al-space-4); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.al-counter { justify-self: end; font-size: .75rem; color: var(--al-text-subtle); font-variant-numeric: tabular-nums; }

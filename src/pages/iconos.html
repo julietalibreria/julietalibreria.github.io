@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iconos · Julieta UI</title>
+  <meta name="description" content="Más de 160 iconos de trazo de Julieta UI con buscador por nombre y sinónimos en español. Copia el HTML o descarga el SVG.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/iconos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/iconos.html">
+  <meta property="og:title" content="Iconos · Julieta UI">
+  <meta property="og:description" content="Más de 160 iconos de trazo de Julieta UI con buscador por nombre y sinónimos en español. Copia el HTML o descarga el SVG.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Iconos · Julieta UI">
+  <meta name="twitter:description" content="Más de 160 iconos de trazo de Julieta UI con buscador por nombre y sinónimos en español. Copia el HTML o descarga el SVG.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Iconos · Julieta UI", "description": "Más de 160 iconos de trazo de Julieta UI con buscador por nombre y sinónimos en español. Copia el HTML o descarga el SVG.", "url": "https://julietalibreria.github.io/src/pages/iconos.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/iconos.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Iconos</h1>
+      <p><span id="total">Más de 160</span> iconos de trazo redondeado sobre una cuadrícula de 24 px. Busca en español o en inglés; haz clic en uno para copiarlo o descargarlo.</p>
+    </header>
+
+    <div class="d-demo" data-al-demo data-stage="is-block">
+      <div class="al-cluster">
+        <al-icon name="flower" size="32" class="al-text-primary"></al-icon>
+        <al-icon name="heart" size="24" style="color: var(--al-rosa-500)"></al-icon>
+        <button class="al-btn al-btn--primary"><al-icon name="download"></al-icon>Descargar</button>
+        <button class="al-btn al-btn--soft al-btn--icon" aria-label="Ajustes"><al-icon name="settings"></al-icon></button>
+      </div>
+    </div>
+    <p class="al-text-muted al-mt-4">El icono hereda <code>currentColor</code> y mide <code>1.25em</code> por defecto. Cambia el tamaño con <code>size="32"</code> o con la variable <code>--al-icon-size</code>.</p>
+
+    <h2 id="catalogo">Catálogo</h2>
+    <div class="d-iconbar">
+      <div class="d-iconbar__row">
+        <div class="al-input-group">
+          <span class="al-input-group__addon"><al-icon name="search" size="20"></al-icon></span>
+          <input class="al-input" id="q" type="search" placeholder="Busca “flecha”, “casa”, “user”…" autocomplete="off" aria-label="Buscar iconos">
+        </div>
+        <label class="d-ctl">Tamaño <input class="al-range" id="size" type="range" min="20" max="48" value="28" aria-label="Tamaño de los iconos"> <output id="size-out">28</output></label>
+        <label class="d-ctl">Trazo <input class="al-range" id="stroke" type="range" min="1" max="2.5" step="0.25" value="1.75" aria-label="Grosor del trazo"> <output id="stroke-out">1.75</output></label>
+      </div>
+      <div class="d-chips" id="cats" role="group" aria-label="Categorías"></div>
+    </div>
+    <div id="groups"></div>
+    <div class="al-empty" id="empty" hidden>
+      <img class="al-empty__art" src="../assets/images/empty-state.svg" alt="">
+      <div class="al-empty__title">Ningún icono coincide</div>
+      <p class="al-empty__text">Prueba con un sinónimo, por ejemplo “casa” en lugar de “home”, o quita la categoría.</p>
+      <button class="al-btn al-btn--soft" id="clear">Limpiar búsqueda</button>
+    </div>
+  </main>
+
+  <dialog class="al-modal" id="detail" aria-labelledby="d-title">
+    <div class="al-modal__header">
+      <h2 class="al-modal__title" id="d-title">icono</h2>
+      <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button>
+    </div>
+    <div class="al-modal__body">
+      <div class="d-icondetail">
+        <div class="d-icondetail__preview"><al-icon id="d-icon" name="home"></al-icon></div>
+        <div class="al-cluster" id="d-tags"></div>
+        <div class="al-code" data-lang="html" id="d-code" data-label="HTML"><pre><code>&lt;al-icon name="home"&gt;&lt;/al-icon&gt;</code></pre></div>
+      </div>
+    </div>
+    <div class="al-modal__footer">
+      <button class="al-btn al-btn--secondary" id="d-svg"><al-icon name="copy"></al-icon>Copiar SVG</button>
+      <button class="al-btn al-btn--primary" id="d-dl"><al-icon name="download"></al-icon>Descargar SVG</button>
+    </div>
+  </dialog>
+
+  <script type="module">
+    import { julieta, refreshToc } from "../assets/scripts/docs.js";
+    import { h, $, norm } from "../assets/scripts/core.js";
+    import { iconSVG, loadIcons } from "../assets/scripts/icons.js";
+
+    const data = await loadIcons();
+    $("#total").textContent = data.icons.length;
+    const state = { q: "", cat: "" };
+    const grid = $("#groups");
+    document.documentElement.style.setProperty("--d-icon-size", "28px");
+
+    // Chips de categoría
+    const catBox = $("#cats");
+    const chip = (id, label, n) => h("button", { class: "al-chip", type: "button", "aria-pressed": String(state.cat === id), "data-cat": id, onclick() { state.cat = id; render(); } }, label, h("span", { class: "al-text-subtle" }, n));
+    function renderChips(counts) {
+      catBox.replaceChildren(chip("", "Todos", Object.values(counts).reduce((a, b) => a + b, 0)), ...data.categories.map((c) => chip(c.id, c.name, counts[c.id] || 0)));
+    }
+
+    function render() {
+      const words = norm(state.q).split(/\s+/).filter(Boolean);
+      const matches = data.icons.filter((i) => {
+        const hay = norm(`${i.name} ${i.tags.join(" ")}`);
+        return words.every((w) => hay.includes(w));
+      });
+      const counts = {};
+      matches.forEach((i) => { counts[i.category] = (counts[i.category] || 0) + 1; });
+      renderChips(counts);
+      const shown = state.cat ? matches.filter((i) => i.category === state.cat) : matches;
+      const groups = new Map();
+      shown.forEach((i) => { if (!groups.has(i.category)) groups.set(i.category, []); groups.get(i.category).push(i); });
+      grid.replaceChildren(...data.categories.filter((c) => groups.has(c.id)).map((c) =>
+        h("section", { class: "d-icongroup" },
+          h("h3", { id: `cat-${c.id}`, style: "font-size:var(--al-text-xl)" }, c.name, " ", h("small", { class: "al-text-subtle" }, groups.get(c.id).length)),
+          h("div", { class: "d-icongrid" }, groups.get(c.id).map((i) =>
+            h("button", { class: "d-icon", type: "button", id: i.name, "aria-label": i.name, onclick: () => openDetail(i.name) }, h("al-icon", { name: i.name }), h("span", {}, i.name)))))));
+      $("#empty").hidden = shown.length > 0;
+      refreshToc();
+    }
+
+    let current;
+    function openDetail(name) {
+      current = data.icons.find((i) => i.name === name);
+      if (!current) return;
+      $("#d-title").textContent = name;
+      $("#d-icon").setAttribute("name", name);
+      $("#d-tags").replaceChildren(...current.tags.map((t) => h("span", { class: "al-badge al-badge--neutral" }, t)));
+      const code = $("#d-code");
+      const text = `<al-icon name="${name}"></al-icon>`;
+      code._raw = text;
+      code.querySelector("code").innerHTML = julieta.code.highlight(text, "html");
+      julieta.modal.open("#detail");
+      history.replaceState(null, "", `#${name}`);
+    }
+    $("#detail").addEventListener("close", () => history.replaceState(null, "", location.pathname + location.search));
+
+    const svgText = () => iconSVG(current.name, { size: 24, stroke: data.strokeWidth }).replace(" xmlns=", ' xmlns=');
+    $("#d-svg").addEventListener("click", async () => { const ok = await julieta.copy(svgText()); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "SVG copiado" : "No se pudo copiar", duration: 1800 }); });
+    $("#d-dl").addEventListener("click", () => {
+      const url = URL.createObjectURL(new Blob([svgText()], { type: "image/svg+xml" }));
+      const a = h("a", { href: url, download: `${current.name}.svg` });
+      document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+      julieta.toast.success("Descarga iniciada", `${current.name}.svg`);
+    });
+
+    let t;
+    $("#q").addEventListener("input", (e) => { clearTimeout(t); t = setTimeout(() => { state.q = e.target.value; render(); }, 80); });
+    $("#clear").addEventListener("click", () => { state.q = ""; state.cat = ""; $("#q").value = ""; render(); });
+    $("#size").addEventListener("input", (e) => { document.documentElement.style.setProperty("--d-icon-size", `${e.target.value}px`); $("#size-out").textContent = e.target.value; });
+    $("#stroke").addEventListener("input", (e) => { grid.style.setProperty("--al-icon-stroke", e.target.value); $("#stroke-out").textContent = e.target.value; });
+
+    render();
+    julieta.init(document);
+    const target = decodeURIComponent(location.hash.slice(1));
+    if (target && data.icons.some((i) => i.name === target)) { document.getElementById(target)?.scrollIntoView({ block: "center" }); document.getElementById(target)?.classList.add("is-target"); openDetail(target); }
+  </script>
+</body>
+</html>

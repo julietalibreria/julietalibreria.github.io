@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Julieta UI · Interfaces con alma, por CDN</title>
+  <meta name="description" content="Julieta UI es una librería modular de componentes, iconos, colores, tipografías y plantillas. Se instala con dos líneas de CDN y se usa con clases.">
+  <link rel="canonical" href="https://julietalibreria.github.io/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/">
+  <meta property="og:title" content="Julieta UI · Interfaces con alma, por CDN">
+  <meta property="og:description" content="Julieta UI es una librería modular de componentes, iconos, colores, tipografías y plantillas. Se instala con dos líneas de CDN y se usa con clases.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Julieta UI · Interfaces con alma, por CDN">
+  <meta name="twitter:description" content="Julieta UI es una librería modular de componentes, iconos, colores, tipografías y plantillas. Se instala con dos líneas de CDN y se usa con clases.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://julietalibreria.github.io/#website", "url": "https://julietalibreria.github.io/", "name": "Julieta UI", "description": "Julieta UI es una librería modular de componentes, iconos, colores, tipografías y plantillas. Se instala con dos líneas de CDN y se usa con clases.", "inLanguage": "es-MX"}, {"@type": "SoftwareSourceCode", "@id": "https://julietalibreria.github.io/#library", "name": "Julieta UI", "description": "Julieta UI es una librería modular de componentes, iconos, colores, tipografías y plantillas. Se instala con dos líneas de CDN y se usa con clases.", "url": "https://julietalibreria.github.io/", "codeRepository": "https://github.com/julietalibreria/julietalibreria.github.io", "programmingLanguage": ["CSS", "JavaScript"], "license": "https://opensource.org/licenses/MIT", "inLanguage": "es", "isPartOf": {"@id": "https://julietalibreria.github.io/#website"}}]}</script>
+  <link rel="icon" href="src/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="src/assets/styles/julieta.css">
+  <link rel="stylesheet" href="src/assets/styles/docs.css">
+  <script type="module" src="src/assets/scripts/docs.js"></script>
+  <style>
+    @layer al.docs {
+      .d-hero .al-hero__title { font-size: clamp(3.3rem, 1.4rem + 6.4vw, 7.4rem); letter-spacing: -0.04em; }
+      .home-section-title { font-size: var(--al-text-4xl); line-height: .98; letter-spacing: -0.045em; max-width: 16ch; }
+      .home-tpls { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+      .home-tpl { display: grid; gap: .8rem; text-decoration: none; color: inherit; }
+      .home-tpl__img { aspect-ratio: 16/10; border-radius: var(--al-radius-lg); overflow: hidden; border: 1px solid var(--al-border); box-shadow: var(--al-shadow-md); background: var(--al-surface-sunken); transition: transform var(--al-dur-slow) var(--al-ease), box-shadow var(--al-dur-slow) var(--al-ease); }
+      .home-tpl__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+      .home-tpl:hover .home-tpl__img { transform: translateY(-5px); box-shadow: var(--al-shadow-xl); }
+      .home-tpl b { font-family: var(--al-font-display); font-size: 1.2rem; letter-spacing: -0.02em; }
+      .home-tpl span { color: var(--al-text-muted); font-size: .9rem; }
+      .pg-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+      .pg-chart { --al-chart-h: 11rem; }
+    }
+  </style>
+</head>
+<body data-layout="home" data-page="index.html">
+  <main id="main">
+
+    <!-- ============ Héroe ============ -->
+    <section class="al-hero d-hero">
+      <canvas class="al-petals" data-al-petals data-density="1.1"></canvas>
+      <div class="al-container al-hero__inner">
+        <div class="d-hero__copy">
+          <h1 class="al-hero__title is-entering">Interfaces con alma</h1>
+          <p class="al-hero__lead">Componentes, iconos, colores, tipografías y plantillas en una librería modular. Pega dos líneas de CDN y construye con clases, sin compilar nada.</p>
+          <div class="d-hero__actions">
+            <a class="al-btn al-btn--accent al-btn--lg" href="src/pages/instalacion.html">Empezar en 30 segundos</a>
+            <a class="al-btn al-btn--secondary al-btn--lg" href="src/pages/recursos.html"><al-icon name="compass"></al-icon>Explorar recursos</a>
+          </div>
+          <dl class="d-hero__stats">
+            <div><dt class="al-sr-only">Iconos</dt><dd class="al-m-0"><strong data-stat="icono">164</strong>iconos</dd></div>
+            <div><dt class="al-sr-only">Componentes</dt><dd class="al-m-0"><strong data-stat="componente">60</strong>componentes</dd></div>
+            <div><dt class="al-sr-only">Colores</dt><dd class="al-m-0"><strong data-stat="familias">7</strong>paletas</dd></div>
+            <div><dt class="al-sr-only">Plantillas</dt><dd class="al-m-0"><strong data-stat="plantilla">12</strong>plantillas</dd></div>
+          </dl>
+        </div>
+
+        <div class="d-installer" aria-label="Instalación rápida">
+          <div data-cdn-picker></div>
+          <div class="al-code" data-lang="html" data-label="Pégalo en tu &lt;head&gt;"><pre><code>&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/julieta.css"&gt;
+&lt;script type="module" src="{{CDN}}/src/assets/scripts/julieta.js"&gt;&lt;/script&gt;</code></pre></div>
+          <p class="d-installer__hint">Eso es todo. Los iconos, el tema oscuro y los componentes interactivos ya funcionan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Mapa de recursos ============ -->
+    <section class="al-section">
+      <div class="al-container">
+        <div class="al-section-head">
+          <h2>Todo lo que hay, en un solo mapa</h2>
+          <p>Cada pieza vive en un único lugar y todo el catálogo se busca desde una sola caja. Si existe en Julieta, lo encuentras aquí, sin duplicados.</p>
+        </div>
+        <div class="d-map" id="resource-map">
+          <a class="d-map__row" href="src/pages/componentes.html">
+            <span class="d-map__name">Componentes <span class="d-map__count" data-stat="componente"></span></span>
+            <span class="d-map__desc">Botones, formularios, tablas, modales, pestañas, gráficas y patrones de página.</span>
+            <span class="d-map__peek"><al-icon name="mouse-pointer"></al-icon><al-icon name="toggle-left"></al-icon><al-icon name="table"></al-icon><al-icon name="bar-chart"></al-icon></span>
+          </a>
+          <a class="d-map__row" href="src/pages/iconos.html">
+            <span class="d-map__name">Iconos <span class="d-map__count" data-stat="icono"></span></span>
+            <span class="d-map__desc">Trazo redondeado de 1.75 px, con buscador por nombre y por sinónimos en español.</span>
+            <span class="d-map__peek"><al-icon name="flower"></al-icon><al-icon name="sun"></al-icon><al-icon name="heart"></al-icon><al-icon name="rocket"></al-icon></span>
+          </a>
+          <a class="d-map__row" href="src/pages/colores.html">
+            <span class="d-map__name">Colores <span class="d-map__count" data-stat="familias"></span></span>
+            <span class="d-map__desc">Siete familias de 11 tonos y colores semánticos que cambian solos con el tema.</span>
+            <span class="d-map__peek"><i class="sw" style="background:var(--al-jacaranda-600)"></i><i class="sw" style="background:var(--al-rosa-400)"></i><i class="sw" style="background:var(--al-cempasuchil-400)"></i><i class="sw" style="background:var(--al-agave-500)"></i></span>
+          </a>
+          <a class="d-map__row" href="src/pages/tipografia.html">
+            <span class="d-map__name">Tipografía <span class="d-map__count" data-stat="fuentes"></span></span>
+            <span class="d-map__desc">Bricolage Grotesque, Hanken Grotesk y JetBrains Mono, con una escala de diez tamaños.</span>
+            <span class="d-map__peek"><span class="aa">Aa</span></span>
+          </a>
+          <a class="d-map__row" href="src/pages/plantillas.html">
+            <span class="d-map__name">Plantillas <span class="d-map__count" data-stat="plantilla"></span></span>
+            <span class="d-map__desc">Landing, panel de control, acceso y precios. Páginas completas y funcionales.</span>
+            <span class="d-map__peek"><al-icon name="layout"></al-icon><al-icon name="columns"></al-icon></span>
+          </a>
+          <a class="d-map__row" href="src/pages/fundamentos.html">
+            <span class="d-map__name">Fundamentos <span class="d-map__count" data-stat="token"></span></span>
+            <span class="d-map__desc">Espacio, radios, sombras, movimiento y capas, todo como variables CSS.</span>
+            <span class="d-map__peek"><al-icon name="sliders"></al-icon></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Probar en vivo ============ -->
+    <section class="al-section al-section--tint">
+      <div class="al-container">
+        <div class="al-section-head">
+          <h2>Pruébalo aquí mismo</h2>
+          <p>Nada de capturas: estos controles son los componentes reales de la librería.</p>
+        </div>
+
+        <div class="d-playground">
+          <div class="d-panel d-pg-a">
+            <h3>Acciones y avisos</h3>
+            <div class="pg-row">
+              <button class="al-btn al-btn--primary" id="pg-toast">Publicar cambios</button>
+              <button class="al-btn al-btn--soft" id="pg-load">Guardar borrador</button>
+              <button class="al-btn al-btn--outline" id="pg-confirm">Eliminar proyecto</button>
+              <div class="al-dropdown" data-al-dropdown>
+                <button class="al-btn al-btn--ghost" data-al-dropdown-trigger>Más<al-icon name="chevron-down" size="16"></al-icon></button>
+                <div class="al-menu" role="menu" hidden>
+                  <button class="al-menu__item" data-value="duplicar"><al-icon name="copy" size="18"></al-icon>Duplicar<kbd>⌘D</kbd></button>
+                  <button class="al-menu__item" data-value="compartir"><al-icon name="share" size="18"></al-icon>Compartir</button>
+                  <div class="al-menu__sep"></div>
+                  <button class="al-menu__item al-menu__item--danger" data-value="archivar"><al-icon name="archive" size="18"></al-icon>Archivar</button>
+                </div>
+              </div>
+            </div>
+            <div class="al-alert al-alert--success">
+              <al-icon name="check-circle"></al-icon>
+              <div><div class="al-alert__title">Todo en orden</div><div class="al-alert__text">El menú, el diálogo y las notificaciones responden al teclado.</div></div>
+              <button class="al-alert__close" data-al-alert-close aria-label="Cerrar aviso"><al-icon name="x" size="16"></al-icon></button>
+            </div>
+          </div>
+
+          <div class="d-panel d-pg-b">
+            <h3>Tema y ajustes</h3>
+            <div class="al-segmented" role="group" aria-label="Tema">
+              <label><input type="radio" name="pg-theme" value="light"><span><al-icon name="sun" size="16"></al-icon>Claro</span></label>
+              <label><input type="radio" name="pg-theme" value="system" checked><span><al-icon name="monitor" size="16"></al-icon>Sistema</span></label>
+              <label><input type="radio" name="pg-theme" value="dark"><span><al-icon name="moon" size="16"></al-icon>Oscuro</span></label>
+            </div>
+            <label class="al-switch"><input type="checkbox" role="switch" checked>Avisarme cuando alguien comente</label>
+            <div class="al-field">
+              <label class="al-label" for="pg-range">Densidad de pétalos <output class="al-text-muted" data-al-output-for="#pg-range">1.1</output></label>
+              <input class="al-range" id="pg-range" type="range" min="0" max="3" step="0.1" value="1.1">
+            </div>
+          </div>
+
+          <div class="d-panel d-pg-c">
+            <h3>Visitas esta semana</h3>
+            <div class="al-stat">
+              <div class="al-stat__value">12,480</div>
+              <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>18% más que la anterior</span>
+            </div>
+            <div class="al-chart pg-chart" role="img" aria-label="Visitas por día: máximo el sábado con 3,100"
+              data-al-chart='{"type":"area","labels":["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"],"series":[{"name":"Visitas","data":[1450,1820,1710,2240,2650,3100,2480]},{"name":"Año pasado","data":[1200,1500,1400,1800,2100,2500,2100]}]}'></div>
+          </div>
+
+          <div class="d-panel d-pg-d">
+            <h3>Equipo del proyecto</h3>
+            <ul class="al-list" role="list">
+              <li class="al-list__item"><span class="al-avatar" data-status="online" aria-label="Ximena Ortega">XO</span><div class="al-list__main"><div class="al-list__title">Ximena Ortega</div><div class="al-list__meta">Diseño · en línea</div></div><span class="al-badge al-badge--success al-badge--dot">Activa</span></li>
+              <li class="al-list__item"><span class="al-avatar al-avatar--sol" data-status="away" aria-label="Mateo Ruiz">MR</span><div class="al-list__main"><div class="al-list__title">Mateo Ruiz</div><div class="al-list__meta">Desarrollo · ausente</div></div><span class="al-badge al-badge--warning al-badge--dot">Ausente</span></li>
+              <li class="al-list__item"><span class="al-avatar al-avatar--agave" data-status="busy" aria-label="Lucía Paredes">LP</span><div class="al-list__main"><div class="al-list__title">Lucía Paredes</div><div class="al-list__meta">Producto · ocupada</div></div><div class="al-ring" style="--value:72;--size:3rem;--thick:5px" aria-label="72% completado"><span style="font-size:.7rem">72%</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Modular ============ -->
+    <section class="al-section">
+      <div class="al-container">
+        <div class="al-split" style="--al-cols:minmax(0,.85fr) minmax(0,1.15fr);align-items:start">
+          <div class="al-stack" style="--al-gap:1.25rem">
+            <h2 class="home-section-title">Usa todo, o solo lo que necesites</h2>
+            <p class="al-lead">Cada archivo es un módulo independiente. Carga la librería completa con una línea, o importa únicamente el CSS de los botones o el JavaScript de las notificaciones.</p>
+            <ul class="al-stack al-text-muted" role="list" style="--al-gap:.7rem">
+              <li class="al-cluster" style="--al-align:flex-start;flex-wrap:nowrap"><al-icon name="check-circle" class="al-text-success"></al-icon><span>Los estilos usan <code>@layer</code>: los tuyos siempre ganan, sin <code>!important</code>.</span></li>
+              <li class="al-cluster" style="--al-align:flex-start;flex-wrap:nowrap"><al-icon name="check-circle" class="al-text-success"></al-icon><span>Los módulos JS son ES modules y resuelven sus rutas desde su propia URL.</span></li>
+              <li class="al-cluster" style="--al-align:flex-start;flex-wrap:nowrap"><al-icon name="check-circle" class="al-text-success"></al-icon><span>Sin build, sin dependencias, sin frameworks obligatorios.</span></li>
+            </ul>
+          </div>
+          <div data-al-tabs>
+            <div class="al-tabs al-tabs--pills" role="tablist" aria-label="Formas de instalar">
+              <button class="al-tab" data-target="m-todo" aria-selected="true">Todo</button>
+              <button class="al-tab" data-target="m-css">Solo CSS</button>
+              <button class="al-tab" data-target="m-js">Módulos JS</button>
+            </div>
+            <div class="al-tabpanel" id="m-todo">
+              <div class="al-code" data-lang="html" data-label="Librería completa"><pre><code>&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/julieta.css"&gt;
+&lt;script type="module" src="{{CDN}}/src/assets/scripts/julieta.js"&gt;&lt;/script&gt;</code></pre></div>
+            </div>
+            <div class="al-tabpanel" id="m-css" hidden>
+              <div class="al-code" data-lang="html" data-label="Solo tokens, base y botones"><pre><code>&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/tokens.css"&gt;
+&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/base.css"&gt;
+&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/buttons.css"&gt;</code></pre></div>
+            </div>
+            <div class="al-tabpanel" id="m-js" hidden>
+              <div class="al-code" data-lang="js" data-label="Solo notificaciones"><pre><code>import { toast } from "{{CDN}}/src/assets/scripts/toast.js";
+
+toast({ type: "success", title: "Publicado", text: "Tu página ya está en línea." });</code></pre></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Plantillas ============ -->
+    <section class="al-section al-section--tint">
+      <div class="al-container">
+        <div class="al-section-head">
+          <h2>Doce plantillas en cuatro categorías</h2>
+          <p>Elige un tipo de página y recorre todas las opciones que tiene. Todas funcionan de verdad: validan formularios, ordenan tablas y recalculan precios.</p>
+        </div>
+        <div class="home-tpls">
+          <a class="home-tpl" href="src/pages/plantillas/landing.html"><span class="home-tpl__img"><img src="src/assets/images/templates/landing/tejido.webp" alt="Vista previa de la plantilla de landing" loading="lazy" width="1280" height="800"></span><b>Landing de producto</b><span>Héroe con pétalos, características y preguntas frecuentes.</span></a>
+          <a class="home-tpl" href="src/pages/plantillas/dashboard.html"><span class="home-tpl__img"><img src="src/assets/images/templates/dashboard/casa-jacaranda.webp" alt="Vista previa de la plantilla de panel de control" loading="lazy" width="1280" height="800"></span><b>Panel de control</b><span>Métricas, gráficas y una tabla que se ordena y filtra.</span></a>
+          <a class="home-tpl" href="src/pages/plantillas/acceso.html"><span class="home-tpl__img"><img src="src/assets/images/templates/acceso/casa-jacaranda.webp" alt="Vista previa de la plantilla de acceso" loading="lazy" width="1280" height="800"></span><b>Acceso y registro</b><span>Validación en español y contraseña visible a demanda.</span></a>
+          <a class="home-tpl" href="src/pages/plantillas/precios.html"><span class="home-tpl__img"><img src="src/assets/images/templates/precios/tejido.webp" alt="Vista previa de la plantilla de precios" loading="lazy" width="1280" height="800"></span><b>Precios</b><span>Planes con selector mensual y anual.</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Cierre ============ -->
+    <section class="al-section">
+      <div class="al-container">
+        <div class="al-cta">
+          <h2>Empieza con dos líneas</h2>
+          <p>Copia el fragmento de instalación, elige un componente y míralo funcionar. El resto se aprende con el buscador: presiona <kbd class="al-kbd">/</kbd> en cualquier página.</p>
+          <div class="al-cluster">
+            <a class="al-btn al-btn--accent al-btn--lg" href="src/pages/instalacion.html">Ver la instalación</a>
+            <button class="al-btn al-btn--lg" style="--_bg:rgb(255 255 255/.12);--_bg-h:rgb(255 255 255/.2);--_fg:#fff;--_bd:rgb(255 255 255/.3);--_sh:none" data-al-command-open><al-icon name="search"></al-icon>Buscar en Julieta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Diálogo de confirmación de la demostración -->
+  <script type="module">
+    import { julieta } from "./src/assets/scripts/docs.js";
+    const $ = (s) => document.querySelector(s);
+
+    $("#pg-toast").addEventListener("click", () => julieta.toast({ type: "success", title: "Publicado", text: "Tus cambios ya están en línea.", action: { label: "Ver página", onClick: () => julieta.toast.info("Abriendo la página…") } }));
+    $("#pg-load").addEventListener("click", (e) => {
+      const b = e.currentTarget; b.classList.add("is-loading");
+      setTimeout(() => { b.classList.remove("is-loading"); julieta.toast.success("Borrador guardado"); }, 1400);
+    });
+    $("#pg-confirm").addEventListener("click", async () => {
+      const ok = await julieta.confirm({ title: "¿Eliminar el proyecto?", text: "Se borrarán sus 24 archivos. Esta acción no se puede deshacer.", confirmText: "Eliminar proyecto", danger: true });
+      julieta.toast({ type: ok ? "danger" : "info", title: ok ? "Proyecto eliminado" : "No se eliminó nada" });
+    });
+    document.addEventListener("al:select", (e) => julieta.toast.info(`Elegiste “${e.detail.value}”`));
+
+    document.querySelectorAll('input[name="pg-theme"]').forEach((r) => r.addEventListener("change", () => julieta.theme.set(r.value)));
+    document.addEventListener("al:theme", (e) => { const r = document.querySelector(`input[name="pg-theme"][value="${e.detail.mode}"]`); if (r) r.checked = true; });
+    const initial = document.querySelector(`input[name="pg-theme"][value="${julieta.theme.mode()}"]`); if (initial) initial.checked = true;
+
+    const canvas = document.querySelector("canvas[data-al-petals]");
+    $("#pg-range").addEventListener("input", (e) => {
+      canvas._julietaPetals?.destroy();
+      canvas._julietaPetals = julieta.petals(canvas, { density: parseFloat(e.target.value) });
+    });
+
+    // Contadores reales a partir del catálogo
+    julieta.catalog.build().then(({ items, colors, type, tokens }) => {
+      const count = (t) => items.filter((i) => i.type === t).length;
+      const set = (k, v) => document.querySelectorAll(`[data-stat="${k}"]`).forEach((n) => { n.textContent = v; });
+      set("icono", count("icono")); set("componente", count("componente")); set("plantilla", count("plantilla"));
+      set("familias", colors.families.length); set("fuentes", type.fonts.length); set("token", count("token"));
+    }).catch(() => {});
+  </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colores · Julieta UI</title>
+  <meta name="description" content="Paleta de Julieta UI: siete familias de once tonos, colores semánticos que cambian con el tema y contraste calculado en vivo.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/colores.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/colores.html">
+  <meta property="og:title" content="Colores · Julieta UI">
+  <meta property="og:description" content="Paleta de Julieta UI: siete familias de once tonos, colores semánticos que cambian con el tema y contraste calculado en vivo.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Colores · Julieta UI">
+  <meta name="twitter:description" content="Paleta de Julieta UI: siete familias de once tonos, colores semánticos que cambian con el tema y contraste calculado en vivo.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Colores · Julieta UI", "description": "Paleta de Julieta UI: siete familias de once tonos, colores semánticos que cambian con el tema y contraste calculado en vivo.", "url": "https://julietalibreria.github.io/src/pages/colores.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../assets/styles/julieta.css">
+  <link rel="stylesheet" href="../assets/styles/docs.css">
+  <script type="module" src="../assets/scripts/docs.js"></script>
+</head>
+<body data-layout="docs" data-page="src/pages/colores.html">
+  <main id="main" class="d-content">
+    <header class="d-pagehead">
+      <h1>Colores</h1>
+      <p>Siete familias inspiradas en la Ciudad de México, cada una con once tonos. Haz clic en un tono para copiarlo.</p>
+      <div class="al-cluster">
+        <span class="al-text-sm al-weight-600">Copiar como</span>
+        <div class="al-segmented" role="radiogroup" aria-label="Formato al copiar">
+          <label><input type="radio" name="fmt" value="var" checked><span>var()</span></label>
+          <label><input type="radio" name="fmt" value="hex"><span>HEX</span></label>
+        </div>
+      </div>
+    </header>
+
+    <div id="families"></div>
+
+    <h2 id="semanticos">Colores semánticos</h2>
+    <p>En tu interfaz usa estos tokens, no los tonos sueltos. Cambian solos entre el tema claro y el oscuro, así tu CSS no necesita media queries de color. El valor mostrado es el del tema actual.</p>
+    <div class="d-sem" id="semantic"></div>
+
+    <h2 id="degradados">Degradados</h2>
+    <p>Combinaciones de la paleta que se repiten en los héroes y bandas de llamada a la acción.</p>
+    <div class="d-gradients" id="gradients"></div>
+
+    <h2 id="contraste">Contraste</h2>
+    <p>Las parejas de texto y fondo más comunes, calculadas ahora mismo con el tema actual. AA exige 4.5 para texto normal; AAA, 7. Cambia de tema para ver cómo responden.</p>
+    <div class="al-table-wrap" style="margin-top:1.25rem"><table class="al-table">
+      <thead><tr><th>Pareja</th><th>Muestra</th><th class="is-num">Contraste</th><th>Nivel</th></tr></thead>
+      <tbody id="contrast"></tbody>
+    </table></div>
+
+    <h2 id="uso">Cómo usarlos</h2>
+    <div class="d-demo" data-al-demo data-stage="is-block">
+      <div class="al-stack" style="--al-gap: .75rem">
+        <p style="color: var(--al-text)">Texto principal con <code>--al-text</code></p>
+        <p style="color: var(--al-text-muted)">Texto secundario con <code>--al-text-muted</code></p>
+        <p style="color: var(--al-primary)">Énfasis de marca con <code>--al-primary</code></p>
+        <div style="background: var(--al-primary-soft); color: var(--al-primary-strong); padding: 1rem; border-radius: var(--al-radius-md)">Fondo suave de marca con <code>--al-primary-soft</code></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { julieta, refreshToc } from "../assets/scripts/docs.js";
+    import { h, $ } from "../assets/scripts/core.js";
+
+    const colors = await julieta.loadJSON("colors");
+    const root = document.documentElement;
+    let fmt = "var";
+    document.querySelectorAll('input[name="fmt"]').forEach((r) => r.addEventListener("change", () => { fmt = r.value; }));
+
+    /* ---- utilidades de color ---- */
+    const probe = h("span", { style: "position:fixed;left:-99px;top:0;width:1px;height:1px;pointer-events:none" });
+    document.body.append(probe);
+    const cv = document.createElement("canvas"); cv.width = cv.height = 1;
+    const cx = cv.getContext("2d", { willReadFrequently: true });
+    function resolve(cssValue, prop = "backgroundColor") {
+      probe.style.background = ""; probe.style.color = "";
+      probe.style[prop === "color" ? "color" : "background"] = cssValue;
+      const c = getComputedStyle(probe)[prop];
+      cx.clearRect(0, 0, 1, 1); cx.fillStyle = "#000"; cx.fillStyle = c; cx.fillRect(0, 0, 1, 1);
+      const [r, g, b, a] = cx.getImageData(0, 0, 1, 1).data;
+      return { r, g, b, a: a / 255 };
+    }
+    const hex = ({ r, g, b }) => "#" + [r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("");
+    const lum = ({ r, g, b }) => { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b); };
+    const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+    const blend = (fg, bg) => ({ r: Math.round(fg.r * fg.a + bg.r * (1 - fg.a)), g: Math.round(fg.g * fg.a + bg.g * (1 - fg.a)), b: Math.round(fg.b * fg.a + bg.b * (1 - fg.a)), a: 1 });
+    const WHITE = { r: 255, g: 255, b: 255 }, INK = { r: 20, g: 17, b: 29 };
+
+    async function copy(text) { const ok = await julieta.copy(text); julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Copiado" : "No se pudo copiar", text, duration: 1800 }); }
+
+    /* ---- familias ---- */
+    const fam = $("#families");
+    for (const f of colors.families) {
+      fam.append(h("section", { class: "d-family", id: f.id },
+        h("div", { class: "d-family__head" },
+          h("h3", {}, f.name, " ", h("span", { class: "al-badge" }, f.role)),
+          h("p", {}, f.description)),
+        h("div", { class: "d-shades" }, colors.shades.map((s) => {
+          const token = `--al-${f.id}-${s}`;
+          const c = resolve(`var(${token})`);
+          const onWhite = ratio(c, WHITE), onInk = ratio(c, INK);
+          const fg = onWhite >= onInk ? "#fff" : "#14111d";
+          return h("button", { class: "d-shade", type: "button", style: `background:var(${token});color:${fg}`, "aria-label": `${f.name} ${s}, ${hex(c)}`,
+            onclick: () => copy(fmt === "hex" ? hex(c) : `var(${token})`) },
+            h("span", {}, s), h("small", {}, hex(c)));
+        }))));
+    }
+
+    /* ---- semánticos ---- */
+    const sem = $("#semantic");
+    function paintSemantic() {
+      sem.replaceChildren(...colors.semantic.map((t) => {
+        const c = resolve(`var(${t.token})`);
+        return h("button", { class: "d-sem__item", type: "button", onclick: () => copy(fmt === "hex" ? hex(c) : `var(${t.token})`) },
+          h("span", { class: "d-sem__chip", style: `background:var(${t.token})` }),
+          h("span", {}, h("b", {}, t.token), h("span", {}, `${t.role} · ${hex(c)}`)));
+      }));
+    }
+
+    /* ---- degradados ---- */
+    $("#gradients").replaceChildren(...colors.gradients.map((g) => h("button", { class: "d-grad", type: "button", style: `background:${g.css}`, onclick: () => copy(g.css) }, g.name, h("small", {}, `--al-${g.id}`))));
+
+    /* ---- contraste ---- */
+    const pairs = [
+      ["Texto sobre fondo", "--al-text", "--al-bg"],
+      ["Texto sobre superficie", "--al-text", "--al-surface"],
+      ["Texto secundario sobre superficie", "--al-text-muted", "--al-surface"],
+      ["Texto terciario sobre superficie", "--al-text-subtle", "--al-surface"],
+      ["Marca sobre superficie (enlaces)", "--al-primary", "--al-surface"],
+      ["Marca fuerte sobre fondo suave", "--al-primary-strong", "--al-primary-soft"],
+      ["Texto sobre botón primario", "--al-on-primary", "--al-jacaranda-600"],
+      ["Éxito sobre superficie", "--al-success", "--al-surface"],
+      ["Advertencia sobre superficie", "--al-warning", "--al-surface"],
+      ["Peligro sobre superficie", "--al-danger", "--al-surface"],
+      ["Información sobre superficie", "--al-info", "--al-surface"],
+    ];
+    function paintContrast() {
+      $("#contrast").replaceChildren(...pairs.map(([label, fg, bg]) => {
+        const b = resolve(`var(${bg})`);
+        const f = blend(resolve(`var(${fg})`), b);
+        const r = ratio(f, b);
+        const level = r >= 7 ? ["AAA", "success"] : r >= 4.5 ? ["AA", "success"] : r >= 3 ? ["Solo texto grande", "warning"] : ["No cumple", "danger"];
+        return h("tr", {},
+          h("td", {}, label, h("div", { class: "al-text-sm al-text-muted" }, h("code", {}, fg), " sobre ", h("code", {}, bg))),
+          h("td", {}, h("span", { style: `display:inline-grid;place-items:center;min-width:5rem;padding:.4rem .9rem;border-radius:.6rem;font-weight:700;background:var(${bg});color:var(${fg});box-shadow:inset 0 0 0 1px var(--al-border)` }, "Aa texto")),
+          h("td", { class: "is-num" }, `${r.toFixed(2)} : 1`),
+          h("td", {}, h("span", { class: `al-badge al-badge--${level[1]}` }, level[0])));
+      }));
+    }
+
+    function paintAll() { paintSemantic(); paintContrast(); }
+    paintAll();
+    document.addEventListener("al:theme", () => requestAnimationFrame(paintAll));
+    refreshToc();
+    julieta.init(document);
+    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+{
+  "shades": [
+    "50",
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+    "950"
+  ],
+  "note": "Los valores hexadecimales no se repiten aquí: se leen en vivo de tokens.css (--al-<familia>-<tono>), la única fuente de verdad.",
+  "families": [
+    {
+      "id": "jacaranda",
+      "name": "Jacaranda",
+      "role": "Primario",
+      "description": "El violeta de las calles de la Ciudad de México en marzo. Es el color de marca: botones principales, enlaces y foco.",
+      "use": [
+        "Acciones principales",
+        "Enlaces",
+        "Anillos de foco"
+      ],
+      "keywords": "morado violeta purpura lila purple violet"
+    },
+    {
+      "id": "cempasuchil",
+      "name": "Cempasúchil",
+      "role": "Acento",
+      "description": "El naranja dorado de la flor de muertos. Se usa poco y a propósito: una llamada de atención por pantalla.",
+      "use": [
+        "Destacados",
+        "Advertencias",
+        "Estrellas y logros"
+      ],
+      "keywords": "naranja amarillo dorado orange yellow gold"
+    },
+    {
+      "id": "rosa",
+      "name": "Rosa mexicano",
+      "role": "Acento vivo",
+      "description": "Rosa intenso, el más eufórico de la paleta. Funciona en degradados junto al jacaranda.",
+      "use": [
+        "Degradados",
+        "Ilustración",
+        "Énfasis puntual"
+      ],
+      "keywords": "rosa fucsia magenta pink"
+    },
+    {
+      "id": "agave",
+      "name": "Agave",
+      "role": "Éxito",
+      "description": "Verde azulado de campo de agave. Confirma que algo salió bien.",
+      "use": [
+        "Confirmaciones",
+        "Estados correctos",
+        "Tendencias al alza"
+      ],
+      "keywords": "verde green teal"
+    },
+    {
+      "id": "cielo",
+      "name": "Cielo",
+      "role": "Información",
+      "description": "Azul de cielo despejado en el Altiplano. Informa sin alarmar.",
+      "use": [
+        "Avisos",
+        "Ayuda",
+        "Enlaces secundarios"
+      ],
+      "keywords": "azul celeste blue"
+    },
+    {
+      "id": "granada",
+      "name": "Granada",
+      "role": "Peligro",
+      "description": "Rojo profundo de granada abierta. Reservado para errores y acciones destructivas.",
+      "use": [
+        "Errores",
+        "Eliminar",
+        "Tendencias a la baja"
+      ],
+      "keywords": "rojo red carmesi"
+    },
+    {
+      "id": "piedra",
+      "name": "Piedra",
+      "role": "Neutro",
+      "description": "Grises con un toque de violeta, como la piedra volcánica. Sostienen texto, bordes y superficies.",
+      "use": [
+        "Texto",
+        "Bordes",
+        "Fondos"
+      ],
+      "keywords": "gris neutro gray grey"
+    }
+  ],
+  "semantic": [
+    {
+      "token": "--al-bg",
+      "role": "Fondo de página"
+    },
+    {
+      "token": "--al-bg-subtle",
+      "role": "Fondo atenuado"
+    },
+    {
+      "token": "--al-surface",
+      "role": "Tarjetas y paneles"
+    },
+    {
+      "token": "--al-surface-sunken",
+      "role": "Áreas hundidas (tablas, dropzone)"
+    },
+    {
+      "token": "--al-border",
+      "role": "Bordes suaves"
+    },
+    {
+      "token": "--al-border-strong",
+      "role": "Bordes de campos"
+    },
+    {
+      "token": "--al-text",
+      "role": "Texto principal"
+    },
+    {
+      "token": "--al-text-muted",
+      "role": "Texto secundario"
+    },
+    {
+      "token": "--al-text-subtle",
+      "role": "Texto terciario"
+    },
+    {
+      "token": "--al-primary",
+      "role": "Color de marca"
+    },
+    {
+      "token": "--al-primary-soft",
+      "role": "Fondo de marca suave"
+    },
+    {
+      "token": "--al-accent",
+      "role": "Acento cálido"
+    },
+    {
+      "token": "--al-success",
+      "role": "Éxito"
+    },
+    {
+      "token": "--al-warning",
+      "role": "Advertencia"
+    },
+    {
+      "token": "--al-danger",
+      "role": "Peligro"
+    },
+    {
+      "token": "--al-info",
+      "role": "Información"
+    }
+  ],
+  "gradients": [
+    {
+      "id": "amanecer",
+      "name": "Amanecer en la Condesa",
+      "css": "linear-gradient(135deg, var(--al-jacaranda-500), var(--al-rosa-400))"
+    },
+    {
+      "id": "atardecer",
+      "name": "Atardecer en Coyoacán",
+      "css": "linear-gradient(135deg, var(--al-rosa-500), var(--al-cempasuchil-400))"
+    },
+    {
+      "id": "noche",
+      "name": "Noche en el Zócalo",
+      "css": "linear-gradient(160deg, var(--al-jacaranda-800), var(--al-jacaranda-950))"
+    },
+    {
+      "id": "milpa",
+      "name": "Milpa",
+      "css": "linear-gradient(135deg, var(--al-agave-400), var(--al-cielo-400))"
+    }
+  ]
+}
