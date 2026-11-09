@@ -1,0 +1,28 @@
+/* Julieta UI · Plantilla «Tejido · El tablero donde tu taller se organiza»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-lp-hero .al-hero__title { font-size: clamp(3rem, 1.2rem + 6.4vw, 7rem); letter-spacing: -0.045em; }
+.julieta-lp-hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+@media (max-width: 62rem) { .julieta-lp-hero__grid { grid-template-columns: 1fr; } }
+.julieta-lp-hero__copy { display: grid; gap: 1.75rem; justify-items: start; }
+.julieta-lp-hero .al-btn--ghost { --_fg: #fff; --_bg-h: rgb(255 255 255 / .14); --_bd: rgb(255 255 255 / .3); border: 1px solid var(--_bd); }
+.julieta-lp-board { display: grid; gap: .85rem; padding: 1.1rem; border-radius: var(--al-radius-xl); background: color-mix(in oklab, var(--al-surface) 94%, transparent); color: var(--al-text); box-shadow: 0 40px 80px -30px rgb(0 0 0 / .55); rotate: 1.2deg; }
+.julieta-lp-board__head { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+.julieta-lp-board__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+.julieta-lp-col { display: grid; gap: .5rem; align-content: start; padding: .55rem; border-radius: var(--al-radius-md); background: var(--al-surface-sunken); }
+.julieta-lp-col h4 { font-size: .75rem; color: var(--al-text-muted); font-family: var(--al-font-sans); letter-spacing: 0; padding: .1rem .2rem; }
+.julieta-lp-card { padding: .65rem .7rem; border-radius: var(--al-radius-sm); background: var(--al-surface); box-shadow: var(--al-shadow-sm); font-size: .8125rem; font-weight: 600; display: grid; gap: .4rem; }
+.julieta-lp-card small { font-weight: 500; color: var(--al-text-muted); }
+.julieta-lp-section-title { font-size: var(--al-text-4xl); line-height: .98; letter-spacing: -0.045em; max-width: 17ch; }
+.julieta-lp-features { display: grid; gap: 2.5rem 3rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.julieta-lp-view { display: grid; gap: 1rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface-sunken); border: 1px solid var(--al-border); }
+.julieta-lp-quotes { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.julieta-lp-quotes .al-quote { padding: 1.75rem; border-radius: var(--al-radius-xl); background: var(--al-surface); border: 1px solid var(--al-border); align-content: space-between; margin: 0; }
+.julieta-lp-quotes .al-quote:nth-child(2) { margin-top: 2rem; }
+@media (max-width: 62rem) { .julieta-lp-quotes .al-quote:nth-child(2) { margin-top: 0; } }
+.julieta-lp-numbers { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.julieta-lp-numbers .al-stat__value { font-size: clamp(2.5rem, 2rem + 2vw, 3.75rem); letter-spacing: -0.04em; }
+#julieta-alta .al-error { color: #ffd0d3; }
+.julieta-lp-nav-menu { display: none; }
+@media (max-width: 52rem) { .julieta-lp-nav-links, .julieta-lp-nav-cta { display: none; } .julieta-lp-nav-menu { display: inline-flex; } }

@@ -27,6 +27,13 @@
       "icon": "credit-card",
       "description": "Planes, calculadoras y comparativas para que tu gente elija sin dudas.",
       "keywords": "planes suscripcion pricing"
+    },
+    {
+      "id": "portafolio",
+      "name": "Portafolio",
+      "icon": "briefcase",
+      "description": "Portafolios para diseño y desarrollo web, arquitectura y diseño gráfico: proyectos, habilidades, experiencia y contacto.",
+      "keywords": "portfolio trabajos galeria proyectos cv"
     }
   ],
   "templates": [
@@ -363,6 +370,74 @@
         "button",
         "toast",
         "footer"
+      ]
+    },
+    {
+      "id": "tlapali",
+      "category": "portafolio",
+      "name": "Tlapali · Portafolio de diseño y desarrollo web",
+      "description": "Portafolio oscuro y luminoso con ventana de código, proyectos en cuadrícula bento, habilidades con barras, proceso, experiencia, testimonios y contacto.",
+      "href": "src/pages/plantillas/portafolio/tlapali.html",
+      "preview": "src/assets/images/templates/portafolio/tlapali.webp",
+      "tags": [
+        "diseñador web",
+        "desarrollador",
+        "bento",
+        "proyectos",
+        "oscuro"
+      ],
+      "uses": [
+        "badge",
+        "timeline",
+        "avatar",
+        "select",
+        "input",
+        "button",
+        "toast"
+      ]
+    },
+    {
+      "id": "vega-lozano",
+      "category": "portafolio",
+      "name": "Vega Lozano · Portafolio de arquitectura",
+      "description": "Portafolio editorial y sobrio con tipografía serif, obra seleccionada con elevaciones, disciplinas, reconocimientos, equipo, testimonio y contacto.",
+      "href": "src/pages/plantillas/portafolio/vega-lozano.html",
+      "preview": "src/assets/images/templates/portafolio/vega-lozano.webp",
+      "tags": [
+        "arquitectura",
+        "editorial",
+        "serif",
+        "obra",
+        "elegante"
+      ],
+      "uses": [
+        "avatar",
+        "select",
+        "input",
+        "button",
+        "toast"
+      ]
+    },
+    {
+      "id": "colibri",
+      "category": "portafolio",
+      "name": "Colibrí · Portafolio de diseño gráfico",
+      "description": "Portafolio de color y collage con titular gigante, cinta animada, carteles de proyectos, servicios con precio, experiencia, clientes y cotización.",
+      "href": "src/pages/plantillas/portafolio/colibri.html",
+      "preview": "src/assets/images/templates/portafolio/colibri.webp",
+      "tags": [
+        "diseño gráfico",
+        "identidad",
+        "color",
+        "collage",
+        "cotización"
+      ],
+      "uses": [
+        "timeline",
+        "select",
+        "input",
+        "button",
+        "toast"
       ]
     }
   ]

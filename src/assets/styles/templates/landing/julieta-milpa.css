@@ -1,0 +1,51 @@
+/* Julieta UI · Plantilla «Milpa · Verdura de temporada en tu puerta»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-mi-nav { background: var(--al-bg); }
+.julieta-mi-brand { font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.04em; font-size: 1.35rem; }
+.julieta-mi-brand al-icon { color: var(--al-success); }
+.julieta-mi-nav-menu { display: none; }
+@media (max-width: 52rem) { .julieta-mi-nav-links, .julieta-mi-nav-cta { display: none; } .julieta-mi-nav-menu { display: inline-flex; } }
+
+.julieta-mi-hero { text-align: center; padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2rem, 5vw, 3.5rem); display: grid; justify-items: center; gap: 1.75rem; }
+.julieta-mi-kicker { font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--al-text-muted); }
+.julieta-mi-title { font-size: clamp(3.6rem, 1rem + 15vw, 13rem); line-height: .82; letter-spacing: -0.065em; font-weight: 800; text-wrap: balance; overflow-wrap: anywhere; }
+.julieta-mi-title em { font-style: normal; color: var(--al-success); }
+.julieta-mi-title span { display: block; }
+.julieta-mi-lead { max-width: 40ch; font-size: var(--al-text-xl); color: var(--al-text-muted); line-height: 1.4; }
+
+.julieta-mi-marquee { border-block: 1px solid var(--al-text); overflow: hidden; background: var(--al-text); color: var(--al-bg); }
+.julieta-mi-marquee__track { display: flex; width: max-content; animation: julieta-mi-scroll 38s linear infinite; }
+.julieta-mi-marquee__track span { font-family: var(--al-font-display); font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem); font-weight: 700; letter-spacing: -0.02em; padding: .8rem 1.4rem; white-space: nowrap; }
+.julieta-mi-marquee__track span::after { content: "✺"; margin-left: 2.8rem; opacity: .55; }
+@keyframes julieta-mi-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .julieta-mi-marquee__track { animation: none; } }
+
+.julieta-mi-heading { font-size: var(--al-text-5xl); line-height: .92; letter-spacing: -0.055em; max-width: 14ch; }
+.julieta-mi-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: end; margin-bottom: clamp(2rem, 5vw, 4rem); }
+@media (max-width: 52rem) { .julieta-mi-intro { grid-template-columns: 1fr; } }
+
+.julieta-mi-rows { border-top: 2px solid var(--al-text); }
+.julieta-mi-row { display: grid; grid-template-columns: minmax(3.5rem, 8rem) minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 1.5rem; align-items: baseline; padding-block: 1.75rem; border-bottom: 1px solid var(--al-border-strong); }
+.julieta-mi-row__n { font-family: var(--al-font-display); font-size: clamp(2.5rem, 2rem + 3vw, 5rem); font-weight: 800; letter-spacing: -0.06em; line-height: .9; color: var(--al-primary); }
+.julieta-mi-row h3 { font-size: var(--al-text-2xl); letter-spacing: -0.03em; }
+.julieta-mi-row p { color: var(--al-text-muted); }
+@media (max-width: 48rem) { .julieta-mi-row { grid-template-columns: 3.5rem minmax(0, 1fr); gap: .5rem 1rem; } .julieta-mi-row p { grid-column: 2; } }
+
+.julieta-mi-season { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; }
+.julieta-mi-season .al-card { background: var(--al-surface); }
+.julieta-mi-season__icon { display: grid; place-items: center; aspect-ratio: 16 / 9; background: var(--al-success-soft); color: var(--al-success); }
+.julieta-mi-season .al-card:nth-child(2) .julieta-mi-season__icon { background: var(--al-warning-soft); color: var(--al-warning); }
+.julieta-mi-season .al-card:nth-child(3) .julieta-mi-season__icon { background: var(--al-danger-soft); color: var(--al-danger); }
+.julieta-mi-season .al-card:nth-child(4) .julieta-mi-season__icon { background: var(--al-info-soft); color: var(--al-info); }
+
+.julieta-mi-order { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: start; }
+@media (max-width: 62rem) { .julieta-mi-order { grid-template-columns: 1fr; } }
+.julieta-mi-summary { display: grid; gap: 1rem; padding: 1.5rem; border: 2px solid var(--al-text); border-radius: var(--al-radius-lg); background: var(--al-surface); }
+.julieta-mi-summary__price { font-family: var(--al-font-display); font-size: 4.5rem; font-weight: 800; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
+.julieta-mi-summary__price small { font-family: var(--al-font-sans); font-size: .95rem; font-weight: 500; letter-spacing: 0; color: var(--al-text-muted); margin-left: .35rem; }
+.julieta-mi-form { display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--al-radius-xl); background: var(--al-surface); border: 1px solid var(--al-border); box-shadow: var(--al-shadow-md); }
+.julieta-mi-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 30rem) { .julieta-mi-row2 { grid-template-columns: 1fr; } }
+.julieta-mi-size { flex-wrap: wrap; }

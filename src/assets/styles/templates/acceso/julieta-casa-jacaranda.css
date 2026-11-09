@@ -1,0 +1,12 @@
+/* Julieta UI · Plantilla «Acceso · Casa Jacaranda»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-ac-art__quote { font-family: var(--al-font-display); font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.035em; font-weight: 600; max-width: 18ch; color: #fff; }
+.julieta-ac-art__who { display: flex; align-items: center; gap: .8rem; color: color-mix(in oklab, #fff 75%, var(--al-jacaranda-300)); font-size: .9375rem; }
+.julieta-ac-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: inherit; text-decoration: none; }
+.julieta-ac-top { position: absolute; top: 1.25rem; right: 1.25rem; }
+.julieta-ac-title { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1.05; }
+.julieta-ac-sso { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.julieta-ac-meta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.al-auth__form { position: relative; }

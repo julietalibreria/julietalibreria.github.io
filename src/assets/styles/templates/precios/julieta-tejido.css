@@ -1,0 +1,20 @@
+/* Julieta UI · Plantilla «Precios · Tejido»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-pr-head { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-block: clamp(3rem, 7vw, 5.5rem) 2.5rem; }
+.julieta-pr-head h1 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 14ch; }
+.julieta-pr-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); max-width: 46ch; }
+.julieta-pr-save { color: var(--al-success); font-weight: 700; font-size: .75rem; margin-left: .35rem; }
+.julieta-pr-plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+@media (max-width: 62rem) { .julieta-pr-plans { grid-template-columns: 1fr; max-width: 28rem; margin-inline: auto; } }
+.julieta-pr-plans .al-plan--featured { position: relative; }
+.julieta-pr-flag { position: absolute; top: -.8rem; right: 1.5rem; }
+.julieta-pr-price-note { min-height: 1.25rem; font-size: .8125rem; margin-top: -.75rem; color: var(--al-text-muted); }
+.al-plan--featured .julieta-pr-price-note { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
+.julieta-pr-table td:not(:first-child), .julieta-pr-table th:not(:first-child) { text-align: center; }
+.julieta-pr-table al-icon[name="check"] { color: var(--al-success); }
+.julieta-pr-table al-icon[name="minus"] { color: var(--al-text-subtle); }
+.julieta-pr-nav-links { display: flex; }
+@media (max-width: 40rem) { .julieta-pr-nav-links { display: none; } }
+#julieta-precios-tabla-wrap { margin-top: 1.5rem; }

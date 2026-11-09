@@ -125,7 +125,7 @@ function buildFooter() {
         ),
         col("Empezar", [["Instalación", "src/pages/instalacion.html"], ["Navegador de recursos", "src/pages/recursos.html"], ["Fundamentos", "src/pages/fundamentos.html"]]),
         col("Recursos", [["Componentes", "src/pages/componentes.html"], ["Iconos", "src/pages/iconos.html"], ["Colores", "src/pages/colores.html"], ["Tipografía", "src/pages/tipografia.html"]]),
-        col("Plantillas", [["Galería", "src/pages/plantillas.html"], ["Landing", "src/pages/plantillas/landing.html"], ["Panel de control", "src/pages/plantillas/dashboard.html"], ["Acceso", "src/pages/plantillas/acceso.html"]]),
+        col("Plantillas", [["Galería", "src/pages/plantillas.html"], ["Landing", "src/pages/plantillas/landing.html"], ["Panel de control", "src/pages/plantillas/dashboard.html"], ["Acceso", "src/pages/plantillas/acceso.html"], ["Portafolio", "src/pages/plantillas/portafolio.html"]]),
       ),
       h("div", { class: "al-footer__legal" },
         h("span", {}, `Julieta UI ${julieta.version} · Licencia MIT · Hecho con cariño en la Ciudad de México`),

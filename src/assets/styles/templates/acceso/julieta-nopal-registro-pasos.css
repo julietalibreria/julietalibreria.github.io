@@ -1,0 +1,42 @@
+/* Julieta UI · Plantilla «Registro · Nopal Ahorro»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+body {
+  min-height: 100dvh;
+  background:
+    radial-gradient(48rem 32rem at 0% 0%, light-dark(color-mix(in oklab, var(--al-agave-500) 20%, transparent), color-mix(in oklab, var(--al-agave-500) 16%, transparent)), transparent 65%),
+    radial-gradient(44rem 30rem at 100% 100%, light-dark(color-mix(in oklab, var(--al-rosa-500) 16%, transparent), color-mix(in oklab, var(--al-rosa-500) 14%, transparent)), transparent 65%),
+    url("../../../images/pattern-petals.svg") 0 0 / 120px 120px,
+    var(--al-bg);
+}
+.julieta-rg-page { min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; padding: 1.25rem 1rem 5rem; gap: 1.25rem; }
+.julieta-rg-top { width: min(34rem, 100%); display: flex; align-items: center; justify-content: space-between; }
+.julieta-rg-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; }
+.julieta-rg-card { width: min(34rem, 100%); align-self: center; }
+.julieta-rg-card .al-card__body { padding: clamp(1.25rem, 5vw, 2.25rem); gap: 1.5rem; }
+.julieta-rg-title { font-size: var(--al-text-2xl); letter-spacing: -0.04em; line-height: 1.1; }
+.julieta-rg-title:focus { outline: none; }
+.julieta-rg-actions { display: flex; gap: .75rem; justify-content: space-between; flex-wrap: wrap; }
+.julieta-rg-actions .al-btn--primary { flex: 1 1 10rem; }
+.julieta-rg-stepper { margin: 0; }
+.julieta-rg-stepper .al-stepper__item { min-width: 0; }
+.julieta-rg-stepper .al-stepper__item > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.julieta-rg-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 30rem) { .julieta-rg-grid2 { grid-template-columns: 1fr; } .julieta-rg-stepper .al-stepper__item { font-size: .8125rem; } }
+.julieta-rg-opts { display: grid; gap: .5rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+.julieta-rg-opts legend { padding: 0; margin-bottom: .5rem; }
+.julieta-rg-opt { border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-md); padding: .7rem .9rem; background: var(--al-surface); }
+.julieta-rg-opt:has(input:checked) { border-color: var(--al-primary); background: var(--al-primary-soft); }
+.julieta-rg-opt:has(input:focus-visible) { outline: 2px solid var(--al-ring); outline-offset: 2px; }
+.julieta-rg-sum { display: grid; gap: 0; margin: 0; border: 1px solid var(--al-border); border-radius: var(--al-radius-lg); background: var(--al-surface-sunken); overflow: hidden; }
+.julieta-rg-sum > div { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; }
+.julieta-rg-sum > div + div { border-top: 1px solid var(--al-border); }
+.julieta-rg-sum dt { font-size: .8125rem; color: var(--al-text-muted); }
+.julieta-rg-sum dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; text-align: right; }
+.julieta-rg-sum__row-main { min-width: 0; display: grid; gap: .1rem; }
+.julieta-rg-sum__row-main dd { text-align: left; }
+.julieta-rg-ok { text-align: center; justify-items: center; }
+.julieta-rg-ok__ring { --size: 5.5rem; display: grid; place-items: center; color: var(--al-agave-500); }
+.julieta-rg-foot { width: min(34rem, 100%); display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center; }
+#meter-wrap[hidden] { display: none; }

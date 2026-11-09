@@ -1,0 +1,19 @@
+/* Julieta UI · Plantilla «Panel · Casa Jacaranda»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-db-greeting h1 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; }
+.julieta-db-greeting p { color: var(--al-text-muted); }
+.julieta-db-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
+.julieta-db-stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+.julieta-db-stat { display: grid; gap: .75rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); }
+.julieta-db-stat__row { display: flex; justify-content: space-between; align-items: end; gap: .75rem; }
+.julieta-db-main { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+@media (max-width: 80rem) { .julieta-db-main { grid-template-columns: 1fr; } }
+.julieta-db-panel { padding: 1.35rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.julieta-db-panel__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
+.julieta-db-panel__head h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
+.julieta-db-goal { display: flex; align-items: center; gap: 1.25rem; }
+.julieta-db-side-brand { display: flex; align-items: center; gap: .6rem; padding: .25rem .5rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.03em; text-decoration: none; color: var(--al-text); }
+.julieta-db-side-foot { margin-top: auto; }
+.julieta-db-search { flex: 1; max-width: 24rem; }

@@ -1,0 +1,44 @@
+/* Julieta UI · Plantilla «Vega Lozano · Portafolio de arquitectura»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+:root { --julieta-vl-bg: light-dark(#f4f0e8, #12110e); --julieta-vl-ink: light-dark(#1f1c17, #ece6da); --julieta-vl-mut: light-dark(#6b645a, #a39b8b); --julieta-vl-line: light-dark(#d8d0c1, #2c2923); --julieta-vl-stone: light-dark(#ebe4d6, #1a1814); --julieta-vl-br: light-dark(#8a6838, #c9a26b); --julieta-vl-serif: "Cormorant Garamond", "Times New Roman", Georgia, serif; }
+body { background: var(--julieta-vl-bg); color: var(--julieta-vl-ink); }
+.julieta-vl-wrap { width: min(100% - 3rem, 78rem); margin-inline: auto; }
+.julieta-vl-top { display: flex; align-items: center; gap: 2rem; padding-block: 1.4rem; border-bottom: 1px solid var(--julieta-vl-line); }
+.julieta-vl-brand { font: 600 1.7rem/1 var(--julieta-vl-serif); letter-spacing: .01em; color: inherit; text-decoration: none; }
+.julieta-vl-brand small { display: block; font: 400 .72rem var(--al-font-sans); letter-spacing: .22em; text-transform: uppercase; color: var(--julieta-vl-mut); margin-top: .3rem; }
+.julieta-vl-links { display: flex; gap: 2rem; margin-left: auto; font-size: .95rem; } .julieta-vl-links a { color: var(--julieta-vl-mut); text-decoration: none; } .julieta-vl-links a:hover { color: var(--julieta-vl-ink); }
+@media (max-width: 52rem) { .julieta-vl-links { display: none; } .julieta-vl-top .julieta-vl-theme { margin-left: auto; } }
+.julieta-vl-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 5rem); align-items: end; padding-block: clamp(3rem, 7vw, 6rem) 0; }
+@media (max-width: 60rem) { .julieta-vl-hero { grid-template-columns: 1fr; } }
+.julieta-vl-h1 { font: 500 clamp(3.4rem, 1rem + 7.4vw, 8rem)/.9 var(--julieta-vl-serif); letter-spacing: -.025em; text-wrap: balance; }
+.julieta-vl-lead { margin-top: 2rem; max-width: 40ch; color: var(--julieta-vl-mut); font-size: 1.1rem; line-height: 1.7; }
+.julieta-vl-link { display: inline-flex; gap: .6rem; align-items: center; margin-top: 2rem; color: var(--julieta-vl-ink); text-decoration: none; border-bottom: 1px solid var(--julieta-vl-br); padding-bottom: .35rem; }
+.julieta-vl-hero svg { width: 100%; height: auto; display: block; color: var(--julieta-vl-br); }
+.julieta-vl-facts { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: clamp(2.5rem, 5vw, 4rem); border-block: 1px solid var(--julieta-vl-line); }
+.julieta-vl-facts div { padding: 1.4rem 1.2rem; border-left: 1px solid var(--julieta-vl-line); } .julieta-vl-facts div:first-child { border-left: 0; padding-left: 0; }
+.julieta-vl-facts b { display: block; font: 500 2.6rem/1 var(--julieta-vl-serif); } .julieta-vl-facts span { color: var(--julieta-vl-mut); font-size: .9rem; }
+@media (max-width: 46rem) { .julieta-vl-facts { grid-template-columns: 1fr 1fr; } .julieta-vl-facts div:nth-child(3) { border-left: 0; padding-left: 0; } }
+.julieta-vl-sec { padding-block: clamp(4rem, 9vw, 8rem); }
+.julieta-vl-eyebrow { font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--julieta-vl-br); margin-bottom: 1.2rem; }
+.julieta-vl-h2 { font: 500 clamp(2.4rem, 1.2rem + 3.6vw, 4.4rem)/1 var(--julieta-vl-serif); letter-spacing: -.015em; text-wrap: balance; }
+.julieta-vl-manifest { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; } @media (max-width: 52rem) { .julieta-vl-manifest { grid-template-columns: 1fr; } }
+.julieta-vl-manifest p { color: var(--julieta-vl-mut); line-height: 1.8; } .julieta-vl-manifest p + p { margin-top: 1.2rem; }
+.julieta-vl-sign { font: italic 500 1.9rem var(--julieta-vl-serif); color: var(--julieta-vl-ink) !important; margin-top: 1.6rem; }
+.julieta-vl-proj { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: center; margin-top: clamp(3rem, 7vw, 6rem); }
+.julieta-vl-proj:nth-child(odd) .julieta-vl-art { order: 2; } @media (max-width: 52rem) { .julieta-vl-proj { grid-template-columns: 1fr; } .julieta-vl-proj:nth-child(odd) .julieta-vl-art { order: 0; } }
+.julieta-vl-art { aspect-ratio: 4 / 3; overflow: hidden; background: var(--julieta-vl-stone); } .julieta-vl-art svg { width: 100%; height: 100%; display: block; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); } .julieta-vl-art:hover svg { transform: scale(1.04); }
+.julieta-vl-proj h3 { font: 500 clamp(2rem, 1.2rem + 2vw, 3.2rem)/1 var(--julieta-vl-serif); margin-bottom: 1rem; } .julieta-vl-proj p { color: var(--julieta-vl-mut); line-height: 1.75; }
+.julieta-vl-meta { display: grid; grid-template-columns: auto 1fr; gap: .5rem 1.5rem; margin: 1.6rem 0 0; padding-top: 1.4rem; border-top: 1px solid var(--julieta-vl-line); font-size: .92rem; } .julieta-vl-meta dt { color: var(--julieta-vl-mut); } .julieta-vl-meta dd { margin: 0; }
+.julieta-vl-rows { border-top: 1px solid var(--julieta-vl-ink); margin-top: 3rem; } .julieta-vl-row { display: grid; grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.5rem; padding-block: 1.8rem; border-bottom: 1px solid var(--julieta-vl-line); align-items: baseline; }
+.julieta-vl-row i { font: italic 500 1.4rem var(--julieta-vl-serif); color: var(--julieta-vl-br); } .julieta-vl-row h3 { font: 500 2rem/1.1 var(--julieta-vl-serif); } .julieta-vl-row p { color: var(--julieta-vl-mut); line-height: 1.7; } @media (max-width: 46rem) { .julieta-vl-row { grid-template-columns: 3rem 1fr; } .julieta-vl-row p { grid-column: 2; } }
+.julieta-vl-band { background: var(--julieta-vl-stone); } .julieta-vl-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); margin-top: 3rem; } @media (max-width: 52rem) { .julieta-vl-cols { grid-template-columns: 1fr; } }
+.julieta-vl-list { list-style: none; padding: 0; margin: 0; } .julieta-vl-list li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--julieta-vl-line); } .julieta-vl-list time { font: 500 1.2rem var(--julieta-vl-serif); color: var(--julieta-vl-br); } .julieta-vl-list span { color: var(--julieta-vl-mut); display: block; font-size: .9rem; }
+.julieta-vl-team { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 2rem; margin-top: 3rem; } .julieta-vl-team div { display: grid; gap: .3rem; } .julieta-vl-team .al-avatar { width: 4.5rem; height: 4.5rem; font: 500 1.6rem var(--julieta-vl-serif); background: var(--julieta-vl-stone); color: var(--julieta-vl-br); border: 1px solid var(--julieta-vl-line); margin-bottom: .8rem; } .julieta-vl-team h3 { font: 500 1.6rem var(--julieta-vl-serif); } .julieta-vl-team p { color: var(--julieta-vl-mut); font-size: .92rem; }
+.julieta-vl-quote { font: italic 400 clamp(1.8rem, 1rem + 2.6vw, 3.4rem)/1.2 var(--julieta-vl-serif); max-width: 24ch; margin-inline: auto; text-align: center; text-wrap: balance; } .julieta-vl-quote + p { text-align: center; margin-top: 1.6rem; color: var(--julieta-vl-mut); }
+.julieta-vl-contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); } @media (max-width: 52rem) { .julieta-vl-contact { grid-template-columns: 1fr; } }
+.julieta-vl-contact address { font-style: normal; display: grid; gap: 1.4rem; margin-top: 2.2rem; color: var(--julieta-vl-mut); line-height: 1.6; } .julieta-vl-contact address b { display: block; color: var(--julieta-vl-ink); font-weight: 500; }
+.julieta-vl-form { display: grid; gap: 1.1rem; align-content: start; } .julieta-vl-form .al-input, .julieta-vl-form .al-select, .julieta-vl-form .al-textarea { border-radius: 0; background: transparent; }
+.julieta-vl-btn { background: var(--julieta-vl-ink) !important; color: var(--julieta-vl-bg) !important; border-radius: 0 !important; border: 0 !important; letter-spacing: .04em; }
+.julieta-vl-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 2rem 3rem; border-top: 1px solid var(--julieta-vl-line); color: var(--julieta-vl-mut); font-size: .9rem; }

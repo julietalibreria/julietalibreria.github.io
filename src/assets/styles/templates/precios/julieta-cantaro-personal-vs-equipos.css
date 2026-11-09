@@ -1,0 +1,28 @@
+/* Julieta UI · Plantilla «Precios · Cántaro»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-ca-head { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-block: clamp(3rem, 7vw, 5rem) 2.5rem; }
+.julieta-ca-head h1 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 15ch; }
+.julieta-ca-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); max-width: 48ch; }
+.julieta-ca-plans { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; margin-inline: auto; }
+@media (max-width: 46rem) { .julieta-ca-plans { grid-template-columns: 1fr; max-width: 28rem; } }
+.julieta-ca-note { min-height: 1.25rem; font-size: .8125rem; margin-top: -.75rem; color: var(--al-text-muted); }
+.al-plan--featured .julieta-ca-note { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
+.julieta-ca-seats { display: grid; gap: .35rem; }
+.al-plan--featured .julieta-ca-seats .al-label { color: #fff; }
+.julieta-ca-flag { position: absolute; top: -.8rem; right: 1.5rem; }
+.julieta-ca-cmp { max-width: 56rem; margin-inline: auto; }
+.julieta-ca-cmp .al-accordion__body { padding: 0; }
+.julieta-ca-cmp td:not(:first-child), .julieta-ca-cmp th:not(:first-child) { text-align: center; }
+.julieta-ca-cmp al-icon[name="check"] { color: var(--al-success); }
+.julieta-ca-cmp al-icon[name="minus"] { color: var(--al-text-subtle); }
+.julieta-ca-guar { max-width: 56rem; margin-inline: auto; display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; padding: 1.75rem; }
+.julieta-ca-guar h2 { font-size: var(--al-text-2xl); letter-spacing: -0.03em; }
+.julieta-ca-guar p { color: var(--al-text-muted); margin-top: .35rem; }
+.julieta-ca-seal { width: 4rem; height: 4rem; border-radius: 50%; display: grid; place-items: center; background: var(--al-primary-soft); color: var(--al-primary-strong); }
+@media (max-width: 46rem) { .julieta-ca-guar { grid-template-columns: 1fr; justify-items: start; } }
+.julieta-ca-trust { max-width: 56rem; margin-inline: auto; }
+.julieta-ca-example { text-align: center; color: var(--al-text-subtle); font-size: .8125rem; margin-top: 1rem; }
+.julieta-ca-nav-links { display: flex; }
+@media (max-width: 40rem) { .julieta-ca-nav-links { display: none; } }

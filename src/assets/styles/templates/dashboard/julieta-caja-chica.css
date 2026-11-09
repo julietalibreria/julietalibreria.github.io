@@ -1,0 +1,44 @@
+/* Julieta UI · Plantilla «Panel de finanzas · Caja Chica»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-cc-page { max-width: 80rem; margin-inline: auto; width: 100%; padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
+.julieta-cc-sub { display: flex; gap: .25rem; overflow-x: auto; padding: .5rem clamp(1rem, 3vw, 2rem); border-bottom: 1px solid var(--al-border); background: var(--al-surface); scrollbar-width: none; }
+.julieta-cc-sub .al-nav-link { flex: none; }
+.julieta-cc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
+.julieta-cc-head h1 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; }
+.julieta-cc-head p { color: var(--al-text-muted); }
+.julieta-cc-head__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.julieta-cc-kpis { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.julieta-cc-kpi { display: grid; gap: .5rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); min-width: 0; }
+.julieta-cc-kpi--hero { background: linear-gradient(150deg, var(--al-jacaranda-700), var(--al-jacaranda-950)); color: #fff; border-color: transparent; }
+.julieta-cc-kpi--hero .al-stat__label { color: rgb(255 255 255 / .75); }
+.julieta-cc-kpi--hero .al-stat__delta { color: var(--al-cempasuchil-300); }
+.julieta-cc-kpi__row { display: flex; justify-content: space-between; align-items: end; gap: .75rem; }
+.julieta-cc-kpi .al-stat__value { font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem); }
+.julieta-cc-panel { padding: 1.35rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.julieta-cc-panel__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
+.julieta-cc-panel__head h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
+.julieta-cc-split { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+@media (max-width: 64rem) { .julieta-cc-split { grid-template-columns: 1fr; } }
+.julieta-cc-legend { display: flex; gap: 1rem; font-size: .8125rem; color: var(--al-text-muted); }
+.julieta-cc-legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 3px; margin-right: .35rem; background: var(--al-primary); }
+.julieta-cc-legend i + * { vertical-align: middle; }
+.julieta-cc-legend .is-b i { background: var(--al-cempasuchil-400); }
+.julieta-cc-tools { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.julieta-cc-tools .al-input-group { flex: 1; min-width: 12rem; max-width: 22rem; }
+.julieta-cc-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.julieta-cc-concept { display: flex; align-items: center; gap: .65rem; min-width: 0; }
+.julieta-cc-concept small { display: block; color: var(--al-text-muted); }
+.julieta-cc-in { color: var(--al-success); font-weight: 650; }
+.julieta-cc-out { color: var(--al-text); font-weight: 650; }
+.julieta-cc-cats { display: grid; gap: .95rem; }
+.julieta-cc-cats__row { display: flex; justify-content: space-between; gap: .5rem; font-size: .875rem; margin-bottom: .35rem; }
+.julieta-cc-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; color: var(--al-text-muted); font-size: .8125rem; }
+.julieta-cc-detail { display: grid; gap: 1rem; }
+.julieta-cc-detail dl { display: grid; grid-template-columns: auto 1fr; gap: .6rem 1rem; }
+.julieta-cc-detail dt { color: var(--al-text-muted); }
+.julieta-cc-detail dd { text-align: right; font-weight: 600; margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 40rem) { .julieta-cc-hide-sm { display: none; } .al-table th, .al-table td { padding: .75rem .75rem; } }
+.al-table-wrap { position: relative; }
+body { padding-bottom: 3.5rem; }

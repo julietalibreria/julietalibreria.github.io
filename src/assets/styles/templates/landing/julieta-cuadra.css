@@ -1,0 +1,53 @@
+/* Julieta UI · Plantilla «Cuadra · Organiza tu tianguis sin perder la cabeza»
+   Estilos de la plantilla. Todas las clases, variables y animaciones llevan el prefijo julieta-.
+   Se cargan por CDN junto con la plantilla; agrega tus ajustes en tu propio archivo CSS. */
+
+.julieta-cu-brand { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.03em; font-size: 1.3rem; }
+.julieta-cu-brand__sq { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .55rem; background: var(--al-accent); color: var(--al-cempasuchil-950); }
+.julieta-cu-nav-menu { display: none; }
+@media (max-width: 52rem) { .julieta-cu-nav-links, .julieta-cu-nav-cta { display: none; } .julieta-cu-nav-menu { display: inline-flex; } }
+
+.julieta-cu-hero { position: relative; isolation: isolate; overflow: hidden;
+  background:
+    radial-gradient(40rem 26rem at 100% 0%, color-mix(in oklab, var(--al-accent) 28%, transparent), transparent 65%),
+    radial-gradient(34rem 24rem at 0% 100%, color-mix(in oklab, var(--al-primary) 18%, transparent), transparent 65%),
+    var(--al-bg); }
+.julieta-cu-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(2.5rem, 7vw, 6rem); }
+@media (max-width: 62rem) { .julieta-cu-hero__grid { grid-template-columns: 1fr; } }
+.julieta-cu-hero__copy { display: grid; gap: 1.5rem; justify-items: start; }
+.julieta-cu-hero h1 { font-size: clamp(2.7rem, 1.4rem + 4.6vw, 5.2rem); line-height: .95; letter-spacing: -0.05em; text-wrap: balance; }
+.julieta-cu-hero h1 mark { background: linear-gradient(transparent 62%, color-mix(in oklab, var(--al-accent) 55%, transparent) 62%); color: inherit; padding: 0 .1em; }
+
+.julieta-cu-win { border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-xl); background: var(--al-surface); box-shadow: 0 40px 70px -30px color-mix(in oklab, var(--al-primary) 45%, transparent), var(--al-shadow-lg); overflow: hidden; }
+.julieta-cu-win__bar { display: flex; align-items: center; gap: .4rem; padding: .7rem .9rem; background: var(--al-surface-sunken); border-bottom: 1px solid var(--al-border); font-size: .8125rem; color: var(--al-text-muted); }
+.julieta-cu-win__bar i { width: .65rem; height: .65rem; border-radius: 50%; background: var(--al-border-strong); }
+.julieta-cu-win__bar span { margin-left: .6rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.julieta-cu-win__body { display: grid; gap: 1rem; padding: 1.1rem; }
+.julieta-cu-win__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.julieta-cu-win__stats .al-stat { padding: .75rem .9rem; border-radius: var(--al-radius-md); background: var(--al-surface-sunken); }
+.julieta-cu-puesto { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .7rem .2rem; border-bottom: 1px solid var(--al-border); }
+.julieta-cu-puesto:last-child { border-bottom: 0; }
+.julieta-cu-puesto strong { display: block; font-size: .9375rem; }
+.julieta-cu-puesto small { color: var(--al-text-muted); }
+.julieta-cu-hint { font-size: .8125rem; color: var(--al-text-muted); display: flex; align-items: center; gap: .4rem; }
+
+.julieta-cu-bento { display: grid; gap: 1.25rem; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.julieta-cu-bento > * { grid-column: span 2; }
+.julieta-cu-bento > .julieta-cu-wide { grid-column: span 4; }
+@media (max-width: 62rem) { .julieta-cu-bento > *, .julieta-cu-bento > .julieta-cu-wide { grid-column: span 3; } }
+@media (max-width: 40rem) { .julieta-cu-bento > *, .julieta-cu-bento > .julieta-cu-wide { grid-column: 1 / -1; } }
+.julieta-cu-bento .al-card__body { padding: 1.5rem; }
+.julieta-cu-tone { background: var(--al-primary-soft); border-color: transparent; }
+.julieta-cu-tone2 { background: var(--al-warning-soft); border-color: transparent; }
+.julieta-cu-icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: .8rem; background: var(--al-surface); color: var(--al-primary); box-shadow: var(--al-shadow-sm); }
+.julieta-cu-map { display: grid; grid-template-columns: repeat(8, 1fr); gap: .35rem; margin-top: .5rem; }
+.julieta-cu-map i { aspect-ratio: 1; border-radius: .35rem; background: var(--al-border); }
+.julieta-cu-map i.julieta-on { background: var(--al-primary); } .julieta-cu-map i.julieta-mid { background: var(--al-accent); }
+
+.julieta-cu-plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); align-items: stretch; }
+.julieta-cu-center { display: grid; justify-items: center; text-align: center; gap: 1rem; margin-bottom: 2.5rem; }
+.julieta-cu-center h2 { font-size: var(--al-text-4xl); letter-spacing: -0.045em; line-height: 1; }
+
+.julieta-cu-end { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding: clamp(1.75rem, 4vw, 3rem); border-radius: var(--al-radius-2xl); background: var(--al-surface); border: 2px solid var(--al-text); }
+.julieta-cu-end h2 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1; }
+@media (max-width: 40rem) { .julieta-cu-end { grid-template-columns: 1fr; } }

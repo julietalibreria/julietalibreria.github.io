@@ -87,7 +87,7 @@
           "title": "Galería de plantillas",
           "href": "src/pages/plantillas.html",
           "icon": "layout",
-          "description": "12 páginas completas, todas las categorías",
+          "description": "15 páginas completas, todas las categorías",
           "keywords": "templates paginas ejemplos"
         },
         {
@@ -117,6 +117,13 @@
           "icon": "credit-card",
           "description": "3 plantillas · Planes, calculadoras y comparativas para que tu gente elija sin dudas",
           "keywords": "planes suscripcion pricing"
+        },
+        {
+          "title": "Portafolio",
+          "href": "src/pages/plantillas/portafolio.html",
+          "icon": "briefcase",
+          "description": "3 plantillas · Portafolios para diseño y desarrollo web, arquitectura y diseño gráfico",
+          "keywords": "portfolio trabajos galeria proyectos cv"
         }
       ]
     }
