@@ -31,51 +31,20 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .np-brand { display: flex; align-items: center; gap: .6rem; padding: .25rem .5rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.03em; text-decoration: none; color: var(--al-text); }
-    .np-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
-    .np-head h1 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; }
-    .np-head p { color: var(--al-text-muted); }
-    .np-stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-    .np-stat, .np-panel { padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); min-width: 0; }
-    .np-stat { display: grid; gap: .6rem; }
-    .np-stat__row { display: flex; justify-content: space-between; align-items: end; gap: .75rem; }
-    .np-panel { display: grid; gap: 1rem; align-content: start; }
-    .np-panel__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
-    .np-panel__head h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
-    .np-tools { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
-    .np-tools .al-input-group { flex: 1; min-width: 12rem; max-width: 22rem; }
-    .np-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .np-board { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); align-items: start; }
-    .np-col { display: grid; gap: .65rem; align-content: start; padding: .75rem; border-radius: var(--al-radius-lg); background: var(--al-surface-sunken); min-width: 0; }
-    .np-col__head { display: flex; justify-content: space-between; align-items: center; padding: .15rem .25rem; font-weight: 650; }
-    .np-card { display: grid; gap: .6rem; padding: .85rem; border-radius: var(--al-radius-md); background: var(--al-surface); border: 1px solid var(--al-border); min-width: 0; }
-    .np-card__top { display: flex; justify-content: space-between; align-items: start; gap: .5rem; }
-    .np-card__title { font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
-    .np-card__meta { display: flex; justify-content: space-between; align-items: center; gap: .5rem; font-size: .8125rem; color: var(--al-text-muted); }
-    .np-card__meta span { display: inline-flex; align-items: center; gap: .3rem; }
-    .np-empty { padding: 1rem; text-align: center; font-size: .875rem; color: var(--al-text-muted); }
-    .np-split { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
-    @media (max-width: 80rem) { .np-split { grid-template-columns: 1fr; } }
-    .np-goal { display: flex; align-items: center; gap: 1.25rem; }
-    .np-person { display: flex; align-items: center; gap: .6rem; flex-wrap: nowrap; }
-    .np-foot { color: var(--al-text-muted); font-size: .8125rem; padding-bottom: 3rem; }
-    .np-search { flex: 1; max-width: 24rem; }
-    .np-side-foot { margin-top: auto; }
-    @media (max-width: 40rem) { .np-hide-sm { display: none; } .al-table th, .al-table td { padding: .75rem; } }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/dashboard/julieta-estudio-nopal.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
   <div class="al-app">
     <aside class="al-app__sidebar" aria-label="Navegación del tablero">
-      <a class="np-brand" href="#contenido"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">estudio nopal</a>
+      <a class="julieta-np-brand" href="#contenido"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">estudio nopal</a>
       <nav class="al-sidebar" aria-label="Principal">
         <div class="al-sidebar__group">
           <div class="al-sidebar__title">Trabajo</div>
@@ -85,25 +54,25 @@
         </div>
         <div class="al-sidebar__group">
           <div class="al-sidebar__title">Proyectos</div>
-          <a class="al-sidebar__link" href="#contenido" data-proyecto="Todos"><al-icon name="folder"></al-icon>Todos</a>
-          <a class="al-sidebar__link" href="#contenido" data-proyecto="Mercado Sonora"><al-icon name="folder"></al-icon>Mercado Sonora</a>
-          <a class="al-sidebar__link" href="#contenido" data-proyecto="Casa Tecolote"><al-icon name="folder"></al-icon>Casa Tecolote</a>
-          <a class="al-sidebar__link" href="#contenido" data-proyecto="Ruta Mezcal"><al-icon name="folder"></al-icon>Ruta Mezcal</a>
+          <a class="al-sidebar__link" href="#contenido" data-julieta-proyecto="Todos"><al-icon name="folder"></al-icon>Todos</a>
+          <a class="al-sidebar__link" href="#contenido" data-julieta-proyecto="Mercado Sonora"><al-icon name="folder"></al-icon>Mercado Sonora</a>
+          <a class="al-sidebar__link" href="#contenido" data-julieta-proyecto="Casa Tecolote"><al-icon name="folder"></al-icon>Casa Tecolote</a>
+          <a class="al-sidebar__link" href="#contenido" data-julieta-proyecto="Ruta Mezcal"><al-icon name="folder"></al-icon>Ruta Mezcal</a>
         </div>
       </nav>
-      <div class="np-side-foot al-card al-card--flat"><div class="al-card__body" style="padding:1rem;gap:.35rem">
+      <div class="julieta-np-side-foot al-card al-card--flat"><div class="al-card__body" style="padding:1rem;gap:.35rem">
         <strong class="al-text-sm">Sprint de noviembre</strong>
-        <div class="al-progress" id="side-prog" style="--value:0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Avance del sprint"><span></span></div>
-        <span class="al-text-xs al-text-muted" id="side-txt"></span>
+        <div class="al-progress" id="julieta-side-prog" style="--value:0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Avance del sprint"><span></span></div>
+        <span class="al-text-xs al-text-muted" id="julieta-side-txt"></span>
       </div></div>
     </aside>
 
     <div class="al-app__main">
       <header class="al-app__topbar">
         <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm al-app__menu-btn" data-al-app-menu aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
-        <div class="al-input-group np-search">
+        <div class="al-input-group julieta-np-search">
           <span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span>
-          <input class="al-input" id="buscar" type="search" placeholder="Buscar tareas" aria-label="Buscar tareas en el tablero" autocomplete="off">
+          <input class="al-input" id="julieta-buscar" type="search" placeholder="Buscar tareas" aria-label="Buscar tareas en el tablero" autocomplete="off">
         </div>
         <span style="flex:1"></span>
         <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-command-open aria-label="Abrir buscador global" data-al-tip="Buscar (Ctrl K)" data-al-tip-pos="bottom"><al-icon name="command" size="20"></al-icon></button>
@@ -121,60 +90,60 @@
       </header>
 
       <main class="al-app__content" id="contenido">
-        <div class="np-head">
-          <div><h1>Tablero de proyectos</h1><p id="sub-proyecto">Todos los proyectos · semana del 2 de noviembre de 2026</p></div>
-          <button class="al-btn al-btn--primary" data-al-open="#nueva"><al-icon name="plus"></al-icon>Nueva tarea</button>
+        <div class="julieta-np-head">
+          <div><h1>Tablero de proyectos</h1><p id="julieta-sub-proyecto">Todos los proyectos · semana del 2 de noviembre de 2026</p></div>
+          <button class="al-btn al-btn--primary" data-al-open="#julieta-nueva"><al-icon name="plus"></al-icon>Nueva tarea</button>
         </div>
 
-        <section class="np-stats" aria-label="Indicadores">
-          <div class="np-stat"><span class="al-stat__label">Tareas abiertas</span>
-            <div class="np-stat__row"><span class="al-stat__value" id="k-abiertas">0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[9,11,10,13,12,11,10]}]}'></div></div>
+        <section class="julieta-np-stats" aria-label="Indicadores">
+          <div class="julieta-np-stat"><span class="al-stat__label">Tareas abiertas</span>
+            <div class="julieta-np-stat__row"><span class="al-stat__value" id="julieta-k-abiertas">0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[9,11,10,13,12,11,10]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-down" size="16"></al-icon>3 menos que la semana pasada</span></div>
-          <div class="np-stat"><span class="al-stat__label">Completadas</span>
-            <div class="np-stat__row"><span class="al-stat__value" id="k-hechas">0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[2,3,3,5,6,6,8]}]}'></div></div>
+          <div class="julieta-np-stat"><span class="al-stat__label">Completadas</span>
+            <div class="julieta-np-stat__row"><span class="al-stat__value" id="julieta-k-hechas">0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[2,3,3,5,6,6,8]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>+4 esta semana</span></div>
-          <div class="np-stat"><span class="al-stat__label">Vencen esta semana</span>
-            <div class="np-stat__row"><span class="al-stat__value" id="k-vencen">0</span><div class="al-ring" id="ring-av" style="--value:0;--size:3.6rem;--thick:7px" role="img" aria-label="Avance general"><span>0%</span></div></div>
+          <div class="julieta-np-stat"><span class="al-stat__label">Vencen esta semana</span>
+            <div class="julieta-np-stat__row"><span class="al-stat__value" id="julieta-k-vencen">0</span><div class="al-ring" id="julieta-ring-av" style="--value:0;--size:3.6rem;--thick:7px" role="img" aria-label="Avance general"><span>0%</span></div></div>
             <span class="al-stat__delta al-stat__delta--down"><al-icon name="alert-triangle" size="16"></al-icon>Revisa las de prioridad alta</span></div>
-          <div class="np-stat"><span class="al-stat__label">Entrega a tiempo</span>
-            <div class="np-stat__row"><span class="al-stat__value">92%</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[84,86,85,89,90,91,92]}]}'></div></div>
+          <div class="julieta-np-stat"><span class="al-stat__label">Entrega a tiempo</span>
+            <div class="julieta-np-stat__row"><span class="al-stat__value">92%</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[84,86,85,89,90,91,92]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>+5 puntos vs. octubre</span></div>
         </section>
 
-        <section class="np-panel" aria-labelledby="t-tablero">
-          <div class="np-panel__head"><h2 id="t-tablero">Tablero</h2><span class="al-text-sm al-text-muted" id="estado" role="status"></span></div>
-          <div class="np-tools">
-            <div class="np-chips" role="group" aria-label="Filtrar por prioridad">
-              <button class="al-chip" type="button" data-prio="todas" aria-pressed="true">Todas</button>
-              <button class="al-chip" type="button" data-prio="Alta" aria-pressed="false">Alta</button>
-              <button class="al-chip" type="button" data-prio="Media" aria-pressed="false">Media</button>
-              <button class="al-chip" type="button" data-prio="Baja" aria-pressed="false">Baja</button>
+        <section class="julieta-np-panel" aria-labelledby="t-tablero">
+          <div class="julieta-np-panel__head"><h2 id="t-tablero">Tablero</h2><span class="al-text-sm al-text-muted" id="julieta-estado" role="status"></span></div>
+          <div class="julieta-np-tools">
+            <div class="julieta-np-chips" role="group" aria-label="Filtrar por prioridad">
+              <button class="al-chip" type="button" data-julieta-prio="todas" aria-pressed="true">Todas</button>
+              <button class="al-chip" type="button" data-julieta-prio="Alta" aria-pressed="false">Alta</button>
+              <button class="al-chip" type="button" data-julieta-prio="Media" aria-pressed="false">Media</button>
+              <button class="al-chip" type="button" data-julieta-prio="Baja" aria-pressed="false">Baja</button>
             </div>
           </div>
-          <div class="np-board" id="tablero"></div>
+          <div class="julieta-np-board" id="julieta-tablero"></div>
         </section>
 
-        <div class="np-split">
-          <section class="np-panel" id="equipo" aria-labelledby="t-eq">
-            <div class="np-panel__head"><h2 id="t-eq">Carga del equipo</h2>
-              <div class="al-input-group" style="max-width:14rem"><span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span><input class="al-input" id="filtro-eq" type="search" placeholder="Buscar persona" aria-label="Buscar persona del equipo" autocomplete="off"></div>
+        <div class="julieta-np-split">
+          <section class="julieta-np-panel" id="equipo" aria-labelledby="t-eq">
+            <div class="julieta-np-panel__head"><h2 id="t-eq">Carga del equipo</h2>
+              <div class="al-input-group" style="max-width:14rem"><span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span><input class="al-input" id="julieta-filtro-eq" type="search" placeholder="Buscar persona" aria-label="Buscar persona del equipo" autocomplete="off"></div>
             </div>
             <div class="al-table-wrap">
-              <table class="al-table al-table--hover" id="tabla-eq" data-al-sortable data-al-filter="#filtro-eq">
+              <table class="al-table al-table--hover" id="tabla-eq" data-al-sortable data-al-filter="#julieta-filtro-eq">
                 <thead><tr>
                   <th><button>Persona</button></th>
-                  <th class="np-hide-sm"><button>Rol</button></th>
+                  <th class="julieta-np-hide-sm"><button>Rol</button></th>
                   <th class="is-num" aria-sort="none"><button>Abiertas</button></th>
                   <th class="is-num"><button>Hechas</button></th>
                 </tr></thead>
-                <tbody id="cuerpo-eq"></tbody>
+                <tbody id="julieta-cuerpo-eq"></tbody>
               </table>
             </div>
           </section>
 
-          <section class="np-panel" id="hitos" aria-labelledby="t-hitos">
-            <div class="np-panel__head"><h2 id="t-hitos">Próximos hitos</h2></div>
-            <div class="np-goal">
+          <section class="julieta-np-panel" id="hitos" aria-labelledby="t-hitos">
+            <div class="julieta-np-panel__head"><h2 id="t-hitos">Próximos hitos</h2></div>
+            <div class="julieta-np-goal">
               <div class="al-ring" style="--value:72;--size:6rem;--thick:10px" role="img" aria-label="72% de avance de Mercado Sonora"><span>72%</span></div>
               <div><div class="al-weight-700">Mercado Sonora</div><div class="al-text-sm al-text-muted">Entrega final el 20 de noviembre</div></div>
             </div>
@@ -187,19 +156,19 @@
           </section>
         </div>
 
-        <p class="np-foot">Plantilla de ejemplo de Julieta UI · Los datos y la marca son ficticios.</p>
+        <p class="julieta-np-foot">Plantilla de ejemplo de Julieta UI · Los datos y la marca son ficticios.</p>
       </main>
     </div>
   </div>
 
-  <dialog class="al-modal" id="nueva" aria-labelledby="nueva-t">
-    <form data-al-validate id="form-tarea" method="dialog">
+  <dialog class="al-modal" id="julieta-nueva" aria-labelledby="nueva-t">
+    <form data-al-validate id="julieta-form-tarea" method="dialog">
       <div class="al-modal__header"><h2 class="al-modal__title" id="nueva-t">Nueva tarea</h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
       <div class="al-modal__body">
         <div class="al-field"><label class="al-label" for="t-titulo">Título</label><input class="al-input" id="t-titulo" name="titulo" required minlength="3" autocomplete="off"></div>
         <div class="al-form-row">
           <div class="al-field"><label class="al-label" for="t-proy">Proyecto</label><div class="al-select-wrap"><select class="al-select" id="t-proy" name="proyecto"><option>Mercado Sonora</option><option>Casa Tecolote</option><option>Ruta Mezcal</option></select></div></div>
-          <div class="al-field"><label class="al-label" for="t-resp">Responsable</label><div class="al-select-wrap"><select class="al-select" id="t-resp" name="responsable"></select></div></div>
+          <div class="al-field"><label class="al-label" for="julieta-t-resp">Responsable</label><div class="al-select-wrap"><select class="al-select" id="julieta-t-resp" name="responsable"></select></div></div>
         </div>
         <div class="al-form-row">
           <div class="al-field"><label class="al-label" for="t-prio">Prioridad</label><div class="al-select-wrap"><select class="al-select" id="t-prio" name="prioridad"><option>Media</option><option>Alta</option><option>Baja</option></select></div></div>
@@ -210,136 +179,17 @@
     </form>
   </dialog>
 
-  <dialog class="al-drawer" id="detalle" aria-labelledby="det-t">
+  <dialog class="al-drawer" id="julieta-detalle" aria-labelledby="det-t">
     <div class="al-drawer__header"><h2 class="al-drawer__title" id="det-t">Detalle de la tarea</h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
-    <div class="al-drawer__body"><div id="det-cuerpo" class="al-stack"></div></div>
-    <div class="al-drawer__footer"><button class="al-btn al-btn--danger" type="button" id="det-borrar"><al-icon name="trash" size="18"></al-icon>Eliminar</button><button class="al-btn al-btn--primary" type="button" data-al-close>Listo</button></div>
+    <div class="al-drawer__body"><div id="julieta-det-cuerpo" class="al-stack"></div></div>
+    <div class="al-drawer__footer"><button class="al-btn al-btn--danger" type="button" id="julieta-det-borrar"><al-icon name="trash" size="18"></al-icon>Eliminar</button><button class="al-btn al-btn--primary" type="button" data-al-close>Listo</button></div>
   </dialog>
 
   <!-- docs:start -->
   <div class="d-backbar"><a href="../dashboard.html"><al-icon name="arrow-left" size="16"></al-icon>Panel de control</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s) => document.querySelector(s);
-    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    const fechaTxt = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("es-MX", { day: "numeric", month: "short" });
-    const HOY = "2026-11-02", FIN_SEMANA = "2026-11-08";
-
-    const equipo = [
-      { n: "Itzel Camacho", ini: "IC", av: "al-avatar--agave", rol: "Dirección de proyecto" },
-      { n: "Emiliano Rojas", ini: "ER", av: "", rol: "Arquitectura" },
-      { n: "Paloma Quintero", ini: "PQ", av: "al-avatar--sol", rol: "Diseño gráfico" },
-      { n: "Ricardo Aguilar", ini: "RA", av: "al-avatar--cielo", rol: "Desarrollo" },
-    ];
-    const cols = ["Pendiente", "En curso", "En revisión", "Hecho"];
-    const prioBadge = { Alta: "danger", Media: "warning", Baja: "neutral" };
-    const inicial = [
-      { id: 1, t: "Definir paleta del mercado", p: "Mercado Sonora", r: "Paloma Quintero", pr: "Media", f: "2026-11-05", c: "Pendiente" },
-      { id: 2, t: "Levantamiento de la fachada", p: "Casa Tecolote", r: "Emiliano Rojas", pr: "Alta", f: "2026-11-04", c: "Pendiente" },
-      { id: 3, t: "Cotizar rotulación de locales", p: "Mercado Sonora", r: "Itzel Camacho", pr: "Baja", f: "2026-11-14", c: "Pendiente" },
-      { id: 4, t: "Maquetas de los puestos", p: "Mercado Sonora", r: "Emiliano Rojas", pr: "Alta", f: "2026-11-04", c: "En curso" },
-      { id: 5, t: "Mapa interactivo de la ruta", p: "Ruta Mezcal", r: "Ricardo Aguilar", pr: "Alta", f: "2026-11-07", c: "En curso" },
-      { id: 6, t: "Planos de instalaciones v3", p: "Casa Tecolote", r: "Emiliano Rojas", pr: "Media", f: "2026-11-09", c: "En curso" },
-      { id: 7, t: "Etiquetas de las mezcaleras", p: "Ruta Mezcal", r: "Paloma Quintero", pr: "Media", f: "2026-11-12", c: "En revisión" },
-      { id: 8, t: "Contrato con proveedores", p: "Mercado Sonora", r: "Itzel Camacho", pr: "Alta", f: "2026-11-06", c: "En revisión" },
-      { id: 9, t: "Logotipo del mercado", p: "Mercado Sonora", r: "Paloma Quintero", pr: "Media", f: "2026-10-28", c: "Hecho" },
-      { id: 10, t: "Sitio web de la ruta", p: "Ruta Mezcal", r: "Ricardo Aguilar", pr: "Media", f: "2026-10-30", c: "Hecho" },
-      { id: 11, t: "Visita técnica a Casa Tecolote", p: "Casa Tecolote", r: "Itzel Camacho", pr: "Baja", f: "2026-10-26", c: "Hecho" },
-    ];
-    let tareas = structuredClone(inicial), sig = 100, actual = null, proyecto = "Todos", prio = "todas";
-    const persona = (n) => equipo.find((e) => e.n === n) || equipo[0];
-
-    $("#t-resp").innerHTML = equipo.map((e) => `<option>${e.n}</option>`).join("");
-
-    function visibles() {
-      const q = $("#buscar").value.trim().toLowerCase();
-      return tareas.filter((x) => (proyecto === "Todos" || x.p === proyecto) && (prio === "todas" || x.pr === prio) && (!q || (x.t + " " + x.p + " " + x.r).toLowerCase().includes(q)));
-    }
-
-    function renderTablero() {
-      const vis = visibles();
-      $("#tablero").innerHTML = cols.map((c) => {
-        const items = vis.filter((x) => x.c === c);
-        return `<div class="np-col" aria-label="${c}"><div class="np-col__head"><span>${c}</span><span class="al-badge al-badge--neutral">${items.length}</span></div>
-        ${items.map((x) => { const e = persona(x.r); return `<article class="np-card">
-          <div class="np-card__top"><span class="np-card__title">${esc(x.t)}</span>
-            <div class="al-dropdown" data-al-dropdown><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-dropdown-trigger aria-label="Acciones de ${esc(x.t)}"><al-icon name="more-horizontal" size="18"></al-icon></button>
-              <div class="al-menu al-menu--end" role="menu" hidden>
-                ${cols.filter((k) => k !== x.c).map((k) => `<button class="al-menu__item" data-mover="${x.id}" data-col="${k}"><al-icon name="arrow-right" size="18"></al-icon>Mover a ${k}</button>`).join("")}
-                <div class="al-menu__sep"></div>
-                <button class="al-menu__item" data-ver="${x.id}"><al-icon name="eye" size="18"></al-icon>Ver detalle</button>
-              </div></div></div>
-          <div><span class="al-badge al-badge--${prioBadge[x.pr]}">${x.pr}</span> <span class="al-text-xs al-text-muted">${esc(x.p)}</span></div>
-          <div class="np-card__meta"><span><al-icon name="calendar" size="14"></al-icon>${fechaTxt(x.f)}</span><span class="al-avatar al-avatar--sm ${e.av}" title="${esc(x.r)}" aria-label="${esc(x.r)}">${e.ini}</span></div>
-        </article>`; }).join("") || '<div class="np-empty">Sin tareas</div>'}</div>`;
-      }).join("");
-      $("#estado").textContent = `${vis.length} de ${tareas.length} tareas`;
-    }
-
-    function resumen() {
-      const hechas = tareas.filter((x) => x.c === "Hecho").length, ab = tareas.length - hechas;
-      const pct = tareas.length ? Math.round((hechas / tareas.length) * 100) : 0;
-      $("#k-abiertas").textContent = ab; $("#k-hechas").textContent = hechas;
-      $("#k-vencen").textContent = tareas.filter((x) => x.c !== "Hecho" && x.f >= HOY && x.f <= FIN_SEMANA).length;
-      const r = $("#ring-av"); r.style.setProperty("--value", pct); r.querySelector("span").textContent = pct + "%"; r.setAttribute("aria-label", `${pct}% de avance general`);
-      const sp = $("#side-prog"); sp.style.setProperty("--value", pct); sp.setAttribute("aria-valuenow", pct);
-      $("#side-txt").textContent = `${hechas} de ${tareas.length} tareas hechas`;
-      $("#cuerpo-eq").innerHTML = equipo.map((e) => {
-        const a = tareas.filter((x) => x.r === e.n && x.c !== "Hecho").length, h = tareas.filter((x) => x.r === e.n && x.c === "Hecho").length;
-        return `<tr><td><div class="np-person"><span class="al-avatar al-avatar--sm ${e.av}" aria-hidden="true">${e.ini}</span>${e.n}</div></td><td class="np-hide-sm">${e.rol}</td><td class="is-num" data-sort="${a}">${a}</td><td class="is-num" data-sort="${h}">${h}</td></tr>`;
-      }).join("");
-      $("#filtro-eq").dispatchEvent(new Event("input"));
-    }
-    const render = () => { renderTablero(); resumen(); };
-
-    document.addEventListener("click", (e) => {
-      const m = e.target.closest("[data-mover]");
-      if (m) {
-        const t = tareas.find((x) => x.id === Number(m.dataset.mover));
-        if (t) { t.c = m.dataset.col; render(); Julieta.toast({ type: "success", title: "Tarea movida", text: `${t.t} → ${t.c}` }); }
-        return;
-      }
-      const v = e.target.closest("[data-ver]");
-      if (v) {
-        actual = tareas.find((x) => x.id === Number(v.dataset.ver)); if (!actual) return;
-        const p = persona(actual.r);
-        $("#det-cuerpo").innerHTML = `<h3>${esc(actual.t)}</h3>
-          <div class="al-cluster"><span class="al-badge al-badge--${prioBadge[actual.pr]}">Prioridad ${actual.pr.toLowerCase()}</span><span class="al-badge al-badge--info">${actual.c}</span></div>
-          <div class="np-person"><span class="al-avatar ${p.av}" aria-hidden="true">${p.ini}</span><div><div class="al-weight-700">${esc(actual.r)}</div><div class="al-text-sm al-text-muted">${p.rol}</div></div></div>
-          <p class="al-text-muted">Proyecto: ${esc(actual.p)}<br>Fecha límite: ${fechaTxt(actual.f)} de 2026<br>Folio: NP-${String(actual.id).padStart(4, "0")}</p>`;
-        $("#detalle").showModal();
-      }
-    });
-    $("#det-borrar").addEventListener("click", () => {
-      if (!actual) return;
-      const t = actual; tareas = tareas.filter((x) => x !== t); actual = null;
-      $("#detalle").close(); render(); Julieta.toast.warning("Tarea eliminada", t.t);
-    });
-
-    $("#buscar").addEventListener("input", renderTablero);
-    document.querySelectorAll("[data-prio]").forEach((b) => b.addEventListener("click", () => {
-      prio = b.dataset.prio;
-      document.querySelectorAll("[data-prio]").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
-      renderTablero();
-    }));
-    document.querySelectorAll("[data-proyecto]").forEach((a) => a.addEventListener("click", () => {
-      proyecto = a.dataset.proyecto;
-      document.querySelectorAll("[data-proyecto]").forEach((x) => x.removeAttribute("aria-current")); a.setAttribute("aria-current", "page");
-      $("#sub-proyecto").textContent = `${proyecto === "Todos" ? "Todos los proyectos" : proyecto} · semana del 2 de noviembre de 2026`;
-      renderTablero();
-    }));
-
-    $("#form-tarea").addEventListener("al:valid", (e) => {
-      const d = e.detail.data;
-      tareas.unshift({ id: sig++, t: d.titulo.trim(), p: d.proyecto, r: d.responsable, pr: d.prioridad, f: d.fecha, c: "Pendiente" });
-      $("#nueva").close(); e.target.reset(); render();
-      Julieta.toast({ type: "success", title: "Tarea agregada", text: `${d.titulo} · ${d.responsable}` });
-    });
-
-    document.addEventListener("al:select", (e) => { if (e.detail.value === "salir") Julieta.toast.info("Cerraste sesión", "En esta plantilla no hay sesión real."); });
-    render();
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/dashboard/julieta-estudio-nopal.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

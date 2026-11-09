@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudio Adobe · Portafolio de arquitectura</title>
+  <meta name="description" content="Portafolio de arquitectura con índice de obras filtrable, ficha lateral con planta esquemática y llamada para agendar una visita.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/portafolio/estudio-adobe.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/portafolio/estudio-adobe.html">
+  <meta property="og:title" content="Estudio Adobe · Portafolio de arquitectura">
+  <meta property="og:description" content="Portafolio de arquitectura con índice de obras filtrable, ficha lateral con planta esquemática y llamada para agendar una visita.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Estudio Adobe · Portafolio de arquitectura">
+  <meta name="twitter:description" content="Portafolio de arquitectura con índice de obras filtrable, ficha lateral con planta esquemática y llamada para agendar una visita.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Estudio Adobe · Portafolio de arquitectura", "description": "Portafolio de arquitectura con índice de obras filtrable, ficha lateral con planta esquemática y llamada para agendar una visita.", "url": "https://julietalibreria.github.io/src/pages/plantillas/portafolio/estudio-adobe.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .ea-brand { font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.04em; font-size: 1.3rem; }
+    .ea-menu { display: none; }
+    @media (max-width: 52rem) { .ea-links { display: none; } .ea-menu { display: inline-flex; } }
+    .ea-hero { padding-block: clamp(3rem, 8vw, 7rem) clamp(2rem, 5vw, 3.5rem); }
+    .ea-hero h1 { font-size: clamp(2.8rem, 1rem + 8vw, 8rem); line-height: .9; letter-spacing: -0.06em; font-weight: 800; max-width: 13ch; text-wrap: balance; }
+    .ea-hero p { max-width: 44ch; margin-top: 1.75rem; color: var(--al-text-muted); font-size: var(--al-text-xl); }
+    .ea-bar { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: end; margin-bottom: 1rem; }
+    .ea-list { border-top: 2px solid var(--al-text); }
+    .ea-row { display: grid; grid-template-columns: 4rem minmax(0, 2fr) minmax(0, 1.2fr) 7rem 5rem; gap: 1rem; align-items: baseline; width: 100%; padding: 1.25rem .25rem; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--al-border-strong); color: inherit; font: inherit; cursor: pointer; }
+    .ea-row:hover, .ea-row:focus-visible { background: var(--al-surface); }
+    .ea-row:focus-visible { outline: 3px solid var(--al-primary); outline-offset: -3px; }
+    .ea-row[hidden] { display: none; }
+    .ea-row__name { font-family: var(--al-font-display); font-size: var(--al-text-3xl); font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+    .ea-row span:not(.ea-row__name) { color: var(--al-text-muted); font-variant-numeric: tabular-nums; }
+    @media (max-width: 52rem) { .ea-row { grid-template-columns: 3.5rem minmax(0, 1fr); } .ea-row span:nth-child(n+3) { grid-column: 2; } }
+    .ea-plan { color: var(--al-text); background: var(--al-surface); border: 1px solid var(--al-border); border-radius: var(--al-radius-md); padding: 1rem; }
+    .ea-plan svg { width: 100%; height: auto; display: block; }
+    .ea-data { display: grid; grid-template-columns: auto 1fr; gap: .4rem 1rem; margin: 1.25rem 0 0; }
+    .ea-data dt { color: var(--al-text-muted); }
+    .ea-data dd { margin: 0; font-weight: 600; }
+    .ea-practice { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2rem; }
+    .ea-practice h3 { font-size: var(--al-text-xl); letter-spacing: -0.02em; margin-bottom: .5rem; }
+    .ea-practice p { color: var(--al-text-muted); }
+    .ea-cta { display: grid; justify-items: start; gap: 1.25rem; padding: clamp(1.5rem, 5vw, 3.5rem); border-radius: var(--al-radius-xl); background: var(--al-text); color: var(--al-bg); }
+    .ea-cta h2 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 14ch; }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="al-navbar">
+    <a class="al-navbar__brand ea-brand" href="#inicio"><al-icon name="building" size="24"></al-icon>estudio adobe</a>
+    <nav class="al-navbar__links ea-links" aria-label="Principal"><a class="al-nav-link" href="#obra">Obra</a><a class="al-nav-link" href="#practica">Práctica</a><a class="al-nav-link" href="#contacto">Contacto</a></nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle data-al-tip="Cambiar tema" data-al-tip-pos="bottom" aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm ea-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
+  </header>
+  <dialog class="al-drawer" id="menu-movil" aria-label="Menú">
+    <div class="al-drawer__header"><span class="al-drawer__title">estudio adobe</span><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-drawer__body"><nav class="al-sidebar" aria-label="Móvil"><div class="al-sidebar__group"><a class="al-sidebar__link" href="#obra" data-al-close>Obra</a><a class="al-sidebar__link" href="#practica" data-al-close>Práctica</a><a class="al-sidebar__link" href="#contacto" data-al-close>Contacto</a></div></nav></div>
+  </dialog>
+
+  <main id="contenido">
+    <section class="al-container ea-hero" id="inicio">
+      <h1>Casas hechas con tierra, sombra y paciencia</h1>
+      <p>Somos un estudio de arquitectura en Oaxaca. Proyectamos vivienda, espacios culturales y comercios con materiales de la región.</p>
+    </section>
+
+    <section class="al-container al-section" id="obra" aria-labelledby="t-obra">
+      <div class="ea-bar">
+        <h2 id="t-obra">Obra</h2>
+        <div class="al-cluster" role="group" aria-label="Filtrar por tipo" id="filtros">
+          <button class="al-chip" type="button" data-tipo="todo" aria-pressed="true">Todo</button>
+          <button class="al-chip" type="button" data-tipo="Vivienda" aria-pressed="false">Vivienda</button>
+          <button class="al-chip" type="button" data-tipo="Cultural" aria-pressed="false">Cultural</button>
+          <button class="al-chip" type="button" data-tipo="Comercial" aria-pressed="false">Comercial</button>
+        </div>
+      </div>
+      <div class="ea-list" id="lista"></div>
+    </section>
+
+    <section class="al-container al-section" id="practica" aria-labelledby="t-prac">
+      <h2 id="t-prac" class="al-mb-6">Cómo trabajamos</h2>
+      <div class="ea-practice">
+        <div><h3>Primero el sitio</h3><p>Pasamos una semana en el terreno midiendo sol, viento y lluvia antes de dibujar.</p></div>
+        <div><h3>Materiales cercanos</h3><p>Adobe, cantera y madera a menos de 150 km. Menos transporte y oficios locales.</p></div>
+        <div><h3>Obra acompañada</h3><p>Visitamos la obra cada semana y entregamos planos de mantenimiento.</p></div>
+      </div>
+    </section>
+
+    <section class="al-container al-section" id="contacto" aria-labelledby="t-cont">
+      <div class="ea-cta"><h2 id="t-cont">¿Tienes un terreno?</h2><p>Agenda una visita sin costo y platicamos qué se puede construir.</p><button class="al-btn al-btn--accent al-btn--lg" id="visita" type="button">Agendar visita</button></div>
+    </section>
+  </main>
+
+  <dialog class="al-drawer" id="detalle" aria-labelledby="detalle-t">
+    <div class="al-drawer__header"><span class="al-drawer__title" id="detalle-t"></span><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-drawer__body" id="detalle-c"></div>
+  </dialog>
+
+  <footer class="al-footer"><div class="al-container"><div class="al-footer__legal"><span>© 2026 Estudio Adobe. Marca ficticia.</span><span>Plantilla de ejemplo de Julieta UI</span></div></div></footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../portafolio.html"><al-icon name="arrow-left" size="16"></al-icon>Portafolio</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    const OBRAS = [
+      { n: "Casa Tezontle", tipo: "Vivienda", lugar: "Teotitlán del Valle", año: 2025, m2: 180, d: "Casa de dos patios con muros de adobe de 50 cm que mantienen 24 °C sin aire acondicionado.", p: [[10,10,110,70],[120,10,70,50],[10,80,60,50],[70,80,120,50]] },
+      { n: "Biblioteca Alebrije", tipo: "Cultural", lugar: "San Martín Tilcajete", año: 2024, m2: 420, d: "Biblioteca comunitaria con sala de lectura central y talleres de talla alrededor.", p: [[10,10,180,40],[10,50,60,80],[70,50,60,80],[130,50,60,80]] },
+      { n: "Café Cántaro", tipo: "Comercial", lugar: "Oaxaca centro", año: 2024, m2: 95, d: "Cafetería en una casona del siglo XIX, con barra de cantera y patio cubierto.", p: [[10,10,100,120],[110,10,80,60],[110,70,80,60]] },
+      { n: "Casa Jacaranda", tipo: "Vivienda", lugar: "Etla", año: 2023, m2: 140, d: "Vivienda alrededor de una jacaranda existente que no se tocó.", p: [[10,10,70,120],[80,10,110,50],[80,60,110,70]] },
+      { n: "Mercado de la Sierra", tipo: "Comercial", lugar: "Ixtlán", año: 2022, m2: 640, d: "Mercado techado con 48 puestos, ventilación cruzada y captación de lluvia.", p: [[10,10,180,35],[10,45,180,40],[10,85,180,45]] },
+    ];
+    const $ = (id) => document.getElementById(id);
+    const plano = (p) => `<svg viewBox="0 0 200 140" role="img" aria-label="Planta esquemática" fill="none" stroke="currentColor" stroke-width="2">${p.map(([x, y, w, h]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`).join("")}</svg>`;
+    $("lista").innerHTML = OBRAS.map((o, i) => `<button class="ea-row" type="button" data-i="${i}" data-tipo="${o.tipo}"><span>${o.año}</span><span class="ea-row__name">${o.n}</span><span>${o.lugar}</span><span>${o.tipo}</span><span>${o.m2} m²</span></button>`).join("");
+    $("lista").addEventListener("click", (e) => {
+      const b = e.target.closest(".ea-row"); if (!b) return;
+      const o = OBRAS[b.dataset.i];
+      $("detalle-t").textContent = o.n;
+      $("detalle-c").innerHTML = `<div class="ea-plan">${plano(o.p)}</div><p class="al-mt-4">${o.d}</p><dl class="ea-data"><dt>Lugar</dt><dd>${o.lugar}</dd><dt>Tipo</dt><dd>${o.tipo}</dd><dt>Año</dt><dd>${o.año}</dd><dt>Superficie</dt><dd>${o.m2} m²</dd></dl>`;
+      $("detalle").showModal();
+    });
+    $("filtros").addEventListener("click", (e) => {
+      const b = e.target.closest(".al-chip"); if (!b) return;
+      $("filtros").querySelectorAll(".al-chip").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
+      document.querySelectorAll(".ea-row").forEach((r) => { r.hidden = b.dataset.tipo !== "todo" && r.dataset.tipo !== b.dataset.tipo; });
+    });
+    $("visita").addEventListener("click", () => Julieta.toast({ type: "success", title: "Solicitud registrada", text: "Te llamaremos para acordar el día de la visita." }));
+  </script>
+</body>
+</html>

@@ -31,54 +31,14 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .cc-page { max-width: 80rem; margin-inline: auto; width: 100%; padding: clamp(1rem, 3vw, 2rem); display: grid; gap: 1.5rem; }
-    .cc-sub { display: flex; gap: .25rem; overflow-x: auto; padding: .5rem clamp(1rem, 3vw, 2rem); border-bottom: 1px solid var(--al-border); background: var(--al-surface); scrollbar-width: none; }
-    .cc-sub .al-nav-link { flex: none; }
-    .cc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
-    .cc-head h1 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; }
-    .cc-head p { color: var(--al-text-muted); }
-    .cc-head__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
-    .cc-kpis { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
-    .cc-kpi { display: grid; gap: .5rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); min-width: 0; }
-    .cc-kpi--hero { background: linear-gradient(150deg, var(--al-jacaranda-700), var(--al-jacaranda-950)); color: #fff; border-color: transparent; }
-    .cc-kpi--hero .al-stat__label { color: rgb(255 255 255 / .75); }
-    .cc-kpi--hero .al-stat__delta { color: var(--al-cempasuchil-300); }
-    .cc-kpi__row { display: flex; justify-content: space-between; align-items: end; gap: .75rem; }
-    .cc-kpi .al-stat__value { font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem); }
-    .cc-panel { padding: 1.35rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); display: grid; gap: 1rem; align-content: start; min-width: 0; }
-    .cc-panel__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
-    .cc-panel__head h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
-    .cc-split { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
-    @media (max-width: 64rem) { .cc-split { grid-template-columns: 1fr; } }
-    .cc-legend { display: flex; gap: 1rem; font-size: .8125rem; color: var(--al-text-muted); }
-    .cc-legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 3px; margin-right: .35rem; background: var(--al-primary); }
-    .cc-legend i + * { vertical-align: middle; }
-    .cc-legend .is-b i { background: var(--al-cempasuchil-400); }
-    .cc-tools { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
-    .cc-tools .al-input-group { flex: 1; min-width: 12rem; max-width: 22rem; }
-    .cc-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .cc-concept { display: flex; align-items: center; gap: .65rem; min-width: 0; }
-    .cc-concept small { display: block; color: var(--al-text-muted); }
-    .cc-in { color: var(--al-success); font-weight: 650; }
-    .cc-out { color: var(--al-text); font-weight: 650; }
-    .cc-cats { display: grid; gap: .95rem; }
-    .cc-cats__row { display: flex; justify-content: space-between; gap: .5rem; font-size: .875rem; margin-bottom: .35rem; }
-    .cc-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; color: var(--al-text-muted); font-size: .8125rem; }
-    .cc-detail { display: grid; gap: 1rem; }
-    .cc-detail dl { display: grid; grid-template-columns: auto 1fr; gap: .6rem 1rem; }
-    .cc-detail dt { color: var(--al-text-muted); }
-    .cc-detail dd { text-align: right; font-weight: 600; margin: 0; overflow-wrap: anywhere; }
-    @media (max-width: 40rem) { .cc-hide-sm { display: none; } .al-table th, .al-table td { padding: .75rem .75rem; } }
-    .al-table-wrap { position: relative; }
-    body { padding-bottom: 3.5rem; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/dashboard/julieta-caja-chica.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
@@ -99,108 +59,108 @@
       </div>
     </div>
   </header>
-  <nav class="cc-sub" aria-label="Secciones">
+  <nav class="julieta-cc-sub" aria-label="Secciones">
     <a class="al-nav-link" href="#resumen" aria-current="page"><al-icon name="home" size="18"></al-icon>Resumen</a>
     <a class="al-nav-link" href="#flujo"><al-icon name="bar-chart" size="18"></al-icon>Flujo</a>
     <a class="al-nav-link" href="#categorias"><al-icon name="pie-chart" size="18"></al-icon>Categorías</a>
     <a class="al-nav-link" href="#movimientos"><al-icon name="receipt" size="18"></al-icon>Movimientos</a>
   </nav>
 
-  <main class="cc-page" id="contenido">
-    <div class="cc-head" id="resumen">
+  <main class="julieta-cc-page" id="contenido">
+    <div class="julieta-cc-head" id="resumen">
       <div><h1>Finanzas de Tortillería La Esquina</h1><p>Octubre de 2026 · cuenta principal en MXN</p></div>
-      <div class="cc-head__actions">
-        <div class="al-dropdown" data-al-dropdown id="menu-exportar">
+      <div class="julieta-cc-head__actions">
+        <div class="al-dropdown" data-al-dropdown id="julieta-menu-exportar">
           <button class="al-btn al-btn--secondary" data-al-dropdown-trigger><al-icon name="download"></al-icon>Exportar<al-icon name="chevron-down" size="16"></al-icon></button>
           <div class="al-menu al-menu--end" role="menu" hidden>
             <button class="al-menu__item" data-value="csv"><al-icon name="file-text" size="18"></al-icon>Descargar CSV</button>
             <button class="al-menu__item" data-value="copiar"><al-icon name="copy" size="18"></al-icon>Copiar resumen</button>
           </div>
         </div>
-        <button class="al-btn al-btn--primary" data-al-open="#nuevo"><al-icon name="plus"></al-icon>Nuevo movimiento</button>
+        <button class="al-btn al-btn--primary" data-al-open="#julieta-nuevo"><al-icon name="plus"></al-icon>Nuevo movimiento</button>
       </div>
     </div>
 
-    <section class="cc-kpis" aria-label="Indicadores">
-      <div class="cc-kpi cc-kpi--hero">
+    <section class="julieta-cc-kpis" aria-label="Indicadores">
+      <div class="julieta-cc-kpi julieta-cc-kpi--hero">
         <span class="al-stat__label">Saldo del mes</span>
-        <div class="cc-kpi__row"><span class="al-stat__value" id="k-saldo">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem;color:#fff" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[4,5,5,7,6,9,10]}]}'></div></div>
+        <div class="julieta-cc-kpi__row"><span class="al-stat__value" id="julieta-k-saldo">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem;color:#fff" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[4,5,5,7,6,9,10]}]}'></div></div>
         <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>+9% vs. septiembre</span>
       </div>
-      <div class="cc-kpi">
+      <div class="julieta-cc-kpi">
         <span class="al-stat__label">Ingresos</span>
-        <div class="cc-kpi__row"><span class="al-stat__value" id="k-ing">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[6,5,7,6,8,7,9]}]}'></div></div>
+        <div class="julieta-cc-kpi__row"><span class="al-stat__value" id="julieta-k-ing">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[6,5,7,6,8,7,9]}]}'></div></div>
         <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>+12% vs. septiembre</span>
       </div>
-      <div class="cc-kpi">
+      <div class="julieta-cc-kpi">
         <span class="al-stat__label">Egresos</span>
-        <div class="cc-kpi__row"><span class="al-stat__value" id="k-egr">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[8,7,8,6,7,6,6]}]}'></div></div>
+        <div class="julieta-cc-kpi__row"><span class="al-stat__value" id="julieta-k-egr">$0</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[8,7,8,6,7,6,6]}]}'></div></div>
         <span class="al-stat__delta"><al-icon name="trending-down" size="16"></al-icon>-4% vs. septiembre</span>
       </div>
-      <div class="cc-kpi">
+      <div class="julieta-cc-kpi">
         <span class="al-stat__label">Por cobrar</span>
-        <div class="cc-kpi__row"><span class="al-stat__value">$18,750</span><div class="al-ring" style="--value:64;--size:3.6rem;--thick:7px" role="img" aria-label="64% de las facturas ya cobradas"><span>64%</span></div></div>
+        <div class="julieta-cc-kpi__row"><span class="al-stat__value">$18,750</span><div class="al-ring" style="--value:64;--size:3.6rem;--thick:7px" role="img" aria-label="64% de las facturas ya cobradas"><span>64%</span></div></div>
         <span class="al-stat__delta al-stat__delta--down"><al-icon name="alert-triangle" size="16"></al-icon>3 facturas vencen esta semana</span>
       </div>
     </section>
 
-    <div class="cc-split">
-      <section class="cc-panel" id="flujo" aria-labelledby="t-flujo">
-        <div class="cc-panel__head">
+    <div class="julieta-cc-split">
+      <section class="julieta-cc-panel" id="flujo" aria-labelledby="t-flujo">
+        <div class="julieta-cc-panel__head">
           <h2 id="t-flujo">Flujo de efectivo</h2>
           <div class="al-segmented" role="radiogroup" aria-label="Periodo">
             <label><input type="radio" name="rango" value="6" checked><span>6 meses</span></label>
             <label><input type="radio" name="rango" value="12"><span>12 meses</span></label>
           </div>
         </div>
-        <div class="cc-legend"><span><i></i>Ingresos</span><span class="is-b"><i></i>Egresos</span></div>
-        <div class="al-chart" id="grafica" style="--al-chart-h:18rem" role="img" aria-label="Ingresos y egresos mensuales del periodo seleccionado"></div>
+        <div class="julieta-cc-legend"><span><i></i>Ingresos</span><span class="is-b"><i></i>Egresos</span></div>
+        <div class="al-chart" id="julieta-grafica" style="--al-chart-h:18rem" role="img" aria-label="Ingresos y egresos mensuales del periodo seleccionado"></div>
       </section>
 
-      <section class="cc-panel" id="categorias" aria-labelledby="t-cat">
-        <div class="cc-panel__head"><h2 id="t-cat">Egresos por categoría</h2><span class="al-text-sm al-text-muted">Este mes</span></div>
-        <div class="cc-cats" id="cats"></div>
+      <section class="julieta-cc-panel" id="categorias" aria-labelledby="t-cat">
+        <div class="julieta-cc-panel__head"><h2 id="t-cat">Egresos por categoría</h2><span class="al-text-sm al-text-muted">Este mes</span></div>
+        <div class="julieta-cc-cats" id="julieta-cats"></div>
         <div class="al-divider"></div>
-        <div class="al-cluster" style="justify-content:space-between"><span class="al-text-sm al-text-muted">Presupuesto mensual</span><span class="al-tabular al-weight-700" id="pres-txt"></span></div>
-        <div class="al-progress al-progress--lg" id="pres" style="--value:0" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Presupuesto usado"><span></span></div>
+        <div class="al-cluster" style="justify-content:space-between"><span class="al-text-sm al-text-muted">Presupuesto mensual</span><span class="al-tabular al-weight-700" id="julieta-pres-txt"></span></div>
+        <div class="al-progress al-progress--lg" id="julieta-pres" style="--value:0" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Presupuesto usado"><span></span></div>
       </section>
     </div>
 
-    <section class="cc-panel" id="movimientos" aria-labelledby="t-mov">
-      <div class="cc-panel__head"><h2 id="t-mov">Movimientos</h2><span class="al-text-sm al-text-muted" id="tabla-estado" role="status"></span></div>
-      <div class="cc-tools">
+    <section class="julieta-cc-panel" id="movimientos" aria-labelledby="t-mov">
+      <div class="julieta-cc-panel__head"><h2 id="t-mov">Movimientos</h2><span class="al-text-sm al-text-muted" id="julieta-tabla-estado" role="status"></span></div>
+      <div class="julieta-cc-tools">
         <div class="al-input-group">
           <span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span>
-          <input class="al-input" id="filtro" type="search" placeholder="Buscar concepto o categoría" aria-label="Buscar movimientos" autocomplete="off">
+          <input class="al-input" id="julieta-filtro" type="search" placeholder="Buscar concepto o categoría" aria-label="Buscar movimientos" autocomplete="off">
         </div>
-        <div class="cc-chips" role="group" aria-label="Filtrar por tipo">
-          <button class="al-chip" type="button" data-tipo="todos" aria-pressed="true">Todos</button>
-          <button class="al-chip" type="button" data-tipo="ingreso" aria-pressed="false">Ingresos</button>
-          <button class="al-chip" type="button" data-tipo="egreso" aria-pressed="false">Egresos</button>
+        <div class="julieta-cc-chips" role="group" aria-label="Filtrar por tipo">
+          <button class="al-chip" type="button" data-julieta-tipo="todos" aria-pressed="true">Todos</button>
+          <button class="al-chip" type="button" data-julieta-tipo="ingreso" aria-pressed="false">Ingresos</button>
+          <button class="al-chip" type="button" data-julieta-tipo="egreso" aria-pressed="false">Egresos</button>
         </div>
       </div>
       <div class="al-table-wrap">
-        <table class="al-table al-table--hover" id="tabla" data-al-sortable data-al-filter="#filtro">
+        <table class="al-table al-table--hover" id="julieta-tabla" data-al-sortable data-al-filter="#julieta-filtro">
           <thead><tr>
-            <th class="cc-hide-sm"><button>Fecha</button></th>
+            <th class="julieta-cc-hide-sm"><button>Fecha</button></th>
             <th><button>Concepto</button></th>
-            <th class="cc-hide-sm"><button>Categoría</button></th>
+            <th class="julieta-cc-hide-sm"><button>Categoría</button></th>
             <th class="is-num" aria-sort="none"><button>Monto</button></th>
             <th><span class="al-sr-only">Acciones</span></th>
           </tr></thead>
-          <tbody id="cuerpo"></tbody>
+          <tbody id="julieta-cuerpo"></tbody>
         </table>
       </div>
     </section>
 
-    <div class="cc-foot">
+    <div class="julieta-cc-foot">
       <span>Plantilla de ejemplo de Julieta UI · Los datos y la marca son ficticios.</span>
-      <button class="al-btn al-btn--ghost al-btn--sm" type="button" id="btn-reset"><al-icon name="refresh" size="16"></al-icon>Restablecer datos</button>
+      <button class="al-btn al-btn--ghost al-btn--sm" type="button" id="julieta-btn-reset"><al-icon name="refresh" size="16"></al-icon>Restablecer datos</button>
     </div>
   </main>
 
-  <dialog class="al-modal" id="nuevo" aria-labelledby="nuevo-t">
-    <form data-al-validate id="form-mov" method="dialog">
+  <dialog class="al-modal" id="julieta-nuevo" aria-labelledby="nuevo-t">
+    <form data-al-validate id="julieta-form-mov" method="dialog">
       <div class="al-modal__header"><h2 class="al-modal__title" id="nuevo-t">Nuevo movimiento</h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
       <div class="al-modal__body">
         <div class="al-field"><label class="al-label" for="m-concepto">Concepto</label><input class="al-input" id="m-concepto" name="concepto" required minlength="3" autocomplete="off"></div>
@@ -217,152 +177,17 @@
     </form>
   </dialog>
 
-  <dialog class="al-drawer" id="detalle" aria-labelledby="det-t">
+  <dialog class="al-drawer" id="julieta-detalle" aria-labelledby="det-t">
     <div class="al-drawer__header"><h2 class="al-drawer__title" id="det-t">Detalle del movimiento</h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
-    <div class="al-drawer__body"><div class="cc-detail" id="det-cuerpo"></div></div>
-    <div class="al-drawer__footer"><button class="al-btn al-btn--danger" type="button" id="det-borrar"><al-icon name="trash" size="18"></al-icon>Eliminar</button><button class="al-btn al-btn--primary" type="button" data-al-close>Listo</button></div>
+    <div class="al-drawer__body"><div class="julieta-cc-detail" id="julieta-det-cuerpo"></div></div>
+    <div class="al-drawer__footer"><button class="al-btn al-btn--danger" type="button" id="julieta-det-borrar"><al-icon name="trash" size="18"></al-icon>Eliminar</button><button class="al-btn al-btn--primary" type="button" data-al-close>Listo</button></div>
   </dialog>
 
   <!-- docs:start -->
   <div class="d-backbar"><a href="../dashboard.html"><al-icon name="arrow-left" size="16"></al-icon>Panel de control</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s) => document.querySelector(s);
-    const mxn = (v) => v.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: v % 1 ? 2 : 0 });
-    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    const fechaTxt = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
-    const PRESUPUESTO = 60000;
-
-    const inicial = [
-      { id: 1, fecha: "2026-10-31", concepto: "Venta de mostrador", tipo: "ingreso", cat: "Ventas", monto: 8420 },
-      { id: 2, fecha: "2026-10-30", concepto: "Maíz nixtamalizado (500 kg)", tipo: "egreso", cat: "Insumos", monto: 6250 },
-      { id: 3, fecha: "2026-10-29", concepto: "Pedido de fonda Doña Chela", tipo: "ingreso", cat: "Ventas", monto: 12600 },
-      { id: 4, fecha: "2026-10-28", concepto: "Recibo de luz", tipo: "egreso", cat: "Servicios", monto: 3180.5 },
-      { id: 5, fecha: "2026-10-26", concepto: "Nómina quincenal", tipo: "egreso", cat: "Nómina", monto: 21500 },
-      { id: 6, fecha: "2026-10-25", concepto: "Catering de boda", tipo: "ingreso", cat: "Ventas", monto: 15800 },
-      { id: 7, fecha: "2026-10-22", concepto: "Gas LP (2 tanques)", tipo: "egreso", cat: "Servicios", monto: 4120 },
-      { id: 8, fecha: "2026-10-20", concepto: "Venta de mostrador", tipo: "ingreso", cat: "Ventas", monto: 7940 },
-      { id: 9, fecha: "2026-10-18", concepto: "Renta del local", tipo: "egreso", cat: "Renta", monto: 9500 },
-      { id: 10, fecha: "2026-10-15", concepto: "Reparación de molino", tipo: "egreso", cat: "Otros", monto: 2380 },
-      { id: 11, fecha: "2026-10-12", concepto: "Pedido de la escuela Benito Juárez", tipo: "ingreso", cat: "Ventas", monto: 9800 },
-      { id: 12, fecha: "2026-10-08", concepto: "Bolsas y papel encerado", tipo: "egreso", cat: "Insumos", monto: 1460 },
-    ];
-    let datos = structuredClone(inicial);
-    let sig = 100, tipoSel = "todos", actual = null;
-
-    const cuerpo = $("#cuerpo"), tabla = $("#tabla"), filtro = $("#filtro");
-
-    function renderTabla() {
-      cuerpo.innerHTML = datos.map((m) => `
-        <tr data-id="${m.id}" data-tipo="${m.tipo}">
-          <td class="cc-hide-sm" data-sort="${m.fecha}">${fechaTxt(m.fecha)}</td>
-          <td><div class="cc-concept"><span class="al-avatar al-avatar--sm ${m.tipo === "ingreso" ? "al-avatar--agave" : "al-avatar--sol"}" aria-hidden="true"><al-icon name="${m.tipo === "ingreso" ? "arrow-down" : "arrow-up"}" size="16"></al-icon></span><span>${esc(m.concepto)}<small>${m.tipo === "ingreso" ? "Ingreso" : "Egreso"} · ${fechaTxt(m.fecha)}</small></span></div></td>
-          <td class="cc-hide-sm"><span class="al-badge ${m.tipo === "ingreso" ? "al-badge--success" : "al-badge--neutral"}">${esc(m.cat)}</span></td>
-          <td class="is-num ${m.tipo === "ingreso" ? "cc-in" : "cc-out"}" data-sort="${m.tipo === "ingreso" ? m.monto : -m.monto}">${m.tipo === "ingreso" ? "+" : "−"}${mxn(m.monto)}</td>
-          <td class="is-num"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-detalle="${m.id}" aria-label="Ver detalle de ${esc(m.concepto)}"><al-icon name="chevron-right" size="18"></al-icon></button></td>
-        </tr>`).join("");
-      aplicar();
-      resumen();
-    }
-
-    /* Filtro por tipo: reutiliza el filtro de texto de Julieta y oculta además por tipo */
-    function aplicarTipo() {
-      [...cuerpo.rows].forEach((r) => { if (tipoSel !== "todos" && r.dataset.tipo !== tipoSel) r.hidden = true; });
-      const vis = [...cuerpo.rows].filter((r) => !r.hidden).length;
-      $("#tabla-estado").textContent = `${vis} de ${cuerpo.rows.length} movimientos`;
-      const wrap = tabla.parentElement, vacio = wrap.querySelector(".al-table__empty");
-      if (!vis && !vacio) tabla.after(Object.assign(document.createElement("div"), { className: "al-table__empty al-empty", innerHTML: '<div class="al-empty__title">Sin resultados</div><p class="al-empty__text">Ningún movimiento coincide con los filtros.</p>' }));
-      else if (vis && vacio) vacio.remove();
-    }
-    const aplicar = () => filtro.dispatchEvent(new Event("input"));
-    tabla.addEventListener("al:filter", aplicarTipo);
-
-    document.querySelectorAll("[data-tipo]").forEach((b) => b.addEventListener("click", () => {
-      tipoSel = b.dataset.tipo;
-      document.querySelectorAll("[data-tipo].al-chip").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
-      aplicar();
-    }));
-
-    /* Indicadores, categorías y presupuesto */
-    function resumen() {
-      const ing = datos.filter((m) => m.tipo === "ingreso").reduce((a, m) => a + m.monto, 0);
-      const egr = datos.filter((m) => m.tipo === "egreso").reduce((a, m) => a + m.monto, 0);
-      $("#k-ing").textContent = mxn(ing); $("#k-egr").textContent = mxn(egr); $("#k-saldo").textContent = mxn(ing - egr);
-      const porCat = {};
-      datos.filter((m) => m.tipo === "egreso").forEach((m) => (porCat[m.cat] = (porCat[m.cat] || 0) + m.monto));
-      const filas = Object.entries(porCat).sort((a, b) => b[1] - a[1]);
-      $("#cats").innerHTML = filas.map(([c, v]) => `<div><div class="cc-cats__row"><span>${esc(c)}</span><span class="al-tabular">${mxn(v)}</span></div><div class="al-progress" style="--value:${Math.round((v / egr) * 100)}" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round((v / egr) * 100)}" aria-label="${esc(c)}"><span></span></div></div>`).join("") || '<p class="al-text-muted al-text-sm">Aún no hay egresos.</p>';
-      const pct = Math.min(100, Math.round((egr / PRESUPUESTO) * 100));
-      const p = $("#pres");
-      p.style.setProperty("--value", pct); p.setAttribute("aria-valuenow", pct);
-      p.classList.toggle("al-progress--warning", pct >= 75);
-      $("#pres-txt").textContent = `${pct}% de ${mxn(PRESUPUESTO)}`;
-    }
-
-    /* Gráfica */
-    const meses = ["Nov", "Dic", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct"];
-    const ingS = [38, 52, 31, 36, 40, 43, 41, 46, 44, 49, 47, 54].map((v) => v * 1000);
-    const egrS = [30, 34, 28, 31, 33, 35, 36, 37, 38, 40, 39, 41].map((v) => v * 1000);
-    let graf;
-    function dibujar(n) {
-      graf?.destroy();
-      graf = Julieta.chart($("#grafica"), { type: "bar", labels: meses.slice(-n), series: [{ name: "Ingresos", data: ingS.slice(-n) }, { name: "Egresos", data: egrS.slice(-n) }], format: (v) => `$${v.toLocaleString("es-MX")}` });
-      document.querySelectorAll("#grafica svg [fill]").length;
-    }
-    dibujar(6);
-    document.querySelectorAll('input[name="rango"]').forEach((i) => i.addEventListener("change", () => dibujar(Number(i.value))));
-
-    /* Alta de movimientos */
-    $("#form-mov").addEventListener("al:valid", (e) => {
-      const d = e.detail.data;
-      datos.unshift({ id: sig++, fecha: d.fecha, concepto: d.concepto.trim(), tipo: d.tipo, cat: d.categoria, monto: Number(d.monto) });
-      $("#nuevo").close(); e.target.reset();
-      renderTabla();
-      Julieta.toast({ type: "success", title: d.tipo === "ingreso" ? "Ingreso registrado" : "Egreso registrado", text: `${d.concepto} · ${mxn(Number(d.monto))}` });
-    });
-
-    /* Detalle en drawer */
-    document.addEventListener("click", (e) => {
-      const b = e.target.closest("[data-detalle]");
-      if (!b) return;
-      actual = datos.find((m) => m.id === Number(b.dataset.detalle));
-      if (!actual) return;
-      $("#det-cuerpo").innerHTML = `<div class="al-stat"><span class="al-stat__label">${actual.tipo === "ingreso" ? "Ingreso" : "Egreso"}</span><span class="al-stat__value">${mxn(actual.monto)}</span></div>
-        <dl><dt>Concepto</dt><dd>${esc(actual.concepto)}</dd><dt>Categoría</dt><dd>${esc(actual.cat)}</dd><dt>Fecha</dt><dd>${fechaTxt(actual.fecha)}</dd><dt>Folio</dt><dd>CC-${String(actual.id).padStart(5, "0")}</dd></dl>`;
-      $("#detalle").showModal();
-    });
-    $("#det-borrar").addEventListener("click", () => {
-      if (!actual) return;
-      datos = datos.filter((m) => m !== actual);
-      $("#detalle").close(); renderTabla();
-      Julieta.toast.warning("Movimiento eliminado", actual.concepto);
-      actual = null;
-    });
-
-    /* Exportar */
-    $("#menu-exportar").addEventListener("al:select", async (e) => {
-      if (e.detail.value === "csv") {
-        const csv = ["fecha,concepto,tipo,categoria,monto", ...datos.map((m) => [m.fecha, `"${m.concepto.replace(/"/g, '""')}"`, m.tipo, m.cat, m.monto].join(","))].join("\n");
-        const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv" })), download: "movimientos-caja-chica.csv" });
-        document.body.append(a); a.click(); a.remove();
-        Julieta.toast.success("CSV descargado", `${datos.length} movimientos`);
-      } else {
-        const txt = `Caja Chica · Octubre 2026\nIngresos: ${$("#k-ing").textContent}\nEgresos: ${$("#k-egr").textContent}\nSaldo: ${$("#k-saldo").textContent}`;
-        try { await navigator.clipboard.writeText(txt); Julieta.toast.success("Resumen copiado", "Listo para pegar."); }
-        catch { Julieta.toast.info("No se pudo copiar", "Tu navegador bloqueó el portapapeles."); }
-      }
-    });
-
-    $("#btn-reset").addEventListener("click", () => { datos = structuredClone(inicial); renderTabla(); Julieta.toast.info("Datos restablecidos", "Volvieron los movimientos de ejemplo."); });
-
-    document.querySelectorAll(".cc-sub a").forEach((a) => a.addEventListener("click", () => {
-      document.querySelectorAll(".cc-sub a").forEach((x) => x.removeAttribute("aria-current")); a.setAttribute("aria-current", "page");
-    }));
-    document.addEventListener("al:select", (e) => { if (e.detail.value === "salir") Julieta.toast.info("Cerraste sesión", "En esta plantilla no hay sesión real."); });
-
-    renderTabla();
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/dashboard/julieta-caja-chica.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

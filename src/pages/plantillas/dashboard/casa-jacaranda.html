@@ -31,40 +31,25 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .db-greeting h1 { font-size: var(--al-text-3xl); letter-spacing: -0.04em; }
-    .db-greeting p { color: var(--al-text-muted); }
-    .db-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
-    .db-stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-    .db-stat { display: grid; gap: .75rem; padding: 1.25rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); }
-    .db-stat__row { display: flex; justify-content: space-between; align-items: end; gap: .75rem; }
-    .db-main { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
-    @media (max-width: 80rem) { .db-main { grid-template-columns: 1fr; } }
-    .db-panel { padding: 1.35rem; border-radius: var(--al-radius-lg); background: var(--al-surface); border: 1px solid var(--al-border); display: grid; gap: 1rem; align-content: start; min-width: 0; }
-    .db-panel__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
-    .db-panel__head h2 { font-size: 1.15rem; letter-spacing: -0.02em; }
-    .db-goal { display: flex; align-items: center; gap: 1.25rem; }
-    .db-side-brand { display: flex; align-items: center; gap: .6rem; padding: .25rem .5rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.03em; text-decoration: none; color: var(--al-text); }
-    .db-side-foot { margin-top: auto; }
-    .db-search { flex: 1; max-width: 24rem; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/dashboard/julieta-casa-jacaranda.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
   <div class="al-app">
     <aside class="al-app__sidebar" aria-label="Navegación del panel">
-      <a class="db-side-brand" href="#"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">casa jacaranda</a>
+      <a class="julieta-db-side-brand" href="#"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">casa jacaranda</a>
       <nav class="al-sidebar" aria-label="Principal">
         <div class="al-sidebar__group">
           <div class="al-sidebar__title">Tienda</div>
           <a class="al-sidebar__link" href="#" aria-current="page"><al-icon name="home"></al-icon>Resumen</a>
-          <a class="al-sidebar__link" href="#pedidos"><al-icon name="shopping-bag"></al-icon>Pedidos<span class="al-badge al-sidebar__badge" id="count-badge">8</span></a>
+          <a class="al-sidebar__link" href="#pedidos"><al-icon name="shopping-bag"></al-icon>Pedidos<span class="al-badge al-sidebar__badge" id="julieta-count-badge">8</span></a>
           <a class="al-sidebar__link" href="#"><al-icon name="package"></al-icon>Productos</a>
           <a class="al-sidebar__link" href="#"><al-icon name="users"></al-icon>Clientes</a>
         </div>
@@ -74,7 +59,7 @@
           <a class="al-sidebar__link" href="#"><al-icon name="percent"></al-icon>Promociones</a>
         </div>
       </nav>
-      <div class="db-side-foot al-stack" style="--al-gap:.75rem">
+      <div class="julieta-db-side-foot al-stack" style="--al-gap:.75rem">
         <div class="al-card al-card--flat"><div class="al-card__body" style="padding:1rem;gap:.35rem">
           <strong class="al-text-sm">Meta de noviembre</strong>
           <div class="al-progress" style="--value:68" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Meta del mes"><span></span></div>
@@ -87,7 +72,7 @@
     <div class="al-app__main">
       <header class="al-app__topbar">
         <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm al-app__menu-btn" data-al-app-menu aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
-        <div class="al-input-group db-search">
+        <div class="al-input-group julieta-db-search">
           <span class="al-input-group__addon"><al-icon name="search" size="18"></al-icon></span>
           <input class="al-input" id="filtro" type="search" placeholder="Buscar pedidos o clientes" aria-label="Buscar en los pedidos" autocomplete="off">
         </div>
@@ -107,37 +92,37 @@
       </header>
 
       <main class="al-app__content" id="contenido">
-        <div class="db-head">
-          <div class="db-greeting"><h1>Buenas tardes, Ximena</h1><p>Hoy tienes 3 pedidos por enviar y 1 pago pendiente.</p></div>
-          <button class="al-btn al-btn--primary" data-al-open="#nuevo"><al-icon name="plus"></al-icon>Nuevo pedido</button>
+        <div class="julieta-db-head">
+          <div class="julieta-db-greeting"><h1>Buenas tardes, Ximena</h1><p>Hoy tienes 3 pedidos por enviar y 1 pago pendiente.</p></div>
+          <button class="al-btn al-btn--primary" data-al-open="#julieta-nuevo"><al-icon name="plus"></al-icon>Nuevo pedido</button>
         </div>
 
-        <section class="db-stats" aria-label="Métricas">
-          <div class="db-stat">
+        <section class="julieta-db-stats" aria-label="Métricas">
+          <div class="julieta-db-stat">
             <span class="al-stat__label">Ventas</span>
-            <div class="db-stat__row"><span class="al-stat__value">$81,420</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[4,5,4,7,6,8,10]}]}'></div></div>
+            <div class="julieta-db-stat__row"><span class="al-stat__value">$81,420</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[4,5,4,7,6,8,10]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>12% vs. octubre</span>
           </div>
-          <div class="db-stat">
+          <div class="julieta-db-stat">
             <span class="al-stat__label">Pedidos</span>
-            <div class="db-stat__row"><span class="al-stat__value">342</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[6,5,7,6,8,7,9]}]}'></div></div>
+            <div class="julieta-db-stat__row"><span class="al-stat__value">342</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[6,5,7,6,8,7,9]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>8% vs. octubre</span>
           </div>
-          <div class="db-stat">
+          <div class="julieta-db-stat">
             <span class="al-stat__label">Ticket promedio</span>
-            <div class="db-stat__row"><span class="al-stat__value">$238</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[8,7,8,6,7,6,6]}]}'></div></div>
+            <div class="julieta-db-stat__row"><span class="al-stat__value">$238</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[8,7,8,6,7,6,6]}]}'></div></div>
             <span class="al-stat__delta al-stat__delta--down"><al-icon name="trending-down" size="16"></al-icon>3% vs. octubre</span>
           </div>
-          <div class="db-stat">
+          <div class="julieta-db-stat">
             <span class="al-stat__label">Clientes nuevos</span>
-            <div class="db-stat__row"><span class="al-stat__value">57</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[2,3,3,5,4,6,7]}]}'></div></div>
+            <div class="julieta-db-stat__row"><span class="al-stat__value">57</span><div class="al-chart al-chart--spark" style="width:5.5rem" aria-hidden="true" data-al-chart='{"type":"area","labels":["a","b","c","d","e","f","g"],"series":[{"data":[2,3,3,5,4,6,7]}]}'></div></div>
             <span class="al-stat__delta"><al-icon name="trending-up" size="16"></al-icon>21% vs. octubre</span>
           </div>
         </section>
 
-        <div class="db-main">
-          <section class="db-panel" aria-labelledby="t-ventas">
-            <div class="db-panel__head">
+        <div class="julieta-db-main">
+          <section class="julieta-db-panel" aria-labelledby="t-ventas">
+            <div class="julieta-db-panel__head">
               <h2 id="t-ventas">Ventas por día</h2>
               <div class="al-segmented" role="radiogroup" aria-label="Periodo">
                 <label><input type="radio" name="rango" value="7" checked><span>7 días</span></label>
@@ -145,12 +130,12 @@
                 <label><input type="radio" name="rango" value="90"><span>90 días</span></label>
               </div>
             </div>
-            <div class="al-chart" id="grafica" style="--al-chart-h:17rem" role="img" aria-label="Ventas diarias del periodo seleccionado"></div>
+            <div class="al-chart" id="julieta-grafica" style="--al-chart-h:17rem" role="img" aria-label="Ventas diarias del periodo seleccionado"></div>
           </section>
 
-          <section class="db-panel" aria-labelledby="t-metas">
-            <div class="db-panel__head"><h2 id="t-metas">Metas de la semana</h2></div>
-            <div class="db-goal">
+          <section class="julieta-db-panel" aria-labelledby="t-metas">
+            <div class="julieta-db-panel__head"><h2 id="t-metas">Metas de la semana</h2></div>
+            <div class="julieta-db-goal">
               <div class="al-ring" style="--value:72;--size:6.5rem;--thick:11px" role="img" aria-label="72% de la meta semanal"><span>72%</span></div>
               <div><div class="al-weight-700">$14,400</div><div class="al-text-sm al-text-muted">de $20,000 esta semana</div></div>
             </div>
@@ -161,11 +146,11 @@
           </section>
         </div>
 
-        <div class="db-main">
-          <section class="db-panel" id="pedidos" aria-labelledby="t-pedidos">
-            <div class="db-panel__head"><h2 id="t-pedidos">Pedidos recientes</h2><span class="al-text-sm al-text-muted" id="tabla-estado" role="status"></span></div>
+        <div class="julieta-db-main">
+          <section class="julieta-db-panel" id="pedidos" aria-labelledby="t-pedidos">
+            <div class="julieta-db-panel__head"><h2 id="t-pedidos">Pedidos recientes</h2><span class="al-text-sm al-text-muted" id="julieta-tabla-estado" role="status"></span></div>
             <div class="al-table-wrap">
-              <table class="al-table al-table--hover" id="tabla" data-al-sortable data-al-filter="#filtro">
+              <table class="al-table al-table--hover" id="julieta-tabla" data-al-sortable data-al-filter="#filtro">
                 <thead><tr>
                   <th><button>Cliente</button></th>
                   <th><button>Producto</button></th>
@@ -186,8 +171,8 @@
             </div>
           </section>
 
-          <section class="db-panel" aria-labelledby="t-act">
-            <div class="db-panel__head"><h2 id="t-act">Actividad</h2></div>
+          <section class="julieta-db-panel" aria-labelledby="t-act">
+            <div class="julieta-db-panel__head"><h2 id="t-act">Actividad</h2></div>
             <ol class="al-timeline">
               <li class="al-timeline__item"><div class="al-timeline__time">Hace 12 min</div><div class="al-timeline__title">Lucía pagó $12,980</div><div class="al-timeline__text">Rebozo de seda · tarjeta</div></li>
               <li class="al-timeline__item"><div class="al-timeline__time">Hace 1 h</div><div class="al-timeline__title">Pedido enviado a Ana</div><div class="al-timeline__text">Guía 4471 · entrega en 2 días</div></li>
@@ -200,8 +185,8 @@
     </div>
   </div>
 
-  <dialog class="al-modal" id="nuevo" aria-labelledby="nuevo-t">
-    <form data-al-validate id="form-pedido" method="dialog">
+  <dialog class="al-modal" id="julieta-nuevo" aria-labelledby="nuevo-t">
+    <form data-al-validate id="julieta-form-pedido" method="dialog">
       <div class="al-modal__header"><h2 class="al-modal__title" id="nuevo-t">Nuevo pedido</h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
       <div class="al-modal__body">
         <div class="al-field"><label class="al-label" for="p-cliente">Cliente</label><input class="al-input" id="p-cliente" name="cliente" required minlength="3" autocomplete="off"></div>
@@ -219,53 +204,7 @@
   <div class="d-backbar"><a href="../dashboard.html"><al-icon name="arrow-left" size="16"></al-icon>Panel de control</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s) => document.querySelector(s);
-
-    /* ---- Gráfica con selector de periodo ---- */
-    const seed = (n) => { let x = 7; return Array.from({ length: n }, (_, i) => { x = (x * 9301 + 49297) % 233280; return Math.round(1800 + (x / 233280) * 2600 + Math.sin(i / 3) * 500 + i * (n > 30 ? 8 : 25)); }); };
-    const ranges = {
-      7:  { labels: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"], a: seed(7) },
-      30: { labels: Array.from({ length: 30 }, (_, i) => `${i + 1}`), a: seed(30) },
-      90: { labels: Array.from({ length: 90 }, (_, i) => `${i + 1}`), a: seed(90) },
-    };
-    const money = (v) => `$${v.toLocaleString("es-MX")}`;
-    let graf;
-    function draw(r) {
-      const d = ranges[r];
-      graf?.destroy();
-      graf = Julieta.chart($("#grafica"), { type: r === "7" ? "bar" : "area", labels: d.labels, series: [{ name: "Ventas", data: d.a }], format: money });
-    }
-    draw("7");
-    document.querySelectorAll('input[name="rango"]').forEach((i) => i.addEventListener("change", () => draw(i.value)));
-
-    /* ---- Tabla: contador visible y alta de pedidos ---- */
-    const tabla = $("#tabla");
-    const estado = () => { const n = [...tabla.tBodies[0].rows].filter((r) => !r.hidden).length; $("#tabla-estado").textContent = `${n} ${n === 1 ? "pedido" : "pedidos"}`; $("#count-badge").textContent = tabla.tBodies[0].rows.length; };
-    tabla.addEventListener("al:filter", estado);
-    estado();
-
-    const badge = { Pendiente: "warning", Pagado: "success", "En camino": "info" };
-    $("#form-pedido").addEventListener("al:valid", (e) => {
-      const d = e.detail.data;
-      const initials = d.cliente.trim().split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
-      const total = Number(d.total);
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td><div class="al-cluster" style="flex-wrap:nowrap"><span class="al-avatar al-avatar--sm" aria-hidden="true"></span><span></span></div></td><td></td><td><span class="al-badge al-badge--${badge[d.estado]} al-badge--dot"></span></td><td class="is-num" data-sort="${total}"></td>`;
-      tr.querySelector(".al-avatar").textContent = initials;
-      tr.querySelector(".al-cluster span:last-child").textContent = d.cliente;
-      tr.cells[1].textContent = d.producto;
-      tr.querySelector(".al-badge").textContent = d.estado;
-      tr.cells[3].textContent = total.toLocaleString("es-MX", { style: "currency", currency: "MXN" });
-      tabla.tBodies[0].prepend(tr);
-      $("#nuevo").close();
-      e.target.reset();
-      estado();
-      Julieta.toast({ type: "success", title: "Pedido agregado", text: `${d.cliente} · ${tr.cells[3].textContent}` });
-    });
-
-    document.addEventListener("al:select", (e) => { if (e.detail.value === "salir") Julieta.toast.info("Cerraste sesión", "En esta plantilla no hay sesión real."); });
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/dashboard/julieta-casa-jacaranda.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

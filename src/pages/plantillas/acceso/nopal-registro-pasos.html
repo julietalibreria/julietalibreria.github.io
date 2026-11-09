@@ -31,98 +31,60 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    body {
-      min-height: 100dvh;
-      background:
-        radial-gradient(48rem 32rem at 0% 0%, light-dark(color-mix(in oklab, var(--al-agave-500) 20%, transparent), color-mix(in oklab, var(--al-agave-500) 16%, transparent)), transparent 65%),
-        radial-gradient(44rem 30rem at 100% 100%, light-dark(color-mix(in oklab, var(--al-rosa-500) 16%, transparent), color-mix(in oklab, var(--al-rosa-500) 14%, transparent)), transparent 65%),
-        url("../../../assets/images/pattern-petals.svg") 0 0 / 120px 120px,
-        var(--al-bg);
-    }
-    .rg-page { min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; padding: 1.25rem 1rem 5rem; gap: 1.25rem; }
-    .rg-top { width: min(34rem, 100%); display: flex; align-items: center; justify-content: space-between; }
-    .rg-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; }
-    .rg-card { width: min(34rem, 100%); align-self: center; }
-    .rg-card .al-card__body { padding: clamp(1.25rem, 5vw, 2.25rem); gap: 1.5rem; }
-    .rg-title { font-size: var(--al-text-2xl); letter-spacing: -0.04em; line-height: 1.1; }
-    .rg-title:focus { outline: none; }
-    .rg-actions { display: flex; gap: .75rem; justify-content: space-between; flex-wrap: wrap; }
-    .rg-actions .al-btn--primary { flex: 1 1 10rem; }
-    .rg-stepper { margin: 0; }
-    .rg-stepper .al-stepper__item { min-width: 0; }
-    .rg-stepper .al-stepper__item > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .rg-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media (max-width: 30rem) { .rg-grid2 { grid-template-columns: 1fr; } .rg-stepper .al-stepper__item { font-size: .8125rem; } }
-    .rg-opts { display: grid; gap: .5rem; border: 0; padding: 0; margin: 0; min-width: 0; }
-    .rg-opts legend { padding: 0; margin-bottom: .5rem; }
-    .rg-opt { border: 1px solid var(--al-border-strong); border-radius: var(--al-radius-md); padding: .7rem .9rem; background: var(--al-surface); }
-    .rg-opt:has(input:checked) { border-color: var(--al-primary); background: var(--al-primary-soft); }
-    .rg-opt:has(input:focus-visible) { outline: 2px solid var(--al-ring); outline-offset: 2px; }
-    .rg-sum { display: grid; gap: 0; margin: 0; border: 1px solid var(--al-border); border-radius: var(--al-radius-lg); background: var(--al-surface-sunken); overflow: hidden; }
-    .rg-sum > div { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; }
-    .rg-sum > div + div { border-top: 1px solid var(--al-border); }
-    .rg-sum dt { font-size: .8125rem; color: var(--al-text-muted); }
-    .rg-sum dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; text-align: right; }
-    .rg-sum__row-main { min-width: 0; display: grid; gap: .1rem; }
-    .rg-sum__row-main dd { text-align: left; }
-    .rg-ok { text-align: center; justify-items: center; }
-    .rg-ok__ring { --size: 5.5rem; display: grid; place-items: center; color: var(--al-agave-500); }
-    .rg-foot { width: min(34rem, 100%); display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center; }
-    #meter-wrap[hidden] { display: none; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/acceso/julieta-nopal-registro-pasos.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#registro">Saltar al formulario</a>
-  <div class="rg-page">
-    <header class="rg-top">
-      <span class="rg-brand"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">nopal ahorro</span>
+  <div class="julieta-rg-page">
+    <header class="julieta-rg-top">
+      <span class="julieta-rg-brand"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">nopal ahorro</span>
       <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
     </header>
 
-    <main class="al-card al-card--raised rg-card" id="registro">
+    <main class="al-card al-card--raised julieta-rg-card" id="registro">
       <div class="al-card__body">
-        <div id="encabezado" class="al-stack" style="--al-gap:1.25rem">
-          <ol class="al-stepper rg-stepper" id="pasos" aria-label="Progreso del registro">
+        <div id="julieta-encabezado" class="al-stack" style="--al-gap:1.25rem">
+          <ol class="al-stepper julieta-rg-stepper" id="julieta-pasos" aria-label="Progreso del registro">
             <li class="al-stepper__item is-current" aria-current="step"><span>Cuenta</span></li>
             <li class="al-stepper__item"><span>Perfil</span></li>
             <li class="al-stepper__item"><span>Confirmar</span></li>
           </ol>
         </div>
-        <p class="al-sr-only" id="estado" role="status" aria-live="polite"></p>
+        <p class="al-sr-only" id="julieta-estado" role="status" aria-live="polite"></p>
 
         <!-- Paso 1 -->
-        <form class="al-stack" data-al-validate id="f1" style="--al-gap:1.25rem" novalidate aria-labelledby="t1">
-          <div><h1 class="rg-title" id="t1" tabindex="-1">Abre tu cuenta de ahorro</h1><p class="al-text-muted al-mt-2">Empezamos con lo básico. Toma menos de dos minutos.</p></div>
-          <div class="al-field"><label class="al-label" for="nombre">Nombre completo</label><input class="al-input al-input--lg" id="nombre" name="nombre" autocomplete="name" required minlength="3"></div>
-          <div class="al-field"><label class="al-label" for="correo">Correo electrónico</label><input class="al-input al-input--lg" id="correo" name="correo" type="email" autocomplete="email" required></div>
+        <form class="al-stack" data-al-validate id="julieta-f1" style="--al-gap:1.25rem" novalidate aria-labelledby="julieta-t1">
+          <div><h1 class="julieta-rg-title" id="julieta-t1" tabindex="-1">Abre tu cuenta de ahorro</h1><p class="al-text-muted al-mt-2">Empezamos con lo básico. Toma menos de dos minutos.</p></div>
+          <div class="al-field"><label class="al-label" for="julieta-nombre">Nombre completo</label><input class="al-input al-input--lg" id="julieta-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
+          <div class="al-field"><label class="al-label" for="julieta-correo">Correo electrónico</label><input class="al-input al-input--lg" id="julieta-correo" name="correo" type="email" autocomplete="email" required></div>
           <div class="al-field">
-            <label class="al-label" for="clave">Contraseña</label>
-            <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="clave" name="clave" type="password" autocomplete="new-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
-            <div class="al-progress" id="fuerza" style="--value:0" role="progressbar" aria-label="Seguridad de la contraseña" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-            <p class="al-hint" id="fuerza-txt">Mínimo 8 caracteres, con mayúsculas y números.</p>
+            <label class="al-label" for="julieta-clave">Contraseña</label>
+            <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="julieta-clave" name="clave" type="password" autocomplete="new-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#julieta-clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
+            <div class="al-progress" id="julieta-fuerza" style="--value:0" role="progressbar" aria-label="Seguridad de la contraseña" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <p class="al-hint" id="julieta-fuerza-txt">Mínimo 8 caracteres, con mayúsculas y números.</p>
           </div>
           <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Continuar<al-icon name="arrow-right"></al-icon></button>
-          <p class="al-text-sm al-text-muted al-text-center">¿Ya tienes cuenta? <button class="al-btn al-btn--link" type="button" id="ya-tengo">Inicia sesión</button></p>
+          <p class="al-text-sm al-text-muted al-text-center">¿Ya tienes cuenta? <button class="al-btn al-btn--link" type="button" id="julieta-ya-tengo">Inicia sesión</button></p>
         </form>
 
         <!-- Paso 2 -->
-        <form class="al-stack" data-al-validate id="f2" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="t2">
-          <div><h2 class="rg-title" id="t2" tabindex="-1">Cuéntanos de ti</h2><p class="al-text-muted al-mt-2">Con esto personalizamos tus metas de ahorro.</p></div>
-          <div class="rg-grid2">
+        <form class="al-stack" data-al-validate id="julieta-f2" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="julieta-t2">
+          <div><h2 class="julieta-rg-title" id="julieta-t2" tabindex="-1">Cuéntanos de ti</h2><p class="al-text-muted al-mt-2">Con esto personalizamos tus metas de ahorro.</p></div>
+          <div class="julieta-rg-grid2">
             <div class="al-field">
-              <label class="al-label" for="tel">Celular</label>
-              <div class="al-input-group"><span class="al-input-group__addon">+52</span><input class="al-input" id="tel" name="tel" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="55 1234 5678" required></div>
+              <label class="al-label" for="julieta-tel">Celular</label>
+              <div class="al-input-group"><span class="al-input-group__addon">+52</span><input class="al-input" id="julieta-tel" name="tel" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="55 1234 5678" required></div>
             </div>
             <div class="al-field">
-              <label class="al-label" for="estadoMx">Estado</label>
-              <div class="al-select-wrap"><select class="al-select" id="estadoMx" name="estado" required autocomplete="address-level1"><option value="">Elige uno</option></select></div>
+              <label class="al-label" for="julieta-estadoMx">Estado</label>
+              <div class="al-select-wrap"><select class="al-select" id="julieta-estadoMx" name="estado" required autocomplete="address-level1"><option value="">Elige uno</option></select></div>
             </div>
           </div>
           <div class="al-field">
@@ -133,42 +95,42 @@
             </div>
           </div>
           <div class="al-field">
-            <fieldset class="rg-opts">
+            <fieldset class="julieta-rg-opts">
               <legend class="al-label">¿Para qué quieres ahorrar?</legend>
-              <label class="al-radio rg-opt"><input type="radio" name="meta" value="Un viaje" required>Un viaje</label>
-              <label class="al-radio rg-opt"><input type="radio" name="meta" value="Mi casa">Mi casa</label>
-              <label class="al-radio rg-opt"><input type="radio" name="meta" value="Un fondo de emergencias">Un fondo de emergencias</label>
+              <label class="al-radio julieta-rg-opt"><input type="radio" name="meta" value="Un viaje" required>Un viaje</label>
+              <label class="al-radio julieta-rg-opt"><input type="radio" name="meta" value="Mi casa">Mi casa</label>
+              <label class="al-radio julieta-rg-opt"><input type="radio" name="meta" value="Un fondo de emergencias">Un fondo de emergencias</label>
             </fieldset>
           </div>
-          <div class="rg-actions">
-            <button class="al-btn al-btn--secondary al-btn--lg" type="button" data-atras><al-icon name="arrow-left"></al-icon>Atrás</button>
+          <div class="julieta-rg-actions">
+            <button class="al-btn al-btn--secondary al-btn--lg" type="button" data-julieta-atras><al-icon name="arrow-left"></al-icon>Atrás</button>
             <button class="al-btn al-btn--primary al-btn--lg" type="submit">Continuar<al-icon name="arrow-right"></al-icon></button>
           </div>
         </form>
 
         <!-- Paso 3 -->
-        <form class="al-stack" data-al-validate id="f3" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="t3">
-          <div><h2 class="rg-title" id="t3" tabindex="-1">Revisa y confirma</h2><p class="al-text-muted al-mt-2">Verifica que todo esté bien antes de crear tu cuenta.</p></div>
-          <dl class="rg-sum" id="resumen"></dl>
+        <form class="al-stack" data-al-validate id="julieta-f3" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="julieta-t3">
+          <div><h2 class="julieta-rg-title" id="julieta-t3" tabindex="-1">Revisa y confirma</h2><p class="al-text-muted al-mt-2">Verifica que todo esté bien antes de crear tu cuenta.</p></div>
+          <dl class="julieta-rg-sum" id="julieta-resumen"></dl>
           <label class="al-switch"><input type="checkbox" role="switch" name="avisos" checked>Avisarme por correo cuando alcance mi meta</label>
           <label class="al-check"><input type="checkbox" name="terminos" required>Acepto los términos y el aviso de privacidad</label>
-          <div class="rg-actions">
-            <button class="al-btn al-btn--secondary al-btn--lg" type="button" data-atras><al-icon name="arrow-left"></al-icon>Atrás</button>
+          <div class="julieta-rg-actions">
+            <button class="al-btn al-btn--secondary al-btn--lg" type="button" data-julieta-atras><al-icon name="arrow-left"></al-icon>Atrás</button>
             <button class="al-btn al-btn--primary al-btn--lg" type="submit">Crear mi cuenta</button>
           </div>
         </form>
 
         <!-- Éxito -->
-        <section class="al-stack rg-ok" id="exito" style="--al-gap:1.25rem" hidden aria-labelledby="t4">
-          <div class="rg-ok__ring"><al-icon name="check-circle" size="72"></al-icon></div>
-          <div><h2 class="rg-title" id="t4" tabindex="-1">¡Listo, <span id="ok-nombre"></span>!</h2><p class="al-text-muted al-mt-2" id="ok-texto"></p></div>
-          <div class="al-alert al-alert--success" role="status" style="text-align:left"><al-icon name="mail"></al-icon><div><div class="al-alert__title">Confirma tu correo</div><div class="al-alert__text" id="ok-correo"></div></div></div>
-          <button class="al-btn al-btn--secondary" type="button" id="reiniciar"><al-icon name="refresh"></al-icon>Probar de nuevo</button>
+        <section class="al-stack julieta-rg-ok" id="julieta-exito" style="--al-gap:1.25rem" hidden aria-labelledby="julieta-t4">
+          <div class="julieta-rg-ok__ring"><al-icon name="check-circle" size="72"></al-icon></div>
+          <div><h2 class="julieta-rg-title" id="julieta-t4" tabindex="-1">¡Listo, <span id="julieta-ok-nombre"></span>!</h2><p class="al-text-muted al-mt-2" id="julieta-ok-texto"></p></div>
+          <div class="al-alert al-alert--success" role="status" style="text-align:left"><al-icon name="mail"></al-icon><div><div class="al-alert__title">Confirma tu correo</div><div class="al-alert__text" id="julieta-ok-correo"></div></div></div>
+          <button class="al-btn al-btn--secondary" type="button" id="julieta-reiniciar"><al-icon name="refresh"></al-icon>Probar de nuevo</button>
         </section>
       </div>
     </main>
 
-    <footer class="rg-foot">
+    <footer class="julieta-rg-foot">
       <p class="al-text-xs al-text-subtle">Plantilla de ejemplo: los datos no se envían a ningún servidor.</p>
     </footer>
   </div>
@@ -177,111 +139,7 @@
   <div class="d-backbar"><a href="../acceso.html"><al-icon name="arrow-left" size="16"></al-icon>Acceso y registro</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s, r = document) => r.querySelector(s);
-    const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-
-    const ESTADOS = ["Aguascalientes","Baja California","Baja California Sur","Campeche","Chiapas","Chihuahua","Ciudad de México","Coahuila","Colima","Durango","Estado de México","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacán","Morelos","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro","Quintana Roo","San Luis Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatán","Zacatecas"];
-    $("#estadoMx").append(...ESTADOS.map((e) => new Option(e, e)));
-
-    const forms = [$("#f1"), $("#f2"), $("#f3")];
-    const titulos = ["Cuenta", "Perfil", "Confirmar"];
-    const items = $$("#pasos .al-stepper__item");
-    let actual = 0;
-
-    function ir(n, enfocar = true) {
-      actual = n;
-      forms.forEach((f, i) => { f.hidden = i !== n; });
-      $("#exito").hidden = true;
-      items.forEach((li, i) => {
-        li.classList.toggle("is-done", i < n);
-        li.classList.toggle("is-current", i === n);
-        if (i === n) li.setAttribute("aria-current", "step"); else li.removeAttribute("aria-current");
-      });
-      $("#estado").textContent = `Paso ${n + 1} de 3: ${titulos[n]}`;
-      if (n === 2) resumen();
-      if (enfocar) $(`#t${n + 1}`).focus({ preventScroll: false });
-    }
-
-    const val = (id) => $(id).value.trim();
-    function resumen() {
-      const filas = [
-        ["Nombre", val("#nombre"), 0],
-        ["Correo", val("#correo"), 0],
-        ["Contraseña", "•".repeat(Math.min($("#clave").value.length, 12)), 0],
-        ["Celular", "+52 " + $("#tel").value, 1],
-        ["Estado", $("#estadoMx").value, 1],
-        ["Cuenta", `${$("input[name=tipo]:checked").value} · ${$("input[name=meta]:checked")?.value ?? ""}`, 1],
-      ];
-      $("#resumen").replaceChildren(...filas.map(([k, v, paso]) => {
-        const row = document.createElement("div");
-        const main = document.createElement("div"); main.className = "rg-sum__row-main";
-        const dt = document.createElement("dt"); dt.textContent = k;
-        const dd = document.createElement("dd"); dd.textContent = v;
-        main.append(dt, dd);
-        const b = document.createElement("button");
-        b.type = "button"; b.className = "al-btn al-btn--ghost al-btn--sm"; b.textContent = "Editar";
-        b.setAttribute("aria-label", `Editar ${k.toLowerCase()}`);
-        b.addEventListener("click", () => { ir(paso, false); $(paso === 0 ? "#" + (k === "Nombre" ? "nombre" : k === "Correo" ? "correo" : "clave") : k === "Celular" ? "#tel" : k === "Estado" ? "#estadoMx" : "input[name=tipo]:checked").focus(); });
-        row.append(main, b);
-        return row;
-      }));
-    }
-
-    // Medidor de fuerza + regla mínima
-    const clave = $("#clave");
-    function puntos(v) { return [v.length >= 8, /[A-Z]/.test(v), /[0-9]/.test(v), /[^A-Za-z0-9]/.test(v)].filter(Boolean).length; }
-    clave.addEventListener("input", () => {
-      const v = clave.value, p = puntos(v);
-      const barra = $("#fuerza");
-      barra.style.setProperty("--value", v ? p * 25 : 0);
-      barra.setAttribute("aria-valuenow", v ? p * 25 : 0);
-      barra.classList.toggle("al-progress--success", p >= 3);
-      barra.classList.toggle("al-progress--warning", p === 2);
-      $("#fuerza-txt").textContent = !v ? "Mínimo 8 caracteres, con mayúsculas y números." : ["Muy débil", "Débil", "Aceptable", "Buena", "Excelente"][p];
-      clave.setCustomValidity(v.length >= 8 && p < 3 ? "Añade una mayúscula y un número para fortalecerla." : "");
-    });
-
-    // Celular a 10 dígitos con formato
-    const tel = $("#tel");
-    tel.addEventListener("input", () => {
-      const d = tel.value.replace(/\D/g, "").slice(0, 10);
-      tel.value = d.length > 6 ? `${d.slice(0, 2)} ${d.slice(2, 6)} ${d.slice(6)}` : d.length > 2 ? `${d.slice(0, 2)} ${d.slice(2)}` : d;
-      tel.setCustomValidity(d.length === 10 ? "" : "Escribe tu celular a 10 dígitos.");
-    });
-    tel.setCustomValidity("Escribe tu celular a 10 dígitos.");
-
-    $("#f1").addEventListener("al:valid", () => ir(1));
-    $("#f2").addEventListener("al:valid", () => ir(2));
-    $$("[data-atras]").forEach((b) => b.addEventListener("click", () => ir(actual - 1)));
-
-    $("#f3").addEventListener("al:valid", (e) => {
-      const btn = e.target.querySelector('[type="submit"]');
-      btn.classList.add("is-loading"); btn.setAttribute("aria-busy", "true");
-      setTimeout(() => {
-        btn.classList.remove("is-loading"); btn.removeAttribute("aria-busy");
-        forms.forEach((f) => { f.hidden = true; });
-        $("#pasos").closest("#encabezado").hidden = true;
-        $("#exito").hidden = false;
-        $("#ok-nombre").textContent = val("#nombre").split(/\s+/)[0];
-        $("#ok-texto").textContent = `Tu meta: ${$("input[name=meta]:checked").value.toLowerCase()}. Empieza con el primer depósito cuando quieras.`;
-        $("#ok-correo").textContent = `Enviamos un enlace a ${val("#correo")}.`;
-        $("#estado").textContent = "Cuenta creada correctamente.";
-        $("#t4").focus();
-        Julieta.toast({ type: "success", title: "Cuenta creada", text: `Bienvenida, ${val("#nombre").split(/\s+/)[0]}.` });
-      }, 1200);
-    });
-
-    $("#reiniciar").addEventListener("click", () => {
-      forms.forEach((f) => f.reset());
-      $$(".al-error", document).forEach((x) => x.remove());
-      $$("[aria-invalid]").forEach((x) => x.removeAttribute("aria-invalid"));
-      clave.dispatchEvent(new Event("input")); tel.setCustomValidity("Escribe tu celular a 10 dígitos.");
-      $("#encabezado").hidden = false;
-      ir(0);
-    });
-    $("#ya-tengo").addEventListener("click", () => Julieta.toast({ type: "info", title: "Inicio de sesión", text: "Aquí enlazarías tu pantalla de acceso." }));
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/acceso/julieta-nopal-registro-pasos.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

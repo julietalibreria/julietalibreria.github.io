@@ -31,37 +31,29 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .ac-art__quote { font-family: var(--al-font-display); font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.035em; font-weight: 600; max-width: 18ch; color: #fff; }
-    .ac-art__who { display: flex; align-items: center; gap: .8rem; color: color-mix(in oklab, #fff 75%, var(--al-jacaranda-300)); font-size: .9375rem; }
-    .ac-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; color: inherit; text-decoration: none; }
-    .ac-top { position: absolute; top: 1.25rem; right: 1.25rem; }
-    .ac-title { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1.05; }
-    .ac-sso { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
-    .ac-meta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .al-auth__form { position: relative; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/acceso/julieta-casa-jacaranda.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#formulario">Saltar al formulario</a>
   <div class="al-auth">
     <aside class="al-auth__art" aria-hidden="false">
       <canvas class="al-petals" data-al-petals data-density=".9"></canvas>
-      <a class="ac-brand" href="#" style="color:#fff"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">casa jacaranda</a>
+      <a class="julieta-ac-brand" href="#" style="color:#fff"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">casa jacaranda</a>
       <figure style="margin:0;display:grid;gap:1.5rem">
-        <blockquote class="ac-art__quote" style="margin:0">“Cada pieza llega con una nota escrita a mano.”</blockquote>
-        <figcaption class="ac-art__who"><span class="al-avatar al-avatar--sol" aria-hidden="true">LP</span><span>Lucía Paredes, clienta desde 2023</span></figcaption>
+        <blockquote class="julieta-ac-art__quote" style="margin:0">“Cada pieza llega con una nota escrita a mano.”</blockquote>
+        <figcaption class="julieta-ac-art__who"><span class="al-avatar al-avatar--sol" aria-hidden="true">LP</span><span>Lucía Paredes, clienta desde 2023</span></figcaption>
       </figure>
     </aside>
 
     <section class="al-auth__form" id="formulario">
-      <div class="ac-top"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button></div>
+      <div class="julieta-ac-top"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button></div>
       <div class="al-auth__box">
         <div data-al-tabs>
           <div class="al-tabs" role="tablist" aria-label="Acceso">
@@ -70,11 +62,11 @@
           </div>
 
           <div class="al-tabpanel" id="entrar">
-            <form class="al-stack" data-al-validate id="f-entrar" style="--al-gap:1.25rem" novalidate>
-              <div><h1 class="ac-title">Qué gusto verte</h1><p class="al-text-muted al-mt-2">Entra para revisar tus pedidos.</p></div>
-              <div class="ac-sso">
-                <button class="al-btn al-btn--secondary" type="button" data-sso="Google"><al-icon name="globe"></al-icon>Google</button>
-                <button class="al-btn al-btn--secondary" type="button" data-sso="Apple"><al-icon name="smartphone"></al-icon>Apple</button>
+            <form class="al-stack" data-al-validate id="julieta-f-entrar" style="--al-gap:1.25rem" novalidate>
+              <div><h1 class="julieta-ac-title">Qué gusto verte</h1><p class="al-text-muted al-mt-2">Entra para revisar tus pedidos.</p></div>
+              <div class="julieta-ac-sso">
+                <button class="al-btn al-btn--secondary" type="button" data-julieta-sso="Google"><al-icon name="globe"></al-icon>Google</button>
+                <button class="al-btn al-btn--secondary" type="button" data-julieta-sso="Apple"><al-icon name="smartphone"></al-icon>Apple</button>
               </div>
               <div class="al-divider">o con tu correo</div>
               <div class="al-field"><label class="al-label" for="e-correo">Correo</label><input class="al-input al-input--lg" id="e-correo" name="correo" type="email" autocomplete="email" required></div>
@@ -82,21 +74,21 @@
                 <label class="al-label" for="e-clave">Contraseña</label>
                 <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="e-clave" name="clave" type="password" autocomplete="current-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#e-clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
               </div>
-              <div class="ac-meta"><label class="al-check"><input type="checkbox" name="recordar" checked>Recordarme</label><a class="al-link al-text-sm" href="#" id="olvide">¿Olvidaste tu contraseña?</a></div>
+              <div class="julieta-ac-meta"><label class="al-check"><input type="checkbox" name="recordar" checked>Recordarme</label><a class="al-link al-text-sm" href="#" id="julieta-olvide">¿Olvidaste tu contraseña?</a></div>
               <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Entrar</button>
             </form>
           </div>
 
           <div class="al-tabpanel" id="crear" hidden>
-            <form class="al-stack" data-al-validate id="f-crear" style="--al-gap:1.25rem" novalidate>
-              <div><h2 class="ac-title">Crea tu cuenta</h2><p class="al-text-muted al-mt-2">Guarda tus direcciones y sigue tus envíos.</p></div>
+            <form class="al-stack" data-al-validate id="julieta-f-crear" style="--al-gap:1.25rem" novalidate>
+              <div><h2 class="julieta-ac-title">Crea tu cuenta</h2><p class="al-text-muted al-mt-2">Guarda tus direcciones y sigue tus envíos.</p></div>
               <div class="al-field"><label class="al-label" for="c-nombre">Nombre</label><input class="al-input al-input--lg" id="c-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
               <div class="al-field"><label class="al-label" for="c-correo">Correo</label><input class="al-input al-input--lg" id="c-correo" name="correo" type="email" autocomplete="email" required></div>
               <div class="al-field">
-                <label class="al-label" for="c-clave">Contraseña</label>
-                <input class="al-input al-input--lg" id="c-clave" name="clave" type="password" autocomplete="new-password" required minlength="8">
-                <div class="al-progress" id="fuerza" style="--value:0" aria-hidden="true"><span></span></div>
-                <p class="al-hint" id="fuerza-txt">Usa al menos 8 caracteres.</p>
+                <label class="al-label" for="julieta-c-clave">Contraseña</label>
+                <input class="al-input al-input--lg" id="julieta-c-clave" name="clave" type="password" autocomplete="new-password" required minlength="8">
+                <div class="al-progress" id="julieta-fuerza" style="--value:0" aria-hidden="true"><span></span></div>
+                <p class="al-hint" id="julieta-fuerza-txt">Usa al menos 8 caracteres.</p>
               </div>
               <label class="al-check"><input type="checkbox" name="terminos" required>Acepto los términos y el aviso de privacidad</label>
               <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Crear cuenta</button>
@@ -112,30 +104,7 @@
   <div class="d-backbar"><a href="../acceso.html"><al-icon name="arrow-left" size="16"></al-icon>Acceso y registro</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s) => document.querySelector(s);
-
-    function enviar(form, mensaje) {
-      const btn = form.querySelector('[type="submit"]');
-      btn.classList.add("is-loading");
-      setTimeout(() => { btn.classList.remove("is-loading"); Julieta.toast({ type: "success", title: mensaje.title, text: mensaje.text }); }, 1100);
-    }
-    $("#f-entrar").addEventListener("al:valid", (e) => enviar(e.target, { title: "Sesión iniciada", text: e.detail.data.correo }));
-    $("#f-crear").addEventListener("al:valid", (e) => enviar(e.target, { title: "Cuenta creada", text: `Bienvenida, ${e.detail.data.nombre.split(" ")[0]}.` }));
-    $("#olvide").addEventListener("click", (e) => { e.preventDefault(); Julieta.toast({ type: "info", title: "Revisa tu correo", text: "Te enviaremos un enlace para restablecerla." }); });
-    document.querySelectorAll("[data-sso]").forEach((b) => b.addEventListener("click", () => Julieta.toast({ type: "info", title: `Acceso con ${b.dataset.sso}`, text: "Conecta aquí tu proveedor de identidad." })));
-
-    // Medidor de fuerza de contraseña
-    $("#c-clave").addEventListener("input", (e) => {
-      const v = e.target.value;
-      const puntos = [v.length >= 8, /[A-Z]/.test(v), /[0-9]/.test(v), /[^A-Za-z0-9]/.test(v)].filter(Boolean).length;
-      const barra = $("#fuerza");
-      barra.style.setProperty("--value", v ? puntos * 25 : 0);
-      barra.classList.toggle("al-progress--success", puntos >= 3);
-      barra.classList.toggle("al-progress--warning", puntos === 2);
-      $("#fuerza-txt").textContent = !v ? "Usa al menos 8 caracteres." : ["Muy débil", "Débil", "Aceptable", "Buena", "Excelente"][puntos];
-    });
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/acceso/julieta-casa-jacaranda.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

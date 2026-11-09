@@ -31,68 +31,21 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .mi-nav { background: var(--al-bg); }
-    .mi-brand { font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.04em; font-size: 1.35rem; }
-    .mi-brand al-icon { color: var(--al-success); }
-    .mi-nav-menu { display: none; }
-    @media (max-width: 52rem) { .mi-nav-links, .mi-nav-cta { display: none; } .mi-nav-menu { display: inline-flex; } }
-
-    .mi-hero { text-align: center; padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2rem, 5vw, 3.5rem); display: grid; justify-items: center; gap: 1.75rem; }
-    .mi-kicker { font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--al-text-muted); }
-    .mi-title { font-size: clamp(3.6rem, 1rem + 15vw, 13rem); line-height: .82; letter-spacing: -0.065em; font-weight: 800; text-wrap: balance; overflow-wrap: anywhere; }
-    .mi-title em { font-style: normal; color: var(--al-success); }
-    .mi-title span { display: block; }
-    .mi-lead { max-width: 40ch; font-size: var(--al-text-xl); color: var(--al-text-muted); line-height: 1.4; }
-
-    .mi-marquee { border-block: 1px solid var(--al-text); overflow: hidden; background: var(--al-text); color: var(--al-bg); }
-    .mi-marquee__track { display: flex; width: max-content; animation: mi-scroll 38s linear infinite; }
-    .mi-marquee__track span { font-family: var(--al-font-display); font-size: clamp(1.25rem, 1rem + 1.2vw, 2rem); font-weight: 700; letter-spacing: -0.02em; padding: .8rem 1.4rem; white-space: nowrap; }
-    .mi-marquee__track span::after { content: "✺"; margin-left: 2.8rem; opacity: .55; }
-    @keyframes mi-scroll { to { transform: translateX(-50%); } }
-    @media (prefers-reduced-motion: reduce) { .mi-marquee__track { animation: none; } }
-
-    .mi-heading { font-size: var(--al-text-5xl); line-height: .92; letter-spacing: -0.055em; max-width: 14ch; }
-    .mi-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: end; margin-bottom: clamp(2rem, 5vw, 4rem); }
-    @media (max-width: 52rem) { .mi-intro { grid-template-columns: 1fr; } }
-
-    .mi-rows { border-top: 2px solid var(--al-text); }
-    .mi-row { display: grid; grid-template-columns: minmax(3.5rem, 8rem) minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 1.5rem; align-items: baseline; padding-block: 1.75rem; border-bottom: 1px solid var(--al-border-strong); }
-    .mi-row__n { font-family: var(--al-font-display); font-size: clamp(2.5rem, 2rem + 3vw, 5rem); font-weight: 800; letter-spacing: -0.06em; line-height: .9; color: var(--al-primary); }
-    .mi-row h3 { font-size: var(--al-text-2xl); letter-spacing: -0.03em; }
-    .mi-row p { color: var(--al-text-muted); }
-    @media (max-width: 48rem) { .mi-row { grid-template-columns: 3.5rem minmax(0, 1fr); gap: .5rem 1rem; } .mi-row p { grid-column: 2; } }
-
-    .mi-season { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; }
-    .mi-season .al-card { background: var(--al-surface); }
-    .mi-season__icon { display: grid; place-items: center; aspect-ratio: 16 / 9; background: var(--al-success-soft); color: var(--al-success); }
-    .mi-season .al-card:nth-child(2) .mi-season__icon { background: var(--al-warning-soft); color: var(--al-warning); }
-    .mi-season .al-card:nth-child(3) .mi-season__icon { background: var(--al-danger-soft); color: var(--al-danger); }
-    .mi-season .al-card:nth-child(4) .mi-season__icon { background: var(--al-info-soft); color: var(--al-info); }
-
-    .mi-order { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: start; }
-    @media (max-width: 62rem) { .mi-order { grid-template-columns: 1fr; } }
-    .mi-summary { display: grid; gap: 1rem; padding: 1.5rem; border: 2px solid var(--al-text); border-radius: var(--al-radius-lg); background: var(--al-surface); }
-    .mi-summary__price { font-family: var(--al-font-display); font-size: 4.5rem; font-weight: 800; letter-spacing: -0.06em; line-height: 1; font-variant-numeric: tabular-nums; }
-    .mi-summary__price small { font-family: var(--al-font-sans); font-size: .95rem; font-weight: 500; letter-spacing: 0; color: var(--al-text-muted); margin-left: .35rem; }
-    .mi-form { display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--al-radius-xl); background: var(--al-surface); border: 1px solid var(--al-border); box-shadow: var(--al-shadow-md); }
-    .mi-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    @media (max-width: 30rem) { .mi-row2 { grid-template-columns: 1fr; } }
-    .mi-size { flex-wrap: wrap; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/landing/julieta-milpa.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="al-navbar mi-nav">
-    <a class="al-navbar__brand mi-brand" href="#inicio"><al-icon name="leaf" size="26"></al-icon>milpa</a>
-    <nav class="al-navbar__links mi-nav-links" aria-label="Principal">
+  <header class="al-navbar julieta-mi-nav">
+    <a class="al-navbar__brand julieta-mi-brand" href="#inicio"><al-icon name="leaf" size="26"></al-icon>milpa</a>
+    <nav class="al-navbar__links julieta-mi-nav-links" aria-label="Principal">
       <a class="al-nav-link" href="#como">Cómo funciona</a>
       <a class="al-nav-link" href="#temporada">De temporada</a>
       <a class="al-nav-link" href="#pedir">Pedir caja</a>
@@ -100,8 +53,8 @@
     </nav>
     <span class="al-navbar__spacer"></span>
     <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle data-al-tip="Cambiar tema" data-al-tip-pos="bottom" aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
-    <a class="al-btn al-btn--primary al-btn--sm mi-nav-cta" href="#pedir">Pedir mi caja</a>
-    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm mi-nav-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
+    <a class="al-btn al-btn--primary al-btn--sm julieta-mi-nav-cta" href="#pedir">Pedir mi caja</a>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm julieta-mi-nav-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
   </header>
 
   <dialog class="al-drawer" id="menu-movil" aria-label="Menú">
@@ -120,18 +73,18 @@
   </dialog>
 
   <main id="contenido">
-    <section class="al-container mi-hero" id="inicio">
-      <span class="mi-kicker">Caja semanal · Verdura de temporada</span>
-      <h1 class="mi-title"><span>Come lo que</span><span>da la <em>milpa</em></span></h1>
-      <p class="mi-lead">Cada semana llega a tu puerta una caja con maíz, frijol, calabaza y lo que toque, con una receta para cada ingrediente.</p>
+    <section class="al-container julieta-mi-hero" id="inicio">
+      <span class="julieta-mi-kicker">Caja semanal · Verdura de temporada</span>
+      <h1 class="julieta-mi-title"><span>Come lo que</span><span>da la <em>milpa</em></span></h1>
+      <p class="julieta-mi-lead">Cada semana llega a tu puerta una caja con maíz, frijol, calabaza y lo que toque, con una receta para cada ingrediente.</p>
       <div class="al-cluster" style="justify-content:center">
         <a class="al-btn al-btn--primary al-btn--lg" href="#pedir">Pedir mi primera caja<al-icon name="arrow-right"></al-icon></a>
         <a class="al-btn al-btn--outline al-btn--lg" href="#como">Cómo funciona</a>
       </div>
     </section>
 
-    <div class="mi-marquee" aria-hidden="true">
-      <div class="mi-marquee__track">
+    <div class="julieta-mi-marquee" aria-hidden="true">
+      <div class="julieta-mi-marquee__track">
         <span>Calabacitas</span><span>Elote tierno</span><span>Frijol de la olla</span><span>Quelites</span><span>Chile poblano</span><span>Tomate verde</span><span>Epazote</span><span>Flor de calabaza</span>
         <span>Calabacitas</span><span>Elote tierno</span><span>Frijol de la olla</span><span>Quelites</span><span>Chile poblano</span><span>Tomate verde</span><span>Epazote</span><span>Flor de calabaza</span>
       </div>
@@ -139,50 +92,50 @@
 
     <section class="al-section" id="como">
       <div class="al-container">
-        <div class="mi-intro">
-          <h2 class="mi-heading">Tres pasos y a la mesa</h2>
+        <div class="julieta-mi-intro">
+          <h2 class="julieta-mi-heading">Tres pasos y a la mesa</h2>
           <p class="al-lead">Sin supermercado, sin tirar lo que no usas. Eliges el tamaño, nosotros armamos la caja con lo que está en su mejor momento.</p>
         </div>
-        <div class="mi-rows">
-          <div class="mi-row"><span class="mi-row__n">01</span><h3>Eliges tu caja</h3><p>Chica para una o dos personas, mediana para una familia, grande si en tu casa se cocina para todos. La cambias o la pausas cuando quieras.</p></div>
-          <div class="mi-row"><span class="mi-row__n">02</span><h3>Llega fresca</h3><p>Cosechamos un día antes y la entregamos en una caja de cartón que recogemos la semana siguiente para reutilizarla.</p></div>
-          <div class="mi-row"><span class="mi-row__n">03</span><h3>Cocinas con receta</h3><p>Una tarjeta por ingrediente: desde el caldo de calabaza hasta las tortitas de quelites. Pensadas para entre semana, en menos de media hora.</p></div>
+        <div class="julieta-mi-rows">
+          <div class="julieta-mi-row"><span class="julieta-mi-row__n">01</span><h3>Eliges tu caja</h3><p>Chica para una o dos personas, mediana para una familia, grande si en tu casa se cocina para todos. La cambias o la pausas cuando quieras.</p></div>
+          <div class="julieta-mi-row"><span class="julieta-mi-row__n">02</span><h3>Llega fresca</h3><p>Cosechamos un día antes y la entregamos en una caja de cartón que recogemos la semana siguiente para reutilizarla.</p></div>
+          <div class="julieta-mi-row"><span class="julieta-mi-row__n">03</span><h3>Cocinas con receta</h3><p>Una tarjeta por ingrediente: desde el caldo de calabaza hasta las tortitas de quelites. Pensadas para entre semana, en menos de media hora.</p></div>
         </div>
       </div>
     </section>
 
     <section class="al-section al-section--tint" id="temporada">
       <div class="al-container">
-        <div class="mi-intro">
-          <h2 class="mi-heading">Lo que trae noviembre</h2>
+        <div class="julieta-mi-intro">
+          <h2 class="julieta-mi-heading">Lo que trae noviembre</h2>
           <p class="al-lead">Ejemplo de contenido de una caja mediana. Cada semana cambia según la cosecha.</p>
         </div>
-        <div class="mi-season">
-          <article class="al-card"><div class="mi-season__icon"><al-icon name="tree" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Calabaza de Castilla</h3><p class="al-card__text">Para el caldo, la sopa o el dulce en tacha.</p></div><div class="al-card__footer"><span class="al-badge al-badge--success">De temporada</span></div></article>
-          <article class="al-card"><div class="mi-season__icon"><al-icon name="sunrise" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Maíz criollo</h3><p class="al-card__text">Mazorcas para esquites o para tus tortillas.</p></div><div class="al-card__footer"><span class="al-badge al-badge--warning">Cosecha corta</span></div></article>
-          <article class="al-card"><div class="mi-season__icon"><al-icon name="flower" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Flor de calabaza</h3><p class="al-card__text">Quesadillas, sopa o rellenas. Se acaba rápido.</p></div><div class="al-card__footer"><span class="al-badge al-badge--danger">Pocas cajas</span></div></article>
-          <article class="al-card"><div class="mi-season__icon"><al-icon name="droplet" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Frijol y quelites</h3><p class="al-card__text">Una olla de frijoles con hierbas de la milpa.</p></div><div class="al-card__footer"><span class="al-badge al-badge--info">Receta incluida</span></div></article>
+        <div class="julieta-mi-season">
+          <article class="al-card"><div class="julieta-mi-season__icon"><al-icon name="tree" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Calabaza de Castilla</h3><p class="al-card__text">Para el caldo, la sopa o el dulce en tacha.</p></div><div class="al-card__footer"><span class="al-badge al-badge--success">De temporada</span></div></article>
+          <article class="al-card"><div class="julieta-mi-season__icon"><al-icon name="sunrise" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Maíz criollo</h3><p class="al-card__text">Mazorcas para esquites o para tus tortillas.</p></div><div class="al-card__footer"><span class="al-badge al-badge--warning">Cosecha corta</span></div></article>
+          <article class="al-card"><div class="julieta-mi-season__icon"><al-icon name="flower" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Flor de calabaza</h3><p class="al-card__text">Quesadillas, sopa o rellenas. Se acaba rápido.</p></div><div class="al-card__footer"><span class="al-badge al-badge--danger">Pocas cajas</span></div></article>
+          <article class="al-card"><div class="julieta-mi-season__icon"><al-icon name="droplet" size="48"></al-icon></div><div class="al-card__body"><h3 class="al-card__title">Frijol y quelites</h3><p class="al-card__text">Una olla de frijoles con hierbas de la milpa.</p></div><div class="al-card__footer"><span class="al-badge al-badge--info">Receta incluida</span></div></article>
         </div>
       </div>
     </section>
 
     <section class="al-section" id="pedir">
-      <div class="al-container mi-order">
+      <div class="al-container julieta-mi-order">
         <div class="al-stack" style="--al-gap:1.5rem">
-          <h2 class="mi-heading">Arma tu primera caja</h2>
+          <h2 class="julieta-mi-heading">Arma tu primera caja</h2>
           <p class="al-lead">Elige el tamaño y cada cuándo la quieres. El precio se actualiza al instante.</p>
-          <div class="mi-summary" aria-live="polite">
-            <span class="mi-kicker" id="res-tam">Caja mediana</span>
-            <div class="mi-summary__price"><span id="res-precio">$420</span><small id="res-freq">por entrega</small></div>
-            <p class="al-text-muted" id="res-desc">Para 3 o 4 personas. Unos 6 kg de verdura y fruta, con 5 recetas.</p>
+          <div class="julieta-mi-summary" aria-live="polite">
+            <span class="julieta-mi-kicker" id="julieta-res-tam">Caja mediana</span>
+            <div class="julieta-mi-summary__price"><span id="julieta-res-precio">$420</span><small id="julieta-res-freq">por entrega</small></div>
+            <p class="al-text-muted" id="julieta-res-desc">Para 3 o 4 personas. Unos 6 kg de verdura y fruta, con 5 recetas.</p>
             <span class="al-badge al-badge--success" style="justify-self:start" id="res-envio">Envío incluido</span>
           </div>
         </div>
 
-        <form class="mi-form" id="pedido" data-al-validate novalidate>
+        <form class="julieta-mi-form" id="julieta-pedido" data-al-validate novalidate>
           <div class="al-field">
             <span class="al-label" id="l-tam">Tamaño de la caja</span>
-            <div class="al-segmented mi-size" role="radiogroup" aria-labelledby="l-tam">
+            <div class="al-segmented julieta-mi-size" role="radiogroup" aria-labelledby="l-tam">
               <label><input type="radio" name="tamano" value="chica"><span>Chica</span></label>
               <label><input type="radio" name="tamano" value="mediana" checked><span>Mediana</span></label>
               <label><input type="radio" name="tamano" value="grande"><span>Grande</span></label>
@@ -199,7 +152,7 @@
             </div>
           </div>
           <div class="al-field"><label class="al-label" for="p-nombre">Nombre</label><input class="al-input" id="p-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
-          <div class="mi-row2">
+          <div class="julieta-mi-row2">
             <div class="al-field"><label class="al-label" for="p-correo">Correo</label><input class="al-input" id="p-correo" name="correo" type="email" autocomplete="email" required></div>
             <div class="al-field"><label class="al-label" for="p-cp">Código postal</label><input class="al-input" id="p-cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" required></div>
           </div>
@@ -225,7 +178,7 @@
   <footer class="al-footer">
     <div class="al-container">
       <div class="al-footer__grid">
-        <div class="al-stack" style="--al-gap:.9rem"><a class="al-navbar__brand mi-brand" href="#inicio"><al-icon name="leaf" size="26"></al-icon>milpa</a><p class="al-text-sm al-text-muted" style="max-width:30ch">Verdura de temporada, de la milpa a tu cocina.</p></div>
+        <div class="al-stack" style="--al-gap:.9rem"><a class="al-navbar__brand julieta-mi-brand" href="#inicio"><al-icon name="leaf" size="26"></al-icon>milpa</a><p class="al-text-sm al-text-muted" style="max-width:30ch">Verdura de temporada, de la milpa a tu cocina.</p></div>
         <div><div class="al-footer__title">Caja</div><ul class="al-footer__links" role="list"><li><a href="#como">Cómo funciona</a></li><li><a href="#temporada">De temporada</a></li><li><a href="#pedir">Pedir caja</a></li></ul></div>
         <div><div class="al-footer__title">Ayuda</div><ul class="al-footer__links" role="list"><li><a href="#preguntas">Preguntas</a></li><li><a href="#pedir">Contacto</a></li></ul></div>
         <div><div class="al-footer__title">Legal</div><ul class="al-footer__links" role="list"><li><a href="#inicio">Privacidad</a></li><li><a href="#inicio">Términos</a></li></ul></div>
@@ -238,30 +191,7 @@
   <div class="d-backbar"><a href="../landing.html"><al-icon name="arrow-left" size="16"></al-icon>Landing de producto</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const CAJAS = {
-      chica:   { nombre: "Caja chica",   precio: 260, desc: "Para 1 o 2 personas. Unos 3 kg de verdura y fruta, con 3 recetas." },
-      mediana: { nombre: "Caja mediana", precio: 420, desc: "Para 3 o 4 personas. Unos 6 kg de verdura y fruta, con 5 recetas." },
-      grande:  { nombre: "Caja grande",  precio: 590, desc: "Para 5 o más personas. Unos 9 kg de verdura y fruta, con 7 recetas." },
-    };
-    const FREQ = { semanal: "por entrega, cada semana", quincenal: "por entrega, cada 2 semanas", unica: "una sola entrega" };
-    const form = document.getElementById("pedido");
-    const $ = (id) => document.getElementById(id);
-    const pinta = () => {
-      const c = CAJAS[form.tamano.value];
-      $("res-tam").textContent = c.nombre;
-      $("res-precio").textContent = "$" + c.precio;
-      $("res-freq").textContent = FREQ[form.frecuencia.value];
-      $("res-desc").textContent = c.desc;
-    };
-    form.addEventListener("change", pinta);
-    form.addEventListener("al:valid", (e) => {
-      const d = e.detail.data;
-      Julieta.toast({ type: "success", title: "¡Caja reservada!", text: `${CAJAS[d.tamano].nombre}: te escribiremos a ${d.correo} para confirmar la entrega.` });
-      form.reset(); pinta();
-    });
-    form.addEventListener("al:invalid", () => Julieta.toast({ type: "warning", title: "Revisa el formulario", text: "Hay campos que necesitan tu atención." }));
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/landing/julieta-milpa.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

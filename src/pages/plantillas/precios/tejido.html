@@ -31,36 +31,20 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .pr-head { display: grid; gap: 1.25rem; justify-items: center; text-align: center; padding-block: clamp(3rem, 7vw, 5.5rem) 2.5rem; }
-    .pr-head h1 { font-size: var(--al-text-5xl); line-height: .95; letter-spacing: -0.05em; max-width: 14ch; }
-    .pr-head p { color: var(--al-text-muted); font-size: var(--al-text-lg); max-width: 46ch; }
-    .pr-save { color: var(--al-success); font-weight: 700; font-size: .75rem; margin-left: .35rem; }
-    .pr-plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
-    @media (max-width: 62rem) { .pr-plans { grid-template-columns: 1fr; max-width: 28rem; margin-inline: auto; } }
-    .pr-plans .al-plan--featured { position: relative; }
-    .pr-flag { position: absolute; top: -.8rem; right: 1.5rem; }
-    .pr-price-note { min-height: 1.25rem; font-size: .8125rem; margin-top: -.75rem; color: var(--al-text-muted); }
-    .al-plan--featured .pr-price-note { color: color-mix(in oklab, #fff 70%, var(--al-jacaranda-300)); }
-    .pr-table td:not(:first-child), .pr-table th:not(:first-child) { text-align: center; }
-    .pr-table al-icon[name="check"] { color: var(--al-success); }
-    .pr-table al-icon[name="minus"] { color: var(--al-text-subtle); }
-    .pr-nav-links { display: flex; }
-    @media (max-width: 40rem) { .pr-nav-links { display: none; } }
-    #precios-tabla-wrap { margin-top: 1.5rem; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/precios/julieta-tejido.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#planes">Saltar a los planes</a>
   <header class="al-navbar">
     <a class="al-navbar__brand" href="#"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">tejido</a>
-    <nav class="al-navbar__links pr-nav-links" aria-label="Principal"><a class="al-nav-link" href="#">Funciones</a><a class="al-nav-link" href="#planes" aria-current="page">Precios</a><a class="al-nav-link" href="#preguntas">Preguntas</a></nav>
+    <nav class="al-navbar__links julieta-pr-nav-links" aria-label="Principal"><a class="al-nav-link" href="#">Funciones</a><a class="al-nav-link" href="#planes" aria-current="page">Precios</a><a class="al-nav-link" href="#preguntas">Preguntas</a></nav>
     <span class="al-navbar__spacer"></span>
     <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
     <a class="al-btn al-btn--primary al-btn--sm" href="#planes">Probar gratis</a>
@@ -68,59 +52,59 @@
 
   <main>
     <div class="al-container">
-      <div class="pr-head">
+      <div class="julieta-pr-head">
         <h1>Un plan para cada taller</h1>
         <p>Empieza gratis. Cambia de plan cuando tu taller crezca, sin permanencia ni sorpresas.</p>
         <div class="al-segmented" role="radiogroup" aria-label="Facturación">
           <label><input type="radio" name="ciclo" value="mensual" checked><span>Mensual</span></label>
-          <label><input type="radio" name="ciclo" value="anual"><span>Anual <span class="pr-save">−20%</span></span></label>
+          <label><input type="radio" name="ciclo" value="anual"><span>Anual <span class="julieta-pr-save">−20%</span></span></label>
         </div>
       </div>
 
-      <section class="pr-plans" id="planes" aria-label="Planes">
+      <section class="julieta-pr-plans" id="planes" aria-label="Planes">
         <article class="al-plan">
           <div><h2 class="al-plan__name">Semilla</h2><p class="al-plan__desc">Para probar con tus primeros pedidos.</p></div>
-          <div class="al-plan__price"><span data-precio="0">$0</span><small>al mes</small></div>
-          <p class="pr-price-note">Gratis para siempre</p>
+          <div class="al-plan__price"><span data-julieta-precio="0">$0</span><small>al mes</small></div>
+          <p class="julieta-pr-price-note">Gratis para siempre</p>
           <ul class="al-plan__features" role="list">
             <li><al-icon name="check"></al-icon>Hasta 20 pedidos al mes</li>
             <li><al-icon name="check"></al-icon>Tablero y calendario</li>
             <li><al-icon name="check"></al-icon>1 persona</li>
           </ul>
-          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-plan="Semilla">Empezar gratis</a>
+          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-julieta-plan="Semilla">Empezar gratis</a>
         </article>
 
         <article class="al-plan al-plan--featured">
-          <span class="al-badge al-badge--solid pr-flag" style="--_c:var(--al-cempasuchil-500);color:var(--al-cempasuchil-950)">Más elegido</span>
+          <span class="al-badge al-badge--solid julieta-pr-flag" style="--_c:var(--al-cempasuchil-500);color:var(--al-cempasuchil-950)">Más elegido</span>
           <div><h2 class="al-plan__name">Taller</h2><p class="al-plan__desc">Para estudios que ya viven de esto.</p></div>
-          <div class="al-plan__price"><span data-precio="249">$249</span><small>al mes</small></div>
-          <p class="pr-price-note" data-nota="249"></p>
+          <div class="al-plan__price"><span data-julieta-precio="249">$249</span><small>al mes</small></div>
+          <p class="julieta-pr-price-note" data-julieta-nota="249"></p>
           <ul class="al-plan__features" role="list">
             <li><al-icon name="check"></al-icon>Pedidos ilimitados</li>
             <li><al-icon name="check"></al-icon>Cobros y anticipos</li>
             <li><al-icon name="check"></al-icon>Hasta 5 personas</li>
             <li><al-icon name="check"></al-icon>Recibos con tu logotipo</li>
           </ul>
-          <a class="al-btn al-btn--accent al-btn--block" href="#" data-plan="Taller">Probar 30 días gratis</a>
+          <a class="al-btn al-btn--accent al-btn--block" href="#" data-julieta-plan="Taller">Probar 30 días gratis</a>
         </article>
 
         <article class="al-plan">
           <div><h2 class="al-plan__name">Cooperativa</h2><p class="al-plan__desc">Para colectivos con varias sedes.</p></div>
-          <div class="al-plan__price"><span data-precio="699">$699</span><small>al mes</small></div>
-          <p class="pr-price-note" data-nota="699"></p>
+          <div class="al-plan__price"><span data-julieta-precio="699">$699</span><small>al mes</small></div>
+          <p class="julieta-pr-price-note" data-julieta-nota="699"></p>
           <ul class="al-plan__features" role="list">
             <li><al-icon name="check"></al-icon>Todo lo de Taller</li>
             <li><al-icon name="check"></al-icon>Personas ilimitadas</li>
             <li><al-icon name="check"></al-icon>Inventario por sede</li>
             <li><al-icon name="check"></al-icon>Atención prioritaria</li>
           </ul>
-          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-plan="Cooperativa">Hablar con nosotras</a>
+          <a class="al-btn al-btn--secondary al-btn--block" href="#" data-julieta-plan="Cooperativa">Hablar con nosotras</a>
         </article>
       </section>
 
       <section class="al-section" aria-labelledby="comparar">
         <div class="al-section-head"><h2 id="comparar">Compara con detalle</h2></div>
-        <div class="al-table-wrap pr-table" id="precios-tabla-wrap">
+        <div class="al-table-wrap julieta-pr-table" id="julieta-precios-tabla-wrap">
           <table class="al-table al-table--striped">
             <thead><tr><th>Función</th><th>Semilla</th><th>Taller</th><th>Cooperativa</th></tr></thead>
             <tbody>
@@ -160,29 +144,7 @@
   <div class="d-backbar"><a href="../precios.html"><al-icon name="arrow-left" size="16"></al-icon>Precios</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const mxn = (n) => n.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
-    const ANUAL = 0.8;
-
-    function pintar(ciclo) {
-      document.querySelectorAll("[data-precio]").forEach((el) => {
-        const base = Number(el.dataset.precio);
-        el.textContent = mxn(ciclo === "anual" ? Math.round(base * ANUAL) : base);
-      });
-      document.querySelectorAll("[data-nota]").forEach((el) => {
-        const base = Number(el.dataset.nota);
-        el.textContent = ciclo === "anual" ? `${mxn(Math.round(base * ANUAL * 12))} al año · ahorras ${mxn(Math.round(base * 12 * (1 - ANUAL)))}` : "Facturado cada mes";
-      });
-    }
-    document.querySelectorAll('input[name="ciclo"]').forEach((r) => r.addEventListener("change", () => pintar(r.value)));
-    pintar("mensual");
-
-    document.querySelectorAll("[data-plan]").forEach((a) => a.addEventListener("click", (e) => {
-      e.preventDefault();
-      const ciclo = document.querySelector('input[name="ciclo"]:checked').value;
-      Julieta.toast({ type: "success", title: `Elegiste ${a.dataset.plan}`, text: `Facturación ${ciclo}. Aquí iría tu flujo de pago.` });
-    }));
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/precios/julieta-tejido.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

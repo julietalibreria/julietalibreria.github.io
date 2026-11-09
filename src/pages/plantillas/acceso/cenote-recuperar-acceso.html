@@ -31,113 +31,83 @@
   <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <script src="../../../assets/scripts/julieta-theme-init.js"></script>
   <link rel="stylesheet" href="../../../assets/styles/julieta.css">
   <script type="module" src="../../../assets/scripts/julieta.js"></script>
   <!-- docs:start -->
   <link rel="stylesheet" href="../../../assets/styles/docs.css">
   <!-- docs:end -->
-  <style>
-    .cn-auth { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
-    @media (max-width: 62rem) { .cn-auth { grid-template-columns: minmax(0, 1fr); } }
-    .cn-art {
-      order: 2; justify-content: space-between;
-      background:
-        linear-gradient(180deg, color-mix(in oklab, var(--al-jacaranda-950) 55%, transparent), color-mix(in oklab, var(--al-jacaranda-950) 10%, transparent) 40%, color-mix(in oklab, var(--al-jacaranda-950) 78%, transparent)),
-        url("../../../assets/images/cover-atardecer.svg") center / cover no-repeat;
-    }
-    .cn-brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--al-font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.03em; }
-    .cn-art .cn-brand { color: #fff; }
-    .cn-brand--mobile { display: none; }
-    @media (max-width: 62rem) { .cn-brand--mobile { display: inline-flex; } .cn-art { display: none; } .al-auth__form { padding-top: 5rem; align-items: start; } .al-auth__box { padding-bottom: 4rem; } }
-    .cn-art__quote { margin: 0; font-family: var(--al-font-display); font-size: clamp(1.6rem, 1.1rem + 1.5vw, 2.4rem); line-height: 1.12; letter-spacing: -0.035em; font-weight: 600; max-width: 17ch; color: #fff; }
-    .cn-art__small { margin: .9rem 0 0; color: color-mix(in oklab, #fff 82%, transparent); font-size: .9375rem; max-width: 34ch; }
-    .al-auth__form { position: relative; }
-    .cn-top { position: absolute; top: 1.25rem; right: 1.25rem; }
-    .cn-brand--mobile { position: absolute; top: 1.25rem; left: 1.25rem; }
-    .cn-title { font-size: var(--al-text-3xl); letter-spacing: -0.04em; line-height: 1.05; }
-    .cn-title:focus { outline: none; }
-    .cn-icon { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border-radius: var(--al-radius-lg); background: var(--al-primary-soft); color: var(--al-primary); }
-    .cn-icon--ok { color: var(--al-success); background: color-mix(in oklab, var(--al-success) 14%, transparent); }
-    .cn-code { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(.35rem, 2vw, .6rem); }
-    .cn-code .al-input { text-align: center; padding-inline: 0; font-size: 1.5rem; font-weight: 700; min-height: 3.5rem; font-variant-numeric: tabular-nums; }
-    .cn-resend { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; }
-    .cn-count { font-variant-numeric: tabular-nums; }
-    .cn-steps { list-style: none; margin: 0; padding: 0; display: flex; gap: .4rem; }
-    .cn-steps li { height: .3rem; flex: 1; border-radius: 99px; background: var(--al-border-strong); }
-    .cn-steps li.is-on { background: var(--al-primary); }
-    .cn-link-row { display: flex; justify-content: center; }
-    .cn-view[hidden] { display: none; }
-  </style>
+  <link rel="stylesheet" href="../../../assets/styles/templates/acceso/julieta-cenote-recuperar-acceso.css">
+  <!-- Tus estilos (opcional): agrega aquí tu propio archivo, por ejemplo <link rel="stylesheet" href="mi-estilo.css"> -->
 </head>
 <body>
   <a class="al-skip-link" href="#formulario">Saltar al formulario</a>
-  <div class="al-auth cn-auth">
-    <aside class="al-auth__art cn-art">
-      <a class="cn-brand" href="#formulario" style="text-decoration:none"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">cenote seguros</a>
+  <div class="al-auth julieta-cn-auth">
+    <aside class="al-auth__art julieta-cn-art">
+      <a class="julieta-cn-brand" href="#formulario" style="text-decoration:none"><img src="../../../assets/images/mark.svg" alt="" width="30" height="30">cenote seguros</a>
       <div>
-        <p class="cn-art__quote">Tu tranquilidad no se queda fuera de la cuenta.</p>
-        <p class="cn-art__small">Verificamos que seas tú antes de cambiar tu contraseña, para que tus pólizas sigan seguras.</p>
+        <p class="julieta-cn-art__quote">Tu tranquilidad no se queda fuera de la cuenta.</p>
+        <p class="julieta-cn-art__small">Verificamos que seas tú antes de cambiar tu contraseña, para que tus pólizas sigan seguras.</p>
       </div>
     </aside>
 
     <section class="al-auth__form" id="formulario">
-      <span class="cn-brand cn-brand--mobile"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">cenote seguros</span>
-      <div class="cn-top"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button></div>
+      <span class="julieta-cn-brand julieta-cn-brand--mobile"><img src="../../../assets/images/mark.svg" alt="" width="28" height="28">cenote seguros</span>
+      <div class="julieta-cn-top"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button></div>
       <div class="al-auth__box">
-        <ol class="cn-steps" id="barra" aria-hidden="true"><li class="is-on"></li><li></li><li></li></ol>
-        <p class="al-sr-only" id="estado" role="status" aria-live="polite"></p>
+        <ol class="julieta-cn-steps" id="julieta-barra" aria-hidden="true"><li class="is-on"></li><li></li><li></li></ol>
+        <p class="al-sr-only" id="julieta-estado" role="status" aria-live="polite"></p>
 
         <!-- 1 · Correo -->
-        <form class="al-stack cn-view" data-al-validate id="f-correo" style="--al-gap:1.25rem" novalidate aria-labelledby="t1">
-          <span class="cn-icon" aria-hidden="true"><al-icon name="key" size="26"></al-icon></span>
-          <div><h1 class="cn-title" id="t1" tabindex="-1">¿Olvidaste tu contraseña?</h1><p class="al-text-muted al-mt-2">Escribe el correo de tu cuenta y te enviaremos un código de seis dígitos.</p></div>
-          <div class="al-field"><label class="al-label" for="correo">Correo electrónico</label><input class="al-input al-input--lg" id="correo" name="correo" type="email" autocomplete="email" required></div>
+        <form class="al-stack julieta-cn-view" data-al-validate id="julieta-f-correo" style="--al-gap:1.25rem" novalidate aria-labelledby="julieta-t1">
+          <span class="julieta-cn-icon" aria-hidden="true"><al-icon name="key" size="26"></al-icon></span>
+          <div><h1 class="julieta-cn-title" id="julieta-t1" tabindex="-1">¿Olvidaste tu contraseña?</h1><p class="al-text-muted al-mt-2">Escribe el correo de tu cuenta y te enviaremos un código de seis dígitos.</p></div>
+          <div class="al-field"><label class="al-label" for="julieta-correo">Correo electrónico</label><input class="al-input al-input--lg" id="julieta-correo" name="correo" type="email" autocomplete="email" required></div>
           <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Enviar código</button>
-          <div class="cn-link-row"><button class="al-btn al-btn--link" type="button" id="volver-login">Volver a iniciar sesión</button></div>
+          <div class="julieta-cn-link-row"><button class="al-btn al-btn--link" type="button" id="julieta-volver-login">Volver a iniciar sesión</button></div>
         </form>
 
         <!-- 2 · Código -->
-        <form class="al-stack cn-view" id="f-codigo" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="t2">
-          <span class="cn-icon" aria-hidden="true"><al-icon name="mail" size="26"></al-icon></span>
-          <div><h2 class="cn-title" id="t2" tabindex="-1">Revisa tu correo</h2><p class="al-text-muted al-mt-2">Enviamos un código a <strong id="correo-mask"></strong>. Escríbelo o pégalo aquí.</p></div>
+        <form class="al-stack julieta-cn-view" id="julieta-f-codigo" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="julieta-t2">
+          <span class="julieta-cn-icon" aria-hidden="true"><al-icon name="mail" size="26"></al-icon></span>
+          <div><h2 class="julieta-cn-title" id="julieta-t2" tabindex="-1">Revisa tu correo</h2><p class="al-text-muted al-mt-2">Enviamos un código a <strong id="julieta-correo-mask"></strong>. Escríbelo o pégalo aquí.</p></div>
           <div class="al-field">
             <span class="al-label" id="l-codigo">Código de verificación</span>
-            <div class="cn-code" role="group" aria-labelledby="l-codigo" id="codigo"></div>
-            <p class="al-error" id="codigo-err" role="alert" hidden></p>
+            <div class="julieta-cn-code" role="group" aria-labelledby="l-codigo" id="julieta-codigo"></div>
+            <p class="al-error" id="julieta-codigo-err" role="alert" hidden></p>
           </div>
           <div class="al-alert al-alert--primary"><al-icon name="info"></al-icon><div><div class="al-alert__title">Código de ejemplo</div><div class="al-alert__text">Como esta es una plantilla, usa <strong>482915</strong>.</div></div></div>
-          <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit" id="verificar">Verificar código</button>
-          <div class="cn-resend">
-            <span class="al-text-sm al-text-muted cn-count" id="cuenta" aria-hidden="true"></span>
-            <button class="al-btn al-btn--ghost al-btn--sm" type="button" id="reenviar" disabled><al-icon name="refresh"></al-icon>Reenviar código</button>
+          <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit" id="julieta-verificar">Verificar código</button>
+          <div class="julieta-cn-resend">
+            <span class="al-text-sm al-text-muted julieta-cn-count" id="julieta-cuenta" aria-hidden="true"></span>
+            <button class="al-btn al-btn--ghost al-btn--sm" type="button" id="julieta-reenviar" disabled><al-icon name="refresh"></al-icon>Reenviar código</button>
           </div>
-          <div class="cn-link-row"><button class="al-btn al-btn--link" type="button" id="cambiar-correo">Usar otro correo</button></div>
+          <div class="julieta-cn-link-row"><button class="al-btn al-btn--link" type="button" id="julieta-cambiar-correo">Usar otro correo</button></div>
         </form>
 
         <!-- 3 · Nueva contraseña -->
-        <form class="al-stack cn-view" data-al-validate id="f-clave" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="t3">
-          <span class="cn-icon" aria-hidden="true"><al-icon name="lock" size="26"></al-icon></span>
-          <div><h2 class="cn-title" id="t3" tabindex="-1">Crea una contraseña nueva</h2><p class="al-text-muted al-mt-2">Elige una que no hayas usado antes.</p></div>
+        <form class="al-stack julieta-cn-view" data-al-validate id="julieta-f-clave" style="--al-gap:1.25rem" novalidate hidden aria-labelledby="julieta-t3">
+          <span class="julieta-cn-icon" aria-hidden="true"><al-icon name="lock" size="26"></al-icon></span>
+          <div><h2 class="julieta-cn-title" id="julieta-t3" tabindex="-1">Crea una contraseña nueva</h2><p class="al-text-muted al-mt-2">Elige una que no hayas usado antes.</p></div>
           <div class="al-field">
-            <label class="al-label" for="clave">Nueva contraseña</label>
-            <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="clave" name="clave" type="password" autocomplete="new-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
-            <div class="al-progress" id="fuerza" style="--value:0" role="progressbar" aria-label="Seguridad de la contraseña" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-            <p class="al-hint" id="fuerza-txt">Mínimo 8 caracteres, con mayúsculas y números.</p>
+            <label class="al-label" for="julieta-clave">Nueva contraseña</label>
+            <div class="al-input-group" style="min-height:3.25rem"><input class="al-input al-input--lg" id="julieta-clave" name="clave" type="password" autocomplete="new-password" required minlength="8"><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-toggle-password="#julieta-clave" aria-label="Mostrar contraseña"><al-icon name="eye"></al-icon></button></div>
+            <div class="al-progress" id="julieta-fuerza" style="--value:0" role="progressbar" aria-label="Seguridad de la contraseña" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <p class="al-hint" id="julieta-fuerza-txt">Mínimo 8 caracteres, con mayúsculas y números.</p>
           </div>
           <div class="al-field">
-            <label class="al-label" for="clave2">Confirma la contraseña</label>
-            <input class="al-input al-input--lg" id="clave2" name="clave2" type="password" autocomplete="new-password" required>
+            <label class="al-label" for="julieta-clave2">Confirma la contraseña</label>
+            <input class="al-input al-input--lg" id="julieta-clave2" name="clave2" type="password" autocomplete="new-password" required>
           </div>
           <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="submit">Guardar contraseña</button>
         </form>
 
         <!-- 4 · Éxito -->
-        <section class="al-stack cn-view" id="exito" style="--al-gap:1.25rem" hidden aria-labelledby="t4">
-          <span class="cn-icon cn-icon--ok" aria-hidden="true"><al-icon name="check-circle" size="28"></al-icon></span>
-          <div><h2 class="cn-title" id="t4" tabindex="-1">Contraseña actualizada</h2><p class="al-text-muted al-mt-2">Ya puedes entrar a tu cuenta con tu contraseña nueva. Por seguridad, cerramos tus otras sesiones.</p></div>
-          <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="button" id="ir-login">Ir a iniciar sesión</button>
-          <div class="cn-link-row"><button class="al-btn al-btn--link" type="button" id="reiniciar">Probar de nuevo</button></div>
+        <section class="al-stack julieta-cn-view" id="julieta-exito" style="--al-gap:1.25rem" hidden aria-labelledby="julieta-t4">
+          <span class="julieta-cn-icon julieta-cn-icon--ok" aria-hidden="true"><al-icon name="check-circle" size="28"></al-icon></span>
+          <div><h2 class="julieta-cn-title" id="julieta-t4" tabindex="-1">Contraseña actualizada</h2><p class="al-text-muted al-mt-2">Ya puedes entrar a tu cuenta con tu contraseña nueva. Por seguridad, cerramos tus otras sesiones.</p></div>
+          <button class="al-btn al-btn--primary al-btn--lg al-btn--block" type="button" id="julieta-ir-login">Ir a iniciar sesión</button>
+          <div class="julieta-cn-link-row"><button class="al-btn al-btn--link" type="button" id="julieta-reiniciar">Probar de nuevo</button></div>
         </section>
 
         <p class="al-text-xs al-text-subtle al-text-center">Plantilla de ejemplo: los datos no se envían a ningún servidor.</p>
@@ -149,164 +119,7 @@
   <div class="d-backbar"><a href="../acceso.html"><al-icon name="arrow-left" size="16"></al-icon>Acceso y registro</a></div>
   <!-- docs:end -->
 
-  <script type="module">
-    import { Julieta } from "../../../assets/scripts/julieta.js";
-    const $ = (s, r = document) => r.querySelector(s);
-    const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-
-    const CODIGO_OK = "482915", ESPERA = 30, MAX_INTENTOS = 3;
-    const vistas = ["#f-correo", "#f-codigo", "#f-clave", "#exito"].map((s) => $(s));
-    const titulos = ["Recuperar acceso", "Verifica tu código", "Contraseña nueva", "Listo"];
-    let intentos = 0, timer = null, restante = 0;
-
-    function ir(n, enfocar = true) {
-      vistas.forEach((v, i) => { v.hidden = i !== n; });
-      $$("#barra li").forEach((li, i) => li.classList.toggle("is-on", i <= Math.min(n, 2)));
-      $("#estado").textContent = `${titulos[n]}.`;
-      if (enfocar) $(`#t${n + 1}`).focus();
-    }
-    const cargando = (btn, on) => { btn.classList.toggle("is-loading", on); on ? btn.setAttribute("aria-busy", "true") : btn.removeAttribute("aria-busy"); };
-
-    // ---- Código de 6 dígitos ----
-    const caja = $("#codigo");
-    const celdas = Array.from({ length: 6 }, (_, i) => {
-      const el = document.createElement("input");
-      el.className = "al-input"; el.type = "text"; el.inputMode = "numeric"; el.maxLength = 1;
-      el.autocomplete = i === 0 ? "one-time-code" : "off"; el.setAttribute("aria-label", `Dígito ${i + 1} de 6`);
-      caja.append(el); return el;
-    });
-    const valor = () => celdas.map((c) => c.value).join("");
-    function errorCodigo(texto) {
-      const e = $("#codigo-err");
-      e.hidden = !texto; e.textContent = texto || "";
-      celdas.forEach((c) => texto ? c.setAttribute("aria-invalid", "true") : c.removeAttribute("aria-invalid"));
-    }
-    function rellenar(desde, digitos) {
-      let i = desde;
-      for (const d of digitos) { if (i > 5) break; celdas[i++].value = d; }
-      celdas[Math.min(i, 5)].focus();
-    }
-    celdas.forEach((c, i) => {
-      c.addEventListener("input", () => {
-        const d = c.value.replace(/\D/g, "");
-        c.value = "";
-        if (d) { errorCodigo(""); rellenar(i, d); }
-        if (valor().length === 6) $("#f-codigo").requestSubmit();
-      });
-      c.addEventListener("keydown", (e) => {
-        if (e.key === "Backspace" && !c.value && i > 0) { e.preventDefault(); celdas[i - 1].value = ""; celdas[i - 1].focus(); }
-        else if (e.key === "ArrowLeft" && i > 0) { e.preventDefault(); celdas[i - 1].focus(); }
-        else if (e.key === "ArrowRight" && i < 5) { e.preventDefault(); celdas[i + 1].focus(); }
-      });
-      c.addEventListener("focus", () => c.select());
-      c.addEventListener("paste", (e) => {
-        e.preventDefault();
-        const d = (e.clipboardData?.getData("text") || "").replace(/\D/g, "").slice(0, 6);
-        if (!d) return;
-        errorCodigo("");
-        rellenar(d.length === 6 ? 0 : i, d);
-        if (valor().length === 6) $("#f-codigo").requestSubmit();
-      });
-    });
-
-    $("#f-codigo").addEventListener("submit", (e) => {
-      e.preventDefault();
-      if ($("#verificar").classList.contains("is-loading")) return;
-      const v = valor();
-      if (v.length < 6) { errorCodigo("Escribe los 6 dígitos del código."); celdas[v.length].focus(); return; }
-      errorCodigo("");
-      const btn = $("#verificar"); cargando(btn, true);
-      setTimeout(() => {
-        cargando(btn, false);
-        if (v === CODIGO_OK) {
-          clearInterval(timer);
-          ir(2);
-          Julieta.toast({ type: "success", title: "Código verificado", text: "Ahora crea tu nueva contraseña." });
-        } else {
-          intentos++;
-          celdas.forEach((c) => { c.value = ""; });
-          if (intentos >= MAX_INTENTOS) {
-            errorCodigo("Demasiados intentos. Solicita un código nuevo.");
-            celdas.forEach((c) => { c.disabled = true; }); btn.disabled = true;
-            if (restante > 0) return;
-          } else {
-            errorCodigo(`El código no es correcto. Te quedan ${MAX_INTENTOS - intentos} intento${MAX_INTENTOS - intentos === 1 ? "" : "s"}.`);
-            celdas[0].focus();
-          }
-        }
-      }, 900);
-    });
-
-    // ---- Cuenta regresiva ----
-    const fmt = (s) => `0:${String(s).padStart(2, "0")}`;
-    function arrancar() {
-      clearInterval(timer);
-      restante = ESPERA;
-      $("#reenviar").disabled = true;
-      const pinta = () => { $("#cuenta").textContent = restante > 0 ? `Podrás reenviar el código en ${fmt(restante)}` : "¿No te llegó el código?"; };
-      pinta();
-      timer = setInterval(() => {
-        restante--; pinta();
-        if (restante <= 0) { clearInterval(timer); $("#reenviar").disabled = false; $("#estado").textContent = "Ya puedes reenviar el código."; }
-      }, 1000);
-    }
-    $("#reenviar").addEventListener("click", () => {
-      const btn = $("#reenviar"); cargando(btn, true);
-      setTimeout(() => {
-        cargando(btn, false);
-        intentos = 0; errorCodigo("");
-        celdas.forEach((c) => { c.value = ""; c.disabled = false; }); $("#verificar").disabled = false;
-        arrancar(); celdas[0].focus();
-        $("#estado").textContent = "Código reenviado.";
-        Julieta.toast({ type: "success", title: "Código reenviado", text: `Revisa ${$("#correo-mask").textContent}.` });
-      }, 800);
-    });
-
-    // ---- Paso 1: correo ----
-    const mascara = (c) => { const [u, d] = c.split("@"); return `${u[0]}${"•".repeat(Math.max(u.length - 1, 2))}@${d}`; };
-    $("#f-correo").addEventListener("al:valid", (e) => {
-      const btn = $("#f-correo [type=submit]"); cargando(btn, true);
-      setTimeout(() => {
-        cargando(btn, false);
-        $("#correo-mask").textContent = mascara(e.detail.data.correo.trim());
-        intentos = 0; errorCodigo("");
-        celdas.forEach((c) => { c.value = ""; c.disabled = false; }); $("#verificar").disabled = false;
-        ir(1, false); arrancar(); celdas[0].focus();
-        Julieta.toast({ type: "info", title: "Código enviado", text: "Tarda menos de un minuto en llegar." });
-      }, 1000);
-    });
-    $("#cambiar-correo").addEventListener("click", () => { clearInterval(timer); ir(0); $("#correo").focus(); });
-
-    // ---- Paso 3: nueva contraseña ----
-    const clave = $("#clave"), clave2 = $("#clave2");
-    const puntos = (v) => [v.length >= 8, /[A-Z]/.test(v), /[0-9]/.test(v), /[^A-Za-z0-9]/.test(v)].filter(Boolean).length;
-    function validarClaves() {
-      const v = clave.value, p = puntos(v);
-      const barra = $("#fuerza");
-      barra.style.setProperty("--value", v ? p * 25 : 0); barra.setAttribute("aria-valuenow", v ? p * 25 : 0);
-      barra.classList.toggle("al-progress--success", p >= 3); barra.classList.toggle("al-progress--warning", p === 2);
-      $("#fuerza-txt").textContent = !v ? "Mínimo 8 caracteres, con mayúsculas y números." : ["Muy débil", "Débil", "Aceptable", "Buena", "Excelente"][p];
-      clave.setCustomValidity(v.length >= 8 && p < 3 ? "Añade una mayúscula y un número para fortalecerla." : "");
-      clave2.setCustomValidity(clave2.value && clave2.value !== v ? "Las contraseñas no coinciden." : "");
-    }
-    clave.addEventListener("input", validarClaves); clave2.addEventListener("input", validarClaves);
-    $("#f-clave").addEventListener("al:valid", () => {
-      const btn = $("#f-clave [type=submit]"); cargando(btn, true);
-      setTimeout(() => {
-        cargando(btn, false); ir(3);
-        Julieta.toast({ type: "success", title: "Contraseña actualizada", text: "Tu cuenta está protegida de nuevo." });
-      }, 1100);
-    });
-
-    // ---- Otros ----
-    const aviso = () => Julieta.toast({ type: "info", title: "Inicio de sesión", text: "Aquí enlazarías tu pantalla de acceso." });
-    $("#volver-login").addEventListener("click", aviso); $("#ir-login").addEventListener("click", aviso);
-    $("#reiniciar").addEventListener("click", () => {
-      $$("form").forEach((f) => f.reset());
-      $$(".al-error[id$='-err']").forEach((x) => { if (x.id !== "codigo-err") x.remove(); });
-      $$("[aria-invalid]").forEach((x) => x.removeAttribute("aria-invalid"));
-      validarClaves(); errorCodigo(""); ir(0); $("#correo").focus();
-    });
-  </script>
+  <script type="module" src="../../../assets/scripts/templates/acceso/julieta-cenote-recuperar-acceso.js"></script>
+  <!-- Tu JavaScript (opcional): agrega aquí tu propio archivo, por ejemplo <script type="module" src="mi-script.js"></script> -->
 </body>
 </html>

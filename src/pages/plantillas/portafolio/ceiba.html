@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ceiba · Portafolio de desarrolladora full stack</title>
+  <meta name="description" content="Portafolio de desarrollo con presentación fija a un lado, proyectos con su stack, línea de tiempo de experiencia y correo para copiar con un clic.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/portafolio/ceiba.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/portafolio/ceiba.html">
+  <meta property="og:title" content="Ceiba · Portafolio de desarrolladora full stack">
+  <meta property="og:description" content="Portafolio de desarrollo con presentación fija a un lado, proyectos con su stack, línea de tiempo de experiencia y correo para copiar con un clic.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ceiba · Portafolio de desarrolladora full stack">
+  <meta name="twitter:description" content="Portafolio de desarrollo con presentación fija a un lado, proyectos con su stack, línea de tiempo de experiencia y correo para copiar con un clic.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Ceiba · Portafolio de desarrolladora full stack", "description": "Portafolio de desarrollo con presentación fija a un lado, proyectos con su stack, línea de tiempo de experiencia y correo para copiar con un clic.", "url": "https://julietalibreria.github.io/src/pages/plantillas/portafolio/ceiba.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .ce-layout { display: grid; grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); padding-block: clamp(2rem, 6vw, 5rem); }
+    @media (max-width: 62rem) { .ce-layout { grid-template-columns: 1fr; } }
+    .ce-side { position: sticky; top: 1.5rem; align-self: start; display: grid; gap: 1.25rem; }
+    @media (max-width: 62rem) { .ce-side { position: static; } }
+    .ce-name { font-family: var(--al-font-display); font-size: clamp(2.6rem, 1.5rem + 4vw, 4.2rem); line-height: .92; letter-spacing: -0.05em; font-weight: 800; }
+    .ce-role { font-family: var(--al-font-mono); font-size: var(--al-text-sm); color: var(--al-primary); }
+    .ce-nav { display: grid; gap: .25rem; font-family: var(--al-font-mono); font-size: var(--al-text-sm); }
+    .ce-nav a { padding: .3rem 0; color: var(--al-text-muted); text-decoration: none; }
+    .ce-nav a:hover, .ce-nav a:focus-visible { color: var(--al-text); }
+    .ce-main { display: grid; gap: clamp(3rem, 7vw, 5rem); max-width: 46rem; }
+    .ce-main h2 { font-family: var(--al-font-mono); font-size: var(--al-text-sm); font-weight: 500; color: var(--al-text-muted); margin-bottom: 1.25rem; }
+    .ce-about { font-size: var(--al-text-xl); line-height: 1.5; text-wrap: pretty; }
+    .ce-proj { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0 1.25rem; padding-block: 1.5rem; border-top: 1px solid var(--al-border); }
+    .ce-proj:last-child { border-bottom: 1px solid var(--al-border); }
+    .ce-proj time { font-family: var(--al-font-mono); font-size: var(--al-text-sm); color: var(--al-text-muted); padding-top: .3rem; }
+    .ce-proj h3 { font-size: var(--al-text-xl); letter-spacing: -0.02em; display: flex; align-items: center; gap: .5rem; }
+    .ce-proj h3 a { color: inherit; text-decoration: none; }
+    .ce-proj h3 a:hover { text-decoration: underline; text-underline-offset: .2em; }
+    .ce-proj p { color: var(--al-text-muted); margin-block: .4rem .8rem; }
+    .ce-stack { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .ce-stack .al-badge { font-family: var(--al-font-mono); }
+    @media (max-width: 36rem) { .ce-proj { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="al-container ce-layout">
+    <aside class="ce-side" aria-label="Presentación">
+      <div>
+        <h1 class="ce-name">Renata Cruz</h1>
+        <p class="ce-role al-mt-2">Desarrolladora full stack</p>
+      </div>
+      <p class="al-text-muted">Construyo herramientas web rápidas y accesibles para organizaciones pequeñas. Hoy en Oaxaca, trabajando a distancia.</p>
+      <span class="al-badge al-badge--success al-badge--dot" style="justify-self:start">Disponible desde enero</span>
+      <nav class="ce-nav" aria-label="Secciones"><a href="#sobre-mi">sobre mí</a><a href="#proyectos">proyectos</a><a href="#experiencia">experiencia</a><a href="#contacto">contacto</a></nav>
+      <div class="al-cluster">
+        <a class="al-btn al-btn--ghost al-btn--icon" href="#contacto" aria-label="Código en GitHub"><al-icon name="git-branch" size="20"></al-icon></a>
+        <a class="al-btn al-btn--ghost al-btn--icon" href="#contacto" aria-label="Correo"><al-icon name="mail" size="20"></al-icon></a>
+        <button class="al-btn al-btn--ghost al-btn--icon" data-al-theme-toggle data-al-tip="Cambiar tema" aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+      </div>
+    </aside>
+
+    <main class="ce-main" id="contenido">
+      <section id="sobre-mi" aria-labelledby="t-sobre"><h2 id="t-sobre">sobre mí</h2>
+        <p class="ce-about">Estudié ingeniería en computación y llevo siete años haciendo software para cooperativas, medios y salud. Me interesa que lo que construyo funcione en un teléfono viejo con conexión lenta.</p>
+      </section>
+
+      <section id="proyectos" aria-labelledby="t-proy"><h2 id="t-proy">proyectos</h2>
+        <article class="ce-proj"><time datetime="2025">2025</time><div><h3><a href="#proyectos">Cosecha</a><al-icon name="arrow-up-right" size="16"></al-icon></h3><p>Panel para que cooperativas agrícolas registren cosechas desde el celular, aun sin señal. <strong>Offline-first · 1,200 productores.</strong></p><div class="ce-stack"><span class="al-badge">TypeScript</span><span class="al-badge">React</span><span class="al-badge">SQLite</span></div></div></article>
+        <article class="ce-proj"><time datetime="2024">2024</time><div><h3><a href="#proyectos">Rutas del Sur</a><al-icon name="arrow-up-right" size="16"></al-icon></h3><p>API de horarios de transporte público abierta para tres ciudades, con 40 mil consultas al día. <strong>Open data · 99.9 % de disponibilidad.</strong></p><div class="ce-stack"><span class="al-badge">Go</span><span class="al-badge">PostgreSQL</span><span class="al-badge">Docker</span></div></div></article>
+        <article class="ce-proj"><time datetime="2023">2023</time><div><h3><a href="#proyectos">Tinta</a><al-icon name="arrow-up-right" size="16"></al-icon></h3><p>Editor de texto colaborativo para redacciones pequeñas, con comentarios y control de versiones. <strong>Tiempo real · 8 redacciones.</strong></p><div class="ce-stack"><span class="al-badge">TypeScript</span><span class="al-badge">WebSockets</span><span class="al-badge">Redis</span></div></div></article>
+        <article class="ce-proj"><time datetime="2022">2022</time><div><h3><a href="#proyectos">Paso a paso</a><al-icon name="arrow-up-right" size="16"></al-icon></h3><p>App de rehabilitación para fisioterapeutas: rutinas en video y seguimiento por paciente. <strong>Accesible · WCAG AA.</strong></p><div class="ce-stack"><span class="al-badge">Kotlin</span><span class="al-badge">Firebase</span></div></div></article>
+      </section>
+
+      <section id="experiencia" aria-labelledby="t-exp"><h2 id="t-exp">experiencia</h2>
+        <ol class="al-timeline">
+          <li class="al-timeline__item"><div class="al-timeline__time">2023 – hoy</div><div class="al-timeline__title">Desarrolladora sénior · Agave Digital</div><div class="al-timeline__text">Lidero un equipo de cuatro personas que mantiene plataformas para 30 organizaciones.</div></li>
+          <li class="al-timeline__item"><div class="al-timeline__time">2020 – 2023</div><div class="al-timeline__title">Desarrolladora · Diario del Valle</div><div class="al-timeline__text">Rehice el sitio y el CMS; el tiempo de carga bajó de 6 s a 1.2 s.</div></li>
+          <li class="al-timeline__item"><div class="al-timeline__time">2018 – 2020</div><div class="al-timeline__title">Desarrolladora junior · Clínica Sol</div><div class="al-timeline__text">Primer sistema de citas en línea de la clínica.</div></li>
+        </ol>
+      </section>
+
+      <section id="contacto" aria-labelledby="t-cont"><h2 id="t-cont">contacto</h2>
+        <p class="ce-about">¿Tienes un proyecto en mente? Cuéntamelo en un par de líneas y te respondo en un día.</p>
+        <div class="al-cluster al-mt-6"><a class="al-btn al-btn--primary al-btn--lg" href="#contacto" id="copiar"><al-icon name="copy" size="18"></al-icon>Copiar mi correo</a><a class="al-btn al-btn--outline al-btn--lg" href="#proyectos">Ver proyectos</a></div>
+      </section>
+    </main>
+  </div>
+  <footer class="al-footer"><div class="al-container"><div class="al-footer__legal"><span>© 2026 Renata Cruz. Marca ficticia.</span><span>Plantilla de ejemplo de Julieta UI</span></div></div></footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../portafolio.html"><al-icon name="arrow-left" size="16"></al-icon>Portafolio</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    document.getElementById("copiar").addEventListener("click", async (e) => {
+      e.preventDefault();
+      const ok = await Julieta.copy("hola@renatacruz.example");
+      Julieta.toast({ type: ok ? "success" : "danger", title: ok ? "Correo copiado" : "No se pudo copiar", text: ok ? "hola@renatacruz.example" : "Tu navegador bloqueó el portapapeles." });
+    });
+  </script>
+</body>
+</html>

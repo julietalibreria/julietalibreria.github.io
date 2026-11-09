@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sal y Luz · Portafolio de fotografía documental</title>
+  <meta name="description" content="Portafolio de fotografía documental con galería filtrable por tema, visor ampliado con navegación y formulario para reservar sesión.">
+  <link rel="canonical" href="https://julietalibreria.github.io/src/pages/plantillas/portafolio/sal-y-luz.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Julieta">
+  <meta name="application-name" content="Julieta UI">
+  <meta name="theme-color" content="#f6f4fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#261444" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Julieta UI">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://julietalibreria.github.io/src/pages/plantillas/portafolio/sal-y-luz.html">
+  <meta property="og:title" content="Sal y Luz · Portafolio de fotografía documental">
+  <meta property="og:description" content="Portafolio de fotografía documental con galería filtrable por tema, visor ampliado con navegación y formulario para reservar sesión.">
+  <meta property="og:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sal y Luz · Portafolio de fotografía documental">
+  <meta name="twitter:description" content="Portafolio de fotografía documental con galería filtrable por tema, visor ampliado con navegación y formulario para reservar sesión.">
+  <meta name="twitter:image" content="https://julietalibreria.github.io/src/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="Julieta UI: perrito en morado jacaranda y el lema «Interfaces con alma, por CDN»">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Sal y Luz · Portafolio de fotografía documental", "description": "Portafolio de fotografía documental con galería filtrable por tema, visor ampliado con navegación y formulario para reservar sesión.", "url": "https://julietalibreria.github.io/src/pages/plantillas/portafolio/sal-y-luz.html", "inLanguage": "es-MX", "isPartOf": {"@type": "WebSite", "name": "Julieta UI", "url": "https://julietalibreria.github.io/"}}</script>
+  <link rel="icon" href="../../../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>try{var m=localStorage.getItem("julieta-theme");if(m&&m!=="system")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
+  <link rel="stylesheet" href="../../../assets/styles/julieta.css">
+  <script type="module" src="../../../assets/scripts/julieta.js"></script>
+  <!-- docs:start -->
+  <link rel="stylesheet" href="../../../assets/styles/docs.css">
+  <!-- docs:end -->
+  <style>
+    .sl-brand { font-family: var(--al-font-display); font-weight: 800; letter-spacing: -0.04em; font-size: 1.3rem; }
+    .sl-menu { display: none; }
+    @media (max-width: 52rem) { .sl-links, .sl-cta { display: none; } .sl-menu { display: inline-flex; } }
+    .sl-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: end; padding-block: clamp(2.5rem, 6vw, 5rem); }
+    @media (max-width: 52rem) { .sl-hero { grid-template-columns: 1fr; } }
+    .sl-name { font-size: clamp(3.2rem, 1rem + 10vw, 9rem); line-height: .86; letter-spacing: -0.06em; font-weight: 800; overflow-wrap: anywhere; }
+    .sl-lead { max-width: 38ch; color: var(--al-text-muted); font-size: var(--al-text-xl); margin-block: 1.25rem 1.75rem; }
+    .sl-shot { display: block; width: 100%; border: 0; padding: 0; border-radius: var(--al-radius-md); overflow: hidden; cursor: zoom-in; position: relative; }
+    .sl-shot:focus-visible { outline: 3px solid var(--al-primary); outline-offset: 3px; }
+    .sl-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: end; margin-bottom: 1.5rem; }
+    .sl-grid { columns: 3 15rem; column-gap: 1rem; }
+    .sl-item { break-inside: avoid; margin: 0 0 1rem; }
+    .sl-item figcaption { display: flex; justify-content: space-between; gap: .75rem; padding-top: .5rem; font-size: var(--al-text-sm); }
+    .sl-item figcaption span { color: var(--al-text-muted); }
+    .sl-item[hidden] { display: none; }
+    .sl-view { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.25rem; }
+    @media (max-width: 40rem) { .sl-view { grid-template-columns: 1fr; } }
+    .sl-view dl { display: grid; gap: .6rem; margin: 0; align-content: start; }
+    .sl-view dt { font-size: var(--al-text-sm); color: var(--al-text-muted); }
+    .sl-view dd { margin: 0 0 .4rem; font-weight: 600; }
+    .sl-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; }
+    .sl-contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
+    @media (max-width: 52rem) { .sl-contact { grid-template-columns: 1fr; } }
+    .sl-form { display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--al-border); border-radius: var(--al-radius-xl); background: var(--al-surface); }
+  </style>
+</head>
+<body>
+  <a class="al-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="al-navbar">
+    <a class="al-navbar__brand sl-brand" href="#inicio"><al-icon name="camera" size="24"></al-icon>sal y luz</a>
+    <nav class="al-navbar__links sl-links" aria-label="Principal">
+      <a class="al-nav-link" href="#trabajo">Trabajo</a><a class="al-nav-link" href="#servicios">Servicios</a><a class="al-nav-link" href="#contacto">Contacto</a>
+    </nav>
+    <span class="al-navbar__spacer"></span>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-theme-toggle data-al-tip="Cambiar tema" data-al-tip-pos="bottom" aria-label="Cambiar tema"><al-icon name="moon" size="20"></al-icon></button>
+    <a class="al-btn al-btn--primary al-btn--sm sl-cta" href="#contacto">Reservar sesión</a>
+    <button class="al-btn al-btn--ghost al-btn--icon al-btn--sm sl-menu" data-al-open="#menu-movil" aria-label="Abrir menú"><al-icon name="menu" size="22"></al-icon></button>
+  </header>
+  <dialog class="al-drawer" id="menu-movil" aria-label="Menú">
+    <div class="al-drawer__header"><span class="al-drawer__title">sal y luz</span><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-drawer__body"><nav class="al-sidebar" aria-label="Móvil"><div class="al-sidebar__group">
+      <a class="al-sidebar__link" href="#trabajo" data-al-close>Trabajo</a><a class="al-sidebar__link" href="#servicios" data-al-close>Servicios</a><a class="al-sidebar__link" href="#contacto" data-al-close>Contacto</a>
+    </div></nav></div>
+  </dialog>
+
+  <main id="contenido">
+    <section class="al-container sl-hero" id="inicio">
+      <div>
+        <h1 class="sl-name">Ximena Ortiz</h1>
+        <p class="sl-lead">Fotografía documental de costa, ciudad y gente. Vivo en Veracruz y viajo por todo México.</p>
+        <div class="al-cluster"><a class="al-btn al-btn--primary al-btn--lg" href="#trabajo">Ver el trabajo<al-icon name="arrow-down"></al-icon></a><a class="al-btn al-btn--outline al-btn--lg" href="#contacto">Escribirme</a></div>
+      </div>
+      <button class="sl-shot" id="portada" type="button" aria-label="Ampliar la foto de portada"></button>
+    </section>
+
+    <section class="al-container al-section" id="trabajo" aria-labelledby="t-trabajo">
+      <div class="sl-bar">
+        <div><h2 id="t-trabajo">Trabajo reciente</h2><p class="al-text-muted">Ocho series de los últimos tres años. Toca una foto para verla completa.</p></div>
+        <div class="al-cluster" role="group" aria-label="Filtrar por tema" id="filtros">
+          <button class="al-chip" type="button" data-cat="todo" aria-pressed="true">Todo</button>
+          <button class="al-chip" type="button" data-cat="Costa" aria-pressed="false">Costa</button>
+          <button class="al-chip" type="button" data-cat="Ciudad" aria-pressed="false">Ciudad</button>
+          <button class="al-chip" type="button" data-cat="Gente" aria-pressed="false">Gente</button>
+        </div>
+      </div>
+      <div class="sl-grid" id="galeria"></div>
+    </section>
+
+    <section class="al-container al-section" id="servicios" aria-labelledby="t-serv">
+      <h2 id="t-serv">Servicios</h2>
+      <div class="sl-services al-mt-6">
+        <article class="al-card"><div class="al-card__body"><h3 class="al-card__title">Reportaje documental</h3><p class="al-card__text">Un día contigo y tu proyecto. Entrego 40 fotos editadas en una semana.</p></div><div class="al-card__footer"><span class="al-badge">Desde $6,500</span></div></article>
+        <article class="al-card"><div class="al-card__body"><h3 class="al-card__title">Retrato en exteriores</h3><p class="al-card__text">Sesión de una hora con luz natural. Incluye 15 fotos editadas.</p></div><div class="al-card__footer"><span class="al-badge">Desde $2,800</span></div></article>
+        <article class="al-card"><div class="al-card__body"><h3 class="al-card__title">Bodas pequeñas</h3><p class="al-card__text">Para menos de 50 invitados. Cobertura de medio día y álbum impreso.</p></div><div class="al-card__footer"><span class="al-badge">Desde $9,000</span></div></article>
+      </div>
+    </section>
+
+    <section class="al-container al-section" id="contacto" aria-labelledby="t-contacto">
+      <div class="sl-contact">
+        <div><h2 id="t-contacto">Cuéntame qué quieres contar</h2><p class="al-text-muted al-mt-4" style="max-width:40ch">Respondo en menos de dos días hábiles. Reservo máximo tres sesiones al mes para dedicarles tiempo.</p></div>
+        <form class="sl-form" id="reserva" data-al-validate novalidate>
+          <div class="al-field"><label class="al-label" for="r-nombre">Tu nombre</label><input class="al-input" id="r-nombre" name="nombre" autocomplete="name" required minlength="3"></div>
+          <div class="al-field"><label class="al-label" for="r-correo">Correo</label><input class="al-input" id="r-correo" name="correo" type="email" autocomplete="email" required></div>
+          <div class="al-field"><label class="al-label" for="r-tipo">Tipo de sesión</label><select class="al-select" id="r-tipo" name="tipo" required><option value="">Elige una</option><option>Reportaje documental</option><option>Retrato en exteriores</option><option>Boda pequeña</option></select></div>
+          <button class="al-btn al-btn--primary" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="al-modal" id="visor" aria-labelledby="visor-t">
+    <div class="al-modal__header"><h2 class="al-modal__title" id="visor-t"></h2><button class="al-btn al-btn--ghost al-btn--icon al-btn--sm" type="button" data-al-close aria-label="Cerrar"><al-icon name="x" size="20"></al-icon></button></div>
+    <div class="al-modal__body sl-view"><div id="visor-img"></div><dl id="visor-datos"></dl></div>
+    <div class="al-modal__footer"><button class="al-btn al-btn--outline" type="button" id="ant"><al-icon name="arrow-left" size="18"></al-icon>Anterior</button><button class="al-btn al-btn--primary" type="button" id="sig">Siguiente<al-icon name="arrow-right" size="18"></al-icon></button></div>
+  </dialog>
+
+  <footer class="al-footer"><div class="al-container"><div class="al-footer__legal"><span>© 2026 Ximena Ortiz · Sal y Luz. Marca ficticia.</span><span>Plantilla de ejemplo de Julieta UI</span></div></div></footer>
+
+  <!-- docs:start -->
+  <div class="d-backbar"><a href="../portafolio.html"><al-icon name="arrow-left" size="16"></al-icon>Portafolio</a><button type="button" data-al-theme-toggle aria-label="Cambiar tema"><al-icon name="moon" size="16"></al-icon></button></div>
+  <!-- docs:end -->
+
+  <script type="module">
+    import { Julieta } from "../../../assets/scripts/julieta.js";
+    const FOTOS = [
+      { t: "Marea baja", cat: "Costa", lugar: "Antón Lizardo", año: 2025, r: "4 / 5", bg: "radial-gradient(circle at 70% 28%, #ffe6b0 0 7%, transparent 8%), linear-gradient(#f4a261 0 45%, #2a6f97 45% 100%)" },
+      { t: "Mercado a las seis", cat: "Ciudad", lugar: "Xalapa", año: 2024, r: "1 / 1", bg: "linear-gradient(90deg, #264653 0 20%, #2a9d8f 20% 45%, #e9c46a 45% 70%, #e76f51 70% 100%)" },
+      { t: "Doña Chela", cat: "Gente", lugar: "Tlacotalpan", año: 2025, r: "3 / 4", bg: "radial-gradient(circle at 50% 38%, #e0a97f 0 16%, transparent 17%), linear-gradient(#7b2d26, #3d1a17)" },
+      { t: "Muelle en bruma", cat: "Costa", lugar: "Alvarado", año: 2023, r: "5 / 4", bg: "linear-gradient(#cfd8dc 0 55%, #78909c 55% 100%)" },
+      { t: "Azotea", cat: "Ciudad", lugar: "Veracruz centro", año: 2024, r: "4 / 5", bg: "linear-gradient(135deg, #ff7aa2 0 35%, #7b5cd6 35% 70%, #1f1a38 70% 100%)" },
+      { t: "Pescadores", cat: "Gente", lugar: "Boca del Río", año: 2023, r: "1 / 1", bg: "radial-gradient(circle at 30% 70%, #f6bd60 0 10%, transparent 11%), linear-gradient(#1d3557 0 60%, #457b9d 60% 100%)" },
+      { t: "Ventana azul", cat: "Ciudad", lugar: "Coatepec", año: 2025, r: "3 / 4", bg: "linear-gradient(#f1faee 0 20%, #1d6fb8 20% 80%, #f1faee 80% 100%)" },
+      { t: "Último baño", cat: "Costa", lugar: "Mocambo", año: 2024, r: "5 / 4", bg: "linear-gradient(#ffd6a5 0 30%, #ffadad 30% 55%, #4d908e 55% 100%)" },
+    ];
+    const $ = (id) => document.getElementById(id);
+    const arte = (f, extra = "") => `<span style="display:block;aspect-ratio:${f.r};background:${f.bg};${extra}" role="img" aria-label="Fotografía «${f.t}»"></span>`;
+    let activa = 0, visibles = FOTOS.map((_, i) => i);
+    $("galeria").innerHTML = FOTOS.map((f, i) => `<figure class="sl-item" data-i="${i}" data-cat="${f.cat}"><button class="sl-shot" type="button" data-i="${i}" aria-label="Ver «${f.t}»">${arte(f)}</button><figcaption><strong>${f.t}</strong><span>${f.cat} · ${f.año}</span></figcaption></figure>`).join("");
+    $("portada").innerHTML = arte({ ...FOTOS[0], r: "4 / 5" }); $("portada").dataset.i = 0;
+    function abre(i) {
+      activa = i; const f = FOTOS[i];
+      $("visor-t").textContent = f.t; $("visor-img").innerHTML = arte(f, "border-radius:var(--al-radius-md)");
+      $("visor-datos").innerHTML = `<dt>Tema</dt><dd>${f.cat}</dd><dt>Lugar</dt><dd>${f.lugar}</dd><dt>Año</dt><dd>${f.año}</dd>`;
+      if (!$("visor").open) $("visor").showModal();
+    }
+    const mueve = (d) => { const p = visibles.indexOf(activa); abre(visibles[(p + d + visibles.length) % visibles.length]); };
+    document.addEventListener("click", (e) => { const b = e.target.closest("button.sl-shot"); if (b) abre(Number(b.dataset.i)); });
+    $("ant").onclick = () => mueve(-1); $("sig").onclick = () => mueve(1);
+    $("filtros").addEventListener("click", (e) => {
+      const b = e.target.closest(".al-chip"); if (!b) return;
+      $("filtros").querySelectorAll(".al-chip").forEach((c) => c.setAttribute("aria-pressed", String(c === b)));
+      visibles = [];
+      document.querySelectorAll(".sl-item").forEach((el) => { const ok = b.dataset.cat === "todo" || el.dataset.cat === b.dataset.cat; el.hidden = !ok; if (ok) visibles.push(Number(el.dataset.i)); });
+    });
+    $("reserva").addEventListener("al:valid", (e) => {
+      Julieta.toast({ type: "success", title: "Mensaje enviado", text: `Te respondo a ${e.detail.data.correo} en menos de dos días hábiles.` });
+      e.currentTarget.reset();
+    });
+  </script>
+</body>
+</html>
