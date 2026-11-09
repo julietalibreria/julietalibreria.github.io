@@ -24,12 +24,33 @@ src/
 ├─ pages/                  Documentación y plantillas (HTML)
 │  ├─ instalacion.html  recursos.html  fundamentos.html  colores.html
 │  ├─ tipografia.html   iconos.html    componentes.html  plantillas.html
-│  └─ plantillas/        4 categorías (landing · dashboard · acceso · precios), 3 plantillas cada una
+│  └─ plantillas/        5 categorías (landing · dashboard · acceso · precios · portafolio), 3 plantillas cada una (solo HTML)
 └─ assets/
    ├─ styles/            CSS por módulo (julieta.css los importa en @layer)
+   │  └─ templates/      CSS de cada plantilla: <categoría>/julieta-<plantilla>.css
    ├─ scripts/           ES modules (julieta.js es el punto de entrada)
+   │  ├─ julieta-theme-init.js   Aplica el tema guardado antes de pintar (se carga en el <head>)
+   │  └─ templates/      JS de cada plantilla: <categoría>/julieta-<plantilla>.js
    ├─ json/              Datos: iconos, colores, tipografía, componentes, tokens…
    └─ images/            Marca, ilustraciones, portadas y vistas previas
+```
+
+## Plantillas: HTML aparte, CSS y JS por CDN
+
+Cada plantilla es un `.html` limpio, sin `<style>` ni `<script>` en línea. Su CSS y su JS viven en `src/assets/styles/templates/` y `src/assets/scripts/templates/`, y la página los carga desde el CDN (`https://julietalibreria.github.io`). Quien use una plantilla se queda con el HTML; los estilos y la lógica los seguimos controlando nosotros.
+
+Para evitar choques con el código de quien las use, todo lo que aportan las plantillas lleva el prefijo `julieta`:
+
+- Clases CSS, variables y animaciones: `julieta-hero`, `--julieta-bg`, `@keyframes julieta-go`.
+- Ids que usa el JS: `julieta-formulario`.
+- Atributos propios: `data-julieta-plan` (en JS, `dataset.julietaPlan`).
+- Archivos: `julieta-<plantilla>.css` y `julieta-<plantilla>.js`.
+
+Para personalizar, agrega tus propios archivos **después** de los nuestros (así tus reglas ganan):
+
+```html
+<link rel="stylesheet" href="mi-estilo.css">
+<script type="module" src="mi-script.js"></script>
 ```
 
 ## Módulos
