@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="julieta">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,6 +54,7 @@
         <p class="al-text-muted">La hoja de estilos carga todos los módulos CSS. El script registra <code>&lt;al-icon&gt;</code>, el tema, las pestañas, los modales y el resto.</p>
         <div class="al-code" data-lang="html" data-label="HTML"><pre><code>&lt;link rel="stylesheet" href="{{CDN}}/src/assets/styles/julieta.css"&gt;
 &lt;script type="module" src="{{CDN}}/src/assets/scripts/julieta.js"&gt;&lt;/script&gt;</code></pre></div>
+        <div class="d-note"><al-icon name="check-circle"></al-icon><p><strong>Seguro por defecto.</strong> Estas dos líneas no cambian nada de tu página. Julieta solo da estilo a los elementos con clases <code>al-*</code> y a lo que contienen: no toca <code>box-sizing</code>, márgenes, titulares, enlaces, botones ni el <code>body</code>, y no se apropia de atajos de teclado. Si además quieres su reseteo, su tipografía y su tema en toda la página, agrega <code>class="julieta"</code> al <code>&lt;html&gt;</code> (o a un contenedor).</p></div>
       </li>
       <li>
         <h3 id="paso-usar">Usa las clases</h3>
@@ -92,7 +93,7 @@ toast.success("Copiado", "El fragmento está en tu portapapeles.");</code></pre>
 }</code></pre></div>
 
     <h3 id="tema">Tema claro y oscuro</h3>
-    <p>Sigue al sistema por defecto. Para ofrecer un interruptor, añade un botón con <code>data-al-theme-toggle</code>; la preferencia se guarda sola. Para evitar el parpadeo al cargar, copia este script antes de la hoja de estilos:</p>
+    <p>Con <code>class="julieta"</code> en el <code>&lt;html&gt;</code> sigue al sistema por defecto; sin esa clase, los componentes siguen el esquema de color de tu sitio (por ejemplo, <code>color-scheme: dark</code>). Para ofrecer un interruptor, añade un botón con <code>data-al-theme-toggle</code>; la preferencia se guarda sola. Para evitar el parpadeo al cargar, copia este script antes de la hoja de estilos:</p>
     <div class="al-code" data-lang="html" data-label="Antes del primer pintado"><pre><code>&lt;script&gt;
   try { var m = localStorage.getItem("julieta-theme");
     if (m &amp;&amp; m !== "system") document.documentElement.setAttribute("data-theme", m);
