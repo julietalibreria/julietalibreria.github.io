@@ -12,9 +12,9 @@ dialog.al-modal::backdrop, dialog.al-drawer::backdrop, dialog.al-command::backdr
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   opacity: 0; transition: opacity var(--al-dur) var(--al-ease), display var(--al-dur) allow-discrete, overlay var(--al-dur) allow-discrete;
 }
-dialog[open]::backdrop { opacity: 1; }
+dialog.al-modal[open]::backdrop, dialog.al-drawer[open]::backdrop, dialog.al-command[open]::backdrop { opacity: 1; }
 html:has(dialog.al-modal[open], dialog.al-drawer[open], dialog.al-command[open]) { overflow: hidden; }
-@starting-style { dialog[open]::backdrop { opacity: 0; } }
+@starting-style { dialog.al-modal[open]::backdrop, dialog.al-drawer[open]::backdrop, dialog.al-command[open]::backdrop { opacity: 0; } }
 
 /* ---------- Modal ---------- */
 dialog.al-modal {

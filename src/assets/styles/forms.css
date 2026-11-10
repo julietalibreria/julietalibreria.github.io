@@ -22,7 +22,7 @@
   outline: none; border-color: var(--al-primary); box-shadow: var(--al-shadow-glow);
 }
 .al-input:disabled, .al-textarea:disabled, .al-select:disabled { background: var(--al-surface-sunken); opacity: .6; }
-.al-input[aria-invalid="true"], .al-textarea[aria-invalid="true"], .al-select[aria-invalid="true"], .is-invalid {
+.al-input[aria-invalid="true"], .al-textarea[aria-invalid="true"], .al-select[aria-invalid="true"], :is(.al-input, .al-textarea, .al-select).is-invalid {
   border-color: var(--al-danger);
 }
 .al-input[aria-invalid="true"]:focus, .al-textarea[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px color-mix(in oklab, var(--al-danger) 22%, transparent); }

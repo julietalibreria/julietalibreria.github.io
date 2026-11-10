@@ -72,6 +72,6 @@ export function initOverlays() {
   // Devolver el foco a quien abrió el diálogo
   document.addEventListener("close", (e) => {
     const d = e.target;
-    if (d instanceof HTMLDialogElement) { d._opener?.focus?.({ preventScroll: true }); emit(d, "close", { value: d.returnValue }); }
+    if (d instanceof HTMLDialogElement && d.matches(".al-modal, .al-drawer, .al-command")) { d._opener?.focus?.({ preventScroll: true }); emit(d, "close", { value: d.returnValue }); }
   }, true);
 }

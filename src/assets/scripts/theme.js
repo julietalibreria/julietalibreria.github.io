@@ -41,12 +41,12 @@ function sync() {
   });
   const meta = document.querySelector('meta[name="theme-color"]');
   const color = resolved === "dark" ? "#110e19" : "#f6f4fb";
-  if (meta && meta.content !== color) meta.content = color;
+  if (meta && document.documentElement.classList.contains("julieta") && meta.content !== color) meta.content = color;
 }
 
 export function initTheme() {
   const mode = getMode();
-  if (mode !== "system") document.documentElement.setAttribute("data-theme", mode);
+  if (mode !== "system" && document.documentElement.classList.contains("julieta")) document.documentElement.setAttribute("data-theme", mode);
   on("click", "[data-al-theme-toggle]", () => setTheme(getResolved() === "dark" ? "light" : "dark"));
   on("click", "[data-al-theme-set]", (_, el) => setTheme(el.dataset.alThemeSet));
   mq.addEventListener("change", () => { if (getMode() === "system") { sync(); emit(document, "theme", { mode: "system", resolved: getResolved() }); } });

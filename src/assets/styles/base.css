@@ -1,32 +1,17 @@
 /* ==========================================================================
    Julieta UI · base.css
    Reset moderno, tipografía de elementos y accesibilidad básica.
+
+   MODO SEGURO: nada de lo de aquí se aplica a tu página por defecto.
+   Estas reglas solo actúan dentro de:
+     · un elemento con class="julieta" (ponla en <html> para toda la página, o en un contenedor), y
+     · los elementos con clases al-* y lo que contienen (para que los componentes se vean bien sueltos).
+   Así, al cargar julieta.css en un sitio existente no se altera nada de lo tuyo.
+   Todas las reglas usan :where(), así que su especificidad es la misma que tenían antes.
    ========================================================================== */
 
-*, *::before, *::after { box-sizing: border-box; }
-
-* { margin: 0; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--al-header-h) + 1.5rem);
-  accent-color: var(--al-primary);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 1ms !important;
-  }
-}
-
-body {
-  min-height: 100dvh;
-  background: var(--al-bg);
+/* Raíz del ámbito: tipografía y color base (solo .julieta) */
+:where(.julieta) {
   color: var(--al-text);
   font-family: var(--al-font-sans);
   font-size: var(--al-text-base);
@@ -36,62 +21,167 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
-img, picture, video, canvas, svg { display: block; max-width: 100%; }
-img, video { height: auto; }
-input, button, textarea, select { font: inherit; color: inherit; letter-spacing: inherit; }
-button { cursor: pointer; background: none; border: 0; padding: 0; }
-button:disabled, [disabled] { cursor: not-allowed; }
-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-p, li, dd, blockquote, figcaption { text-wrap: pretty; overflow-wrap: break-word; }
-ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
-table { border-collapse: collapse; border-spacing: 0; }
-[hidden] { display: none !important; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--al-font-display);
-  font-weight: 700;
-  line-height: var(--al-leading-snug);
-  letter-spacing: var(--al-tracking-tight);
-  text-wrap: balance;
+html:where(.julieta) {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--al-header-h) + 1.5rem);
+  accent-color: var(--al-primary);
+}
+:where(.julieta) body, body:where(.julieta) {
+  min-height: 100dvh;
+  background: var(--al-bg);
   color: var(--al-text);
-}
-h1 { font-size: var(--al-text-4xl); line-height: var(--al-leading-tight); letter-spacing: var(--al-tracking-tighter); }
-h2 { font-size: var(--al-text-3xl); line-height: 1.1; }
-h3 { font-size: var(--al-text-2xl); }
-h4 { font-size: var(--al-text-xl); }
-h5 { font-size: var(--al-text-lg); }
-h6 { font-size: var(--al-text-base); }
-
-small { font-size: var(--al-text-sm); }
-strong, b { font-weight: 650; }
-mark { background: color-mix(in oklab, var(--al-cempasuchil-300) 60%, transparent); color: inherit; padding: 0 .2em; border-radius: 4px; }
-
-code, kbd, samp, pre { font-family: var(--al-font-mono); font-size: 0.9em; }
-:not(pre) > code {
-  background: var(--al-primary-soft);
-  color: var(--al-primary-strong);
-  padding: 0.12em 0.42em;
-  border-radius: var(--al-radius-xs);
-  font-size: 0.86em;
-  font-weight: 500;
+  font-family: var(--al-font-sans);
+  font-size: var(--al-text-base);
+  line-height: var(--al-leading-normal);
 }
 
-hr { border: 0; height: 1px; background: var(--al-border); margin-block: var(--al-space-8); }
+:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) *,
+:where(.julieta, [class^="al-"], [class*=" al-"])::before, :where(.julieta, [class^="al-"], [class*=" al-"])::after,
+:where(.julieta, [class^="al-"], [class*=" al-"]) *::before, :where(.julieta, [class^="al-"], [class*=" al-"]) *::after { box-sizing: border-box; }
 
-::selection { background: color-mix(in oklab, var(--al-jacaranda-400) 45%, transparent); color: inherit; }
+:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) * { margin: 0; }
 
-:focus { outline: none; }
-:focus-visible {
+@media (prefers-reduced-motion: reduce) {
+  html:where(.julieta) { scroll-behavior: auto; }
+  :where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) *,
+:where(.julieta, [class^="al-"], [class*=" al-"])::before, :where(.julieta, [class^="al-"], [class*=" al-"])::after,
+:where(.julieta, [class^="al-"], [class*=" al-"]) *::before, :where(.julieta, [class^="al-"], [class*=" al-"]) *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+:where(.julieta, [class^="al-"], [class*=" al-"]) img,
+img:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) picture,
+picture:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) video,
+video:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) canvas,
+canvas:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) svg,
+svg:where(.julieta, [class^="al-"], [class*=" al-"]) {display: block; max-width: 100%;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) img,
+img:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) video,
+video:where(.julieta, [class^="al-"], [class*=" al-"]) {height: auto;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) input,
+input:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) button,
+button:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) textarea,
+textarea:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) select,
+select:where(.julieta, [class^="al-"], [class*=" al-"]) {font: inherit; color: inherit; letter-spacing: inherit;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) button,
+button:where(.julieta, [class^="al-"], [class*=" al-"]) {cursor: pointer; background: none; border: 0; padding: 0;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) button:disabled,
+button:disabled:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) [disabled],
+[disabled]:where(.julieta, [class^="al-"], [class*=" al-"]) {cursor: not-allowed;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) a,
+a:where(.julieta, [class^="al-"], [class*=" al-"]) {color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) p,
+p:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) li,
+li:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) dd,
+dd:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) blockquote,
+blockquote:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) figcaption,
+figcaption:where(.julieta, [class^="al-"], [class*=" al-"]) {text-wrap: pretty; overflow-wrap: break-word;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) ul[role="list"],
+ul[role="list"]:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) ol[role="list"],
+ol[role="list"]:where(.julieta, [class^="al-"], [class*=" al-"]) {list-style: none; padding: 0;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) table,
+table:where(.julieta, [class^="al-"], [class*=" al-"]) {border-collapse: collapse; border-spacing: 0;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) [hidden],
+[hidden]:where(.julieta, [class^="al-"], [class*=" al-"]) {display: none !important;}
+
+:where(.julieta, [class^="al-"], [class*=" al-"]) h1,
+h1:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) h2,
+h2:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) h3,
+h3:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) h4,
+h4:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) h5,
+h5:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) h6,
+h6:where(.julieta, [class^="al-"], [class*=" al-"]) {font-family: var(--al-font-display); font-weight: 700; line-height: var(--al-leading-snug); letter-spacing: var(--al-tracking-tight); text-wrap: balance; color: var(--al-text);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h1,
+h1:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-4xl); line-height: var(--al-leading-tight); letter-spacing: var(--al-tracking-tighter);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h2,
+h2:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-3xl); line-height: 1.1;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h3,
+h3:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-2xl);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h4,
+h4:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-xl);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h5,
+h5:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-lg);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) h6,
+h6:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-base);}
+
+:where(.julieta, [class^="al-"], [class*=" al-"]) small,
+small:where(.julieta, [class^="al-"], [class*=" al-"]) {font-size: var(--al-text-sm);}
+:where(.julieta, [class^="al-"], [class*=" al-"]) strong,
+strong:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) b,
+b:where(.julieta, [class^="al-"], [class*=" al-"]) {font-weight: 650;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) mark,
+mark:where(.julieta, [class^="al-"], [class*=" al-"]) {background: color-mix(in oklab, var(--al-cempasuchil-300) 60%, transparent); color: inherit; padding: 0 .2em; border-radius: 4px;}
+
+:where(.julieta, [class^="al-"], [class*=" al-"]) code,
+code:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) kbd,
+kbd:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) samp,
+samp:where(.julieta, [class^="al-"], [class*=" al-"]),
+:where(.julieta, [class^="al-"], [class*=" al-"]) pre,
+pre:where(.julieta, [class^="al-"], [class*=" al-"]) {font-family: var(--al-font-mono); font-size: 0.9em;}
+:where(.julieta, [class^="al-"], [class*=" al-"]) :not(pre) > code,
+:where(.julieta, [class^="al-"], [class*=" al-"]):not(pre) > code,
+:not(pre) > code:where(.julieta, [class^="al-"], [class*=" al-"]) {background: var(--al-primary-soft); color: var(--al-primary-strong); padding: 0.12em 0.42em; border-radius: var(--al-radius-xs); font-size: 0.86em; font-weight: 500;}
+
+:where(.julieta, [class^="al-"], [class*=" al-"]) hr,
+hr:where(.julieta, [class^="al-"], [class*=" al-"]) {border: 0; height: 1px; background: var(--al-border); margin-block: var(--al-space-8);}
+
+:where(.julieta, [class^="al-"], [class*=" al-"])::selection, :where(.julieta, [class^="al-"], [class*=" al-"]) ::selection { background: color-mix(in oklab, var(--al-jacaranda-400) 45%, transparent); color: inherit; }
+
+:where(.julieta, [class^="al-"], [class*=" al-"]):focus, :where(.julieta, [class^="al-"], [class*=" al-"]) :focus { outline: none; }
+:where(.julieta, [class^="al-"], [class*=" al-"]):focus-visible, :where(.julieta, [class^="al-"], [class*=" al-"]) :focus-visible {
   outline: 2px solid var(--al-ring);
   outline-offset: 2px;
   border-radius: var(--al-radius-xs);
 }
 
-/* Scrollbars discretas */
-* { scrollbar-width: thin; scrollbar-color: var(--al-border-strong) transparent; }
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb { background: var(--al-border-strong); border-radius: 99px; border: 2px solid transparent; background-clip: content-box; }
+/* Raíz de cada componente (solo el más externo, con especificidad cero):
+   interlineado y suavizado propios para que se vean igual con o sin .julieta.
+   La fuente, el tamaño y el color de texto los hereda de tu sitio. */
+:where(.al-accordion, .al-alert, .al-avatar, .al-badge, .al-breadcrumb, .al-btn, .al-card, .al-check, .al-chip, .al-code, .al-command, .al-counter, .al-divider, .al-drawer, .al-dropdown, .al-dropzone, .al-empty, .al-error, .al-field, .al-hint, .al-input, .al-kbd, .al-label, .al-link, .al-list, .al-menu, .al-modal, .al-navbar, .al-pagination, .al-progress, .al-quote, .al-radio, .al-range, .al-ring, .al-segmented, .al-select, .al-sidebar, .al-skeleton, .al-spinner, .al-stat, .al-stepper, .al-switch, .al-tab, .al-table, .al-tabpanel, .al-tabs, .al-textarea, .al-timeline, .al-toast, .al-toc):not(:where(.al-accordion, .al-alert, .al-avatar, .al-badge, .al-breadcrumb, .al-btn, .al-card, .al-check, .al-chip, .al-code, .al-command, .al-counter, .al-divider, .al-drawer, .al-dropdown, .al-dropzone, .al-empty, .al-error, .al-field, .al-hint, .al-input, .al-kbd, .al-label, .al-link, .al-list, .al-menu, .al-modal, .al-navbar, .al-pagination, .al-progress, .al-quote, .al-radio, .al-range, .al-ring, .al-segmented, .al-select, .al-sidebar, .al-skeleton, .al-spinner, .al-stat, .al-stepper, .al-switch, .al-tab, .al-table, .al-tabpanel, .al-tabs, .al-textarea, .al-timeline, .al-toast, .al-toc) *) {
+  line-height: var(--al-leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Los componentes que pintan su propia superficie traen también su color de texto */
+:where(.al-accordion, .al-alert, .al-avatar, .al-badge, .al-btn, .al-card, .al-chip, .al-code, .al-command, .al-drawer, .al-dropdown, .al-dropzone, .al-input, .al-kbd, .al-link, .al-menu, .al-modal, .al-navbar, .al-progress, .al-range, .al-segmented, .al-select, .al-sidebar, .al-skeleton, .al-textarea, .al-toast):not(:where(.al-accordion, .al-alert, .al-avatar, .al-badge, .al-breadcrumb, .al-btn, .al-card, .al-check, .al-chip, .al-code, .al-command, .al-counter, .al-divider, .al-drawer, .al-dropdown, .al-dropzone, .al-empty, .al-error, .al-field, .al-hint, .al-input, .al-kbd, .al-label, .al-link, .al-list, .al-menu, .al-modal, .al-navbar, .al-pagination, .al-progress, .al-quote, .al-radio, .al-range, .al-ring, .al-segmented, .al-select, .al-sidebar, .al-skeleton, .al-spinner, .al-stat, .al-stepper, .al-switch, .al-tab, .al-table, .al-tabpanel, .al-tabs, .al-textarea, .al-timeline, .al-toast, .al-toc) *) { color: var(--al-text); }
+
+/* Scrollbars discretas (solo bajo .julieta; no tocamos las de tu página) */
+:where(.julieta),
+:where(.julieta) * { scrollbar-width: thin; scrollbar-color: var(--al-border-strong) transparent; }
+:where(.julieta)::-webkit-scrollbar, :where(.julieta) *::-webkit-scrollbar { width: 10px; height: 10px; }
+:where(.julieta)::-webkit-scrollbar-thumb, :where(.julieta) *::-webkit-scrollbar-thumb { background: var(--al-border-strong); border-radius: 99px; border: 2px solid transparent; background-clip: content-box; }
 
 /* Utilidad para lectores de pantalla */
 .al-sr-only {

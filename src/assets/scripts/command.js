@@ -103,6 +103,8 @@ export const closeCommand = () => dlg?.open && dlg.close();
 export function initCommand() {
   on("click", "[data-al-command-open]", (e) => { e.preventDefault(); openCommand(); });
   document.addEventListener("keydown", (e) => {
+    // Modo seguro: sin paleta de Julieta en la página, no tocamos ningún atajo de teclado del sitio
+    if (!document.querySelector("[data-al-command-open], dialog.al-command")) return;
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
     if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); dlg?.open ? closeCommand() : openCommand(); }
     else if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) { e.preventDefault(); openCommand(); }
