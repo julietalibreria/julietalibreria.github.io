@@ -35,6 +35,14 @@ src/
    └─ images/            Marca, ilustraciones, portadas y vistas previas
 ```
 
+## Seguro por defecto
+
+Cargar `julieta.css` y `julieta.js` en un sitio existente **no altera tu página**: las reglas de base (reseteo, `box-sizing`, tipografía de titulares, enlaces, botones, scrollbars, `body`) solo se aplican dentro de un elemento con `class="julieta"` y dentro de los componentes `al-*` y lo que contienen. Tampoco se registran atajos de teclado (`/`, Ctrl+K) a menos que la página incluya la paleta de comandos de Julieta.
+
+- Para usar Julieta en toda la página (reseteo, tipografía, tema claro/oscuro): `<html class="julieta">`.
+- Para usarla solo en una zona: `<div class="julieta">…</div>`.
+- Sin la clase, los componentes heredan la fuente y el tamaño de tu sitio y siguen su `color-scheme`.
+
 ## Plantillas: HTML aparte, CSS y JS por CDN
 
 Cada plantilla es un `.html` limpio, sin `<style>` ni `<script>` en línea. Su CSS y su JS viven en `src/assets/styles/templates/` y `src/assets/scripts/templates/`, y la página los carga desde el CDN (`https://julietalibreria.github.io`). Quien use una plantilla se queda con el HTML; los estilos y la lógica los seguimos controlando nosotros.

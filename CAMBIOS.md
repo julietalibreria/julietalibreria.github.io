@@ -70,3 +70,28 @@ Ninguno.
 
 ## Dónde va cada cosa
 Copia el contenido del zip sobre la raíz del proyecto (`julietalibreria.github.io`) respetando las rutas; los archivos existentes se sobrescriben. Cuando publiques, las plantillas copiadas por los usuarios apuntarán a `https://julietalibreria.github.io/src/assets/styles/templates/…` y `…/scripts/templates/…`.
+
+---
+
+# Modo seguro por defecto (corrección: Julieta ya no altera páginas ajenas)
+
+**Problema:** al cargar `julieta.css` y `julieta.js` en un sitio existente, el CSS aplicaba un reseteo global (`* { box-sizing: border-box; margin: 0 }`, titulares, imágenes, botones, enlaces, `body`, foco…) y `color-scheme: light dark` en `:root`. El JS tomaba atajos de teclado globales (`/` y Ctrl+K) y cambiaba el `<meta name="theme-color">`.
+
+**Corrección:**
+- `base.css` solo actúa dentro de `class="julieta"` y de los componentes `al-*` (y lo que contienen). Todo con `:where()`, sin cambiar la especificidad.
+- `tokens.css`: el `color-scheme` y el tema claro/oscuro solo se aplican con `class="julieta"`; sin ella, los componentes siguen el esquema de tu sitio.
+- `overlays.css` y `forms.css`: `::backdrop` y `.is-invalid` acotados a Julieta.
+- `command.js`, `overlays.js`, `theme.js`: sin paleta de Julieta en la página no se toca ningún atajo; el cierre de `<dialog>` solo afecta a modales y cajones de Julieta; `theme-color` y `data-theme` solo se tocan con `class="julieta"`.
+- Las 29 páginas propias llevan `<html class="julieta">`.
+
+**Archivos modificados (no HTML):**
+- `README.md`
+- `src/assets/scripts/command.js`
+- `src/assets/scripts/overlays.js`
+- `src/assets/scripts/theme.js`
+- `src/assets/styles/base.css`
+- `src/assets/styles/forms.css`
+- `src/assets/styles/overlays.css`
+- `src/assets/styles/tokens.css`
+
+**Páginas HTML modificadas:** 29 (se añadió `class="julieta"` al `<html>`; en `src/pages/instalacion.html` además hay una nota nueva).
